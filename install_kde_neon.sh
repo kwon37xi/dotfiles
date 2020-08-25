@@ -126,8 +126,7 @@ sudo apt-get install -y inxi \
 	fonts-unfonts-core \
 	fonts-unfonts-extra \
 	fonts-noto* \
-	plasma-wallpapers-addons \
-	ubuntu-wallpapers*
+	plasma-wallpapers-addons
 
 echo "### install wine-stable ###"
 sudo apt-get install --install-recommends winehq-stable winetricks
@@ -163,7 +162,7 @@ sudo service docker restart
 # newgrp docker
 
 # change input method to fcitx - no need
-# im-config -n fcitx
+im-config -n fcitx
 
 if ! [ -d ~/.fonts/free-korean-fonts ]; then
 	echo "### install custom fonts ###"
