@@ -1,7 +1,10 @@
 # first change sudo
 echo "### add sudo without password permission to current user ###"
-echo "$USER    ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/99-self.conf
-sudo chmod 0440 /etc/sudoers.d/99-self.conf
+echo "$USER    ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/99-self
+sudo chmod 0440 /etc/sudoers.d/99-self
+
+echo "### change swappiness ###"
+echo "vm.swappiness=5" | sudo tee /etc/sysctl.d/99-vm_swappiness.conf
 
 # change default directory names to english (Downloads, Desktop, ...)
 echo "### 사용자 디렉토리 변경 ###"
@@ -73,6 +76,18 @@ sudo dpkg --add-architecture i386
 wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
 sudo add-apt-repository -y --no-update "deb https://dl.winehq.org/wine-builds/ubuntu/ $(lsb_release -cs)  main"
 
+# adopt-openjdk https://adoptopenjdk.net/installation.html#linux-pkg
+wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+sudo add-apt-repository -y --no-update "https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/"
+
+# correto jdk https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/generic-linux-install.html
+wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
+sudo add-apt-repository -y --no-update 'deb https://apt.corretto.aws stable main'
+
+# virtualbox  https://www.virtualbox.org/wiki/Linux_Downloads
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+sudo add-apt-repository -y --no-update "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
+
 sudo add-apt-repository -y --no-update ppa:git-core/ppa
 sudo add-apt-repository -y --no-update ppa:libreoffice/ppa
 sudo add-apt-repository -y --no-update ppa:graphics-drivers/ppa
@@ -126,7 +141,11 @@ sudo apt-get install -y inxi \
 	fonts-unfonts-core \
 	fonts-unfonts-extra \
 	fonts-noto* \
-	plasma-wallpapers-addons
+	plasma-wallpapers-addons \
+	java-common  \
+	adoptopenjdk-11-hotspot adoptopenjdk-8-hotspot \
+	java-11-amazon-corretto-jdk \
+	virtualbox-6.1
 
 echo "### install wine-stable ###"
 sudo apt-get install --install-recommends winehq-stable winetricks
@@ -172,11 +191,10 @@ if ! [ -d ~/.fonts/free-korean-fonts ]; then
 	fc-cache -v
 fi
 
-# todo - , openjdk,  vm.swappiness=5, backgrounds,  slack, 개발환경..,  fusuma, 
+# todo - , slack, 개발환경..,  fusuma, 
 # kde 단축키
 # KDE font config...
 # git default config,
-# default project dirs
 # ntfs
 # kwallet git
 # direnv
