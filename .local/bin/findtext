@@ -1,0 +1,3 @@
+#!/bin/sh
+# findtext "검색어" "파일명"
+find . -name "$2" | xargs grep -Hni "$1"

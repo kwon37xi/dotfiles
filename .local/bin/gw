@@ -1,0 +1,17 @@
+#!/bin/bash
+current_dir=`pwd`
+while [ "$current_dir" != "/" ]
+do
+    if [ -f "$current_dir/gradlew" ]
+    then
+        break;
+    fi
+    current_dir=`dirname "$current_dir"`
+done
+ 
+if [ "$current_dir" != "/" ]
+then
+    bash "$current_dir/gradlew" "$@"
+else
+    echo "No gradlew file exists."
+fi
