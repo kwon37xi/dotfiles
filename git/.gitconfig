@@ -1,0 +1,33 @@
+[user]
+	name = KwonNam Son
+	email = kwonnam.son@woowahan.com
+
+[includeIf "gitdir:~/projects/"]
+    path = ~/.dotfiles/.git_woowahan_projects
+
+[includeIf "gitdir:~/projects_kwon37xi/"]
+    path = ~/.dotfiles/.git_kwon37xi_projects
+
+[core]
+	filemode = false
+[diff]
+	external = /home/kwon37xi/.local/bin/git-diff-meld.sh
+[merge]
+	tool = meld
+[alias]
+	last = log -1 HEAD
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an %ae>%Creset' --abbrev-commit --
+	ci = commit
+	co = checkout
+	st = status
+	unstage = reset HEAD --
+[pull]
+	rebase = false
+[credential]
+    helper = /usr/local/bin/git-credential-kwallet
+
+[credential "https://gist.github.com"]
+	username = kwon37xi
+
+[credential "https://github.com"]
+	username = kwon37xi
