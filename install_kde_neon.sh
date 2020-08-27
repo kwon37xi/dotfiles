@@ -1,3 +1,13 @@
+#!/bin/bash
+# error 발생시 즉각 중단.
+set -e
+VAGRANT_VERSION="2.2.10"
+VAGRANT_DEB_FILENAME="vagrant_${VAGRANT_VERSION}_x86_64.deb"
+VAGRANT_PACKAGE_DOWNLOAD_URL="https://releases.hashicorp.com/vagrant/${VAGRANT_VERSION}/${VAGRANT_DEB_FILENAME}"
+PACKER_VERSION="1.6.1"
+PACKER_ZIP_DOWNLOAD_URL="https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip"
+
+
 # first change sudo
 echo "### add sudo without password permission to current user ###"
 echo "$USER    ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/99-self
@@ -54,7 +64,8 @@ sudo apt-get install -y apt-transport-https \
 	curl \
 	gnupg-agent \
 	software-properties-common \
-	software-properties-gtk
+	software-properties-gtk \
+	unzip unrar p7zip-full
 
 # 저장소 미러를 빠른 곳으로 변경하고, 독점 드라이버 등을 설정하기 위해 먼저 실행
 echo "### software-properties-gtk ###"
@@ -145,7 +156,11 @@ sudo apt-get install -y inxi \
 	java-common  \
 	adoptopenjdk-11-hotspot adoptopenjdk-8-hotspot \
 	java-11-amazon-corretto-jdk \
-	virtualbox-6.1
+	virtualbox-6.1 \
+	direnv \
+	autojump \
+	stow
+
 
 echo "### install wine-stable ###"
 sudo apt-get install --install-recommends winehq-stable winetricks
@@ -164,6 +179,21 @@ fi
 
 # flatpak 설치
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+echo "### install vagrant ###"
+if ! [ -f "/usr/bin/vagrant" ]; then
+	wget "$VAGRANT_PACKAGE_DOWNLOAD_URL" -O "/tmp/${VAGRANT_DEB_FILENAME}"
+	sudo dpkg -i "/tmp/${VAGRANT_DEB_FILENAME}"
+fi
+
+echo "### install packer ###"
+if ! [ -f "/opt/packer/packer" ]; then
+	wget "${PACKER_ZIP_DOWNLOAD_URL}" -O /tmp/packer_linux_amd64.zip
+	sudo mkdir -p /opt/packer
+	sudo unzip /tmp/packer_linux_amd64.zip -d /opt/packer
+	sudo chmod 0755 /opt/packer/packer
+	sudo ln -s /opt/packer/packer /usr/local/bin/packer
+fi
 
 # autostarts
 echo "### autostarts ###"
@@ -191,12 +221,9 @@ if ! [ -d ~/.fonts/free-korean-fonts ]; then
 	fc-cache -v
 fi
 
-# todo - , slack, 개발환경..,  fusuma, 
+# todo - , 개발환경..,  fusuma, 
 # kde 단축키
 # KDE font config...
 # git default config,
 # ntfs
 # kwallet git
-# direnv
-# autojump
-# virtualbox, vagrant
