@@ -227,3 +227,8 @@ fi
 # git default config,
 # ntfs
 # kwallet git
+# zoom, 버전을 환경변수로 지정해서 할 수 있게한다.
+# dbeaver
+# intellij
+# vscode
+# sdkman, jenv, zulu
