@@ -232,3 +232,4 @@ fi
 # intellij
 # vscode
 # sdkman, jenv, zulu
+# kde discover 의존성
