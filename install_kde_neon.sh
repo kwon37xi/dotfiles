@@ -6,7 +6,7 @@ VAGRANT_DEB_FILENAME="vagrant_${VAGRANT_VERSION}_x86_64.deb"
 VAGRANT_PACKAGE_DOWNLOAD_URL="https://releases.hashicorp.com/vagrant/${VAGRANT_VERSION}/${VAGRANT_DEB_FILENAME}"
 PACKER_VERSION="1.6.1"
 PACKER_ZIP_DOWNLOAD_URL="https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip"
-
+VIRTUALBOX_VERSION="6.1"
 
 # first change sudo
 echo "### add sudo without password permission to current user ###"
@@ -78,9 +78,9 @@ echo "### 저장소 추가 ###"
 wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add
 sudo add-apt-repository -y --no-update 'deb https://repo.vivaldi.com/archive/deb/ stable main'
 
-# docker
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository -y --no-update "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+# docker - ubuntu 기본 제공 docker 를 사용한다.
+#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#sudo add-apt-repository -y --no-update "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
 # wine 
 sudo dpkg --add-architecture i386
@@ -94,6 +94,9 @@ sudo add-apt-repository -y --no-update "https://adoptopenjdk.jfrog.io/adoptopenj
 # correto jdk https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/generic-linux-install.html
 wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
 sudo add-apt-repository -y --no-update 'deb https://apt.corretto.aws stable main'
+
+# node.js LTS
+curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 
 # virtualbox  https://www.virtualbox.org/wiki/Linux_Downloads
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
@@ -116,14 +119,14 @@ sudo apt-get -y upgrade
 echo "### 필수 소프트웨어 자동 설치"
 # plasma-discover-backend-fwupd 는 설치 불필요
 sudo apt-get install -y inxi \
-	ubuntu-restricted-addons ubuntu-restricted-extras \
+	kubuntu-restricted-addons kubuntu-restricted-extras \
 	git \
 	muon aptitude qapt-deb-installer \
 	yakuake \
 	dolphin-plugins dolphin-owncloud kio-gdrive \
 	plasma-browser-integration \
 	flatpak \
-	plasma-discover-backend-flatpak plasma-discover-backend-snap \
+	plasma-discover-backend-flatpak plasma-discover-backend-snap plasma-discover-backend-fwupd \
 	vim-gtk \
 	copyq copyq-plugins \
 	grub-customizer \
@@ -132,6 +135,7 @@ sudo apt-get install -y inxi \
 	meld \
 	tlp tlp-rdw tlpui \
 	pinta \
+    krita krita-l10n \
 	gimp gimp-gmic \
 	vlc smplayer \
 	ufw gufw \
@@ -153,10 +157,12 @@ sudo apt-get install -y inxi \
 	fonts-unfonts-extra \
 	fonts-noto* \
 	plasma-wallpapers-addons \
+    build-essential \
 	java-common  \
 	adoptopenjdk-11-hotspot adoptopenjdk-8-hotspot \
 	java-11-amazon-corretto-jdk \
-	virtualbox-6.1 \
+    nodejs \
+	virtualbox-${VIRTUALBOX_VERSION} \
 	direnv \
 	autojump \
 	stow
@@ -232,4 +238,3 @@ fi
 # intellij
 # vscode
 # sdkman, jenv, zulu
-# kde discover 의존성
