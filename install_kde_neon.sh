@@ -167,6 +167,8 @@ sudo apt-get install -y inxi \
 	autojump \
 	stow
 
+# flatpak 설치
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "### install wine-stable ###"
 sudo apt-get install --install-recommends winehq-stable winetricks
@@ -183,8 +185,6 @@ if ! [ -f "/usr/bin/naver-whale" ]; then
 	sudo dpkg -i ~/Downloads/naver-whale-stable_amd64.deb
 fi
 
-# flatpak 설치
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "### install vagrant ###"
 if ! [ -f "/usr/bin/vagrant" ]; then
@@ -219,12 +219,17 @@ sudo service docker restart
 # change input method to fcitx - no need
 im-config -n fcitx
 
+echo "### install custom fonts ###"
 if ! [ -d ~/.fonts/free-korean-fonts ]; then
-	echo "### install custom fonts ###"
 	mkdir -p ~/.fonts
 	cd ~/.fonts
 	git clone https://github.com/kwon37xi/free-korean-fonts.git
 	fc-cache -v
+fi
+
+if ! [ -f "/usr/bin/zoom" ]; then
+    wget https://zoom.us/client/latest/zoom_amd64.deb -O /tmp/zoom_amd64.deb
+    sudo dpkg -i /tmp/zoom_amd64.deb
 fi
 
 # todo - , 개발환경..,  fusuma, 
@@ -233,7 +238,6 @@ fi
 # git default config,
 # ntfs
 # kwallet git
-# zoom, 버전을 환경변수로 지정해서 할 수 있게한다.
 # dbeaver
 # intellij
 # vscode
