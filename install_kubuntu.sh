@@ -252,5 +252,4 @@ fi
 # kwallet git
 # dbeaver
 # intellij
-# vscode
 # sdkman, jenv, zulu
