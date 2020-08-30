@@ -1,12 +1,8 @@
 #!/bin/bash
 # error 발생시 즉각 중단.
 set -e
-VAGRANT_VERSION="2.2.10"
-VAGRANT_DEB_FILENAME="vagrant_${VAGRANT_VERSION}_x86_64.deb"
-VAGRANT_PACKAGE_DOWNLOAD_URL="https://releases.hashicorp.com/vagrant/${VAGRANT_VERSION}/${VAGRANT_DEB_FILENAME}"
-PACKER_VERSION="1.6.1"
-PACKER_ZIP_DOWNLOAD_URL="https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip"
-VIRTUALBOX_VERSION="6.1"
+
+source ./config.sh
 
 # first change sudo
 echo "### add sudo without password permission to current user ###"
@@ -64,13 +60,9 @@ sudo apt-get install -y apt-transport-https \
 	curl \
 	gnupg-agent \
 	software-properties-common \
-	software-properties-gtk \
+	software-properties-qt \
 	unzip unrar p7zip-full
 
-# 저장소 미러를 빠른 곳으로 변경하고, 독점 드라이버 등을 설정하기 위해 먼저 실행
-echo "### software-properties-gtk ###"
-echo "  - change mirror, install proprietary drivers "
-sudo software-properties-gtk
 
 echo "### 저장소 추가 ###"
 # prepare repositories
@@ -110,6 +102,8 @@ sudo add-apt-repository -y --no-update "deb [arch=amd64] https://download.virtua
 sudo sh -c 'curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.gpg'
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 
+curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash
+
 sudo add-apt-repository -y --no-update ppa:gezakovacs/ppa
 sudo add-apt-repository -y --no-update ppa:git-core/ppa
 sudo add-apt-repository -y --no-update ppa:libreoffice/ppa
@@ -144,11 +138,11 @@ sudo apt-get install -y inxi \
 	meld \
 	tlp tlp-rdw tlpui \
 	pinta \
-    krita krita-l10n \
+	krita krita-l10n \
 	gimp gimp-gmic \
 	vlc smplayer \
 	ufw gufw \
-	docker-ce docker-ce-cli containerd.io docker-compose \
+	docker docker-compose \
 	ctop \
 	openconnect network-manager-openconnect \
 	openfortivpn network-manager-fortisslvpn \
@@ -165,9 +159,11 @@ sudo apt-get install -y inxi \
 	fonts-unfonts-core \
 	fonts-unfonts-extra \
 	fonts-noto* \
+	uim uim-byeoru \
 	build-essential \
 	code \
 	java-common  \
+	openjdk-11-jdk \
 	adoptopenjdk-11-hotspot adoptopenjdk-8-hotspot \
 	java-11-amazon-corretto-jdk \
 	nodejs \
@@ -175,12 +171,14 @@ sudo apt-get install -y inxi \
 	direnv \
 	autojump \
 	unetbootin \
+	asbru-cm  \
 	stow
 
 # flatpak 설치
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "### install wine-stable ###"
+sudo dpkg --add-architecture i386
 sudo apt-get install --install-recommends winehq-stable winetricks
 
 echo "### install google chrome ###"
@@ -229,7 +227,7 @@ sudo service docker restart
 # newgrp docker
 
 # change input method to fcitx - no need
-im-config -n fcitx
+im-config -n uim
 
 echo "### install custom fonts ###"
 if ! [ -d ~/.fonts/free-korean-fonts ]; then
@@ -240,16 +238,43 @@ if ! [ -d ~/.fonts/free-korean-fonts ]; then
 fi
 
 if ! [ -f "/usr/bin/zoom" ]; then
-    wget https://zoom.us/client/latest/zoom_amd64.deb -O /tmp/zoom_amd64.deb
-    sudo dpkg -i /tmp/zoom_amd64.deb
+	sudo apt-get install -y libgl1-mesa-glx libegl1-mesa libxcb-xtest
+	wget https://zoom.us/client/latest/zoom_amd64.deb -O /tmp/zoom_amd64.deb
+	sudo dpkg -i /tmp/zoom_amd64.deb
 fi
 
-# todo - , 개발환경..,  fusuma, 
+echo "### install slack ###"
+if ! [ -f "/usr/bin/slack" ]; then
+	wget "https://downloads.slack-edge.com/linux_releases/slack-desktop-${SLACK_VERSION}-amd64.deb" -O /tmp/slack-desktop-${SLACK_VERSION}-amd64.deb
+	sudo dpkg -i /tmp/slack-desktop-${SLACK_VERSION}-amd64.deb
+fi
+
+echo "### install dbeaver ###"
+if ! [ -f "/usr/bin/dbeaver" ]; then
+	wget "https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb" -O /tmp/dbeaver-ce_latest_amd64.deb
+	sudo dpkg -i /tmp/dbeaver-ce_latest_amd64.deb
+fi
+
+echo "### install bitwarden ###"
+sudo flatpak install -y flathub com.bitwarden.desktop
+
+echo "### install JetBrains Toolbox ###"
+if ! [ -f "$HOME/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox" ]; then
+	wget "https://download-cf.jetbrains.com/toolbox/jetbrains-toolbox-${JETBRAINS_TOOLBOX_VERSION}.tar.gz" -O /tmp/jetbrains-toolbox.tar.gz
+	cd /tmp
+	tar xvzf  jetbrains-toolbox.tar.gz
+	cd "jetbrains-toolbox-${JETBRAINS_TOOLBOX_VERSION}"
+	./jetbrains-toolbox 
+fi
+
+sudo apt-get -y autoremove
+
+echo "finished...."
+
+# todo - , fusuma, 
 # kde 단축키
 # KDE font config...
 # git default config,
 # ntfs
 # kwallet git
-# dbeaver
-# intellij
 # sdkman, jenv, zulu
