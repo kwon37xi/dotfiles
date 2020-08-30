@@ -78,7 +78,7 @@ echo "### 저장소 추가 ###"
 wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add
 sudo add-apt-repository -y --no-update 'deb https://repo.vivaldi.com/archive/deb/ stable main'
 
-# docker - ubuntu 기본 제공 docker 를 사용한다.
+# docker - ubuntu 기본 제공 docker 를 사용한다. docker 에서 제공하는 Ubuntu Repository 는 LTS만 지원한다.
 #curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 #sudo add-apt-repository -y --no-update "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
