@@ -98,10 +98,19 @@ sudo add-apt-repository -y --no-update 'deb https://apt.corretto.aws stable main
 # node.js LTS
 curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 
+# yarn
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
 # virtualbox  https://www.virtualbox.org/wiki/Linux_Downloads
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 sudo add-apt-repository -y --no-update "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
 
+# vscode
+sudo sh -c 'curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.gpg'
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
+sudo add-apt-repository -y --no-update ppa:gezakovacs/ppa
 sudo add-apt-repository -y --no-update ppa:git-core/ppa
 sudo add-apt-repository -y --no-update ppa:libreoffice/ppa
 sudo add-apt-repository -y --no-update ppa:graphics-drivers/ppa
@@ -156,15 +165,16 @@ sudo apt-get install -y inxi \
 	fonts-unfonts-core \
 	fonts-unfonts-extra \
 	fonts-noto* \
-	plasma-wallpapers-addons \
-    build-essential \
+	build-essential \
+	code \
 	java-common  \
 	adoptopenjdk-11-hotspot adoptopenjdk-8-hotspot \
 	java-11-amazon-corretto-jdk \
-    nodejs \
+	nodejs \
 	virtualbox-${VIRTUALBOX_VERSION} \
 	direnv \
 	autojump \
+	unetbootin \
 	stow
 
 # flatpak 설치
@@ -200,6 +210,8 @@ if ! [ -f "/opt/packer/packer" ]; then
 	sudo chmod 0755 /opt/packer/packer
 	sudo ln -s /opt/packer/packer /usr/local/bin/packer
 fi
+
+sudo apt-get -y autoremove
 
 # autostarts
 echo "### autostarts ###"
