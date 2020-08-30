@@ -278,3 +278,5 @@ echo "finished...."
 # ntfs
 # kwallet git
 # sdkman, jenv, zulu
+# uim byeoru 설정
+# debcoker
