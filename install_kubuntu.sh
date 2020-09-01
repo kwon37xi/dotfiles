@@ -278,10 +278,13 @@ echo "finished...."
 # kde 단축키
 # KDE font config...
 # git default config, credential helper
-# ntfs
 # kwallet git
+# ssh passphrase
 # sdkman, jenv, zulu
 # debcoker
 # vpn, wifi
 # vivaldi 자동 설정
 # keepassxc
+# stow
+# ntfs
+# grub theme, grub font
