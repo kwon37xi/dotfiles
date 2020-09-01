@@ -226,8 +226,6 @@ sudo service docker restart
 # newgrp 는 그 아래의 모든 셸 스크립트를 중단시켜버림.
 # newgrp docker
 
-# change input method to fcitx - no need
-im-config -n uim
 
 echo "### install custom fonts ###"
 if ! [ -d ~/.fonts/free-korean-fonts ]; then
@@ -259,7 +257,12 @@ echo "### install bitwarden ###"
 sudo flatpak install -y flathub com.bitwarden.desktop
 
 echo "### uim-toolbar config ###"
+# change input method to fcitx - no need
+im-config -n uim
+
 sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
+sudo ln -s /usr/bin/uim-im-switcher-qt5 /usr/bin/uim-im-switcher-qt4
+sudo ln -s /usr/bin/uim-pref-qt5 /usr/bin/uim-pref-qt4
 
 echo "### install JetBrains Toolbox ###"
 if ! [ -f "$HOME/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox" ]; then
