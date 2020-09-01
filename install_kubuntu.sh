@@ -258,6 +258,9 @@ fi
 echo "### install bitwarden ###"
 sudo flatpak install -y flathub com.bitwarden.desktop
 
+echo "### uim-toolbar config ###"
+sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
+
 echo "### install JetBrains Toolbox ###"
 if ! [ -f "$HOME/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox" ]; then
 	wget "https://download-cf.jetbrains.com/toolbox/jetbrains-toolbox-${JETBRAINS_TOOLBOX_VERSION}.tar.gz" -O /tmp/jetbrains-toolbox.tar.gz
@@ -274,10 +277,11 @@ echo "finished...."
 # todo - , fusuma, 
 # kde 단축키
 # KDE font config...
-# git default config,
+# git default config, credential helper
 # ntfs
 # kwallet git
 # sdkman, jenv, zulu
-# uim byeoru 설정
 # debcoker
 # vpn, wifi
+# vivaldi 자동 설정
+# keepassxc
