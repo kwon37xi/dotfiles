@@ -280,3 +280,4 @@ echo "finished...."
 # sdkman, jenv, zulu
 # uim byeoru 설정
 # debcoker
+# vpn, wifi
