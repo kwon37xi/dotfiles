@@ -124,12 +124,12 @@ echo "### 필수 소프트웨어 자동 설치"
 sudo apt-get install -y inxi \
 	kubuntu-restricted-addons kubuntu-restricted-extras \
 	git \
-	muon aptitude qapt-deb-installer \
+	muon aptitude qapt-deb-installer debocker \
+	plasma-discover-backend-flatpak plasma-discover-backend-snap plasma-discover-backend-fwupd \
 	yakuake \
-	dolphin-plugins dolphin-owncloud kio-gdrive \
+	dolphin-plugins dolphin-owncloud kio-gdrive dolphin-plugins \
 	plasma-browser-integration \
 	flatpak \
-	plasma-discover-backend-flatpak plasma-discover-backend-snap plasma-discover-backend-fwupd \
 	vim-gtk \
 	copyq copyq-plugins \
 	grub-customizer \
@@ -137,10 +137,9 @@ sudo apt-get install -y inxi \
 	libreoffice libreoffice-help-ko libreoffice-l10n-ko \
 	meld \
 	tlp tlp-rdw tlpui \
-	pinta \
-	krita krita-l10n \
+	pinta krita krita-l10n \
 	gimp gimp-gmic \
-	vlc smplayer \
+	vlc smplayer youtube-dl audacious \
 	ufw gufw \
 	docker docker-compose \
 	ctop \
@@ -168,10 +167,12 @@ sudo apt-get install -y inxi \
 	java-11-amazon-corretto-jdk \
 	nodejs \
 	virtualbox-${VIRTUALBOX_VERSION} \
+	freerdp2-x11 \
 	direnv \
 	autojump \
 	unetbootin \
 	asbru-cm  \
+	openssh-server openssh-sftp-server \
 	stow
 
 # flatpak 설치
@@ -260,7 +261,10 @@ echo "### uim-toolbar config ###"
 # change input method to fcitx - no need
 im-config -n uim
 
-sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
+#sudo update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-qt5 100
+#sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
+sudo update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk3-systray 100
+sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk3-systray
 sudo ln -s /usr/bin/uim-im-switcher-qt5 /usr/bin/uim-im-switcher-qt4
 sudo ln -s /usr/bin/uim-pref-qt5 /usr/bin/uim-pref-qt4
 
@@ -283,11 +287,11 @@ echo "finished...."
 # git default config, credential helper
 # kwallet git
 # ssh passphrase
-# sdkman, jenv, zulu
+# sdkman, jenv
 # debcoker
 # vpn, wifi
 # vivaldi 자동 설정
-# keepassxc
+# keepassxc 혹은 unix pass
 # stow
 # ntfs
 # grub theme, grub font
