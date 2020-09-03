@@ -9,4 +9,4 @@
 (define toolbar-show-help-button? #f)
 (define toolbar-help-browser 'system)
 (define toolbar-help-browser-name "firefox")
-(define toolbar-icon-for-dark-background? #f)
+(define toolbar-icon-for-dark-background? #t)
