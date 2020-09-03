@@ -210,6 +210,12 @@ if ! [ -f "/opt/packer/packer" ]; then
 	sudo ln -s /opt/packer/packer /usr/local/bin/packer
 fi
 
+echo "### install hugo ###"
+if ! [ -f "/usr/local/bin/hugo" ]; then
+    wget -q --show-progress -O /tmp/hugo_${HUGO_VERSION}_Linux-64bit.deb "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb"
+    sudo dpkg -i /tmp/hugo_${HUGO_VERSION}_Linux-64bit.deb
+fi
+
 sudo apt-get -y autoremove
 
 # autostarts
