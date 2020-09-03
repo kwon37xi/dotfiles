@@ -279,8 +279,8 @@ im-config -n uim
 #sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
 sudo update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk3-systray 100
 sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk3-systray
-sudo ln -s /usr/bin/uim-im-switcher-qt5 /usr/bin/uim-im-switcher-qt4
-sudo ln -s /usr/bin/uim-pref-qt5 /usr/bin/uim-pref-qt4
+! [ -f /usr/bin/uim-im-switcher-qt4 ] && sudo ln -s /usr/bin/uim-im-switcher-qt5 /usr/bin/uim-im-switcher-qt4
+! [ -f /usr/bin/uim-pref-qt4 ] && sudo ln -s /usr/bin/uim-pref-qt5 /usr/bin/uim-pref-qt4
 
 echo "### install JetBrains Toolbox ###"
 if ! [ -f "$HOME/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox" ]; then
@@ -289,6 +289,16 @@ if ! [ -f "$HOME/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox" ]; then
     tar xvzf  jetbrains-toolbox.tar.gz
     cd "jetbrains-toolbox-${JETBRAINS_TOOLBOX_VERSION}"
     ./jetbrains-toolbox 
+fi
+
+echo "### install Lotion notion client ###"
+if ! [ -d "$HOME/.local/share/lotion-${LOTION_VERSION}" ]; then
+    wget -O /tmp/lotion-${LOTION_VERSION}.tar.gz "https://github.com/puneetsl/lotion/archive/V-${LOTION_VERSION}.tar.gz"
+    mkdir -p ~/.local/share/lotion-${LOTION_VERSION}
+    tar xvzf /tmp/lotion-${LOTION_VERSION}.tar.gz -C ~/.local/share/lotion-${LOTION_VERSION} --strip=1
+    cd ~/.local/share/lotion-${LOTION_VERSION}
+    ./install.sh
+    cd ~
 fi
 
 sudo apt-get -y autoremove
@@ -310,3 +320,4 @@ echo "finished...."
 # ntfs
 # grub theme, grub font
 # lotion, tusk, markdown tool
+# todo jenkins user change
