@@ -319,5 +319,5 @@ echo "finished...."
 # stow
 # ntfs
 # grub theme, grub font
-# lotion, tusk, markdown tool
-# todo jenkins user change
+# tusk, markdown tool
+# todo jenkins user/port change
