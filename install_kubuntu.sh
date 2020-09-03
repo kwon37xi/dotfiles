@@ -102,7 +102,14 @@ sudo add-apt-repository -y --no-update "deb [arch=amd64] https://download.virtua
 sudo sh -c 'curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.gpg'
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 
+# asbru-cm
 curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash
+
+# jenkins https://www.jenkins.io/doc/book/installing/
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+    /etc/apt/sources.list.d/jenkins.list'
+
 
 sudo add-apt-repository -y --no-update ppa:gezakovacs/ppa
 sudo add-apt-repository -y --no-update ppa:git-core/ppa
@@ -165,6 +172,7 @@ sudo apt-get install -y inxi \
     openjdk-11-jdk \
     adoptopenjdk-11-hotspot adoptopenjdk-8-hotspot \
     java-11-amazon-corretto-jdk \
+    jenkins \
     nodejs \
     virtualbox-${VIRTUALBOX_VERSION} \
     freerdp2-x11 \
