@@ -301,3 +301,4 @@ echo "finished...."
 # stow
 # ntfs
 # grub theme, grub font
+# lotion, tusk, markdown tool
