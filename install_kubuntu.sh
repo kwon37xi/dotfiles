@@ -158,7 +158,7 @@ sudo apt-get install -y inxi \
     fonts-naver-d2coding \
     fonts-unfonts-core \
     fonts-unfonts-extra \
-    fonts-noto* \
+    fonts-noto-cjk fonts-noto-cjk-extra \
     uim uim-byeoru \
     build-essential \
     code \
