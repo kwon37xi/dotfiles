@@ -87,13 +87,6 @@ sudo add-apt-repository -y --no-update "https://adoptopenjdk.jfrog.io/adoptopenj
 wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
 sudo add-apt-repository -y --no-update 'deb https://apt.corretto.aws stable main'
 
-# node.js LTS
-curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-
-# yarn
-curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-
 # virtualbox  https://www.virtualbox.org/wiki/Linux_Downloads
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 sudo add-apt-repository -y --no-update "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
@@ -167,7 +160,7 @@ sudo apt-get install -y inxi \
     adoptopenjdk-11-hotspot adoptopenjdk-8-hotspot \
     java-11-amazon-corretto-jdk \
     jenkins \
-    nodejs \
+    nodejs yarnpkg \
     virtualbox-${VIRTUALBOX_VERSION} \
     freerdp2-x11 \
     direnv \
