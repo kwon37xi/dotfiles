@@ -117,6 +117,7 @@ echo "### 필수 소프트웨어 자동 설치"
 # plasma-discover-backend-fwupd 는 설치 불필요
 sudo apt-get install -y inxi \
     kubuntu-restricted-addons kubuntu-restricted-extras \
+    htop \
     git \
     muon aptitude qapt-deb-installer debocker \
     plasma-discover-backend-flatpak plasma-discover-backend-snap plasma-discover-backend-fwupd \
