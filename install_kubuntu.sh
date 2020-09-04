@@ -174,7 +174,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 
 echo "### install wine-stable ###"
 sudo dpkg --add-architecture i386
-sudo apt-get install --install-recommends winehq-stable winetricks
+sudo apt-get install -y --install-recommends winehq-stable winetricks
 
 echo "### install google chrome ###"
 if ! [ -f "/usr/bin/google-chrome" ]; then
