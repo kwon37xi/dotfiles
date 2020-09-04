@@ -170,7 +170,7 @@ sudo apt-get install -y inxi \
     stow
 
 # flatpak 설치
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "### install wine-stable ###"
 sudo dpkg --add-architecture i386
