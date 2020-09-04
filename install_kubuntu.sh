@@ -105,12 +105,6 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 # asbru-cm
 curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash
 
-# jenkins https://www.jenkins.io/doc/book/installing/
-wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
-    /etc/apt/sources.list.d/jenkins.list'
-
-
 sudo add-apt-repository -y --no-update ppa:gezakovacs/ppa
 sudo add-apt-repository -y --no-update ppa:git-core/ppa
 sudo add-apt-repository -y --no-update ppa:libreoffice/ppa
@@ -275,10 +269,10 @@ echo "### uim-toolbar config ###"
 # change input method to fcitx - no need
 im-config -n uim
 
-#sudo update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-qt5 100
-#sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
-sudo update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk3-systray 100
-sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk3-systray
+sudo update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-qt5 100
+sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
+#sudo update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk3-systray 100
+#sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk3-systray
 ! [ -f /usr/bin/uim-im-switcher-qt4 ] && sudo ln -s /usr/bin/uim-im-switcher-qt5 /usr/bin/uim-im-switcher-qt4
 ! [ -f /usr/bin/uim-pref-qt4 ] && sudo ln -s /usr/bin/uim-pref-qt5 /usr/bin/uim-pref-qt4
 
@@ -320,4 +314,3 @@ echo "finished...."
 # ntfs
 # grub theme, grub font
 # tusk, markdown tool
-# todo jenkins user/port change
