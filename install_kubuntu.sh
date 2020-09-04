@@ -190,12 +190,11 @@ if ! [ -f "/usr/bin/google-chrome" ]; then
     sudo dpkg -i ~/Downloads/google-chrome-stable_current_amd64.deb
 fi
 
-echo "### install naver whale ###"
-if ! [ -f "/usr/bin/naver-whale" ]; then
-    wget http://update.whale.naver.net/downloads/installers/naver-whale-stable_amd64.deb  -O ~/Downloads/naver-whale-stable_amd64.deb
-    sudo dpkg -i ~/Downloads/naver-whale-stable_amd64.deb
-fi
-
+#echo "### install naver whale ###"
+#if ! [ -f "/usr/bin/naver-whale" ]; then
+#    wget http://update.whale.naver.net/downloads/installers/naver-whale-stable_amd64.deb  -O ~/Downloads/naver-whale-stable_amd64.deb
+#    sudo dpkg -i ~/Downloads/naver-whale-stable_amd64.deb
+#fi
 
 echo "### install vagrant ###"
 if ! [ -f "/usr/bin/vagrant" ]; then
