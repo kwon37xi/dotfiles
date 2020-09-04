@@ -8,5 +8,5 @@
 (define toolbar-show-handwriting-input-pad-button? #f)
 (define toolbar-show-help-button? #f)
 (define toolbar-help-browser 'system)
-(define toolbar-help-browser-name "firefox")
-(define toolbar-icon-for-dark-background? #t)
+(define toolbar-help-browser-name "vivaldi")
+(define toolbar-icon-for-dark-background? #f)
