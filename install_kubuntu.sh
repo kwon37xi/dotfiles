@@ -160,7 +160,6 @@ sudo apt-get install -y inxi \
     openjdk-11-jdk \
     adoptopenjdk-11-hotspot adoptopenjdk-8-hotspot \
     java-11-amazon-corretto-jdk \
-    jenkins \
     nodejs yarnpkg \
     virtualbox-${VIRTUALBOX_VERSION} \
     freerdp2-x11 \
