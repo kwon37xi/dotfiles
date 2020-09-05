@@ -1,6 +1,7 @@
 #!/bin/bash
 # error 발생시 즉각 중단.
-set -e
+set -eux -o pipefail
+shopt -s failglob
 
 source ./config.sh
 
@@ -61,7 +62,9 @@ sudo apt-get install -y apt-transport-https \
     gnupg-agent \
     software-properties-common \
     software-properties-qt \
-    unzip unrar p7zip-full
+    unzip unrar p7zip-full \
+    curl
+
 sudo apt-get clean
 
 echo "### 저장소 추가 ###"
