@@ -103,7 +103,6 @@ curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.de
 
 sudo add-apt-repository -y --no-update ppa:gezakovacs/ppa
 sudo add-apt-repository -y --no-update ppa:git-core/ppa
-sudo add-apt-repository -y --no-update ppa:libreoffice/ppa
 sudo add-apt-repository -y --no-update ppa:graphics-drivers/ppa
 sudo add-apt-repository -y --no-update ppa:pinta-maintainers/pinta-stable
 sudo add-apt-repository -y --no-update ppa:linrunner/tlp
@@ -177,8 +176,12 @@ sudo apt-get clean
 # flatpak 설치
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+echo "### install ttf-mscorefonts ###"
+# https://askubuntu.com/questions/16225/how-can-i-accept-the-microsoft-eula-agreement-for-ttf-mscorefonts-installer
+echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+sudo apt-get install -y ttf-mscorefonts-installer
+
 echo "### install wine-stable ###"
-sudo dpkg --add-architecture i386
 sudo apt-get install -y --install-recommends winehq-stable winetricks
 sudo apt-get clean
 
@@ -307,7 +310,6 @@ echo "finished...."
 # vpn, wifi
 # vivaldi 자동 설정
 # keepassxc 혹은 unix pass
-# stow
 # ntfs
 # grub theme, grub font
 # tusk, markdown tool
