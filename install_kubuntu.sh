@@ -87,13 +87,6 @@ sudo add-apt-repository -y --no-update "https://adoptopenjdk.jfrog.io/adoptopenj
 wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
 sudo add-apt-repository -y --no-update 'deb https://apt.corretto.aws stable main'
 
-# node.js LTS
-curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-
-# yarn
-curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-
 # virtualbox  https://www.virtualbox.org/wiki/Linux_Downloads
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 sudo add-apt-repository -y --no-update "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
@@ -104,12 +97,6 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 
 # asbru-cm
 curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash
-
-# jenkins https://www.jenkins.io/doc/book/installing/
-wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
-    /etc/apt/sources.list.d/jenkins.list'
-
 
 sudo add-apt-repository -y --no-update ppa:gezakovacs/ppa
 sudo add-apt-repository -y --no-update ppa:git-core/ppa
@@ -130,6 +117,7 @@ echo "### 필수 소프트웨어 자동 설치"
 # plasma-discover-backend-fwupd 는 설치 불필요
 sudo apt-get install -y inxi \
     kubuntu-restricted-addons kubuntu-restricted-extras \
+    htop \
     git \
     muon aptitude qapt-deb-installer debocker \
     plasma-discover-backend-flatpak plasma-discover-backend-snap plasma-discover-backend-fwupd \
@@ -164,7 +152,7 @@ sudo apt-get install -y inxi \
     fonts-naver-d2coding \
     fonts-unfonts-core \
     fonts-unfonts-extra \
-    fonts-noto* \
+    fonts-noto-cjk fonts-noto-cjk-extra \
     uim uim-byeoru \
     build-essential \
     code \
@@ -172,8 +160,6 @@ sudo apt-get install -y inxi \
     openjdk-11-jdk \
     adoptopenjdk-11-hotspot adoptopenjdk-8-hotspot \
     java-11-amazon-corretto-jdk \
-    jenkins \
-    nodejs \
     virtualbox-${VIRTUALBOX_VERSION} \
     freerdp2-x11 \
     direnv \
@@ -190,7 +176,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 
 echo "### install wine-stable ###"
 sudo dpkg --add-architecture i386
-sudo apt-get install --install-recommends winehq-stable winetricks
+sudo apt-get install -y --install-recommends winehq-stable winetricks
 sudo apt-get clean
 
 echo "### install google chrome ###"
@@ -199,12 +185,11 @@ if ! [ -f "/usr/bin/google-chrome" ]; then
     sudo dpkg -i ~/Downloads/google-chrome-stable_current_amd64.deb
 fi
 
-echo "### install naver whale ###"
-if ! [ -f "/usr/bin/naver-whale" ]; then
-    wget http://update.whale.naver.net/downloads/installers/naver-whale-stable_amd64.deb  -O ~/Downloads/naver-whale-stable_amd64.deb
-    sudo dpkg -i ~/Downloads/naver-whale-stable_amd64.deb
-fi
-
+#echo "### install naver whale ###"
+#if ! [ -f "/usr/bin/naver-whale" ]; then
+#    wget http://update.whale.naver.net/downloads/installers/naver-whale-stable_amd64.deb  -O ~/Downloads/naver-whale-stable_amd64.deb
+#    sudo dpkg -i ~/Downloads/naver-whale-stable_amd64.deb
+#fi
 
 echo "### install vagrant ###"
 if ! [ -f "/usr/bin/vagrant" ]; then
@@ -278,12 +263,12 @@ echo "### uim-toolbar config ###"
 # change input method to fcitx - no need
 im-config -n uim
 
-#sudo update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-qt5 100
-#sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
-sudo update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk3-systray 100
-sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk3-systray
-sudo ln -s /usr/bin/uim-im-switcher-qt5 /usr/bin/uim-im-switcher-qt4
-sudo ln -s /usr/bin/uim-pref-qt5 /usr/bin/uim-pref-qt4
+sudo update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-qt5 100
+sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
+#sudo update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk3-systray 100
+#sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk3-systray
+! [ -f /usr/bin/uim-im-switcher-qt4 ] && sudo ln -s /usr/bin/uim-im-switcher-qt5 /usr/bin/uim-im-switcher-qt4
+! [ -f /usr/bin/uim-pref-qt4 ] && sudo ln -s /usr/bin/uim-pref-qt5 /usr/bin/uim-pref-qt4
 
 echo "### install JetBrains Toolbox ###"
 if ! [ -f "$HOME/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox" ]; then
@@ -292,6 +277,16 @@ if ! [ -f "$HOME/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox" ]; then
     tar xvzf  jetbrains-toolbox.tar.gz
     cd "jetbrains-toolbox-${JETBRAINS_TOOLBOX_VERSION}"
     ./jetbrains-toolbox 
+fi
+
+echo "### install Lotion notion client ###"
+if ! [ -d "$HOME/.local/share/lotion-${LOTION_VERSION}" ]; then
+    wget -O /tmp/lotion-${LOTION_VERSION}.tar.gz "https://github.com/puneetsl/lotion/archive/V-${LOTION_VERSION}.tar.gz"
+    mkdir -p ~/.local/share/lotion-${LOTION_VERSION}
+    tar xvzf /tmp/lotion-${LOTION_VERSION}.tar.gz -C ~/.local/share/lotion-${LOTION_VERSION} --strip=1
+    cd ~/.local/share/lotion-${LOTION_VERSION}
+    ./install.sh
+    cd ~
 fi
 
 sudo apt-get -y autoremove
@@ -312,4 +307,4 @@ echo "finished...."
 # stow
 # ntfs
 # grub theme, grub font
-# lotion, tusk, markdown tool
+# tusk, markdown tool
