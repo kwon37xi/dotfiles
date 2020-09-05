@@ -113,7 +113,6 @@ sudo apt-add-repository -y --no-update universe
 
 # update all
 sudo apt-get update
-sudo apt-get -y upgrade
 
 echo "### 필수 소프트웨어 자동 설치"
 # plasma-discover-backend-fwupd 는 설치 불필요
@@ -294,6 +293,7 @@ if ! [ -d "$HOME/.local/share/lotion-${LOTION_VERSION}" ]; then
     cd ~
 fi
 
+sudo apt-get -y upgrade
 sudo apt-get -y autoremove
 
 echo "finished...."
