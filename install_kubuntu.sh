@@ -157,6 +157,7 @@ sudo apt-get install -y inxi \
     fonts-unfonts-core \
     fonts-unfonts-extra \
     fonts-noto-cjk fonts-noto-cjk-extra \
+    ttf-mscorefonts-installer \
     uim uim-byeoru \
     build-essential \
     code \
