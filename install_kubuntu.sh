@@ -117,6 +117,8 @@ sudo apt-get -y upgrade
 
 echo "### 필수 소프트웨어 자동 설치"
 # plasma-discover-backend-fwupd 는 설치 불필요
+# ttf-mscorefonts-installer auto install : https://askubuntu.com/questions/16225/how-can-i-accept-the-microsoft-eula-agreement-for-ttf-mscorefonts-installer
+echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 sudo apt-get install -y inxi \
     kubuntu-restricted-addons kubuntu-restricted-extras \
     htop \
@@ -176,10 +178,6 @@ sudo apt-get clean
 # flatpak 설치
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-echo "### install ttf-mscorefonts ###"
-# https://askubuntu.com/questions/16225/how-can-i-accept-the-microsoft-eula-agreement-for-ttf-mscorefonts-installer
-echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
-sudo apt-get install -y ttf-mscorefonts-installer
 
 echo "### install wine-stable ###"
 sudo apt-get install -y --install-recommends winehq-stable winetricks
