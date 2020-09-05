@@ -5,4 +5,5 @@ shopt -s failglob
 sudo apt-get -y install git
 git clone https://github.com/kwon37xi/dotfiles.git ~/.dotfiles
 
+cd ~/.dotfiles
 /usr/bin/bash ~/.dotfiles/install_kubuntu.sh
