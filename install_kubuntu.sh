@@ -62,7 +62,7 @@ sudo apt-get install -y apt-transport-https \
     software-properties-common \
     software-properties-qt \
     unzip unrar p7zip-full
-
+sudo apt-get clean
 
 echo "### 저장소 추가 ###"
 # prepare repositories
@@ -183,12 +183,15 @@ sudo apt-get install -y inxi \
     openssh-server openssh-sftp-server \
     stow
 
+sudo apt-get clean
+
 # flatpak 설치
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "### install wine-stable ###"
 sudo dpkg --add-architecture i386
 sudo apt-get install --install-recommends winehq-stable winetricks
+sudo apt-get clean
 
 echo "### install google chrome ###"
 if ! [ -f "/usr/bin/google-chrome" ]; then
