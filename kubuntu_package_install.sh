@@ -81,11 +81,6 @@ sudo add-apt-repository -y --no-update 'deb https://repo.vivaldi.com/archive/deb
 #curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 #sudo add-apt-repository -y --no-update "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
-# wine 
-sudo dpkg --add-architecture i386
-wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-sudo add-apt-repository -y --no-update "deb https://dl.winehq.org/wine-builds/ubuntu/ $(lsb_release -cs)  main"
-
 # adopt-openjdk https://adoptopenjdk.net/installation.html#linux-pkg
 wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
 sudo add-apt-repository -y --no-update "https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/"
@@ -121,7 +116,10 @@ sudo apt-get update
 echo "### 필수 소프트웨어 자동 설치"
 # plasma-discover-backend-fwupd 는 설치 불필요
 # ttf-mscorefonts-installer auto install : https://askubuntu.com/questions/16225/how-can-i-accept-the-microsoft-eula-agreement-for-ttf-mscorefonts-installer
+
+sudo dpkg --add-architecture i386
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+
 sudo apt-get install -y inxi \
     kubuntu-restricted-addons kubuntu-restricted-extras \
     htop \
@@ -170,23 +168,20 @@ sudo apt-get install -y inxi \
     adoptopenjdk-11-hotspot adoptopenjdk-8-hotspot \
     java-11-amazon-corretto-jdk \
     virtualbox-${VIRTUALBOX_VERSION} \
+    vagrant \
     freerdp2-x11 \
     direnv \
     autojump \
     unetbootin \
     asbru-cm  \
     openssh-server openssh-sftp-server \
+    wine32 wine64 wine32-preloader wine64-preloader winetricks playonlinux \
     stow
 
 sudo apt-get clean
 
 # flatpak 설치
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-
-echo "### install wine-stable ###"
-sudo apt-get install -y --install-recommends winehq-stable winetricks
-sudo apt-get clean
 
 echo "### install google chrome ###"
 if ! [ -f "/usr/bin/google-chrome" ]; then
@@ -199,12 +194,6 @@ fi
 #    wget http://update.whale.naver.net/downloads/installers/naver-whale-stable_amd64.deb  -O ~/Downloads/naver-whale-stable_amd64.deb
 #    sudo dpkg -i ~/Downloads/naver-whale-stable_amd64.deb
 #fi
-
-echo "### install vagrant ###"
-if ! [ -f "/usr/bin/vagrant" ]; then
-    wget "$VAGRANT_PACKAGE_DOWNLOAD_URL" -O "/tmp/${VAGRANT_DEB_FILENAME}"
-    sudo dpkg -i "/tmp/${VAGRANT_DEB_FILENAME}"
-fi
 
 echo "### install packer ###"
 if ! [ -f "/opt/packer/packer" ]; then
@@ -317,4 +306,3 @@ echo "finished...."
 # ntfs
 # grub theme, grub font
 # tusk, markdown tool
-# wine 제거하고, wine32,wine64,playonlinux 로 대체
