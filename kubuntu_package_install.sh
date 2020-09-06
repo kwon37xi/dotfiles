@@ -237,7 +237,7 @@ if ! [ -d ~/.fonts/free-korean-fonts ]; then
 fi
 
 if ! [ -f "/usr/bin/zoom" ]; then
-    sudo apt-get install -y libgl1-mesa-glx libegl1-mesa libxcb-xtest
+    sudo apt-get install -y libgl1-mesa-glx libegl1-mesa libxcb-xtest0
     wget https://zoom.us/client/latest/zoom_amd64.deb -O /tmp/zoom_amd64.deb
     sudo dpkg -i /tmp/zoom_amd64.deb
 fi
