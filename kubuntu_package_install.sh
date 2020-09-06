@@ -149,6 +149,7 @@ sudo apt-get install -y inxi \
     openfortivpn network-manager-fortisslvpn \
     universal-ctags fzf \
     ripgrep \
+    tmux \
     fonts-alee \
     fonts-lexi-gulim \
     fonts-lexi-saebom \
