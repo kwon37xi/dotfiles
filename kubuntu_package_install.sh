@@ -55,6 +55,9 @@ if [ -d ~/비디오 ]; then
     mv ~/비디오 ~/Videos
 fi
 
+echo "### change Ubuntu mirror to Kakao ###"
+sudo sed -i.bak -e 's/http:\/\/kr.archive.ubuntu.com/http:\/\/mirror.kakao.com/g' /etc/apt/sources.list
+
 echo "### Install base packages ###"
 sudo apt-get install -y apt-transport-https \
     ca-certificates \
