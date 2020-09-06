@@ -57,6 +57,7 @@ fi
 
 echo "### change Ubuntu mirror to Kakao ###"
 sudo sed -i.bak -e 's/http:\/\/kr.archive.ubuntu.com/http:\/\/mirror.kakao.com/g' /etc/apt/sources.list
+sudo apt-get update
 
 echo "### Install base packages ###"
 sudo apt-get install -y apt-transport-https \
