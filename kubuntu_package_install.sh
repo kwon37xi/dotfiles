@@ -317,3 +317,4 @@ echo "finished...."
 # ntfs
 # grub theme, grub font
 # tusk, markdown tool
+# wine 제거하고, wine32,wine64,playonlinux 로 대체
