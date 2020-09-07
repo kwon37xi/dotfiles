@@ -306,3 +306,5 @@ echo "finished...."
 # ntfs
 # grub theme, grub font
 # tusk, markdown tool
+# asbrucm recover
+# dbeaver backup & recover
