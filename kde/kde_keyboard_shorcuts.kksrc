@@ -4,7 +4,7 @@ switch-to-activity-627efdf8-0e39-47c1-838a-1cd1d9191c97=none
 [kaccess][Global Shortcuts]
 Toggle Screen Reader On and Off=none
 
-[khotkeys][Global Shortcuts]
+[kded5][Global Shortcuts]
 Disable Touchpad=Touchpad Off
 Enable Touchpad=Touchpad On
 Show System Activity=Ctrl+Esc
@@ -89,7 +89,7 @@ Switch to Desktop 7=none
 Switch to Desktop 8=none
 Switch to Desktop 9=none
 Switch to Next Desktop=Meta+PgDown
-Switch to Next Screen=none
+Switch to Next Screen=Meta+Shift+Right
 Switch to Previous Desktop=Meta+PgUp
 Switch to Previous Screen=none
 Switch to Screen 0=none
@@ -200,7 +200,7 @@ Window to Desktop 9=none
 Window to Next Desktop=Meta+Ctrl+Alt+PgDown
 Window to Next Screen=none
 Window to Previous Desktop=Meta+Ctrl+Alt+PgUp
-Window to Previous Screen=none
+Window to Previous Screen=Meta+Shift+Left
 Window to Screen 0=none
 Window to Screen 1=none
 Window to Screen 2=none
@@ -257,7 +257,7 @@ activate task manager entry 6=Meta+6
 activate task manager entry 7=Meta+7
 activate task manager entry 8=Meta+8
 activate task manager entry 9=Meta+9
-activate widget 177=Meta+Esc
+activate widget 177=Alt+F1
 activate widget 35=none
 clear-history=none
 clipboard_action=none
