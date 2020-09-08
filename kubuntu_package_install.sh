@@ -100,6 +100,10 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 # asbru-cm
 curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash
 
+# typora markdown editor
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+sudo add-apt-repository -y --no-update 'deb https://typora.io/linux ./'
+
 sudo add-apt-repository -y --no-update ppa:gezakovacs/ppa
 sudo add-apt-repository -y --no-update ppa:git-core/ppa
 sudo add-apt-repository -y --no-update ppa:graphics-drivers/ppa
@@ -161,7 +165,8 @@ sudo apt-get install -y inxi \
     fonts-noto-cjk fonts-noto-cjk-extra \
     ttf-mscorefonts-installer \
     uim uim-byeoru \
-    build-essential \
+    build-essential make cmake \
+    openssh-server openssh-sftp-server sshpass ksshaskpass putty putty-tools openssh-client \
     code \
     java-common  \
     openjdk-11-jdk \
@@ -174,7 +179,7 @@ sudo apt-get install -y inxi \
     autojump \
     unetbootin \
     asbru-cm  \
-    openssh-server openssh-sftp-server \
+    typora \
     wine32 wine64 wine32-preloader wine64-preloader winetricks playonlinux \
     stow
 
@@ -292,7 +297,7 @@ sudo apt-get -y autoremove
 
 echo "finished...."
 
-# todo - , fusuma, 
+# fusuma, 
 # kde 단축키
 # KDE font config...
 # git default config, credential helper
@@ -305,6 +310,6 @@ echo "finished...."
 # keepassxc 혹은 unix pass
 # ntfs
 # grub theme, grub font
-# tusk, markdown tool
 # asbrucm recover
 # dbeaver backup & recover
+# google-drive ocamelfuse
