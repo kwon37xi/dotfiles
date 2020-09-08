@@ -121,7 +121,6 @@ echo "### 필수 소프트웨어 자동 설치"
 # plasma-discover-backend-fwupd 는 설치 불필요
 # ttf-mscorefonts-installer auto install : https://askubuntu.com/questions/16225/how-can-i-accept-the-microsoft-eula-agreement-for-ttf-mscorefonts-installer
 
-sudo dpkg --add-architecture i386
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 
 sudo apt-get install -y inxi \
@@ -180,8 +179,11 @@ sudo apt-get install -y inxi \
     unetbootin \
     asbru-cm  \
     typora \
-    wine32 wine64 wine32-preloader wine64-preloader winetricks playonlinux \
     stow
+
+# 실패가 잦아서 wine 패키지독립설치
+sudo dpkg --add-architecture i386
+sudo apt-get -y install wine32 wine64 wine32-preloader wine64-preloader winetricks playonlinux
 
 sudo apt-get clean
 
