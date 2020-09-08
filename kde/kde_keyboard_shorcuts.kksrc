@@ -4,7 +4,7 @@ switch-to-activity-627efdf8-0e39-47c1-838a-1cd1d9191c97=none
 [kaccess][Global Shortcuts]
 Toggle Screen Reader On and Off=none
 
-[kded5][Global Shortcuts]
+[khotkeys][Global Shortcuts]
 Disable Touchpad=Touchpad Off
 Enable Touchpad=Touchpad On
 Show System Activity=Ctrl+Esc
@@ -89,7 +89,7 @@ Switch to Desktop 7=none
 Switch to Desktop 8=none
 Switch to Desktop 9=none
 Switch to Next Desktop=Meta+PgDown
-Switch to Next Screen=Meta+Shift+Right
+Switch to Next Screen=none
 Switch to Previous Desktop=Meta+PgUp
 Switch to Previous Screen=none
 Switch to Screen 0=none
@@ -198,7 +198,7 @@ Window to Desktop 7=none
 Window to Desktop 8=none
 Window to Desktop 9=none
 Window to Next Desktop=Meta+Ctrl+Alt+PgDown
-Window to Next Screen=none
+Window to Next Screen=Meta+Shift+Right
 Window to Previous Desktop=Meta+Ctrl+Alt+PgUp
 Window to Previous Screen=Meta+Shift+Left
 Window to Screen 0=none
@@ -234,6 +234,9 @@ CurrentMonitorScreenShot=none
 FullScreenScreenShot=Shift+Print
 RectangularRegionScreenShot=Meta+Shift+Print
 _launch=Print
+
+[org.kde.yakuake.desktop][Global Shortcuts]
+_launch=none
 
 [org_kde_powerdevil][Global Shortcuts]
 Decrease Keyboard Brightness=Keyboard Brightness Down
