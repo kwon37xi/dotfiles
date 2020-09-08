@@ -3,7 +3,7 @@
 set -eux -o pipefail
 shopt -s failglob
 
-source ./config.sh
+source ./config_envs
 
 # first change sudo
 echo "### add sudo without password permission to current user ###"
@@ -183,7 +183,7 @@ sudo apt-get install -y inxi \
 
 # 실패가 잦아서 wine 패키지독립설치
 sudo dpkg --add-architecture i386
-sudo apt-get -y install wine32 wine64 wine32-preloader wine64-preloader winetricks playonlinux
+sudo apt-get -y install wine winetricks playonlinux
 
 sudo apt-get clean
 
