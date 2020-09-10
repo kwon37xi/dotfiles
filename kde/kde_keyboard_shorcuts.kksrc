@@ -4,7 +4,7 @@ switch-to-activity-627efdf8-0e39-47c1-838a-1cd1d9191c97=none
 [kaccess][Global Shortcuts]
 Toggle Screen Reader On and Off=none
 
-[khotkeys][Global Shortcuts]
+[kcm_touchpad][Global Shortcuts]
 Disable Touchpad=Touchpad Off
 Enable Touchpad=Touchpad On
 Show System Activity=Ctrl+Esc
@@ -42,7 +42,7 @@ Cube=none
 Cylinder=none
 Decrease Opacity=none
 Expose=none
-ExposeAll=Meta+/; Launch (C)
+ExposeAll=Meta+?; Launch (C)
 ExposeClass=none
 Increase Opacity=none
 Invert Screen Colors=none
@@ -57,7 +57,7 @@ MoveZoomRight=none
 MoveZoomUp=none
 Setup Window Shortcut=none
 Show Desktop=Meta+D
-ShowDesktopGrid=Meta+?
+ShowDesktopGrid=Meta+/
 Sphere=none
 Suspend Compositing=Alt+Shift+F12
 Switch One Desktop Down=none
