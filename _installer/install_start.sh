@@ -7,3 +7,9 @@ git clone https://github.com/kwon37xi/dotfiles.git ~/.dotfiles
 
 cd ~/.dotfiles/_installer
 /usr/bin/bash ~/.dotfiles/_installer/kubuntu_package_install.sh
+/usr/bin/bash ~/.dotfiles/_installer/local_apps_install.sh
+/usr/bin/bash ~/.dotfiles/_installer/dotfiles_install.sh
+
+echo "==========================================="
+echo "      installation finished. REBOOT!
+echo "==========================================="

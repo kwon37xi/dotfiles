@@ -297,8 +297,6 @@ fi
 sudo apt-get -y upgrade
 sudo apt-get -y autoremove
 
-echo "finished...."
-
 # fusuma, 
 # kde 단축키
 # KDE font config...
@@ -315,4 +313,4 @@ echo "finished...."
 # asbrucm recover
 # dbeaver backup & recover
 # google-drive ocamelfuse
-# todoist
+# intellij
