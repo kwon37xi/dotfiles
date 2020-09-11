@@ -3,10 +3,14 @@
 set -eux -o pipefail
 shopt -s failglob
 
-LOCAL_BASHRCS_DIR=~/.local/bashrcs
-
+LOCAL_BASHRCS_DIR=~/.config/bashrc.d
 mkdir -p $LOCAL_BASHRCS_DIR
+chmod 700 $LOCAL_BASHRCS_DIR
+
 mkdir -p ~/.local/tmp/vim/{swap,backup,undos}
+
+# initialize bashrc.d load
+echo "for bashrc in $LOCAL_BASHRCS_DIR/*.bashrc; do source \"\$bashrc\"; done;" >> ~/.bashrc
 
 # sdkman https://sdkman.io
 curl -s "https://get.sdkman.io" | bash
@@ -14,8 +18,11 @@ curl -s "https://get.sdkman.io" | bash
 # jenv https://www.jenv.be
 git clone https://github.com/jenv/jenv.git ~/.jenv
 
-echo 'export PATH="$HOME/.jenv/bin:$PATH"' > $LOCAL_BASHRCS_DIR/jenvrc
-echo 'eval "$(jenv init -)"' >> $LOCAL_BASHRCS_DIR/jenvrc
+echo 'export PATH="$HOME/.jenv/bin:$PATH"' > $LOCAL_BASHRCS_DIR/jenv.bashrc
+echo 'eval "$(jenv init -)"' >> $LOCAL_BASHRCS_DIR/jenv.bashrc
+
+# autojump
+echo '. /usr/share/autojump/autojump.sh' > $LOCAL_BASHRCS_DIR/autojump.bashrc
 
 # todo add JDKs to jenv
 

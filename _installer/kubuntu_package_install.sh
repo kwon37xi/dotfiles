@@ -303,7 +303,6 @@ sudo apt-get -y autoremove
 # git default config, credential helper
 # kwallet git
 # ssh passphrase
-# sdkman, jenv
 # debcoker
 # vpn, wifi
 # vivaldi 자동 설정
