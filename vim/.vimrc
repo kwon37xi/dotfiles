@@ -3,13 +3,6 @@
 " Windows Installation
 " Windows에서는 closetag 를 심볼릭링크해줘야한다. 이 파일에서 closetag로 검색해볼것.
 " Windows 에서는 $HOME\vimfiles 아래에 vimrc 로 설정파일을 두고 그 외 플러그인 디렉토리도 둔다. 즉 ~/.vim = $HOME\vimfiles
-" cd $HOME\vimfiles
-" curl -fLo autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-" mklink vimrc ..\tmp\vim\config\.vimrc
-" HOME directory로 이동해서
-" mklink vimrc_pc ..\tmp\vim\config\.vimrc_pc_win
-" > 나머지 *nix 참조
-" 
 " *nix Installation
 " mkdir -p ~/tmp/vim/{backup,swap}
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -32,9 +25,9 @@ endif
 
 set encoding=utf8 " windows 에서 사용시 필수
 set nocompatible
-set backupdir=~/tmp/vim/backup
-set directory=~/tmp/vim/swap
-set undodir=~/tmp/vim/backup
+set backupdir=~/.local/tmp/vim/backup
+set directory=~/.local/tmp/vim/swap
+set undodir=~/.local/tmp/vim/undos
 set nomousehide
 set ignorecase
 set smartcase
