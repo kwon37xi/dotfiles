@@ -22,6 +22,14 @@
 " ln -s ~/tmp/vim/config/.vimrc ~/.vimrc
 " cp ~/tmp/vim/config/.vimrc_pc_linux ~/.vimrc_pc
 " vim -c PlugInstall
+
+" vim-plug auto-install
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 set encoding=utf8 " windows 에서 사용시 필수
 set nocompatible
 set backupdir=~/tmp/vim/backup
