@@ -9,3 +9,4 @@ stow -d $DOTFILES_DIR -t ~/ -S uim
 stow -d $DOTFILES_DIR -t ~/ -S local_bin
 stow -d $DOTFILES_DIR -t ~/ -S htop
 stow -d $DOTFILES_DIR -t ~/ -S git
+# todo separate personal / work git config
