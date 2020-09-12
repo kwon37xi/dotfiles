@@ -13,9 +13,6 @@ curl -s "https://get.sdkman.io" | bash
 # jenv https://www.jenv.be
 git clone https://github.com/jenv/jenv.git ~/.jenv
 
-echo 'export PATH="$HOME/.jenv/bin:$PATH"' > $LOCAL_BASHRCS_DIR/jenv.bashrc
-echo 'eval "$(jenv init -)"' >> $LOCAL_BASHRCS_DIR/jenv.bashrc
-
 # autostarts
 echo "### autostarts ###"
 mkdir -p ~/.config/autostart

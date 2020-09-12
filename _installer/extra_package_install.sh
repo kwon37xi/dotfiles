@@ -63,14 +63,12 @@ fi
 echo "### install bitwarden ###"
 sudo flatpak install -y flathub com.bitwarden.desktop
 
-#echo "### install JetBrains Toolbox ###"
-#if ! [ -f "$HOME/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox" ]; then
-#    wget "https://download-cf.jetbrains.com/toolbox/jetbrains-toolbox-${JETBRAINS_TOOLBOX_VERSION}.tar.gz" -O /tmp/jetbrains-toolbox.tar.gz
-#    cd /tmp
-#    tar xvzf  jetbrains-toolbox.tar.gz
-#    cd "jetbrains-toolbox-${JETBRAINS_TOOLBOX_VERSION}"
-#    ./jetbrains-toolbox 
-#fi
+echo "### install JetBrains IntelliJ IDEA Ultimate ###"
+if ! [ -f "$HOME/.local/share/JetBrains/ideaIU" ]; then
+    mkdir -p $HOME/.local/share/JetBrains/ideaIU
+    wget https://download.jetbrains.com/idea/ideaIU-${JETBRAINS_INTELLIJ_IDEA_VERSION}.tar.gz -O /tmp/ideaIU-${JETBRAINS_INTELLIJ_IDEA_VERSION}.tar.gz
+    tar xvzf /tmp/ideaIU=${JETBRAINS_INTELLIJ_IDEA_VERSION}.tar.gz --strip=1 -C ~/.local/share/JetBrains/ideaIU
+fi
 
 echo "### install Lotion notion client ###"
 if ! [ -d "$HOME/.local/share/lotion-${LOTION_VERSION}" ]; then
