@@ -111,6 +111,7 @@ sudo add-apt-repository -y --no-update ppa:pinta-maintainers/pinta-stable
 sudo add-apt-repository -y --no-update ppa:linrunner/tlp
 # for tlpui
 sudo add-apt-repository -y --no-update ppa:linuxuprising/apps
+sudo add-apt-repository -y --no-update ppa:kdenlive/kdenlive-stable
 sudo apt-add-repository -y --no-update multiverse
 sudo apt-add-repository -y --no-update universe
 
@@ -179,6 +180,7 @@ sudo apt-get install -y inxi \
     unetbootin \
     asbru-cm  \
     typora \
+    kdenlive \
     stow
 
 # 실패가 잦아서 wine 패키지독립설치
