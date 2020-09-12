@@ -1,8 +1,3 @@
-#!/bin/bash
-# error 발생시 즉각 중단.
-set -eux -o pipefail
-shopt -s failglob
-
 LOCAL_BASHRCS_DIR=~/.config/bashrc.d
 mkdir -p $LOCAL_BASHRCS_DIR
 chmod 700 $LOCAL_BASHRCS_DIR
@@ -21,8 +16,12 @@ git clone https://github.com/jenv/jenv.git ~/.jenv
 echo 'export PATH="$HOME/.jenv/bin:$PATH"' > $LOCAL_BASHRCS_DIR/jenv.bashrc
 echo 'eval "$(jenv init -)"' >> $LOCAL_BASHRCS_DIR/jenv.bashrc
 
-# autojump
-echo '. /usr/share/autojump/autojump.sh' > $LOCAL_BASHRCS_DIR/autojump.bashrc
+# autostarts
+echo "### autostarts ###"
+mkdir -p ~/.config/autostart
+cd ~/.config/autostart
+cp /usr/share/applications/com.github.hluk.copyq.desktop .
+cp /usr/share/applications/org.kde.yakuake.desktop .
 
 # todo add JDKs to jenv
 

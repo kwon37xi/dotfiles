@@ -3,5 +3,5 @@ My Linux dotfiles and installation scripts
 
 ## execute with wget
 ```
-wget -O - https://raw.githubusercontent.com/kwon37xi/dotfiles/master/_installer/install_start.sh | bash
+wget -O - https://raw.githubusercontent.com/kwon37xi/dotfiles/master/install_start.sh | bash
 ```
