@@ -119,8 +119,8 @@ set guifont=D2Coding\ 14
 "set guifont=DejaVu\ Sans\ Mono\ 11
 "set guifont=Fixedsys\ Excelsior\ 3.01\ 12
 
-" 툴바 안보이게
-set guioptions-=T
+" 툴바 안보이게 - 툴바를 안보이게 하면 화면 split 시에 커서가 사라짐
+" set guioptions-=T
 
 set fileformats=unix,dos
 set fileencodings=utf8,cp949
