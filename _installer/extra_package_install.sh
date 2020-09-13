@@ -85,5 +85,3 @@ fi
 
 sudo apt-get -y full-upgrade
 sudo apt-get -y autoremove
-sudo apt-get clean
-

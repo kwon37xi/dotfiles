@@ -89,4 +89,3 @@ sudo update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
 # asbrucm recover
 # dbeaver backup & recover
 # google-drive ocamelfuse
-# intellij
