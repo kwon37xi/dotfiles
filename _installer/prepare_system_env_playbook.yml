@@ -1,5 +1,7 @@
 ---
 - name: prepare system environment
+  hosts: 127.0.01
+  connection: local
   tasks:
     - name: add to sudoers
       become: yes
