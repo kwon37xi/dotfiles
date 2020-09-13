@@ -66,33 +66,24 @@
         repo: deb https://typora.io/linux ./
         filename: typora
         update_cache: no
-    - name: ppa:jonathonf/vim
+    -name: add PPAs
+    become: yes
+    shell: "add-apt-repository -y --no-update {{ item }}"
+    with_items:
+      - ppa:jonathonf/vim
+      - ppa:gezakovacs/ppa
+      - ppa:git-core/ppa
+      - ppa:graphics-drivers/ppa
+      - ppa:linrunner/tlp
+      - ppa:linuxuprising/apps
+      - ppa:pinta-maintainers/pinta-stable
+      - ppa:kdenlive/kdenlive-stable
+    - name: multiverse universe
       become: yes
-      shell: add-apt-repository -y --no-update ppa:jonathonf/vim
-    - name:  ppa:gezakovacs/ppa
-      become: yes
-      shell: add-apt-repository -y --no-update ppa:gezakovacs/ppa
-    - name:  ppa:git-core/ppa
-      become: yes
-      shell: add-apt-repository -y --no-update ppa:git-core/ppa
-    - name: ppa:graphics-drivers/ppa
-      become: yes
-      shell: add-apt-repository -y --no-update ppa:graphics-drivers/ppa
-    - name: ppa:linrunner/tlp
-      become: yes
-      shell: add-apt-repository -y --no-update ppa:linrunner/tlp
-    - name: ppa:linuxuprising/apps for tlpui
-      become: yes
-      shell: add-apt-repository -y --no-update ppa:linuxuprising/apps
-    - name: ppa:kdenlive/kdenlive-stable
-      become: yes
-      shell: add-apt-repository -y --no-update ppa:kdenlive/kdenlive-stable
-    - name: multiverse
-      become: yes
-      shell:  apt-add-repository -y --no-update multiverse
-    - name: universe
-      become: yes
-      shell: apt-add-repository -y --no-update universe
+      shell: "apt-add-repository -y --no-update {{ item }}"
+      with_items:
+        - multiverse
+        - universe
     - name: asbru-cm
       become: yes
       shell: curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | bash
