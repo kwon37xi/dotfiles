@@ -66,18 +66,18 @@
         repo: deb https://typora.io/linux ./
         filename: typora
         update_cache: no
-    -name: add PPAs
-    become: yes
-    shell: "add-apt-repository -y --no-update {{ item }}"
-    with_items:
-      - ppa:jonathonf/vim
-      - ppa:gezakovacs/ppa
-      - ppa:git-core/ppa
-      - ppa:graphics-drivers/ppa
-      - ppa:linrunner/tlp
-      - ppa:linuxuprising/apps
-      - ppa:pinta-maintainers/pinta-stable
-      - ppa:kdenlive/kdenlive-stable
+    - name: add PPAs
+      become: yes
+      shell: "add-apt-repository -y --no-update {{ item }}"
+      with_items:
+        - ppa:jonathonf/vim
+        - ppa:gezakovacs/ppa
+        - ppa:git-core/ppa
+        - ppa:graphics-drivers/ppa
+        - ppa:linrunner/tlp
+        - ppa:linuxuprising/apps
+        - ppa:pinta-maintainers/pinta-stable
+        - ppa:kdenlive/kdenlive-stable
     - name: multiverse universe
       become: yes
       shell: "apt-add-repository -y --no-update {{ item }}"
