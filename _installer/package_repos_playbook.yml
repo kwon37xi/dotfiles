@@ -1,0 +1,101 @@
+---
+- name: prepare system environment
+  hosts: 127.0.0.1, localhost
+  connection: local
+  vars:
+    ubuntu_release: "{{ lookup('pipe', 'lsb_release -cs') }}"
+    current_user: "{{ lookup('env', 'USER') }}"
+  tasks:
+    - name: vivaldi browser key
+      become: yes
+      apt_key:
+        url: https://repo.vivaldi.com/archive/linux_signing_key.pub
+    - name: vivaldi browser repo
+      become: yes
+      apt_repository:
+        repo: deb https://repo.vivaldi.com/archive/deb/ stable main
+        filename: vivaldi
+        update_cache: no
+    - name: adoptopenjdk key
+      become: yes
+      apt_key:
+        url: https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
+    - name: adoptopenjdk repo
+      become: yes
+      apt_repository:
+        repo: "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ubuntu_release }} main"
+        filename: adoptopenjdk
+        update_cache: no
+    - name: corretojdk key
+      become: yes
+      apt_key:
+        url: https://apt.corretto.aws/corretto.key
+    - name: corretojdk repo
+      become: yes
+      apt_repository:
+        repo: deb https://apt.corretto.aws stable main
+        filename: corretojdk
+        update_cache: no
+    - name: virtualbox key
+      become: yes
+      apt_key:
+        url: https://www.virtualbox.org/download/oracle_vbox_2016.asc
+    - name: virtualbox repo
+      become: yes
+      apt_repository:
+        repo: deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian {{ ubuntu_release }} contrib
+        filename: virtualbox
+        update_cache: no
+    - name: vscode key
+      become: yes
+      apt_key:
+        url: https://packages.microsoft.com/keys/microsoft.asc
+    - name: vscode repo
+      become: yes
+      apt_repository:
+        repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+        filename: vscode
+        update_cache: no
+    - name: typora key
+      become: yes
+      apt_key:
+        url: https://typora.io/linux/public-key.asc
+    - name: typora repo
+      become: yes
+      apt_repository:
+        repo: deb https://typora.io/linux ./
+        filename: typora
+        update_cache: no
+    - name: ppa:jonathonf/vim
+      become: yes
+      shell: add-apt-repository -y --no-update ppa:jonathonf/vim
+    - name:  ppa:gezakovacs/ppa
+      become: yes
+      shell: add-apt-repository -y --no-update ppa:gezakovacs/ppa
+    - name:  ppa:git-core/ppa
+      become: yes
+      shell: add-apt-repository -y --no-update ppa:git-core/ppa
+    - name: ppa:graphics-drivers/ppa
+      become: yes
+      shell: add-apt-repository -y --no-update ppa:graphics-drivers/ppa
+    - name: ppa:linrunner/tlp
+      become: yes
+      shell: add-apt-repository -y --no-update ppa:linrunner/tlp
+    - name: ppa:linuxuprising/apps for tlpui
+      become: yes
+      shell: add-apt-repository -y --no-update ppa:linuxuprising/apps
+    - name: ppa:kdenlive/kdenlive-stable
+      become: yes
+      shell: add-apt-repository -y --no-update ppa:kdenlive/kdenlive-stable
+    - name: multiverse
+      become: yes
+      shell:  apt-add-repository -y --no-update multiverse
+    - name: universe
+      become: yes
+      shell: apt-add-repository -y --no-update universe
+    - name: asbru-cm
+      become: yes
+      shell: curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | bash
+    - name: update all
+      apt_repository:
+        update_cache: yes

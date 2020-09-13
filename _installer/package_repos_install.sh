@@ -24,12 +24,11 @@ sudo add-apt-repository -y --no-update "deb [arch=amd64] https://download.virtua
 sudo sh -c 'curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.gpg'
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 
-# asbru-cm
-curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash
-
 # typora markdown editor
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
 sudo add-apt-repository -y --no-update 'deb https://typora.io/linux ./'
+
+
 
 sudo add-apt-repository -y --no-update ppa:jonathonf/vim
 sudo add-apt-repository -y --no-update ppa:gezakovacs/ppa
@@ -42,6 +41,9 @@ sudo add-apt-repository -y --no-update ppa:linuxuprising/apps
 sudo add-apt-repository -y --no-update ppa:kdenlive/kdenlive-stable
 sudo apt-add-repository -y --no-update multiverse
 sudo apt-add-repository -y --no-update universe
+
+# asbru-cm
+curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash
 
 # update all
 sudo apt-get update

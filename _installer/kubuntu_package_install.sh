@@ -19,7 +19,7 @@ sudo apt-get install -y inxi \
     libreoffice libreoffice-help-ko libreoffice-l10n-ko \
     meld \
     tlp tlp-rdw tlpui \
-    pinta krita krita-l10n \
+    krita krita-l10n \
     gimp gimp-gmic \
     vlc smplayer youtube-dl audacious \
     ufw gufw \

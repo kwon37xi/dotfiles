@@ -2,12 +2,15 @@
 - name: prepare system environment
   hosts: 127.0.0.1
   connection: local
+  vars:
+    ubuntu_release: "{{ lookup('pipe', 'lsb_release -cs') }}"
+    current_user: "{{ lookup('env', 'USER') }}"
   tasks:
     - name: add to sudoers
       become: yes
       copy:
         dest: "/etc/sudoers.d/99-self"
-        content: "{{ lookup('env', 'USER') }}    ALL=(ALL:ALL) NOPASSWD: ALL"
+        content: "{{ current_user }}    ALL=(ALL:ALL) NOPASSWD: ALL"
         mode: 0440
         owner: root
         group: root
