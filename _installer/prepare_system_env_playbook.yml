@@ -1,21 +1,24 @@
 ---
 - name: prepare system environment
-  hosts: 127.0.01
+  hosts: 127.0.0.1
   connection: local
   tasks:
     - name: add to sudoers
       become: yes
-      file:
-        path: "/etc/sudoers.d/99-self"
+      copy:
+        dest: "/etc/sudoers.d/99-self"
         content: "{{ lookup('env'.'USER') }}    ALL=(ALL:ALL) NOPASSWD: ALL"
+        state: file
         mode: 0440
         owner: root
+        group: root
     - name: change swappiness
       become: yes
-      file:
-        path: "/etc/sysctl.d/99-vm-swappiness.conf"
+      copy:
+        dest: "/etc/sysctl.d/99-vm-swappiness.conf"
         content: "vm.swappiness=5"
         owner: root
+        group: root
     - name: change ubuntu mirror to kakao
       become: yes
       replace:
