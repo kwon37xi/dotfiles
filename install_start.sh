@@ -5,7 +5,7 @@ shopt -s failglob
 
 # 최소 필요사항 설치
 sudo apt-get -y install git ansible
-git clone https://kwon37xi@github.com/kwon37xi/dotfiles.git ~/.dotfiles
+git clone --depth=1 https://kwon37xi@github.com/kwon37xi/dotfiles.git ~/.dotfiles
 
 cd ~/.dotfiles/_installer
 source ~/.dotfiles/_installer/config_envs
