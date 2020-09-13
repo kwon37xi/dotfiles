@@ -20,6 +20,7 @@
         path: "/etc/apt/sources.list"
         regexp: "http:\/\/kr.archive.ubuntu.com/"
         replace: "http:\/\/mirror.kakao.com/"
+    -name: update ubuntu mirror
       apt:
         update_cache: yes
     - name: install basically required packages
