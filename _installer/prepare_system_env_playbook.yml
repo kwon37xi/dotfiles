@@ -2,9 +2,8 @@
 - name: prepare system environment
   hosts: 127.0.0.1
   connection: local
-  vars:
-    ubuntu_release: "{{ lookup('pipe', 'lsb_release -cs') }}"
-    current_user: "{{ lookup('env', 'USER') }}"
+  var_files:
+    - "vars.yml"
   tasks:
     - name: add to sudoers
       become: yes
