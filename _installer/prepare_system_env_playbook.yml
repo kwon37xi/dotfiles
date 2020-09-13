@@ -1,0 +1,40 @@
+---
+- name: prepare system environment
+  tasks:
+    - name: add to sudoers
+      become: yes
+      file:
+        path: "/etc/sudoers.d/99-self"
+        content: "{{ lookup('env'.'USER') }}    ALL=(ALL:ALL) NOPASSWD: ALL"
+        mode: 0440
+        owner: root
+    - name: change swappiness
+      become: yes
+      file:
+        path: "/etc/sysctl.d/99-vm-swappiness.conf"
+        content: "vm.swappiness=5"
+        owner: root
+    - name: change ubuntu mirror to kakao
+      become: yes
+      replace:
+        path: "/etc/apt/sources.list"
+        regexp: "http:\/\/kr.archive.ubuntu.com/"
+        replace: "http:\/\/mirror.kakao.com/"
+      apt:
+        update_cache: yes
+    - name: install basically required packages
+      become: yes
+      apt:
+        pkg:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - gnupg-agent
+          - software-properties-common
+          - software-properties-qt
+          - software-properties-qt
+          - unzip
+          - unrar
+          - p7zip-full
+          - curl
+        autoclean: yes
