@@ -8,7 +8,6 @@
       copy:
         dest: "/etc/sudoers.d/99-self"
         content: "{{ lookup('env', 'USER') }}    ALL=(ALL:ALL) NOPASSWD: ALL"
-        state: file
         mode: 0440
         owner: root
         group: root

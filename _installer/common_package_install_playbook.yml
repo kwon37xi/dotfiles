@@ -1,0 +1,15 @@
+---
+- name: common package installation
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+    - name: install common packages
+      become: yes
+      apt:
+        pkg:
+          - nginx
+          - nginx-core
+          - nginx-common
+        autoremove: yes
+        state: present
+        autoremove: yes

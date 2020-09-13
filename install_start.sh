@@ -10,7 +10,7 @@ git clone https://kwon37xi@github.com/kwon37xi/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles/_installer
 source ~/.dotfiles/_installer/config_envs
 
-ansible-playbook ~/.dotfiles/_installer/prepare_system_env_playbook.yml
+ansible-playbook --ask-become-pass ~/.dotfiles/_installer/prepare_system_env_playbook.yml
 
 source ~/.dotfiles/_installer/package_repos_install.sh
 source ~/.dotfiles/_installer/prepare_user_dirs.sh
