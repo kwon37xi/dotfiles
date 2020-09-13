@@ -44,6 +44,7 @@ let maplocalleader = mapleader
 
 call plug#begin()
 
+Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
@@ -251,6 +252,16 @@ nnoremap <silent> L :call ToggleMovement('L', 'H')<CR>
 let g:indentLine_setConceal = 0
 let g:vim_json_syntax_conceal = 0
 set conceallevel=0
+
+" sytastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " 각 PC별 특별 설정이 있다면 ~/.vimrc_pc 파일을 만들어
 " 해당 파일에 설정을 넣어 두면 된다.
