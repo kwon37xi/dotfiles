@@ -84,4 +84,5 @@ if ! [ -d "$HOME/.local/share/lotion-${LOTION_VERSION}" ]; then
 fi
 
 sudo apt-get -y full-upgrade
+# todo flatpak upgrade
 sudo apt-get -y autoremove
