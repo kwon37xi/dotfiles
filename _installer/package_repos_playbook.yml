@@ -86,6 +86,7 @@
     - name: asbru-cm
       become: yes
       shell: curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | bash
+      creates: /etc/apt/sources.list.d/asbru-cm_asbru-cm.list
     - name: update apt cache all
       become: yes
       apt:
