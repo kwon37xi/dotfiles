@@ -108,6 +108,6 @@
         creates: "/home/{{ current_user }}/.local/opt/lotion/Lotion/Lotion"
     - name: lotion install
       shell:
-        cmd: install.sh
+        cmd: ./install.sh
         chdir: "/home/{{ current_user }}/.local/opt/lotion"
         creates: "/home/{{ current_user }}/.local/opt/lotion/Lotion/Lotion"
