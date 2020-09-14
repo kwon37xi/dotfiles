@@ -22,7 +22,10 @@ echo "### autostarts ###"
 mkdir -p ~/.config/autostart
 cd ~/.config/autostart
 cp /usr/share/applications/com.github.hluk.copyq.desktop .
-cp /usr/share/applications/org.kde.yakuake.desktop .
+cp /usr/share/applications/guake.desktop .
+#cp /usr/share/applications/org.kde.yakuake.desktop . # yakuake buggy use guake
+
+# configure guake - dconf/gsettings
 
 # todo add JDKs to jenv
 

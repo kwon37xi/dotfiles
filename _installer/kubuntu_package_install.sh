@@ -8,7 +8,8 @@ sudo apt-get install -y inxi \
     git \
     muon aptitude qapt-deb-installer debocker \
     plasma-discover-backend-flatpak plasma-discover-backend-snap plasma-discover-backend-fwupd \
-    yakuake \
+    dconf-editor \
+    guake yakuake \
     dolphin-plugins dolphin-owncloud kio-gdrive dolphin-plugins \
     plasma-browser-integration \
     flatpak \
