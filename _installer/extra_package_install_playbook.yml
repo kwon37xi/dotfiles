@@ -25,7 +25,7 @@
       become: yes
       apt:
         package:
-          - kenlive
+          - kdenlive
     - name: install extra packages
       become: yes
       apt:
