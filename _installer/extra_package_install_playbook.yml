@@ -20,7 +20,7 @@
     - name: install virtualbox
       become: yes
       apt:
-        package: "virtualbox-{{ virutalbox_version }}"
+        package: "virtualbox-{{ virtualbox_version }}"
     - name: install media packages
       become: yes
       apt:
