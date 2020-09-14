@@ -94,7 +94,7 @@
         remote_src: yes
         dest: "/home/{{current_user}}/.local/opt/JetBrains/ideaIU"
         extra_ops: [--strip-components=1]
-        create: "/home/{{ current_user }}/.local/opt/JetBrains/ideaIU/bin/idea.sh"
+        creates: "/home/{{ current_user }}/.local/opt/JetBrains/ideaIU/bin/idea.sh"
     - name: lotion target dir
       file:
         path: "/home/{{ current_user }}/.local/opt/lotion"
