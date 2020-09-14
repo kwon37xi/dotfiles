@@ -1,21 +1,4 @@
 " :vim set fileencoding=utf8
-" 기본설정
-" Windows Installation
-" Windows에서는 closetag 를 심볼릭링크해줘야한다. 이 파일에서 closetag로 검색해볼것.
-" Windows 에서는 $HOME\vimfiles 아래에 vimrc 로 설정파일을 두고 그 외 플러그인 디렉토리도 둔다. 즉 ~/.vim = $HOME\vimfiles
-" *nix Installation
-" mkdir -p ~/tmp/vim/{backup,swap}
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-" sudo apt-get install ctags
-" sudo apt-get install ripgrep
-" or 
-" sudo pamac install ctags ripgrep
-" 
-" git clone https://gist.github.com/f8d79278899ae1b5bdf5.git ~/tmp/vim/config
-" ln -s ~/tmp/vim/config/.vimrc ~/.vimrc
-" cp ~/tmp/vim/config/.vimrc_pc_linux ~/.vimrc_pc
-" vim -c PlugInstall
-
 " vim-plug auto-install
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs

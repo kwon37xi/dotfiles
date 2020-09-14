@@ -13,6 +13,10 @@ curl -s "https://get.sdkman.io" | bash
 # jenv https://www.jenv.be
 git clone https://github.com/jenv/jenv.git ~/.jenv
 
+# bash_it
+git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
+~/.bash_it/install.sh --silent --no-modify-config
+
 # autostarts
 echo "### autostarts ###"
 mkdir -p ~/.config/autostart
