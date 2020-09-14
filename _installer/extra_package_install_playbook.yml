@@ -26,7 +26,7 @@
       apt:
         package:
           - kdenlive
-    - name: install extra packages
+    - name: install extra dev related packages
       become: yes
       apt:
         package:
@@ -75,22 +75,15 @@
       become: yes
       flatpak:
         name: "com.bitwarden.desktop"
-    - name: packer install
+    - name: packer
       become: yes
       unarchive:
         src: "https://releases.hashicorp.com/packer/{{ packer_version }}/packer_{{ packer_version }}_linux_amd64.zip"
         remote_src: yes
-        dest: /opt/packer
+        dest: /usr/local/bin
         mode: 0755
         owner: root
         group: root
-        creates: /opt/packer/packer
-    - name: packer link
-      become: yes
-      file:
-        src: /opt/packer/packer
-        path: /usr/local/bin/packer
-        state: link
     - name: IntelliJ IDEA user install
       unarchive:
         src: "https://download.jetbrains.com/idea/ideaIU-{{ jetbrains_intellij_idea_version }}.tar.gz"
