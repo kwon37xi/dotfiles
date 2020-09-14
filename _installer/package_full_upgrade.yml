@@ -1,0 +1,16 @@
+---
+- name: update packages
+  hosts: 127.0.0.1, localhost
+  connection: local
+  vars_files:
+    - "vars.yml"
+  tasks:
+    - name: upgrade packages
+      become: yes
+      apt:
+        upgrade: full
+        autoclean: yes
+        autoremove: yes
+    - name: flatpak upgrade
+      become: yes
+      shell: "flatpak update --system -y"

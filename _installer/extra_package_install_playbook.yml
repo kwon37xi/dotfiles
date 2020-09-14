@@ -1,0 +1,112 @@
+---
+- name: extra package install yml
+  hosts: 127.0.0.1, localhost
+  connection: local
+  vars_files:
+    - "vars.yml"
+  tasks:
+    - name: install JDKs
+      become: yes
+      apt:
+        package:
+          - adoptopenjdk-11-hotspot
+          - adoptopenjdk-8-hotspot
+          - java-11-amazon-corretto-jdk
+    - name: install visual studio code
+      become: yes
+      apt:
+        package:
+          - code
+    - name: install virtualbox
+      become: yes
+      apt:
+        package: "virtualbox-{{ virutalbox_version }}"
+    - name: install media packages
+      become: yes
+      apt:
+        package:
+          - kenlive
+    - name: install extra packages
+      become: yes
+      apt:
+        package:
+          - vagrant
+          - asbru-cm
+          - typora
+          - unetbootin
+    - name: add architecture i386
+      become: yes
+      shell: "dpkg --add-architecture i386"
+    - name: install wine & playonlinux
+      become: yes
+      apt:
+        package:
+          - wine
+          - winetricks
+          - playonlinux
+    - name: google chrome
+      become: yes
+      apt:
+        deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - name: zoom.us preparation
+      become: yes
+      apt:
+        package:
+          - libgl1-mesa-glx
+          - libegl1-mesa
+          - libxcb-xtest0
+    - name: zoom.us
+      become: yes
+      apt:
+        deb: https://zoom.us/client/latest/zoom_amd64.deb
+    - name: slack
+      become: yes
+      apt:
+        deb: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
+    - name: dbeaver
+      become: yes
+      apt:
+        deb:  "https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
+    - name: hugo
+      become: yes
+      apt:
+        deb: "https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/hugo_{{ hugo_version }}_Linux-64bit.deb"
+    - name: bitwarden
+      become: yes
+      flatpak:
+        name: "com.bitwarden.desktop"
+    - name: packer install
+      become: yes
+      unarchive:
+        src: "https://releases.hashicorp.com/packer/{{ packer_version }}/packer_{{ packer_version }}_linux_amd64.zip"
+        remote_src: yes
+        dest: /opt/packer
+        mode: 0755
+        owner: root
+        group: root
+        creates: /opt/packer/packer
+    - name: packer link
+      become: yes
+      file:
+        src: /opt/packer/packer
+        path: /usr/local/bin/packer
+        state: link
+    - name: IntelliJ IDEA user install
+      unarchive:
+        src: "https://download.jetbrains.com/idea/ideaIU-{{ jetbrains_intellij_idea_version }}.tar.gz"
+        remote_src: yes
+        dest: "/home/{{curret_user}}/.local/opt/JetBrains/ideaIU"
+        extra_ops: [--strip-components=1]
+        create: "/home/{{ curret_user }}/.local/opt/JetBrains/ideaIU/bin/idea.sh"
+    - name: lotion notion client
+      unarchive:
+        src: "https://github.com/puneetsl/lotion/archive/V-{{ lotion_version }}.tar.gz"
+        remote_src: yes
+        dest: "/home/{{ curret_user }}/.local/opt/lotion"
+        extra_ops: [--strip-components=1]
+        creates: "/home/{{ curret_user }}/.local/opt/lotion/Lotion/Lotion"
+    - name: lotion install
+      shell:
+        cmd: install.sh
+        chdir: "/home/{{ curret_user }}/.local/opt/lotion"
+        creates: "/home/{{ curret_user }}/.local/opt/lotion/Lotion/Lotion"
