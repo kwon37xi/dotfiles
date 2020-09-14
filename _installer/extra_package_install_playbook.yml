@@ -88,18 +88,18 @@
       unarchive:
         src: "https://download.jetbrains.com/idea/ideaIU-{{ jetbrains_intellij_idea_version }}.tar.gz"
         remote_src: yes
-        dest: "/home/{{curret_user}}/.local/opt/JetBrains/ideaIU"
+        dest: "/home/{{current_user}}/.local/opt/JetBrains/ideaIU"
         extra_ops: [--strip-components=1]
-        create: "/home/{{ curret_user }}/.local/opt/JetBrains/ideaIU/bin/idea.sh"
+        create: "/home/{{ current_user }}/.local/opt/JetBrains/ideaIU/bin/idea.sh"
     - name: lotion notion client
       unarchive:
         src: "https://github.com/puneetsl/lotion/archive/V-{{ lotion_version }}.tar.gz"
         remote_src: yes
-        dest: "/home/{{ curret_user }}/.local/opt/lotion"
+        dest: "/home/{{ current_user }}/.local/opt/lotion"
         extra_ops: [--strip-components=1]
-        creates: "/home/{{ curret_user }}/.local/opt/lotion/Lotion/Lotion"
+        creates: "/home/{{ current_user }}/.local/opt/lotion/Lotion/Lotion"
     - name: lotion install
       shell:
         cmd: install.sh
-        chdir: "/home/{{ curret_user }}/.local/opt/lotion"
-        creates: "/home/{{ curret_user }}/.local/opt/lotion/Lotion/Lotion"
+        chdir: "/home/{{ current_user }}/.local/opt/lotion"
+        creates: "/home/{{ current_user }}/.local/opt/lotion/Lotion/Lotion"
