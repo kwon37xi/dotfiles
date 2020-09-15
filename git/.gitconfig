@@ -3,15 +3,15 @@
 	email = kwonnam.son@woowahan.com
 
 [includeIf "gitdir:~/projects/"]
-    path = ~/.dotfiles/.git_woowahan_projects
+    path = ~/.git_woowahan_projects
 
 [includeIf "gitdir:~/projects_kwon37xi/"]
-    path = ~/.dotfiles/.git_kwon37xi_projects
+    path = ~/.git_kwon37xi_projects
 
 [core]
 	filemode = false
 [diff]
-	external = /home/kwon37xi/.local/bin/git-diff-meld.sh
+	external = ~/.local/bin/git-diff-meld.sh
 [merge]
 	tool = meld
 [alias]
