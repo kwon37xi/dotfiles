@@ -84,9 +84,13 @@
         mode: 0755
         owner: root
         group: root
+    - name: local applications dir
+      file:
+        path: "/home/{{ current_user }}/.local/share/applications"
+        state: directory
     - name: IntelliJ IDEA target dir
       file:
-        path: "/home/{{current_user}}/.local/opt/JetBrains/ideaIU"
+        path: "/home/{{ current_user }}/.local/opt/JetBrains/ideaIU"
         state: directory
     - name: IntelliJ IDEA user install
       unarchive:
