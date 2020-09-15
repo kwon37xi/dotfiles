@@ -28,6 +28,8 @@ source ~/.dotfiles/_installer/free_korean_fonts_install.sh
 source ~/.dotfiles/_installer/local_apps_install.sh
 source ~/.dotfiles/_installer/dotfiles_install.sh
 
+ansible-playbook -vv ~/.dotfiles/_installer/local_kde_configs_playbook.yml
+
 echo "==========================================="
 echo "      installation finished. REBOOT! "
 echo "==========================================="
