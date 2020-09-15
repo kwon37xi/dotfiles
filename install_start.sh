@@ -4,7 +4,7 @@ set -eux -o pipefail
 shopt -s failglob
 
 # 최소 필요사항 설치
-sudo apt-get -y install git ansible
+sudo apt-get -y install git ansible xz-utils unzip
 git clone --depth=1 https://kwon37xi@github.com/kwon37xi/dotfiles.git ~/.dotfiles
 
 cd ~/.dotfiles/_installer
