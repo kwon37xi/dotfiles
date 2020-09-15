@@ -1,0 +1,22 @@
+---
+- name: install KDE packages
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+    - name: install KDE packages
+      become: yes
+      apt:
+        pkg:
+          - kubuntu-restricted-addons
+          - kubuntu-restricted-extras
+          - muon
+          - qapt-deb-installer
+          - plasma-discover-backend-flatpak
+          - plasma-discover-backend-snap
+          - plasma-discover-backend-fwupd
+          - yakuake
+          - dolphin-plugins
+          - dolphin-owncloud
+          - kio-gdrive
+          - dolphin-plugins
+          - plasma-browser-integration

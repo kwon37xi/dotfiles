@@ -3,13 +3,111 @@
   hosts: 127.0.0.1
   connection: local
   tasks:
+    - name: prepare for ttf-mscorefonts auto install
+      become: yes
+      shell: "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections"
     - name: install common packages
       become: yes
       apt:
         pkg:
-          - nginx
-          - nginx-core
-          - nginx-common
-        autoremove: yes
+          - inxi
+          - ubuntu-restricted-addons
+          - ubuntu-restricted-extras
+          - htop
+          - aptitude
+          - dconf-editor
+          - guake
+          - flatpak
+          - vim-gtk
+          - universal-ctags
+          - fzf
+          - ripgrep
+          - tmux
+          - copyq
+          - copyq-plugins
+          - grub-customizer
+          - vivaldi-stable
+          - libreoffice
+          - libreoffice-help-ko
+          - libreoffice-l10n-ko
+          - meld
+          - tlp
+          - tlp-rdw
+          - tlpui
+          - ufw
+          - gufw
+          - docker
+          - docker-compose
+          - ctop
+          - openconnect
+          - network-manager-openconnect
+          - openfortivpn
+          - network-manager-fortisslvpn
+          - fonts-alee
+          - fonts-lexi-gulim
+          - fonts-lexi-saebom
+          - fonts-nanum
+          - fonts-nanum-coding
+          - fonts-nanum-eco
+          - fonts-nanum-extra
+          - fonts-naver-d2coding
+          - fonts-unfonts-core
+          - fonts-unfonts-extra
+          - fonts-noto-cjk
+          - fonts-noto-cjk-extra
+          - ttf-mscorefonts-installer
+          - uim
+          - uim-byeoru
+          - build-essential
+          - make
+          - cmake
+          - direnv
+          - autojump
+          - stow
+          - openssh-server
+          - openssh-sftp-server
+          - sshpass
+          - ksshaskpass
+          - putty
+          - putty-tools
+          - openssh-client
+          - java-common
+          - openjdk-11-jdk
+          - freerdp2-x11
+    - name: install video audio graphic packages
+      become: yes
+      apt:
+        pkg:
+          - pinta
+          - krita
+          - krita-l10n
+          - gimp
+          - gimp-gmic
+          - nomacs
+          - vlc
+          - smplayer
+          - youtube-dl
+          - audacious
+    - name: flatpak add remote
+      become: yes
+      flatpak_remote:
+        name: flathub
+        flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
         state: present
-        autoremove: yes
+    - name: initialize docker
+      become: yes
+      shell: |
+        usermod -aG docker {{ current_user }}
+        systemctl enable docker
+        service docker restart
+    - name: uim initialize
+      become: yes
+      shell: |
+        update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-qt5 100
+        update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
+        #update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk3-systray 100
+        #update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk3-systray
+        ! [ -f /usr/bin/uim-im-switcher-qt4 ] && ln -s /usr/bin/uim-im-switcher-qt5 /usr/bin/uim-im-switcher-qt4
+        ! [ -f /usr/bin/uim-pref-qt4 ] && ln -s /usr/bin/uim-pref-qt5 /usr/bin/uim-pref-qt4
+    - name: im-config uim
+      shell: "im-config -n uim"
