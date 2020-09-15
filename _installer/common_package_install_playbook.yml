@@ -18,7 +18,6 @@
           - htop
           - aptitude
           - dconf-editor
-          - guake
           - flatpak
           - vim-gtk
           - universal-ctags

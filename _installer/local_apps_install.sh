@@ -24,8 +24,8 @@ echo "### autostarts ###"
 mkdir -p ~/.config/autostart
 cd ~/.config/autostart
 cp /usr/share/applications/com.github.hluk.copyq.desktop .
-cp /usr/share/applications/guake.desktop .
-#cp /usr/share/applications/org.kde.yakuake.desktop . # yakuake buggy use guake
+cp /usr/share/applications/org.kde.yakuake.desktop . # yakuake buggy use guake
+#cp /usr/share/applications/guake.desktop .
 
 # configure guake - dconf/gsettings
 
