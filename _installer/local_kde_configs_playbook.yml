@@ -13,3 +13,7 @@
         kwriteconfig5 --file ~/.config/kdeglobals --group General --key smallestReadableFont "나눔바른고딕,9,-1,5,50,0,0,0,0,0"
         kwriteconfig5 --file ~/.config/kdeglobals --group General --key toolBarFont "나눔바른고딕,11,-1,5,50,0,0,0,0,0"
         kwriteconfig5 --file ~/.config/kdeglobals --group WM --key activeFont "서울한강체,10,-1,5,50,0,0,0,0,0,M"
+    - name: yakuake configuration
+      shell: |
+        kwriteconfig5 --file ~/.config/yakuakerc --group Window --key Height "60"
+        kwriteconfig5 --file ~/.config/yakuakerc --group Window --key Width "100"
