@@ -3,6 +3,8 @@ mkdir -p $LOCAL_BASHRCS_DIR
 chmod 700 $LOCAL_BASHRCS_DIR
 
 mkdir -p ~/.local/tmp/vim/{swap,backup,undos}
+mkdir -p ~/.local/opt
+mkdir -p ~/.local/share/applications
 
 # initialize bashrc.d load
 echo "for bashrc in $LOCAL_BASHRCS_DIR/*.bashrc; do source \"\$bashrc\"; done;" >> ~/.bashrc
