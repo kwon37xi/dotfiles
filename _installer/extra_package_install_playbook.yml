@@ -21,11 +21,22 @@
       become: yes
       apt:
         package: "virtualbox-{{ virtualbox_version }}"
-    - name: install media packages
+    - name: install video audio graphic packages
       become: yes
       apt:
         package:
+          - pinta
+          - krita
+          - krita-l10n
+          - gimp
+          - gimp-gmic
+          - nomacs
+          - vlc
+          - smplayer
+          - youtube-dl
+          - audacious
           - kdenlive
+          - handbrake
     - name: install extra dev related packages
       become: yes
       apt:

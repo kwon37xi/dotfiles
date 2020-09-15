@@ -6,7 +6,7 @@
     - name: install KDE packages
       become: yes
       apt:
-        pkg:
+        package:
           - kubuntu-restricted-addons
           - kubuntu-restricted-extras
           - muon

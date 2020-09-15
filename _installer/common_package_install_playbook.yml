@@ -9,7 +9,7 @@
     - name: install common packages
       become: yes
       apt:
-        pkg:
+        package:
           - inxi
           - ubuntu-restricted-addons
           - ubuntu-restricted-extras
@@ -74,20 +74,6 @@
           - java-common
           - openjdk-11-jdk
           - freerdp2-x11
-    - name: install video audio graphic packages
-      become: yes
-      apt:
-        pkg:
-          - pinta
-          - krita
-          - krita-l10n
-          - gimp
-          - gimp-gmic
-          - nomacs
-          - vlc
-          - smplayer
-          - youtube-dl
-          - audacious
     - name: flatpak add remote
       become: yes
       flatpak_remote:
