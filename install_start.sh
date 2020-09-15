@@ -14,8 +14,10 @@ ansible-playbook -vv --ask-become-pass ~/.dotfiles/_installer/prepare_system_env
 
 ansible-playbook -vv ~/.dotfiles/_installer/package_repos_playbook.yml
 
-source ~/.dotfiles/_installer/prepare_user_dirs.sh
+ansible-playbook -vv ~/.dotfiles/_installer/prepare_user_dirs_playbook.yml
+
 source ~/.dotfiles/_installer/kubuntu_package_install.sh
+
 ansible-playbook -vv ~/.dotfiles/_installer/extra_package_install_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/package_full_upgrade.yml
