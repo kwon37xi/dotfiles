@@ -7,4 +7,8 @@ stow -d $DOTFILES_DIR -t ~/ -S htop
 stow -d $DOTFILES_DIR -t ~/ -S git
 stow -d $DOTFILES_DIR -t ~/ -S bashrc.d
 stow -d $DOTFILES_DIR -t ~/ -S copyq
+stow -d $DOTFILES_DIR -t ~/ -S kde
+
+# restart kde global shortcut manager
+kill -HUP kglobalaccel5
 # todo separate personal / work git config
