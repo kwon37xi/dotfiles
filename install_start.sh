@@ -16,7 +16,7 @@ ansible-playbook -vv ~/.dotfiles/_installer/package_repos_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/common_package_install_playbook.yml
 
-ansible-playbook -vv ~/.dotfiles/_installer/kde_package_install_playbook
+ansible-playbook -vv ~/.dotfiles/_installer/kde_package_install_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/prepare_user_dirs_playbook.yml
 
