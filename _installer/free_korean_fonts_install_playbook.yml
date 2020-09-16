@@ -13,7 +13,7 @@
       git:
         repo: https://github.com/kwon37xi/free-korean-fonts.git
         clone: yes
-        dest: ~/.fonts
+        dest: ~/.fonts/free-korean-fonts
         depth: 1
     - name: font cache update
       shell: "fc-cache -v"
