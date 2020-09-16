@@ -1,0 +1,63 @@
+---
+- name: local user application install
+  hosts: 127.0.0.1
+  connection: local
+  vars_files:
+    - "vars.yml"
+  tasks:
+    - name: create bashrc.d dir
+      file:
+        path: "{{ local_bashrcs_dir }}"
+        mode: 0700
+        state: directory
+    - name: create vim related dirs
+      file:
+        path: "~/.local/tmp/vim/{{ item }}"
+        state: directory
+      with_items:
+        - swap
+        - backup
+        - undos
+    - name: create local application dirs
+      file:
+        path: "{{ item }}"
+        state: directory
+      with_items:
+        - ~/.local/opt
+        - ~/.local/share/applications
+        - ~/.config/autostart
+    - name: add reading *.bashrc to ~/.bashrc
+      lineinfile:
+        path: ~/.bashrc
+        line: "for bashrc in {{ local_bashrcs_dir }}/*.bashrc; do source \"$bashrc\"; done;"
+    - name: sdkman
+      shell: curl -s "https://get.sdkman.io" | bash
+    - name: bash_it clone
+      git:
+        repo: https://github.com/Bash-it/bash-it.git
+        clone: yes
+        depth: 1
+        dest: ~/.bash_it
+    - name: bash_it install
+      shell:
+        cmd: ./install.sh --silent --no-modify-config
+        chdir: ~/.bash_it
+    - name: add default autostarts
+      copy:
+        src: "{{ item }}"
+        dest: ~/.config/autostart/
+      with_items:
+        - /usr/share/applications/com.github.hluk.copyq.desktop
+        - /usr/share/applications/org.kde.yakuake.desktop
+# todos
+# fusuma, 
+# kde 단축키
+# KDE font config...
+# git default config, credential helper
+# kwallet git
+# ssh passphrase
+# sdkman, jenv
+# vpn, wifi
+# vivaldi 자동 설정
+# keepassxc 혹은 unix pass
+# intellij auto config

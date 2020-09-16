@@ -1,5 +1,6 @@
 ubuntu_release: "{{ lookup('pipe', 'lsb_release -cs') }}"
 current_user: "{{ lookup('env', 'USER') }}"
+local_bashrcs_dir: ~/.config/bashrc.d
 vagrant_version: 2.2.10
 packer_version: 1.6.1
 virtualbox_version: 6.1

@@ -26,7 +26,8 @@ ansible-playbook -vv ~/.dotfiles/_installer/package_full_upgrade.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/free_korean_fonts_install_playbook.yml
 
-source ~/.dotfiles/_installer/local_apps_install.sh
+ansible-playbook -vv ~/.dotfiles/_installer/local_apps_install_playbook.yml
+
 source ~/.dotfiles/_installer/dotfiles_install.sh
 
 ansible-playbook -vv ~/.dotfiles/_installer/local_kde_configs_playbook.yml
