@@ -20,6 +20,8 @@
           - dconf-editor
           - flatpak
           - vim-gtk
+          - neovim
+          - neovim-qt
           - universal-ctags
           - fzf
           - ripgrep
