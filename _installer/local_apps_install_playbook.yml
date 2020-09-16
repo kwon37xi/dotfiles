@@ -32,6 +32,33 @@
         line: "for bashrc in {{ local_bashrcs_dir }}/*.bashrc; do source \"$bashrc\"; done;"
     - name: sdkman
       shell: curl -s "https://get.sdkman.io" | bash
+      args:
+        creates: ~/.sdkman
+    - name: sdkman default package install
+      shell: |
+        SDKMAN_DIR=~/.sdkman
+        [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/.sdkman/bin/sdkman-init.sh"
+        sdk install {{ item }}
+      with_items:
+        - gradle
+        - groovy
+        - kotlin
+        - maven
+        - springboot
+        - visualvm
+    - name: jenv
+      git:
+        repo: https://github.com/jenv/jenv.git
+        clone: yes
+        depth: 1
+        dest: ~/.jenv
+    - name: jenv add JDKs
+      shell: |
+        eval "$(~/.jenv/bin/jenv init -)"
+        jenv add {{ item }}
+      with_items:
+        - /usr/lib/jvm/adoptopenjdk-11-hotspot-amd64
+        - /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
     - name: bash_it clone
       git:
         repo: https://github.com/Bash-it/bash-it.git
@@ -56,7 +83,6 @@
 # git default config, credential helper
 # kwallet git
 # ssh passphrase
-# sdkman, jenv
 # vpn, wifi
 # vivaldi 자동 설정
 # keepassxc 혹은 unix pass
