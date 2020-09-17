@@ -25,6 +25,7 @@
           - universal-ctags
           - fzf
           - ripgrep
+          - fd-find
           - tmux
           - copyq
           - copyq-plugins
