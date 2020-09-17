@@ -110,9 +110,9 @@ set fileformats=unix,dos
 set fileencodings=utf8,cp949
 
 "colorscheme desert
-colorscheme zenburn
+"colorscheme zenburn
 "colorscheme desertEx
-"colorscheme molokai
+colorscheme molokai
 " colorscheme warm-night
 
 " 기본 들여쓰기

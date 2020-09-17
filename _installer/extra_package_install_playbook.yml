@@ -5,13 +5,6 @@
   vars_files:
     - "vars.yml"
   tasks:
-    - name: install JDKs
-      become: yes
-      apt:
-        package:
-          - adoptopenjdk-11-hotspot
-          - adoptopenjdk-8-hotspot
-          - java-11-amazon-corretto-jdk
     - name: install visual studio code
       become: yes
       apt:

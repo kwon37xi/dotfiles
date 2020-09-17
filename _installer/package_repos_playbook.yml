@@ -15,26 +15,6 @@
         repo: deb https://repo.vivaldi.com/archive/deb/ stable main
         filename: vivaldi
         update_cache: no
-    - name: adoptopenjdk key
-      become: yes
-      apt_key:
-        url: https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
-    - name: adoptopenjdk repo
-      become: yes
-      apt_repository:
-        repo: "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ubuntu_release }} main"
-        filename: adoptopenjdk
-        update_cache: no
-    - name: corretojdk key
-      become: yes
-      apt_key:
-        url: https://apt.corretto.aws/corretto.key
-    - name: corretojdk repo
-      become: yes
-      apt_repository:
-        repo: deb https://apt.corretto.aws stable main
-        filename: corretojdk
-        update_cache: no
     - name: virtualbox key
       become: yes
       apt_key:
@@ -42,7 +22,7 @@
     - name: virtualbox repo
       become: yes
       apt_repository:
-        repo: deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian {{ ubuntu_release }} contrib
+        repo: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian {{ ubuntu_release }} contrib"
         filename: virtualbox
         update_cache: no
     - name: vscode key

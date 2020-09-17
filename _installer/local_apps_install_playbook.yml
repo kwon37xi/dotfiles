@@ -36,9 +36,10 @@
         creates: ~/.sdkman
     - name: sdkman default package install
       shell: |
-        SDKMAN_DIR=~/.sdkman
-        [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/.sdkman/bin/sdkman-init.sh"
+        source ~/.sdkman/bin/sdkman-init.sh
         sdk install {{ item }}
+      args:
+        executable: /usr/bin/bash
       with_items:
         - gradle
         - groovy
@@ -46,19 +47,9 @@
         - maven
         - springboot
         - visualvm
-    - name: jenv
-      git:
-        repo: https://github.com/jenv/jenv.git
-        clone: yes
-        depth: 1
-        dest: ~/.jenv
-    - name: jenv add JDKs
-      shell: |
-        eval "$(~/.jenv/bin/jenv init -)"
-        jenv add {{ item }}
-      with_items:
-        - /usr/lib/jvm/adoptopenjdk-11-hotspot-amd64
-        - /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
+        - java 11.0.8.hs-adpt
+        - java 8.0.265.hs-adpt
+        - java 11.0.8-amzn
     - name: bash_it clone
       git:
         repo: https://github.com/Bash-it/bash-it.git
@@ -87,3 +78,4 @@
 # vivaldi 자동 설정
 # keepassxc 혹은 unix pass
 # intellij auto config
+# MAT

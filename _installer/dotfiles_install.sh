@@ -6,6 +6,7 @@ stow -d $DOTFILES_DIR -t ~/ -S local_bin
 stow -d $DOTFILES_DIR -t ~/ -S htop
 stow -d $DOTFILES_DIR -t ~/ -S git
 stow -d $DOTFILES_DIR -t ~/ -S bashrc.d
+mkdir -p ~/.config/copyq
 stow -d $DOTFILES_DIR -t ~/ -S copyq
 stow -d $DOTFILES_DIR -t ~/ -S neovim
 
