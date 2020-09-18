@@ -8,3 +8,4 @@ slack_version: 4.9.1
 hugo_version: 0.74.3
 lotion_version: 0.04
 jetbrains_intellij_idea_version: 2020.2.2
+fblog_version: 2.3.0
