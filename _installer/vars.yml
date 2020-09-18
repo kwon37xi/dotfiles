@@ -4,7 +4,7 @@ local_bashrcs_dir: ~/.config/bashrc.d
 vagrant_version: 2.2.10
 packer_version: 1.6.1
 virtualbox_version: 6.1
-slack_version: 4.8.0
+slack_version: 4.9.1
 hugo_version: 0.74.3
 lotion_version: 0.04
-jetbrains_intellij_idea_version: 2020.2.1
+jetbrains_intellij_idea_version: 2020.2.2

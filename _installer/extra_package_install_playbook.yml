@@ -48,6 +48,12 @@
           - wine
           - winetricks
           - playonlinux
+    - name: install rust and cargo
+      become: yes
+      apt:
+        package:
+          - rustc
+          - cargo
     - name: google chrome
       become: yes
       apt:
