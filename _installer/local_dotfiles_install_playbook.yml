@@ -1,0 +1,28 @@
+---
+- name: local dotfiles install
+  hosts: 127.0.0.1, localhost
+  connection: local
+  vars_files:
+    - "vars.yml"
+  tasks:
+    - name: create base dirs # 파일 단위로만 관리하고 싶은 경우 디렉토리 미리 생성
+      file:
+        path: "~/{{ item }}"
+        state: directory
+      with_items:
+        - .config/copyq
+        - "{{ local_bashrcs_dir }}"
+        - .local/bin
+        - .config/nvim
+        - .config/nvim-qt
+        - .sdkman/etc
+    - name: stow
+      shell: "stow -d ~/.dotfiles -t ~/ -S {{ item }}"
+      with_items:
+        - vim
+        - uim
+        - htop
+        - git
+        - bashrc.d
+        - copyq
+        - neovim

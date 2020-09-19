@@ -17,3 +17,9 @@
       shell: |
         kwriteconfig5 --file ~/.config/yakuakerc --group Window --key Height "60"
         kwriteconfig5 --file ~/.config/yakuakerc --group Window --key Width "100"
+    - name: global fonts configuration begin
+      shell: |
+        kquitapp5 kglobalaccel
+        rm ~/.config/kglobalshortcutsrc
+        cp ~/.dotfiles/_backup/kde/.config/kglobalshortcutsrc ~/.config
+        kglobalaccel5 &

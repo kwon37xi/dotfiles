@@ -4,13 +4,13 @@ set -eux -o pipefail
 shopt -s failglob
 
 # 최소 필요사항 설치
-sudo apt-get -y install git ansible xz-utils unzip
+echo -n "Password for sudo: "
+read -s SUDO_PASSWORD
+
+echo $SUDO_PASSWORD | sudo -S apt-get -y install git ansible xz-utils unzip
 git clone --depth=1 https://kwon37xi@github.com/kwon37xi/dotfiles.git ~/.dotfiles
 
-cd ~/.dotfiles/_installer
-source ~/.dotfiles/_installer/config_envs
-
-ansible-playbook -vv --ask-become-pass ~/.dotfiles/_installer/prepare_system_env_playbook.yml
+ansible-playbook -vv ~/.dotfiles/_installer/prepare_system_env_playbook.yml --extra-vars "ansible_become_pass=${SUDO_PASSWORD}"
 
 ansible-playbook -vv ~/.dotfiles/_installer/package_repos_playbook.yml
 
@@ -28,10 +28,8 @@ ansible-playbook -vv ~/.dotfiles/_installer/free_korean_fonts_install_playbook.y
 
 ansible-playbook -vv ~/.dotfiles/_installer/local_apps_install_playbook.yml
 
-source ~/.dotfiles/_installer/dotfiles_install.sh
+ansible-playbook -vv ~/.dotfiles/_installer/local_dotfiles_install_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/local_kde_configs_playbook.yml
 
-echo "==========================================="
 echo "      installation finished. REBOOT! "
-echo "==========================================="
