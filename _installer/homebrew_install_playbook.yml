@@ -1,0 +1,27 @@
+---
+- name: HomeBrew and install brew packages
+  hosts: 127.0.0.1, localhost
+  connection: local
+  vars_files:
+    - "vars.yml"
+  environment:
+    PATH: "{{ lookup('env', 'PATH') }}:/home/linuxbrew/.linuxbrew/bin"
+  tasks:
+    - name: install linux HomeBrew
+      shell: # echo for bypassing prompt
+      args:
+        cmd: echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+        creates: /home/linuxbrew/.linuxbrew/bin/brew
+    - name: update homebrew
+      homebrew:
+        update_homebrew: yes
+        upgrade_all: yes
+    - name: brew common packages
+      homebrew:
+        name:
+          - fblog
+          - lazygit
+          - lazydocker
+          - jvmtop
+          - sd
+        state: present
