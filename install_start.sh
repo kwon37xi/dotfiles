@@ -4,10 +4,9 @@ set -eux -o pipefail
 shopt -s failglob
 
 # 최소 필요사항 설치
+set +x
 echo -n "Password for sudo: "
 read -s SUDO_PASSWORD
-
-set +x
 echo "$SUDO_PASSWORD" | sudo -S apt-get -y install git ansible xz-utils unzip
 set -x
 
