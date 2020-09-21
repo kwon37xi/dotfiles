@@ -1,12 +1,15 @@
 [user]
 	name = KwonNam Son
-	email = kwonnam.son@woowahan.com
-
-[includeIf "gitdir:~/projects/"]
-    path = ~/.git_woowahan_projects
+	email = kwon37xi@gmail.com
 
 [includeIf "gitdir:~/projects_kwon37xi/"]
-    path = ~/.git_kwon37xi_projects
+    path = ~/.git_personal_projects
+
+[includeIf "gitdir:~/projects/observes/"]
+    path = ~/.git_personal_projects
+
+[includeIf "gitdir:~/projects/woowabros/"]
+    path = ~/.git_woowabros_projects
 
 [core]
 	filemode = false
@@ -26,8 +29,3 @@
 [credential]
     helper = /usr/local/bin/git-credential-kwallet
 
-[credential "https://gist.github.com"]
-	username = kwon37xi
-
-[credential "https://github.com"]
-	username = kwon37xi

@@ -1,0 +1,9 @@
+[user]
+  email = kwon37xi@gmail.com
+  name = KwonNamSon
+
+[credential "https://gist.github.com"]
+	username = kwon37xi
+
+[credential "https://github.com"]
+	username = kwon37xi

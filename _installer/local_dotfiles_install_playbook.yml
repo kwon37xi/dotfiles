@@ -10,12 +10,18 @@
         path: "/home/{{ current_user }}/{{ item }}"
         state: directory
       with_items:
-        - .config/copyq
         - "{{ local_bashrcs_dir }}"
+        - .config/copyq
         - .local/bin
         - .config/nvim
         - .config/nvim-qt
         - .sdkman/etc
+    - name: delete conflicting files
+      file:
+        path: "/home/{{ current_user }}/{{ item }}"
+        state: absent
+        with_items:
+          - .sdkman/etc/config
     - name: stow
       shell: "stow -d ~/.dotfiles -t ~/ -S {{ item }}"
       with_items:
@@ -26,3 +32,11 @@
         - bashrc.d
         - copyq
         - neovim
+        - sdkman
+        - local_bin
+    - name: after dotfiles install
+      shell: |
+        # vim plugin install
+        curl -fLo ~/.vim/autoload/plug.vim --create-dirs "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+        # PlugInstall then quit
+        vim +'PlugInstall --sync' +qa
