@@ -55,9 +55,9 @@
         - ppa:graphics-drivers/ppa
         - ppa:linrunner/tlp
         - ppa:linuxuprising/apps
-        - ppa:pinta-maintainers/pinta-stable
         - ppa:kdenlive/kdenlive-stable
         - ppa:neovim-ppa/stable
+        - ppa:kritalime/ppa
     - name: multiverse universe
       become: yes
       shell: "apt-add-repository -y --no-update {{ item }}"
