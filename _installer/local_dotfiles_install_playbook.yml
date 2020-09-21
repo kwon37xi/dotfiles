@@ -38,5 +38,6 @@
       shell: |
         # vim plugin install
         curl -fLo ~/.vim/autoload/plug.vim --create-dirs "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-        # PlugInstall then quit
-        vim +'PlugInstall --sync' +qa
+        # PlugInstall then quit - redirect 가 없으면 올바로 작동안함. colorscheme 설정에도 silent! 필요.
+        # https://github.com/junegunn/vim-plug/issues/730
+        vim +'PlugInstall --sync' +qa &> /dev/null < /dev/tty

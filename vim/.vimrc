@@ -112,7 +112,9 @@ set fileencodings=utf8,cp949
 "colorscheme desert
 "colorscheme zenburn
 "colorscheme desertEx
-colorscheme molokai
+" Vim plug 자동 설치 전에는 해당 스킴이 없어서 오류가 발생함. 이를 없애는
+" 방법. slient! ...
+silent! colorscheme molokai
 " colorscheme warm-night
 
 " 기본 들여쓰기
