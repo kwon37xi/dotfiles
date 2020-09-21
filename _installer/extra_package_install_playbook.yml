@@ -22,6 +22,8 @@
           - krita-l10n
           - gimp
           - gimp-gmic
+          - gimp-data-extras
+          - gimp-help-ko
           - nomacs
           - vlc
           - smplayer
