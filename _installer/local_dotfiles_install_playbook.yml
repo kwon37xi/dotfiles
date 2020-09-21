@@ -10,7 +10,7 @@
         path: "/home/{{ current_user }}/{{ item }}"
         state: directory
       with_items:
-        - "{{ local_bashrcs_dir }}"
+        - .config/bashrc.d
         - .config/copyq
         - .local/bin
         - .config/nvim
@@ -22,6 +22,8 @@
         state: absent
       with_items:
           - .sdkman/etc/config
+          - .config/fcitx/conf
+          - .config/fcitx/config
     - name: stow
       shell: "stow -d ~/.dotfiles -t ~/ -S {{ item }}"
       with_items:
@@ -34,3 +36,4 @@
         - neovim
         - sdkman
         - local_bin
+        - fcitx
