@@ -80,10 +80,6 @@
       become: yes
       apt:
         deb: "https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/hugo_{{ hugo_version }}_Linux-64bit.deb"
-    - name: fblog
-      become: yes
-      apt:
-        deb: "https://github.com/brocode/fblog/releases/download/v{{ fblog_version }}/fblog.deb"
     - name: bitwarden
       become: yes
       flatpak:
