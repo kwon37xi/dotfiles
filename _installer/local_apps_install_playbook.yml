@@ -31,7 +31,7 @@
         path: ~/.bashrc
         line: "for bashrc in {{ local_bashrcs_dir }}/*.bashrc; do source \"$bashrc\"; done;"
     - name: sdkman
-      shell: curl -s "https://get.sdkman.io" | bash
+      shell: curl -s "https://get.sdkman.io?rcupdate=false" | bash
       args:
         creates: ~/.sdkman
     - name: sdkman default package install
