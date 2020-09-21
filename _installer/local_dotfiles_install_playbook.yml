@@ -20,7 +20,7 @@
       file:
         path: "/home/{{ current_user }}/{{ item }}"
         state: absent
-        with_items:
+      with_items:
           - .sdkman/etc/config
     - name: stow
       shell: "stow -d ~/.dotfiles -t ~/ -S {{ item }}"
