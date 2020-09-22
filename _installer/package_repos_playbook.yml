@@ -25,6 +25,17 @@
         repo: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian {{ ubuntu_release }} contrib"
         filename: virtualbox
         update_cache: no
+    - name: github cli key
+      become: yes
+      apt_key:
+        id: C99B11DEB97541F0
+        keyserver: keyserver.ubuntu.com
+    - name: github cli repo
+      become: yes
+      apt_repository:
+        repo: "deb https://cli.github.com/packages {{ ubuntu_release }} main"
+        filename: github-cli
+        update_cache: no
     - name: vscode key
       become: yes
       apt_key:

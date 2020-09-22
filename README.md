@@ -16,3 +16,7 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 
 ## 나머지 디렉토리들
 * gnu `stow` 명령으로 링크할 dotfiles 설정파일들이 있다.
+
+## 설치 후 할 일들
+* 후속 private dotfiles 설치
+* IntelliJ Idea 설치 : `~/.local/opt/JetBrains/ideaIU/bin/idea.sh`
