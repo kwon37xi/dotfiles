@@ -53,6 +53,8 @@
         - java 11.0.8.hs-adpt
         - java 8.0.265.hs-adpt
         - java 11.0.8-amzn
+      retries: 3
+      delay: 10
     - name: bash_it clone
       git:
         repo: https://github.com/Bash-it/bash-it.git

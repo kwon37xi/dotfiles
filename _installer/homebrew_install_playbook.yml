@@ -12,6 +12,8 @@
       args:
         cmd: echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
         creates: /home/linuxbrew/.linuxbrew/bin/brew
+      retries: 5
+      delay: 10
     - name: update homebrew
       homebrew:
         update_homebrew: yes
@@ -25,3 +27,6 @@
           - jvmtop
           - sd
         state: present
+      retries: 5
+      delay: 10
+

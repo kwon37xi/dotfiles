@@ -1,5 +1,5 @@
 ---
-- name: install KDE packages
+- name: install KDE only packages
   hosts: 127.0.0.1
   connection: local
   vars_files:

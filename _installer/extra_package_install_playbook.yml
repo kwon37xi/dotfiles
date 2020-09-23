@@ -60,6 +60,8 @@
       become: yes
       apt:
         deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      retries: 3
+      delay: 10
     - name: zoom.us preparation
       become: yes
       apt:
@@ -71,18 +73,26 @@
       become: yes
       apt:
         deb: https://zoom.us/client/latest/zoom_amd64.deb
+      retries: 3
+      delay: 10
     - name: slack
       become: yes
       apt:
         deb: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
+      retries: 3
+      delay: 10
     - name: dbeaver
       become: yes
       apt:
         deb:  "https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
+      retries: 3
+      delay: 10
     - name: hugo
       become: yes
       apt:
         deb: "https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/hugo_{{ hugo_version }}_Linux-64bit.deb"
+      retries: 3
+      delay: 10
     - name: bitwarden
       become: yes
       flatpak:
@@ -96,6 +106,8 @@
         mode: 0755
         owner: root
         group: root
+      retries: 3
+      delay: 10
     - name: local applications dir
       file:
         path: "/home/{{ current_user }}/.local/share/applications"
@@ -111,6 +123,8 @@
         dest: "/home/{{current_user}}/.local/opt/JetBrains/ideaIU"
         extra_opts: [--strip-components=1]
         creates: "/home/{{ current_user }}/.local/opt/JetBrains/ideaIU/bin/idea.sh"
+      retries: 3
+      delay: 10
     - name: lotion target dir
       file:
         path: "/home/{{ current_user }}/.local/opt/lotion"
@@ -122,6 +136,8 @@
         dest: "/home/{{ current_user }}/.local/opt/lotion"
         extra_opts: [--strip-components=1]
         creates: "/home/{{ current_user }}/.local/opt/lotion/Lotion/Lotion"
+      retries: 3
+      delay: 10
     - name: lotion install
       shell:
         cmd: ./install.sh
