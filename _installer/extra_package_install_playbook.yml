@@ -56,12 +56,6 @@
         package:
           - rustc
           - cargo
-    - name: google chrome
-      become: yes
-      apt:
-        deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-      retries: 3
-      delay: 10
     - name: zoom.us preparation
       become: yes
       apt:
@@ -69,30 +63,20 @@
           - libgl1-mesa-glx
           - libegl1-mesa
           - libxcb-xtest0
-    - name: zoom.us
+    - name: download DEBs install
       become: yes
       apt:
-        deb: https://zoom.us/client/latest/zoom_amd64.deb
+        deb: "{{ item }}"
+      register: download_debs_installed
+      until: download_debs_installed is not failed
       retries: 3
       delay: 10
-    - name: slack
-      become: yes
-      apt:
-        deb: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
-      retries: 3
-      delay: 10
-    - name: dbeaver
-      become: yes
-      apt:
-        deb:  "https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
-      retries: 3
-      delay: 10
-    - name: hugo
-      become: yes
-      apt:
-        deb: "https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/hugo_{{ hugo_version }}_Linux-64bit.deb"
-      retries: 3
-      delay: 10
+      with_items:
+        - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        - https://zoom.us/client/latest/zoom_amd64.deb
+        - "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
+        - "https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
+        - "https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/hugo_{{ hugo_version }}_Linux-64bit.deb"
     - name: bitwarden
       become: yes
       flatpak:
@@ -106,6 +90,8 @@
         mode: 0755
         owner: root
         group: root
+      register: packer_installed
+      until: packer_installed is not failed
       retries: 3
       delay: 10
     - name: local applications dir
@@ -123,6 +109,8 @@
         dest: "/home/{{current_user}}/.local/opt/JetBrains/ideaIU"
         extra_opts: [--strip-components=1]
         creates: "/home/{{ current_user }}/.local/opt/JetBrains/ideaIU/bin/idea.sh"
+      register: intellij_idea_installed
+      until: intellij_idea_installed is not failed
       retries: 3
       delay: 10
     - name: lotion target dir
@@ -136,6 +124,8 @@
         dest: "/home/{{ current_user }}/.local/opt/lotion"
         extra_opts: [--strip-components=1]
         creates: "/home/{{ current_user }}/.local/opt/lotion/Lotion/Lotion"
+      register: lotion_client_installed
+      until: lotion_client_installed is not failed
       retries: 3
       delay: 10
     - name: lotion install
