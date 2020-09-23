@@ -37,3 +37,4 @@
         - sdkman
         - local_bin
         - fcitx
+        - tmux
