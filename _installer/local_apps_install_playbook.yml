@@ -33,10 +33,10 @@
     - name: sdkman
       shell: |
         curl -s "https://get.sdkman.io?rcupdate=false" | bash
-        # for auto install
-        sed -i  -e "s/sdkman_auto_answer=false/sdkman_auto_answer=true/g" ~/.sdkman/etc/config
       args:
-        creates: ~/.sdkman
+        creates: ~/.sdkman/etc/config
+    - name: sdkman config auto_answer
+      shell: sed -i  -e "s/sdkman_auto_answer=false/sdkman_auto_answer=true/g" ~/.sdkman/etc/config
     - name: sdkman default package install
       shell: |
         source ~/.sdkman/bin/sdkman-init.sh
