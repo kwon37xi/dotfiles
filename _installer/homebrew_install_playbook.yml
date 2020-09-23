@@ -26,6 +26,7 @@
           - lazydocker
           - jvmtop
           - sd
+          - zenith
         state: present
       retries: 5
       delay: 10
