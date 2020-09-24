@@ -60,6 +60,12 @@
           - ttf-mscorefonts-installer
           - uim
           - uim-byeoru
+          - fcitx
+          - fcitx-hangul
+          - fcitx-ui-classic
+          - fcitx-config-gtk
+          - fcitx-frontend-all
+          - kde-config-fcitx
           - build-essential
           - make
           - cmake
@@ -103,5 +109,5 @@
         #update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk3-systray
         ! [ -f /usr/bin/uim-im-switcher-qt4 ] && ln -s /usr/bin/uim-im-switcher-qt5 /usr/bin/uim-im-switcher-qt4
         ! [ -f /usr/bin/uim-pref-qt4 ] && ln -s /usr/bin/uim-pref-qt5 /usr/bin/uim-pref-qt4
-    - name: im-config uim
-      shell: "im-config -n uim"
+    - name: set default im
+      shell: "im-config -n fcitx"

@@ -36,4 +36,6 @@ ansible-playbook -vv ~/.dotfiles/_installer/local_dotfiles_install_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/local_kde_configs_playbook.yml
 
+ansible-playbook -vv ~/.dotfiles/_installer/local_develop_env_playbook.yml
+
 echo "      installation finished. REBOOT! "

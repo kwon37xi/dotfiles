@@ -74,15 +74,3 @@
       with_items:
         - /usr/share/applications/com.github.hluk.copyq.desktop
         - /usr/share/applications/org.kde.yakuake.desktop
-# todos
-# fusuma, 
-# kde 단축키
-# KDE font config...
-# git default config, credential helper
-# kwallet git
-# ssh passphrase
-# vpn, wifi
-# vivaldi 자동 설정
-# keepassxc 혹은 unix pass
-# intellij auto config
-# MAT
