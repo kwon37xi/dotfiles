@@ -110,4 +110,4 @@
         ! [ -f /usr/bin/uim-im-switcher-qt4 ] && ln -s /usr/bin/uim-im-switcher-qt5 /usr/bin/uim-im-switcher-qt4
         ! [ -f /usr/bin/uim-pref-qt4 ] && ln -s /usr/bin/uim-pref-qt5 /usr/bin/uim-pref-qt4
     - name: set default im
-      shell: "im-config -n fcitx"
+      shell: "im-config -n uim"
