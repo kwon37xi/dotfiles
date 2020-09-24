@@ -24,6 +24,7 @@
           - .sdkman/etc/config
           - .config/fcitx/conf
           - .config/fcitx/config
+          - .local/share/konsole
     - name: stow
       shell: "stow -d ~/.dotfiles -t ~/ -S {{ item }}"
       with_items:
@@ -38,3 +39,4 @@
         - local_bin
         - fcitx
         - tmux
+        - yakuake
