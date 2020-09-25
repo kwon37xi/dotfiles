@@ -29,7 +29,6 @@ call plug#begin()
 
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-scripts/closetag.vim'
@@ -43,7 +42,9 @@ Plug 'vim-scripts/snipMate'
 Plug 'vim-scripts/Align'
 Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'jremmen/vim-ripgrep'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+"Plug 'jremmen/vim-ripgrep'
 "Plug 'vim-scripts/fcitx.vim'
 
 " Programming Languages
@@ -238,6 +239,38 @@ nnoremap <silent> L :call ToggleMovement('L', 'H')<CR>
 let g:indentLine_setConceal = 0
 let g:vim_json_syntax_conceal = 0
 set conceallevel=0
+
+" fzf
+set rtp+=/home/linuxbrew/.linuxbrew/bin/fzf
+nnoremap <C-n> :Files<Cr>
+
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Empty value to disable preview window altogether
+let g:fzf_preview_window = ''
+
+" Always enable preview window on the right with 60% width
+let g:fzf_preview_window = 'right:60%'
+
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
+" [[B]Commits] Customize the options used by 'git log':
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+
+" [Tags] Command to generate tags file
+let g:fzf_tags_command = 'ctags -R'
+
+" [Commands] --expect expression for directly executing the command
+let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 " sytastic
 set statusline+=%#warningmsg#

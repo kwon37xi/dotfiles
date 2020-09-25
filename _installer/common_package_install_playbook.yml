@@ -21,7 +21,6 @@
           - flatpak
           - vim-gtk
           - universal-ctags
-          - fzf
           - ripgrep
           - fd-find
           - tmux
