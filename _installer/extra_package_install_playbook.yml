@@ -77,6 +77,7 @@
         - "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
         - "https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
         - "https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/hugo_{{ hugo_version }}_Linux-64bit.deb"
+        - "https://github.com/sharkdp/bat/releases/download/v0.15.4/bat_{{ bat_version }}_amd64.deb"
     - name: bitwarden
       become: yes
       flatpak:

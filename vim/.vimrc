@@ -42,7 +42,7 @@ Plug 'vim-scripts/snipMate'
 Plug 'vim-scripts/Align'
 Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'junegunn/fzf'
+Plug '/home/linuxbrew/.linuxbrew/opt/fzf'
 Plug 'junegunn/fzf.vim'
 "Plug 'jremmen/vim-ripgrep'
 "Plug 'vim-scripts/fcitx.vim'
@@ -181,8 +181,7 @@ let g:localvimrc_name = ".lvimrc"
 let g:localvimrc_ask = 0
 
 " bufexplorer
-map <C-F6> :BufExplorer<CR>
-map <Leader>be <ESC>:BufExplorer<CR>
+map <Leader>b <ESC>:Buffers<CR>
 
 " Emmet.vim (Zen-Coding)
 " http://mattn.github.io/emmet-vim/
@@ -241,8 +240,13 @@ let g:vim_json_syntax_conceal = 0
 set conceallevel=0
 
 " fzf
-set rtp+=/home/linuxbrew/.linuxbrew/bin/fzf
+" fzf 자체의 vim 기본 플러그인을 로딩해야한다. fzf.vim 과 다름.
+"call fzf#run(fzf#wrap({'source': 'fdfind --type file --type directory --follow --hidden --exclude ".git .class" --color=always'}))
+
 nnoremap <C-n> :Files<Cr>
+let g:zf_preview_window = 'right:60%'
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
@@ -250,8 +254,13 @@ xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
 " Insert mode completion
+" 단어를 사용하다가 단축키를 호출하면 단어 완성 기능
 imap <c-x><c-k> <plug>(fzf-complete-word)
+
+" 문서 작성도중 파일 경로 넣기
 imap <c-x><c-f> <plug>(fzf-complete-path)
+
+" 현재 파일에 있는 특정 줄 내용을 paste
 imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Empty value to disable preview window altogether
@@ -273,14 +282,14 @@ let g:fzf_tags_command = 'ctags -R'
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 " sytastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 0
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 " 각 PC별 특별 설정이 있다면 ~/.vimrc_pc 파일을 만들어
 " 해당 파일에 설정을 넣어 두면 된다.
