@@ -114,23 +114,3 @@
       until: intellij_idea_installed is not failed
       retries: 3
       delay: 10
-    - name: lotion target dir
-      file:
-        path: "/home/{{ current_user }}/.local/opt/lotion"
-        state: directory
-    - name: lotion notion client
-      unarchive:
-        src: "https://github.com/puneetsl/lotion/archive/V-{{ lotion_version }}.tar.gz"
-        remote_src: yes
-        dest: "/home/{{ current_user }}/.local/opt/lotion"
-        extra_opts: [--strip-components=1]
-        creates: "/home/{{ current_user }}/.local/opt/lotion/Lotion/Lotion"
-      register: lotion_client_installed
-      until: lotion_client_installed is not failed
-      retries: 3
-      delay: 10
-    - name: lotion install
-      shell:
-        cmd: ./install.sh
-        chdir: "/home/{{ current_user }}/.local/opt/lotion"
-        creates: "/home/{{ current_user }}/.local/opt/lotion/Lotion/Lotion"
