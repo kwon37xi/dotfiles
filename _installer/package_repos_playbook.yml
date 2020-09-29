@@ -69,6 +69,7 @@
         - ppa:kdenlive/kdenlive-stable
         - ppa:neovim-ppa/stable
         - ppa:kritalime/ppa
+        - ppa:papirus/papirus
     - name: multiverse universe
       become: yes
       shell: "apt-add-repository -y --no-update {{ item }}"

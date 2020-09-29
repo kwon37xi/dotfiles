@@ -22,3 +22,16 @@
           - kio-gdrive
           - dolphin-plugins
           - plasma-browser-integration
+    - name: install KDE/GNOME themes
+      become: yes
+      apt:
+        install_recommends: yes
+        package:
+          - papirus-icon-theme
+          - materia-kde
+          - arc-kde
+          - papirus-folders
+          - claws-mail-themes-papirus
+          - materia-gtk-theme
+          - arc-theme
+
