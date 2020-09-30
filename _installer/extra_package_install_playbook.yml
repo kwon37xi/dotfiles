@@ -5,11 +5,6 @@
   vars_files:
     - "vars.yml"
   tasks:
-    - name: install visual studio code
-      become: yes
-      apt:
-        package:
-          - code
     - name: install virtualbox
       become: yes
       apt:
