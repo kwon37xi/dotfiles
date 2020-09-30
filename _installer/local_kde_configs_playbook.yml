@@ -19,14 +19,10 @@
         kwriteconfig5 --file ~/.config/kdeglobals --group General --key smallestReadableFont "나눔바른고딕,9,-1,5,50,0,0,0,0,0"
         kwriteconfig5 --file ~/.config/kdeglobals --group General --key toolBarFont "나눔바른고딕,11,-1,5,50,0,0,0,0,0"
         kwriteconfig5 --file ~/.config/kdeglobals --group WM --key activeFont "서울한강체,10,-1,5,50,0,0,0,0,0,M"
-    - name: yakuake tabsonly skin install
+    - name: yakuake tabsonly skin install # tabsonly theme 다운로드 불가라, 미리 받아서 설치해둠
       unarchive:
-        src: https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0NjQ4MDM1NzEiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6ImI1YzZlNjJhNWE1MjljMDgwZjdmZGJmZDBlZmE0NWJhMTdiZjBlN2UyMTYxMzNjYjZiZmFiMmI2OTAzODE3MzkyM2UyNjM4MjVlOWI1YjYyZDgwY2ZjNjkxMDI4NTZlNWM1MjkzNzMyMTZjMzFiZTk5MDljZDY4ZDk3MzYyMjdhIiwidCI6MTYwMDkwMDExNywic3RmcCI6IjNkNmVmNzkxNGQzOTQ4NjFjNTFlNGZiZGE1ZGY0OTFjIiwic3RpcCI6IjE0LjM1LjIyOS4zMSJ9.h5D2BXSuSYLnglqPLzC_YA49pnnXA-4TVIf5lPFYwog/146212-tabsonly.tar.gz
+        src: ~/.dotfiles/_backup/kde/yakuake/146212-tabsonly.tar.gz
         dest: ~/.local/share/yakuake/kns_skins
-        remote_src: yes
-      register: tabsonly_downloaded
-      until: tabsonly_downloaded is not failed
-      retries: 3
     - name: yakuake configuration
       shell: |
         kwriteconfig5 --file yakuakerc --group Window --key Height "100"
