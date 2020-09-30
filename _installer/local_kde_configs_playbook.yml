@@ -5,6 +5,12 @@
   vars_files:
     - "vars.yml"
   tasks:
+    - name: kde dirs
+      file:
+        path: "/home/{{ current_user }}/{{ item }}"
+        state: directory
+        with_items:
+          - .local/share/yakuake/kns_skins
     - name: fonts configuration
       shell: |
         kwriteconfig5 --file ~/.config/kdeglobals --group General --key font "나눔바른고딕,11,-1,5,50,0,0,0,0,0"
