@@ -104,8 +104,8 @@
         update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-qt5 100
         update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk3-systray 100
         update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk-systray 100
-        update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
-        #update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk3-systray
+        #update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
+        update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk3-systray
         ! [ -f /usr/bin/uim-im-switcher-qt4 ] && ln -s /usr/bin/uim-im-switcher-qt5 /usr/bin/uim-im-switcher-qt4
         ! [ -f /usr/bin/uim-pref-qt4 ] && ln -s /usr/bin/uim-pref-qt5 /usr/bin/uim-pref-qt4
     - name: set default im
