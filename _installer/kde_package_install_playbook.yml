@@ -14,7 +14,6 @@
           - muon
           - qapt-deb-installer
           - plasma-discover-backend-flatpak
-          - plasma-discover-backend-snap
           - plasma-discover-backend-fwupd
           - yakuake
           - dolphin-plugins
