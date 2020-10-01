@@ -9,6 +9,9 @@
       become: yes
       apt_key:
         url: https://repo.vivaldi.com/archive/linux_signing_key.pub
+      register: vivaldi_key_installed
+      until: vivaldi_key_installed is not failed
+      retries: 3
     - name: vivaldi browser repo
       become: yes
       apt_repository:
@@ -19,6 +22,9 @@
       become: yes
       apt_key:
         url: https://www.virtualbox.org/download/oracle_vbox_2016.asc
+      register: virtualbox_key_installed
+      until: virtualbox_key_installed is not failed
+      retries: 3
     - name: virtualbox repo
       become: yes
       apt_repository:
@@ -40,6 +46,9 @@
       become: yes
       apt_key:
         url: https://typora.io/linux/public-key.asc
+      register: typora_key_installed
+      until: typora_key_installed is not failed
+      retries: 3
     - name: typora repo
       become: yes
       apt_repository:
