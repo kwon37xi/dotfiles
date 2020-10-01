@@ -78,7 +78,7 @@
     - name: remove snapd
       become: yes
       shell: |
-        apt purge --autoremove snapd
+        apt purge -y --autoremove snapd
         rm -rf /snap
         rm -rf /var/snap
         rm -rf /var/lib/snapd
