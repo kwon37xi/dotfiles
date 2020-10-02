@@ -24,6 +24,8 @@ ansible-playbook -vv ~/.dotfiles/_installer/prepare_user_dirs_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/extra_package_install_playbook.yml
 
+ansible-playbook -vv ~/.dotfiles/_installer/meganz_install_playbook.yml
+
 ansible-playbook -vv ~/.dotfiles/_installer/package_full_upgrade.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/free_korean_fonts_install_playbook.yml
