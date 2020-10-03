@@ -1,6 +1,6 @@
 [user]
-	name = KwonNam Son
-	email = kwon37xi@gmail.com
+    name = KwonNam Son
+    email = kwon37xi@gmail.com
 
 [includeIf "gitdir:~/projects_kwon37xi/"]
     path = ~/.git_personal_projects
@@ -12,22 +12,23 @@
     path = ~/.git_woowabros_projects
 
 [core]
-	filemode = false
-    askPass = /usr/bin/ksshaskpass
+    filemode = false
+
+[pull]
+    rebase = false
+
+
+[credential]
+    helper = /usr/local/bin/git-credential-kwalletcli
 
 [diff]
-	external = ~/.local/bin/git-diff-meld.sh
+    external = ~/.local/bin/git-diff-meld.sh
 [merge]
-	tool = meld
+    tool = meld
 [alias]
-	last = log -1 HEAD
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an %ae>%Creset' --abbrev-commit --
-	ci = commit
-	co = checkout
-	st = status
-	unstage = reset HEAD --
-[pull]
-	rebase = false
-
-[core]
-    filemode = false
+    last = log -1 HEAD
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an %ae>%Creset' --abbrev-commit --
+    ci = commit
+    co = checkout
+    st = status
+    unstage = reset HEAD --

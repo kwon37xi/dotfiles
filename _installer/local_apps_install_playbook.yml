@@ -30,6 +30,14 @@
       lineinfile:
         path: ~/.bashrc
         line: "for bashrc in {{ local_bashrcs_dir }}/*.bashrc; do source \"$bashrc\"; done;"
+    - name: git-credential-kwalletcli
+      become: yes
+      get_url:
+        url: https://raw.githubusercontent.com/kwon37xi/git-credential-kwalletcli/main/git-credential-kwalletcli
+        dest: /usr/local/bin/git-credential-kwalletcli
+        owner: root
+        group: root
+        mode: 0755
     - name: sdkman
       shell: |
         curl -s "https://get.sdkman.io?rcupdate=false" | bash
