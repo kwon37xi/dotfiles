@@ -13,6 +13,8 @@
 
 [core]
 	filemode = false
+    askPass = /usr/bin/ksshaskpass
+
 [diff]
 	external = ~/.local/bin/git-diff-meld.sh
 [merge]
@@ -26,6 +28,6 @@
 	unstage = reset HEAD --
 [pull]
 	rebase = false
-[credential]
-    helper = /usr/local/bin/git-credential-kwallet
 
+[core]
+    filemode = false
