@@ -40,3 +40,9 @@
         - fcitx
         - tmux
         - yakuake
+    - name: face
+      file:
+        path: "/home/{{ current_user }}/.face"
+        src: "/home/{{ current_user }}/.dotfiles/_profiles/손권남_Time.jpg"
+        state: link
+        force: yes
