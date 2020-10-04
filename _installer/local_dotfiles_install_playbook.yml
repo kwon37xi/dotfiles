@@ -26,7 +26,8 @@
           - .sdkman/etc/config
           - .config/fcitx/conf
           - .config/fcitx/config
-          - .local/share/konsole - name: stow
+          - .local/share/konsole
+    - name: stow
       shell: "stow -d ~/.dotfiles -t ~/ -S {{ item }}"
       with_items:
         - vim
