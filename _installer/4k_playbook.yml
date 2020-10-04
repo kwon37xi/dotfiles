@@ -1,0 +1,25 @@
+---
+# https://kwonnam.pe.kr/wiki/linux/hidpi
+- name: 4k monitor config
+  hosts: 127.0.0.1
+  connection: local
+  vars_files:
+    - "vars.yml"
+  tasks:
+    - name: console 4k font
+      become: yes
+      shell: |
+        sed -i.bak1k -e "s/^CODESET/#CODESET/g" \
+          -e "s/^FONTFACE/#FONTFACE/g" \
+          -e "s/^FONTSIZE/#FONTSIZE/g" \
+          /etc/default/console-setup
+      args:
+        creates: /etc/default/console-setup.bak1k
+    - name: console 4k font add lines
+      become: yes
+      blockinfile:
+        path: /etc/default/console-setup
+        block: |
+          CODESET="Uni3"
+          FONTFACE="Terminus"
+          FONTSIZE="32x16"
