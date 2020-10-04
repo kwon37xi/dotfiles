@@ -34,7 +34,7 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 * 창 장식 : Materia Dark
 * 색상 : Materia Dark
 * 아이콘 : Papirus-Dark
-* 커서 : Breeze Light (이게 어두운 화면에서 눈에 더 잘 띔)
+* 커서 : DMZ (검정색) (이게 어두운 화면에서 눈에 더 잘 띔)
 
 ### Panel 설정 변경
 * Panel 프로그램 메뉴에서 우클릭 "대체 항목 보기" -> **프로그램 대시보드**

@@ -82,3 +82,5 @@
       with_items:
         - /usr/share/applications/com.github.hluk.copyq.desktop
         - /usr/share/applications/org.kde.yakuake.desktop
+        - /usr/share/applications/megasync.desktop
+        - /usr/share/applications/slack.desktop

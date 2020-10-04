@@ -15,7 +15,9 @@
         - .local/bin
         - .config/nvim
         - .config/nvim-qt
+        - .config/plasma-workspace/env
         - .sdkman/etc
+        - .vim
     - name: delete conflicting files
       file:
         path: "/home/{{ current_user }}/{{ item }}"
@@ -24,8 +26,7 @@
           - .sdkman/etc/config
           - .config/fcitx/conf
           - .config/fcitx/config
-          - .local/share/konsole
-    - name: stow
+          - .local/share/konsole - name: stow
       shell: "stow -d ~/.dotfiles -t ~/ -S {{ item }}"
       with_items:
         - vim
@@ -39,6 +40,7 @@
         - local_bin
         - fcitx
         - tmux
+        - kde
         - yakuake
     - name: face
       file:
