@@ -37,6 +37,8 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 * 커서 : Breeze Light (이게 어두운 화면에서 눈에 더 잘 띔)
 
 ### Panel 설정 변경
+* Panel 프로그램 메뉴에서 우클릭 "대체 항목 보기" -> **프로그램 대시보드**
+  * 아이콘도 변경
 * Panel 작업 관리자에서 우클릭 "대체 항목 보기" -> **아이콘만 있는 작업 관리자** 로 전환
 * 날짜 포맷 변경
   * 디지털 시계 위젯에서 "디지털 시계 설정" 클릭
