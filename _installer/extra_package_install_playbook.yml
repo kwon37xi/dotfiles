@@ -31,6 +31,8 @@
       apt:
         package:
           - vagrant
+          - packer
+          - terraform
           - asbru-cm
           - typora
           - unetbootin
@@ -77,19 +79,6 @@
       become: yes
       flatpak:
         name: "com.bitwarden.desktop"
-    - name: packer
-      become: yes
-      unarchive:
-        src: "https://releases.hashicorp.com/packer/{{ packer_version }}/packer_{{ packer_version }}_linux_amd64.zip"
-        remote_src: yes
-        dest: /usr/local/bin
-        mode: 0755
-        owner: root
-        group: root
-      register: packer_installed
-      until: packer_installed is not failed
-      retries: 3
-      delay: 10
     - name: local applications dir
       file:
         path: "/home/{{ current_user }}/.local/share/applications"
@@ -109,3 +98,9 @@
       until: intellij_idea_installed is not failed
       retries: 3
       delay: 10
+    - name: Memory Analyzer(MAT)
+      unarchive:
+        src: http://mirror.kakao.com/eclipse/mat/1.10.0/rcp/MemoryAnalyzer-1.10.0.20200225-linux.gtk.x86_64.zip
+        remote_src: yes
+        dest: "/home/{{ current_user }}/.local/opt"
+        creates: "/home/{{ current_user }}/.local/opt/mat"
