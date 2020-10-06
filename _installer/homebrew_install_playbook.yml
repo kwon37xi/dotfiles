@@ -30,6 +30,8 @@
           - jvmtop
           - sd
           - zenith
+          - vifm
+          - bitwarden-cli
         state: present
       register: brew_common_packages
       until: brew_common_packages is not failed
