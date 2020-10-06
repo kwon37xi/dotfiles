@@ -110,12 +110,12 @@ set guifont=D2Coding\ 14
 set fileformats=unix,dos
 set fileencodings=utf8,cp949
 
-"colorscheme desert
-"colorscheme zenburn
-"colorscheme desertEx
 " Vim plug 자동 설치 전에는 해당 스킴이 없어서 오류가 발생함. 이를 없애는
 " 방법. slient! ...
-silent! colorscheme pyte
+silent! colorscheme desertEx
+"colorscheme zenburn
+"colorscheme desertEx
+"silent! colorscheme pyte
 " colorscheme molokai
 " colorscheme warm-night
 
