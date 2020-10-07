@@ -1,0 +1,25 @@
+swipe:
+  3: 
+    left: 
+      command: 'xdotool key alt+Right' # Browser back
+    right: 
+      command: 'xdotool key alt+Left' # Browser forward
+    up: # KDE Show Desktop Grid
+      command: 'qdbus org.kde.kglobalaccel /component/kwin invokeShortcut ShowDesktopGrid'
+    down: # KDE Show all windows
+      command: 'qdbus org.kde.kglobalaccel /component/kwin invokeShortcut ExposeAll'
+  4:
+    left: 
+      command: 'wmctrl -s 3' # to the last workspace
+    right: 
+      command: 'wmctrl -s 0' # to the first workspace
+    up: 
+      command: '/home/kwon37xi/.local/bin/workspace-switcher.sh 4 Down'
+    down: 
+      command: '/home/kwon37xi/.local/bin/workspace-switcher.sh 4 Up'
+threshold:
+  swipe: 1
+  pinch: 0.5
+interval:
+  swipe: 1
+  pinch: 3
