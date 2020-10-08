@@ -30,6 +30,8 @@ ansible-playbook -vv ~/.dotfiles/_installer/package_full_upgrade.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/free_korean_fonts_install_playbook.yml
 
+ansible-playbook -vv ~/.dotfiles/_installer/firewall_config_playbook.yml
+
 ansible-playbook -vv ~/.dotfiles/_installer/local_apps_install_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/homebrew_install_playbook.yml
