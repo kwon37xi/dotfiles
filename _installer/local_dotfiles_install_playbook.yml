@@ -16,6 +16,7 @@
         - .config/nvim
         - .config/nvim-qt
         - .config/plasma-workspace/env
+        - .config/gtk-3.0
         - .sdkman/etc
         - .vim
     - name: delete conflicting files
@@ -43,6 +44,10 @@
         - tmux
         - kde
         - yakuake
+    - name: stow with adopt
+      shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
+      with_items:
+        - gtk
     - name: face
       file:
         path: "/home/{{ current_user }}/.face"

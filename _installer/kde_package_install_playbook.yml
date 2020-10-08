@@ -33,4 +33,6 @@
           - claws-mail-themes-papirus
           - materia-gtk-theme
           - arc-theme
-
+          - dmz-cursor-theme
+    - name: change lookandfeel
+      shell: lookandfeeltool --apply com.github.varlesh.materia

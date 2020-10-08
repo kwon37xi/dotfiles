@@ -47,5 +47,6 @@
         kwriteconfig5 --file touchpadxlibinputrc --group "SynPS/2 Synaptics TouchPad" --key naturalScroll --type boolean true
         kwriteconfig5 --file touchpadxlibinputrc --group "SynPS/2 Synaptics TouchPad" --key tapToClick --type boolean true
         # KDE UI의 언어를 영어로 변경
-        # kwriteconfig5 --file plasma-localerc --group "Translations" --key LANGUAGE "en_US:ko"
-
+        kwriteconfig5 --file plasma-localerc --group "Translations" --key LANGUAGE "en_US:ko"
+        # cursor DMZ-Black 으로 변경
+        kwriteconfig5 --file kcminputrc --group "Mouse" --key cursorTheme=DMZ-Black
