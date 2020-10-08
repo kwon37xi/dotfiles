@@ -13,7 +13,7 @@
 
 [core]
     filemode = false
-    pager = 
+    pager = most
 
 [pull]
     rebase = false
