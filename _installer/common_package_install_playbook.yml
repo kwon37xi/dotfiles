@@ -83,6 +83,7 @@
           - openjdk-11-jdk
           - freerdp2-x11
           - git-flow
+          - tig
     - name: install claws-mail packages
       become: yes
       apt:
