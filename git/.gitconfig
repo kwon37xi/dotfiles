@@ -13,10 +13,10 @@
 
 [core]
     filemode = false
+    pager = most
 
 [pull]
     rebase = false
-
 
 [credential]
     helper = /usr/local/bin/git-credential-kwalletcli

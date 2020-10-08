@@ -16,6 +16,7 @@
           - ubuntu-restricted-addons
           - ubuntu-restricted-extras
           - htop
+          - most
           - aptitude
           - dconf-editor
           - flatpak
