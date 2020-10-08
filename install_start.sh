@@ -34,6 +34,8 @@ ansible-playbook -vv ~/.dotfiles/_installer/local_apps_install_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/homebrew_install_playbook.yml
 
+ansible-playbook -vv ~/.dotfiles/_installer/fusuma_install_playbook.yml
+
 ansible-playbook -vv ~/.dotfiles/_installer/local_dotfiles_install_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/local_kde_configs_playbook.yml
