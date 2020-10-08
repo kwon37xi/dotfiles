@@ -49,4 +49,4 @@
         # KDE UI의 언어를 영어로 변경
         kwriteconfig5 --file plasma-localerc --group "Translations" --key LANGUAGE "en_US:ko"
         # cursor DMZ-Black 으로 변경
-        kwriteconfig5 --file kcminputrc --group "Mouse" --key cursorTheme=DMZ-Black
+        kwriteconfig5 --file kcminputrc --group "Mouse" --key cursorTheme "DMZ-Black"
