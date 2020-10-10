@@ -2,6 +2,9 @@
     name = KwonNam Son
     email = kwon37xi@gmail.com
 
+[init]
+  defaultBranch = main
+
 [includeIf "gitdir:~/projects_kwon37xi/"]
     path = ~/.git_personal_projects
 
