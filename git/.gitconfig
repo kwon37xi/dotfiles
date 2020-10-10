@@ -13,7 +13,7 @@
 
 [core]
     filemode = false
-    pager = vmore
+    pager = most
 
 [pull]
     rebase = false
@@ -21,10 +21,6 @@
 [credential]
     helper = /usr/local/bin/git-credential-kwalletcli
 
-[diff]
-    external = ~/.local/bin/git-diff-meld.sh
-[merge]
-    tool = meld
 [alias]
     last = log -1 HEAD
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an %ae>%Creset' --abbrev-commit --
@@ -32,3 +28,35 @@
     co = checkout
     st = status
     unstage = reset HEAD --
+    dt = difftool
+    mt = mergetool
+
+# http://blog.marcinchwedczuk.pl/use-meld-as-git-merge-diff-tool
+[diff]
+    tool = meld
+    # external = ~/.local/bin/git-diff-meld.sh
+
+[difftool]
+    prompt = false
+    keepBackup = false
+    trustExitCode = false
+
+[difftool "meld"]
+    cmd = meld \"$LOCAL\" \"$REMOTE\" --label \"DIFF (ORIGINAL MY)\"
+
+[difftool "kdiff3"]
+    cmd = kdiff3 \"$LOCAL\" \"$REMOTE\"
+
+[merge]
+    #tool = meld
+    tool = kdiff3
+
+[mergetool "meld"]
+    # 3 way 머지 중 가운데가 merged
+    #cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+    # 3 way 머지 중 가운데가 BASE
+    #cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+    cmd = meld --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output \"$MERGED\" --label \"MERGE (REMOTE BASE MY)\"
+
+[mergetool "kdiff3"]
+    cmd = kdiff3 --qall --base \"$BASE\" \"$LOCAL\" \"$REMOTE\" --out \"$MERGED\"
