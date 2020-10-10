@@ -13,7 +13,7 @@
 
 [core]
     filemode = false
-    pager = most
+    pager = vmore
 
 [pull]
     rebase = false
