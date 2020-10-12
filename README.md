@@ -77,7 +77,7 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 * 시스템 설정 열고
 * 단축키
   * Plasma
-    * **프로그램 실행기 위젯 활성화하기** 비어있는 항목을 **Alt+F1**으로 재할당. 기존 것은 삭제
+    * **Activate Application Launcher Widget(프로그램 실행기 위젯 활성화하기)** 비어있는 항목을 **Alt+F1**으로 재할당. 기존 것은 삭제
 
 ### 개발 관련
 * IntelliJ Idea 설치 

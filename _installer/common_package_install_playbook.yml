@@ -52,7 +52,7 @@
           - fonts-nanum-coding
           - fonts-nanum-eco
           - fonts-nanum-extra
-            #- fonts-naver-d2coding # use d2coding nerd font patch
+          - fonts-naver-d2coding
           - fonts-unfonts-core
           - fonts-unfonts-extra
           - fonts-noto-cjk
