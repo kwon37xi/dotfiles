@@ -84,6 +84,8 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 ```
 ~/.local/opt/JetBrains/ideaIU/bin/idea.sh
 ```
+### Libreoffice
+* 도구 -> 기본설정 -> 보기 -> 아이콘 스타일 : dark 계통으로 변경한것. 그렇지 않으면 아이콘이 잘 안보인다.
 
 ### 4k 설정
 * 4k 모니터 Console 및 Grub 설정등
