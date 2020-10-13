@@ -34,7 +34,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-scripts/closetag.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-scripts/localvimrc'
-Plug 'vim-scripts/bufexplorer.zip'
+"Plug 'vim-scripts/bufexplorer.zip'
 Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/taglist-plus'
@@ -154,7 +154,7 @@ let g:indentLine_color_gui = 'lightblue'
 set list lcs=tab:\┆\.,trail:~
 
 " Buffer 단축키
-map <leader>bp <ESC>:bp<CR>
+map <leader>bp <esc>:bp<CR>
 map <leader>bn <ESC>:bn<CR>
 map <C-PageUp> :bp<CR>
 map <C-PageDown> :bn<CR>
@@ -163,25 +163,14 @@ map <C-Tab> :bn<CR>
 map <C-F4> :bdelete<CR>
 map <leader>bd <ESC>:bdelete<CR>
 
-" CtrlP
-" If ignored files and dires searched, execute :CtrlPClearAllCaches
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.exe,*.class
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|build|target)$',
-  \ 'file': '\v\.(exe|so|dll|class|bak|pyc)$',
-  \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-  \ }
-
+"
 " localvimrc 설정
 let g:localvimrc_name = ".lvimrc"
 let g:localvimrc_ask = 0
 
 " bufexplorer
-map <Leader>b <ESC>:Buffers<CR>
+map <Leader>be <ESC>:Buffers<CR>
 
 " Emmet.vim (Zen-Coding)
 " http://mattn.github.io/emmet-vim/
