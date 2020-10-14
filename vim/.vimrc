@@ -171,6 +171,7 @@ let g:localvimrc_ask = 0
 
 " bufexplorer
 map <Leader>be <ESC>:Buffers<CR>
+nnoremap <silent> <C-E> <ESC>:Buffers<CR>
 
 " Emmet.vim (Zen-Coding)
 " http://mattn.github.io/emmet-vim/
