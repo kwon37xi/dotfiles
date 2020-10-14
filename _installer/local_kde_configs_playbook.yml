@@ -19,9 +19,13 @@
         kwriteconfig5 --file ~/.config/kdeglobals --group General --key smallestReadableFont "나눔바른고딕,9,-1,5,50,0,0,0,0,0"
         kwriteconfig5 --file ~/.config/kdeglobals --group General --key toolBarFont "나눔바른고딕,11,-1,5,50,0,0,0,0,0"
         kwriteconfig5 --file ~/.config/kdeglobals --group WM --key activeFont "서울한강체,10,-1,5,50,0,0,0,0,0,M"
-    - name: yakuake tabsonly skin install # tabsonly theme 다운로드 불가라, 미리 받아서 설치해둠
+    - name: yakuake tabsonly skin install # theme 다운로드 불가라, 미리 받아서 설치해둠
       unarchive:
         src: ~/.dotfiles/_backup/kde/yakuake/146212-tabsonly.tar.gz
+        dest: ~/.local/share/yakuake/kns_skins
+    - name: yakuake pixelate skin install # theme 다운로드 불가라, 미리 받아서 설치해둠
+      unarchive:
+        src: ~/.dotfiles/_backup/kde/yakuake/139472-pixelate.tar.gz
         dest: ~/.local/share/yakuake/kns_skins
     - name: yakuake configuration
       shell: |
@@ -30,7 +34,7 @@
         kwriteconfig5 --file yakuakerc --group Window --key Position "100"
         kwriteconfig5 --file yakuakerc --group Window --key ShowTabBar --type boolean false
         kwriteconfig5 --file yakuakerc --group Behavior --key RememberFullscreen --type boolean true
-        kwriteconfig5 --file yakuakerc --group Appearance --key Skin "tabsonly"
+        kwriteconfig5 --file yakuakerc --group Appearance --key Skin "pixelate"
         kwriteconfig5 --file yakuakerc --group Appearance --key SkinInstalledWithKns --type boolean true
         kwriteconfig5 --file yakuakerc --group "Desktop Entry" --key DefaultProfile "YakuakeDefault.profile"
     - name: global shortcut keys configuration begin
