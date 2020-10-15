@@ -38,4 +38,7 @@
           - arc-theme
           - dmz-cursor-theme
     - name: change lookandfeel
-      shell: lookandfeeltool --apply com.github.varlesh.materia
+      shell: |
+        lookandfeeltool --apply com.github.varlesh.materia
+        qdbus org.kde.GtkConfig /GtkConfig setGtk3Theme Materia-dark
+        qdbus org.kde.GtkConfig /GtkConfig setGtk2Theme Materia-dark
