@@ -271,6 +271,12 @@ let g:fzf_tags_command = 'ctags -R'
 " [Commands] --expect expression for directly executing the command
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
+" cursor line/column highlight
+" https://vim.fandom.com/wiki/Highlight_current_line
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
 " sytastic
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
