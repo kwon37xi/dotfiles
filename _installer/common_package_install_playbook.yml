@@ -16,6 +16,7 @@
           - ubuntu-restricted-addons
           - ubuntu-restricted-extras
           - htop
+          - cpufrequtils
           - most
           - aptitude
           - dconf-editor
