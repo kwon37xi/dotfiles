@@ -39,15 +39,16 @@
         kwriteconfig5 --file yakuakerc --group "Desktop Entry" --key DefaultProfile "YakuakeDefault.profile"
     - name: global shortcut keys configuration begin
       shell: |
-        kquitapp5 kglobalaccel
-        rm ~/.config/kglobalshortcutsrc
-        cp ~/.dotfiles/_backup/kde/.config/kglobalshortcutsrc ~/.config
-        kglobalaccel5 &
+        #kquitapp5 kglobalaccel
+        #rm ~/.config/kglobalshortcutsrc
+        #cp ~/.dotfiles/_backup/kde/.config/kglobalshortcutsrc ~/.config
+        #kglobalaccel5 &
+        echo "파일 복사가 아닌 명령어 기반으로 KDE 단축키 설정 변경을 시도해본다"
     - name: global etc configurations
       shell: |
         # 시작시 빈 세션으로 시작
         kwriteconfig5 --file ksmserverrc --group General --key loginMode "emptySession"
-        # 터치패드 설정
+        # 터치패드 설정 for thinkpad x1 gen 2
         kwriteconfig5 --file touchpadxlibinputrc --group "SynPS/2 Synaptics TouchPad" --key naturalScroll --type boolean true
         kwriteconfig5 --file touchpadxlibinputrc --group "SynPS/2 Synaptics TouchPad" --key tapToClick --type boolean true
         # KDE UI의 언어를 영어로 변경
