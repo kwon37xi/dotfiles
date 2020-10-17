@@ -9,3 +9,4 @@ hugo_version: 0.74.3
 lotion_version: 0.04
 jetbrains_intellij_idea_version: 2020.2.3
 bat_version: 0.15.4
+duf_version: 0.4.0
