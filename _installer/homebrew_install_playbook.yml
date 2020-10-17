@@ -37,4 +37,14 @@
       until: brew_common_packages is not failed
       retries: 3
       delay: 10
-
+    - name: tap tgotwig/linux-dust
+      homebrew_tap:
+        name: tgotwig/linux-dust
+    - name: dust install
+      homebrew:
+        name: dust
+        state: present
+      register: dust_package
+      until: dust_package is not failed
+      retries: 3
+      delay: 10
