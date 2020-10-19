@@ -20,6 +20,17 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 ## 설치 후 할 일들
 * 후속 private dotfiles 설치
 
+### xanmod microcode 설치
+* https://xanmod.org
+* intel/amd 여부에 따라 서로 다르게 설치
+```
+# intel
+sudo apt install intel-microcode iucode-tool
+
+# amd
+sudo apt install amd64-microcode
+```
+
 ### KDE/QT/GTK 테마 설치 - Materia 기준
 * **Materia** 와 **Arc**, **Papirus Icon** 테마들을 기본 설치 해둔 상태임
 * KDE/QT, Gnome/GTK 모두 Materia와 Arc 를 지원하기 때문에 통일성 있는 구성 가능.

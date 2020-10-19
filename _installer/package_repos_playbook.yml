@@ -5,6 +5,19 @@
   vars_files:
     - "vars.yml"
   tasks:
+    - name: xanmod kernel key
+      become: yes
+      apt_key:
+        url: https://dl.xanmod.org/gpg.key
+      register: xanmod_kernal_key_installed
+      until: xanmod_kernal_key_installed is not failed
+      retries: 3
+    - name: xanmod kernel repo
+      become: yes
+      apt_repository:
+        repo: deb http://deb.xanmod.org releases main
+        filename: xanmod-kernel
+        update_cache: no
     - name: vivaldi browser key
       become: yes
       apt_key:
