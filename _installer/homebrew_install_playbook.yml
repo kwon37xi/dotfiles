@@ -32,6 +32,7 @@
           - zenith
           - vifm
           - bitwarden-cli
+          - broot
         state: present
       register: brew_common_packages
       until: brew_common_packages is not failed
