@@ -95,6 +95,7 @@
         - ppa:neovim-ppa/stable
         - ppa:kritalime/ppa
         - ppa:papirus/papirus
+        - ppa:qbittorrent-team/qbittorrent-stable
     - name: multiverse universe
       become: yes
       shell: "apt-add-repository -y --no-update {{ item }}"
