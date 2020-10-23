@@ -27,6 +27,10 @@
       unarchive:
         src: ~/.dotfiles/_backup/kde/yakuake/139472-pixelate.tar.gz
         dest: ~/.local/share/yakuake/kns_skins
+    - name: yakuake breeze minimal skin install # theme 다운로드 불가라, 미리 받아서 설치해둠
+      unarchive:
+        src: ~/.dotfiles/_backup/kde/yakuake/175403-breeze-minimal.tar.gz
+        dest: ~/.local/share/yakuake/kns_skins
     - name: yakuake configuration
       shell: |
         kwriteconfig5 --file yakuakerc --group Window --key Height "100"
@@ -34,7 +38,7 @@
         kwriteconfig5 --file yakuakerc --group Window --key Position "100"
         kwriteconfig5 --file yakuakerc --group Window --key ShowTabBar --type boolean false
         kwriteconfig5 --file yakuakerc --group Behavior --key RememberFullscreen --type boolean true
-        kwriteconfig5 --file yakuakerc --group Appearance --key Skin "pixelate"
+        kwriteconfig5 --file yakuakerc --group Appearance --key Skin "breeze-minimal"
         kwriteconfig5 --file yakuakerc --group Appearance --key SkinInstalledWithKns --type boolean true
         kwriteconfig5 --file yakuakerc --group "Desktop Entry" --key DefaultProfile "YakuakeDefault.profile"
     - name: global shortcut keys configuration begin
