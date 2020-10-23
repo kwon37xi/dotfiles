@@ -33,7 +33,7 @@
           - vagrant
           - packer
           - terraform
-          - asbru-cm
+            #- asbru-cm
           - typora
           - unetbootin
           - gh
