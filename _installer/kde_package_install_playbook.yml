@@ -17,9 +17,7 @@
           - plasma-discover-backend-fwupd
           - yakuake
           - dolphin-plugins
-          - dolphin-owncloud
           - kio-gdrive
-          - dolphin-plugins
           - plasma-browser-integration
           - kwalletcli
           - qttools5-dev-tools # for qdbusviewer
