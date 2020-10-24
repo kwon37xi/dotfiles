@@ -31,8 +31,6 @@
       apt:
         package:
           - vagrant
-          - packer
-          - terraform
             #- asbru-cm
           - typora
           - unetbootin
