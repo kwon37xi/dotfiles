@@ -31,19 +31,6 @@
         repo: deb https://repo.vivaldi.com/archive/deb/ stable main
         filename: vivaldi
         update_cache: no
-    - name: virtualbox key
-      become: yes
-      apt_key:
-        url: https://www.virtualbox.org/download/oracle_vbox_2016.asc
-      register: virtualbox_key_installed
-      until: virtualbox_key_installed is not failed
-      retries: 3
-    - name: virtualbox repo
-      become: yes
-      apt_repository:
-        repo: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian {{ ubuntu_release }} contrib"
-        filename: virtualbox
-        update_cache: no
     - name: github cli key
       become: yes
       apt_key:

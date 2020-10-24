@@ -5,10 +5,16 @@
   vars_files:
     - "vars.yml"
   tasks:
-    - name: install virtualbox
+    - name: install virtualization
       become: yes
       apt:
-        package: "virtualbox-{{ virtualbox_version }}"
+        package:
+          - virtualbox
+          - virtualbox-guest-additions-iso
+          - qemu
+          - aqemu
+          - qemu-kvm
+          - virt-manager
     - name: install video audio graphic packages
       become: yes
       apt:
