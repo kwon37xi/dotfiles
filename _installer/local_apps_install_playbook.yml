@@ -18,6 +18,11 @@
         - swap
         - backup
         - undos
+    - name: create /usr/local/bin
+      become: yes
+      file:
+        path: /usr/local/bin
+        state: directory
     - name: create local application dirs
       file:
         path: "{{ item }}"
