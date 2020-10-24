@@ -1,6 +1,9 @@
 # dotfiles
 My Linux dotfiles and installation scripts
 
+## 설치 전 확인사항
+`_installer/vars.yml`의 각 수동 버전 명시 패키지들의 버전이 원하는 대로인지 확인 하고 수정 후 설치시작
+
 ## execute with wget
 ```
 bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/install_start.sh)"
