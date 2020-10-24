@@ -65,7 +65,6 @@
         - visualvm
         - java 11.0.8.hs-adpt
         - java 8.0.265.hs-adpt
-        - java 11.0.8-amzn
       register: sdk_package_installed
       until: sdk_package_installed is not failed
       retries: 3
