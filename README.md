@@ -79,6 +79,11 @@ sudo apt install amd64-microcode
     * 두 손가락 : 활성화
     * 스크롤 방향 반전(자연스크롤)
 
+### PPA 주의점
+* PPA의 경우 Ubuntu 의 6개월 버전업을 올바로 따라가지 못하는 경우가 많이 발생한다.
+* Ubuntu 를 6개월마다 버전업할 예정이고, 해당 패키지가 Ubuntu 에 비록 버전이 뒤지더라도 항상 있는것이라면 가급적 Ubuntu 기본을 사용하는게 낫다.
+* 그렇지 않으면, Ubuntu 가 버전업 돼도 PPA가 해당 버전의 신규 패키지를 못 좇아와서 올바로 신규 버전 설치가 안될 수 있다.
+
 ### Browser Plasma Integration 설치
 * Plasma Integration 을 설치하면, Browser Tab 검색, 다운로드 알림 등이 통합된다.
 * [Firefox Plasma Integration](https://addons.mozilla.org/en-US/firefox/addon/plasma-integration/)
@@ -91,7 +96,7 @@ sudo apt install amd64-microcode
     * **Activate Application Launcher Widget(프로그램 실행기 위젯 활성화하기)** 비어있는 항목을 **Alt+F1**으로 재할당. 기존 것은 삭제
 
 ### 개발 관련
-* IntelliJ Idea 설치 
+* IntelliJ Idea 설치
 ```
 ~/.local/opt/JetBrains/ideaIU/bin/idea.sh
 ```

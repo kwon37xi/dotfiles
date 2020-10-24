@@ -30,10 +30,7 @@
         package:
           - papirus-icon-theme
           - materia-kde
-          - arc-kde
           - papirus-folders
-          - claws-mail-themes-papirus
-          - libreoffice-style-papirus
           - materia-gtk-theme
           - arc-theme
           - dmz-cursor-theme

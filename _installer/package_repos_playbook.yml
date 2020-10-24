@@ -76,14 +76,8 @@
         - ppa:gezakovacs/ppa
         - ppa:git-core/ppa
         - ppa:graphics-drivers/ppa
-        - ppa:linrunner/tlp
         - ppa:linuxuprising/apps
-        - ppa:kdenlive/kdenlive-stable
-        - ppa:neovim-ppa/stable
-        - ppa:kritalime/ppa
         - ppa:papirus/papirus
-        - ppa:qbittorrent-team/qbittorrent-stable
-        - ppa:hluk/copyq
     - name: multiverse universe
       become: yes
       shell: "apt-add-repository -y --no-update {{ item }}"
