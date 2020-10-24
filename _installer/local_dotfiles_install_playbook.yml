@@ -33,7 +33,6 @@
       with_items:
         - vim
         - uim
-        - htop
         - git
         - bashrc.d
         - copyq
@@ -50,6 +49,7 @@
       shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
       with_items:
         - gtk
+        - htop
     - name: face
       file:
         path: "/home/{{ current_user }}/.face"
