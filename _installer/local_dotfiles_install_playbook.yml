@@ -17,6 +17,7 @@
         - .config/nvim-qt
         - .config/plasma-workspace/env
         - .config/gtk-3.0
+        - .config/fcitx
         - .sdkman/etc
         - .vim
     - name: delete conflicting files

@@ -41,6 +41,21 @@
         kwriteconfig5 --file yakuakerc --group Appearance --key Skin "breeze-minimal"
         kwriteconfig5 --file yakuakerc --group Appearance --key SkinInstalledWithKns --type boolean true
         kwriteconfig5 --file yakuakerc --group "Desktop Entry" --key DefaultProfile "YakuakeDefault.profile"
+    - name: kwinrc configuration
+      shell: |
+        kwriteconfig5 --file ~/.config/kwinrc --group Plugins --key trackmouseEnabled --type boolean true
+        kwriteconfig5 --file ~/.config/kwinrc --group Plugins --key wobblywindowsEnabled --type boolean true
+        kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Id_1 "617ec3b5-de72-4d22-ab1b-1a87b12692a1"
+        kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Id_2=3280543f-8e70-483c-8ecd-88c29f1cf1a6
+        kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Id_3=356b7029-94cf-48e8-807c-b8c17a517d28
+        kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Id_4=346a859d-fa28-414e-9045-add54fbc0f54
+        kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Name_1 "1"
+        kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Name_2 "2"
+        kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Name_3 "3"
+        kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Name_4 "4"
+        kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Number 4
+        kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Rows 4
+
     - name: global shortcut keys configuration begin
       shell: |
         kquitapp5 kglobalaccel

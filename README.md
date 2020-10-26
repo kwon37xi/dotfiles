@@ -1,6 +1,11 @@
 # dotfiles
 My Linux dotfiles and installation scripts
 
+## PPA 주의점
+* PPA의 경우 Ubuntu 의 6개월 버전업을 올바로 따라가지 못하는 경우가 많이 발생한다.
+* Ubuntu 를 6개월마다 버전업할 예정이고, 해당 패키지가 Ubuntu 에 비록 버전이 뒤지더라도 항상 있는것이라면 가급적 Ubuntu 기본을 사용하는게 낫다.
+* 그렇지 않으면, Ubuntu 가 버전업 돼도 PPA가 해당 버전의 신규 패키지를 못 좇아와서 올바로 신규 버전 설치가 안될 수 있다.
+
 ## 설치 전 확인사항
 `_installer/vars.yml`의 각 수동 버전 명시 패키지들의 버전이 원하는 대로인지 확인 하고 수정 후 설치시작
 
@@ -22,6 +27,11 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 
 ## 설치 후 할 일들
 * 후속 private dotfiles 설치
+
+## additional drivers n
+```
+sudo software-properties-kde
+```
 
 ### xanmod microcode 설치
 * https://xanmod.org
@@ -82,10 +92,8 @@ sudo apt install amd64-microcode
     * 두 손가락 : 활성화
     * 스크롤 방향 반전(자연스크롤)
 
-### PPA 주의점
-* PPA의 경우 Ubuntu 의 6개월 버전업을 올바로 따라가지 못하는 경우가 많이 발생한다.
-* Ubuntu 를 6개월마다 버전업할 예정이고, 해당 패키지가 Ubuntu 에 비록 버전이 뒤지더라도 항상 있는것이라면 가급적 Ubuntu 기본을 사용하는게 낫다.
-* 그렇지 않으면, Ubuntu 가 버전업 돼도 PPA가 해당 버전의 신규 패키지를 못 좇아와서 올바로 신규 버전 설치가 안될 수 있다.
+### fcitx
+* fcitx 사용시, 설치 완료후, keyboard 에 **hangul** 을 추가해줘야만한다.
 
 ### Browser Plasma Integration 설치
 * Plasma Integration 을 설치하면, Browser Tab 검색, 다운로드 알림 등이 통합된다.
@@ -93,10 +101,7 @@ sudo apt install amd64-microcode
 * [Chrome Plasma Integration](https://chrome.google.com/webstore/detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai)
 
 ### 단축키 보정
-* 시스템 설정 열고
-* 단축키
-  * Plasma
-    * **Activate Application Launcher Widget(프로그램 실행기 위젯 활성화하기)** 비어있는 항목을 **Alt+F1**으로 재할당. 기존 것은 삭제
+* 시스템 설정 열고 각종 단축키 설정 올바로 안 된 것들 보정
 
 ### 개발 관련
 * IntelliJ Idea 설치
