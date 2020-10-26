@@ -21,6 +21,7 @@
           - plasma-browser-integration
           - kwalletcli
           - qttools5-dev-tools # for qdbusviewer
+          - kmix # kubuntu 20.10 에서 자동설치 안됐음
     - name: install KDE/GNOME themes
       become: yes
       apt:
