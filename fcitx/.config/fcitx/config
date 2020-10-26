@@ -1,6 +1,6 @@
 [Hotkey]
 # Trigger Input Method
-TriggerKey=SHIFT_SPACE HANGUL
+TriggerKey=SHIFT_SPACE
 # Use extra trigger key only after using it to inactivate
 # Available Value:
 # True False
@@ -54,7 +54,7 @@ IMSwitchKey=False
 # Interval of Two Key Input
 #TimeInterval=250
 # Switching Virtual Keyboard
-VKSwitchKey=DISABLED
+VKSwitchKey=
 # Switching Remind Mode
 #RemindSwitchKey=
 # Switching Full Width Character Mode
@@ -68,9 +68,9 @@ VKSwitchKey=DISABLED
 # Choose Second and Third Candidate Word
 #SecondThirdCandWordKey=
 # Saving All Config and Input History
-SaveAllKey=DISABLED
+SaveAllKey=
 # Switch Embedded Preedit
-SwitchPreedit=DISABLED
+SwitchPreedit=
 # Previous Candidate Word
 #PrevWord=SHIFT_TAB
 # Next Candidate Word

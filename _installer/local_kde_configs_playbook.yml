@@ -155,7 +155,7 @@
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kwin' --key 'Window Pack Right' 'none,none,Pack Window to the Right'
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kwin' --key 'Window Pack Up' 'none,none,Pack Window Up'
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kwin' --key 'Window Quick Tile Bottom' 'Meta+Down,Meta+Down,Quick Tile Window to the Bottom'
-        kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kwin' --key 'Window Quick Tile Bottom Left' 'Meta+Ctrl+\\,,none,Quick Tile Window to the Bottom Left'
+        kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kwin' --key 'Window Quick Tile Bottom Left' 'Meta+Ctrl+\,,none,Quick Tile Window to the Bottom Left'
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kwin' --key 'Window Quick Tile Bottom Right' 'Meta+Ctrl+.,none,Quick Tile Window to the Bottom Right'
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kwin' --key 'Window Quick Tile Left' 'Meta+Left,Meta+Left,Quick Tile Window to the Left'
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kwin' --key 'Window Quick Tile Right' 'Meta+Right,Meta+Right,Quick Tile Window to the Right'

@@ -94,6 +94,7 @@ sudo apt install amd64-microcode
 
 ### fcitx
 * fcitx 사용시, 설치 완료후, keyboard 에 **hangul** 을 추가해줘야만한다.
+* 또한 KDE Panel 에 Input Method Widget을 추가해주면 좋다(kimpanel).
 
 ### Browser Plasma Integration 설치
 * Plasma Integration 을 설치하면, Browser Tab 검색, 다운로드 알림 등이 통합된다.
