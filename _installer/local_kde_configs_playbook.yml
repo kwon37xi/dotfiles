@@ -45,6 +45,8 @@
       shell: |
         kwriteconfig5 --file ~/.config/kwinrc --group Plugins --key trackmouseEnabled --type boolean true
         kwriteconfig5 --file ~/.config/kwinrc --group Plugins --key wobblywindowsEnabled --type boolean true
+        kwriteconfig5 --file ~/.config/kwinrc --group Plugins --key slideEnabled --type boolean false
+        kwriteconfig5 --file ~/.config/kwinrc --group Plugins --key cubeslideEnabled --type boolean true
         kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Id_1 "617ec3b5-de72-4d22-ab1b-1a87b12692a1"
         kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Id_2=3280543f-8e70-483c-8ecd-88c29f1cf1a6
         kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Id_3=356b7029-94cf-48e8-807c-b8c17a517d28
