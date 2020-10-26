@@ -36,7 +36,7 @@
 
 # http://blog.marcinchwedczuk.pl/use-meld-as-git-merge-diff-tool
 [diff]
-    tool = meld
+    tool = kdiff3
     # external = ~/.local/bin/git-diff-meld.sh
 
 [difftool]
