@@ -28,6 +28,7 @@
           - ripgrep
           - fd-find
           - tmux
+          - xclip
           - copyq
           - copyq-plugins
           - grub-customizer
