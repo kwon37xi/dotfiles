@@ -35,3 +35,5 @@
         done
       args:
         executable: /usr/bin/bash
+    - name: register jenv system jdk
+      shell: jenv add /usr/lib/jvm/java-11-openjdk-amd64
