@@ -92,3 +92,9 @@
         - /usr/share/applications/org.kde.yakuake.desktop
         - /usr/share/applications/megasync.desktop
         - /usr/share/applications/slack.desktop
+    - name: slack startup without window
+      replace:
+        path: ~/.config/autostart/slack.desktop
+        regexp: '(/usr/bin/slack)\s+(%U)'
+        replace: '\1 --startup \2'
+        backup: no
