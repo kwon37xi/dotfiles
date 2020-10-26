@@ -43,6 +43,12 @@
         owner: root
         group: root
         mode: 0755
+    - name: jenv
+      git:
+        repo: https://github.com/jenv/jenv.git
+        clone: yes
+        depth: 1
+        dest: ~/.jenv
     - name: sdkman
       shell: |
         curl -s "https://get.sdkman.io?rcupdate=false" | bash
@@ -63,8 +69,6 @@
         - maven
         - springboot
         - visualvm
-        - java 11.0.8.hs-adpt
-        - java 8.0.265.hs-adpt
       register: sdk_package_installed
       until: sdk_package_installed is not failed
       retries: 3
