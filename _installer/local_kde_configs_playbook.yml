@@ -70,8 +70,8 @@
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kmix' --key 'decrease_volume' 'Volume Down\tMeta+Ctrl+Alt+Down,Volume Down,Decrease Volume'
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kmix' --key 'increase_volume' 'Volume Up\tMeta+Ctrl+Alt+Up,Volume Up,Increase Volume'
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kmix' --key 'mute' 'Volume Mute\tMeta+Ctrl+Alt+Del,Volume Mute,Mute'
-        kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'ksmserver' --key 'Lock Session' 'Meta+L\t\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session'
-        kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'ksmserver' --key 'Log Out' 'Ctrl+Alt+Del\t,none,Log Out'
+        kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'ksmserver' --key 'Lock Session' 'Meta+L,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session'
+        kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'ksmserver' --key 'Log Out' 'Ctrl+Alt+Del,none,Log Out'
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kwin' --key 'Expose' 'Meta+Alt+/,none,Toggle Present Windows (Current desktop)'
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kwin' --key 'ExposeAll' 'Meta+?\tLaunch (C),Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)'
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'kwin' --key 'ExposeClass' 'Meta+Ctrl+/,Ctrl+F7,Toggle Present Windows (Window class)'
@@ -218,6 +218,8 @@
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'krunner.desktop' --key '_k_friendly_name' 'KRunner'
         kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group 'krunner.desktop' --key '_launch' 'Meta+Space,Alt+F2\tSearch,KRunner'
 
+        # kwriteconfig5 가 \t 를 \\t 로 기록하는 버그 때문에 보정 필요
+        sed -i -e 's/\\\\t/\\t/g' ~/.config/kglobalshortcutsrc
         kglobalaccel5 &
     - name: global etc configurations
       shell: |
