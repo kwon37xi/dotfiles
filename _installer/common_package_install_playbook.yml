@@ -91,6 +91,7 @@
           - tig
           - qbittorrent
           - scrcpy
+          - rclone
     - name: install claws-mail packages
       become: yes
       apt:
