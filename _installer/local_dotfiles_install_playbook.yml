@@ -16,7 +16,6 @@
         - .config/nvim
         - .config/nvim-qt
         - .config/plasma-workspace/env
-        - .config/gtk-3.0
         - .config/fcitx
         - .sdkman/etc
         - .vim
@@ -47,7 +46,6 @@
     - name: stow with adopt
       shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
       with_items:
-        - gtk
         - htop
     - name: face
       file:

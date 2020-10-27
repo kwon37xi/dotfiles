@@ -14,6 +14,14 @@
           - gnome-software
           - gnome-software-plugin-flatpak
           - guake
+          - gnome-tweaks
+          - chrome-gnome-shell
+          - gnome-shell-extension-prefs
+          - gnome-shell-extensions
+          - gnome-shell-extensions-gpaste
+          - gpaste
+          - gnome-shell-extension-dash-to-panel
+        state: latest
     - name: install KDE/GNOME themes
       become: yes
       apt:
