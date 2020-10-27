@@ -118,3 +118,5 @@ sudo apt install amd64-microcode
 ansible-playbook -vv ~/.dotfiles/_installer/4k_playbook.yml
 ```
 * SDDM 의 경우 4K 설정이 자동 적용이 안되므로 **System Settings -> Startup and Shutdown -> Login Screen(SDDM) -> Advanced** 에서 **Sync**를 해줘야만 한다.
+* 마우스 우클릭으로 나오는 컨텍스트 메뉴의 icon 이 너무 작을 경우
+  * **System Settings -> Icons -> Configure Icon Sizes -> Small Icons** 값을 **32** 정도로 변경하고 Apply, logout/login 한다.
