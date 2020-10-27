@@ -1,0 +1,30 @@
+---
+- name: install GNOME only packages
+  hosts: 127.0.0.1
+  connection: local
+  vars_files:
+    - "vars.yml"
+  tasks:
+    - name: install GNOME packages
+      become: yes
+      apt:
+        package:
+          - synaptic
+          - gdebi
+          - gnome-software
+          - gnome-software-plugin-flatpak
+          - guake
+    - name: install KDE/GNOME themes
+      become: yes
+      apt:
+        install_recommends: yes
+        package:
+          - papirus-icon-theme
+          - papirus-folders
+          - materia-gtk-theme
+          - arc-theme
+          - dmz-cursor-theme
+    - name: change lookandfeel
+      shell: |
+        echo "TODO change gnome/gtk theme by cli"
+        echo "TODO change qt theme by kvantum by cli"

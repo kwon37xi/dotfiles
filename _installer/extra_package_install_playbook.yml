@@ -19,8 +19,6 @@
       become: yes
       apt:
         package:
-          - krita
-          - krita-l10n
           - gimp
           - gimp-gmic
           - gimp-data-extras
@@ -38,7 +36,6 @@
         package:
           - vagrant
             #- asbru-cm
-          - typora
           - unetbootin
           - gh
     - name: add architecture i386

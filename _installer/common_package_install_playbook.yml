@@ -37,7 +37,6 @@
           - libreoffice-help-ko
           - libreoffice-l10n-ko
           - meld
-          - kdiff3
           - tlp
           - tlp-rdw
           - tlpui
@@ -70,7 +69,6 @@
           - fcitx-ui-classic
           - fcitx-config-gtk
           - fcitx-frontend-all
-          - kde-config-fcitx
           - build-essential
           - make
           - cmake
