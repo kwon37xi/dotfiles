@@ -31,5 +31,4 @@
       shell: gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled
     - name: user for input group
       become: yes
-      shell: |
-        gpasswd -a $USER input
+      shell: gpasswd -a {{ current_user }} input
