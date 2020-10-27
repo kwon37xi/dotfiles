@@ -23,3 +23,10 @@
           CODESET="Uni3"
           FONTFACE="Terminus"
           FONTSIZE="32x16"
+    - name: grub font to Nanum Gothic Coding
+      become: yes
+      shell: |
+        mkdir -p /boot/grub/fonts
+        grub-mkfont --output=/boot/grub/fonts/NanumGothicCoding32.pf2 --size=32 /usr/share/fonts/truetype/nanum/NanumGothicCoding.ttf
+        echo 'GRUB_FONT="/boot/grub/fonts/NanumGothicCoding32.pf2"' >> /etc/default/grub.d/99_fonts.cfg
+        update-grub

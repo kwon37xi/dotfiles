@@ -117,3 +117,4 @@ sudo apt install amd64-microcode
 ```
 ansible-playbook -vv ~/.dotfiles/_installer/4k_playbook.yml
 ```
+* SDDM 의 경우 4K 설정이 자동 적용이 안되므로 **System Settings -> Startup and Shutdown -> Login Screen(SDDM) -> Advanced** 에서 **Sync**를 해줘야만 한다.
