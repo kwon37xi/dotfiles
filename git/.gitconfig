@@ -5,6 +5,12 @@
 [init]
   defaultBranch = main
 
+[includeIf "gitdir:~/.dotfiles/"]
+    path = ~/.git_personal_projects
+
+[includeIf "gitdir:~/.dotfiles-private/"]
+    path = ~/.git_personal_projects
+
 [includeIf "gitdir:~/projects_kwon37xi/"]
     path = ~/.git_personal_projects
 
