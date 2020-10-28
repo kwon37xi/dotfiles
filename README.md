@@ -44,47 +44,17 @@ sudo apt install intel-microcode iucode-tool
 sudo apt install amd64-microcode
 ```
 
-### KDE/QT/GTK 테마 설치 - Materia 기준
-* **Materia** 와 **Arc**, **Papirus Icon** 테마들을 기본 설치 해둔 상태임
-* KDE/QT, Gnome/GTK 모두 Materia와 Arc 를 지원하기 때문에 통일성 있는 구성 가능.
-* 시스템 설정 열고
-* 전역 테마 : Materia
-* Plasma 스타일 : Materia
-* 프로그램 모양
-* 프로그램 스타일 : kvantum
-  * Kvantum Manager 실행하고 **테마 변경 삭제**에서 MateriaDark 선택
-* GTK2 테마 : Materia-dark
-* GTK3 테마 : Materia-dark
-* 창 장식 : Materia Dark
-* 색상 : Materia Dark
-* 아이콘 : Papirus-Dark
-* 커서 : DMZ (검정색) (이게 어두운 화면에서 눈에 더 잘 띔)
+### Pop Gnome 설정
+* **설정 -> 지역 및 언어 -> Manage Installed Languages**에서 부족한 패키지 자동 설치
+* uim/fcitx 사용시에는  **설정 -> Keyboard**에서 **hangul** 제거
 
-### Panel 설정 변경
-* Panel 작업 관리자에서 우클릭 "대체 항목 보기" -> **아이콘만 있는 작업 관리자** 로 전환
-* 날짜 포맷 변경
-  * 디지털 시계 위젯에서 "디지털 시계 설정" 클릭
-  * 날짜표시(show date) 활성화
-  * 시간대 코드 활성화
-  * 시간표시 : 24시간제
-  * 날짜 형식 : 사용자 정의 `dd dddd`
-* Panel 편집
-  * **시스템 트레이** 설정의 "항목"에서
-  * **클립 보드** : 비활성화됨 (copyq 로 대체)
-  * **터치패드** : 항상표시
-
-### 작업공간 행동 변경
-* 가상 바탕 화면 : 세로로 4개
-  * **4열**로 만들고
-  * 각 열마나 하나씩의 바탕화면 추가
-* 테스크톱 효과
-  * 각종 효과 켜주기
-
-### 디스플레이와 모니터
-* 컴포지터
-  * 시작할 때 커포지팅 사용하기 : 활성화
-  * 렌더링 백엔드 : OpenGL 2.0 혹은 3.1. 보통은 2.0이 안정적인듯.
-
+### Super 키 오작동 & 노트북 오른쪽 Alt/Ctrl 한영,한자키
+* `gnome-tweaks` -> 키보드와 마우스 -> 추가배치 옵션
+  * Alt/Win 키 동작
+    * Hyper를 윈도우 키로 매핑
+  * 한국어 한/영, 한자키
+    * 오른쪽 Alt를 한/영 키로 만들기
+    * 오른쪽 Ctrl을 한/영 키로 만들기
 ### 입력장치
 * 터치패드
   * 탭으로 클릭 : 활성화
@@ -95,11 +65,6 @@ sudo apt install amd64-microcode
 ### fcitx
 * fcitx 사용시, 설치 완료후, keyboard 에 **hangul** 을 추가해줘야만한다.
 * 또한 KDE Panel 에 Input Method Widget을 추가해주면 좋다(kimpanel).
-
-### Browser Plasma Integration 설치
-* Plasma Integration 을 설치하면, Browser Tab 검색, 다운로드 알림 등이 통합된다.
-* [Firefox Plasma Integration](https://addons.mozilla.org/en-US/firefox/addon/plasma-integration/)
-* [Chrome Plasma Integration](https://chrome.google.com/webstore/detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai)
 
 ### 단축키 보정
 * 시스템 설정 열고 각종 단축키 설정 올바로 안 된 것들 보정
@@ -117,6 +82,3 @@ sudo apt install amd64-microcode
 ```
 ansible-playbook -vv ~/.dotfiles/_installer/4k_playbook.yml
 ```
-* SDDM 의 경우 4K 설정이 자동 적용이 안되므로 **System Settings -> Startup and Shutdown -> Login Screen(SDDM) -> Advanced** 에서 **Sync**를 해줘야만 한다.
-* 마우스 우클릭으로 나오는 컨텍스트 메뉴의 icon 이 너무 작을 경우
-  * **System Settings -> Icons -> Configure Icon Sizes -> Small Icons** 값을 **32** 정도로 변경하고 Apply, logout/login 한다.
