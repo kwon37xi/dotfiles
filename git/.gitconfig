@@ -23,6 +23,7 @@
 [core]
     filemode = false
     pager = most
+    excludesfile = /home/kwon37xi/.gitignore
 
 [pull]
     rebase = false
