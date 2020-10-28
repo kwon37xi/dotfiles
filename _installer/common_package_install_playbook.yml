@@ -92,6 +92,7 @@
           - qbittorrent
           - scrcpy
           - rclone
+          - inotify-tools
     - name: install claws-mail packages
       become: yes
       apt:
