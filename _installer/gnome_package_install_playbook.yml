@@ -22,6 +22,7 @@
           - network-manager-fortisslvpn-gnome
           - network-manager-openconnect-gnome
           - network-manager-openvpn-gnome
+          - seahorse
           - libsecret-1-0
           - libsecret-1-dev # for git credential
         state: latest

@@ -17,6 +17,7 @@
           - neofetch
           - ubuntu-restricted-addons
           - ubuntu-restricted-extras
+          - apt-file
           - htop
           - cpufrequtils
           - most
