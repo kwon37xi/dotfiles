@@ -23,6 +23,7 @@
 [core]
     filemode = false
     pager = most
+    excludesfile = ~/.gitignore-for-user
 
 [pull]
     rebase = false

@@ -16,4 +16,3 @@
       with_items:
         - "https://mega.nz/linux/MEGAsync/xUbuntu_{{ ubuntu_version }}/amd64/megacmd-xUbuntu_{{ ubuntu_version }}_amd64.deb"
         - "https://mega.nz/linux/MEGAsync/xUbuntu_{{ ubuntu_version }}/amd64/megasync-xUbuntu_{{ ubuntu_version }}_amd64.deb"
-        - "https://mega.nz/linux/MEGAsync/xUbuntu_{{ ubuntu_version }}/amd64/dolphin-megasync-xUbuntu_{{ ubuntu_version }}_amd64.deb"
