@@ -20,16 +20,6 @@
         content: "vm.swappiness=5"
         owner: root
         group: root
-    - name: change ubuntu mirror to kakao
-      become: yes
-      replace:
-        path: "/etc/apt/sources.list"
-        regexp: "http:\/\/kr.archive.ubuntu.com/"
-        replace: "http:\/\/mirror.kakao.com/"
-    - name: update ubuntu mirror
-      become: yes
-      apt:
-        update_cache: yes
     - name: install basically required packages
       become: yes
       apt:

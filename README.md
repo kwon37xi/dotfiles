@@ -7,7 +7,9 @@ My Linux dotfiles and installation scripts
 * 그렇지 않으면, Ubuntu 가 버전업 돼도 PPA가 해당 버전의 신규 패키지를 못 좇아와서 올바로 신규 버전 설치가 안될 수 있다.
 
 ## 설치 전 확인사항
-`_installer/vars.yml`의 각 수동 버전 명시 패키지들의 버전이 원하는 대로인지 확인 하고 수정 후 설치시작
+* `_installer/vars.yml`의 각 수동 버전 명시 패키지들의 버전이 원하는 대로인지 확인 하고 수정 후 설치시작
+* Ubuntu Mirror 를 한국으로 변경한 뒤에 설치를 시작한다. : `http://mirror.kakao.com/ubuntu`
+  * Pop! OS 는 **Pop Shop -> Settings -> Official Sources**에 추가해준다.
 
 ## execute with wget
 ```
