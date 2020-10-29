@@ -18,9 +18,12 @@
           - chrome-gnome-shell
           - gnome-shell-extension-prefs
           - gnome-shell-extensions
-          - gnome-shell-extensions-gpaste
-          - gpaste
           - gnome-shell-extension-dash-to-panel
+          - network-manager-fortisslvpn-gnome
+          - network-manager-openconnect-gnome
+          - network-manager-openvpn-gnome
+          - libsecret-1-0
+          - libsecret-1-dev # for git credential
         state: latest
     - name: install KDE/GNOME themes
       become: yes
@@ -32,6 +35,11 @@
           - materia-gtk-theme
           - arc-theme
           - dmz-cursor-theme
+    - name: build git libsecret git credential helper
+      become: yes
+      shell: |
+        cd /usr/share/doc/git/contrib/credential/libsecret
+        make
     - name: change lookandfeel
       shell: |
         echo "TODO change gnome/gtk theme by cli"

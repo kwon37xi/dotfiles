@@ -28,7 +28,8 @@
     rebase = false
 
 [credential]
-    helper = /usr/local/bin/git-credential-kwalletcli
+    #helper = /usr/local/bin/git-credential-kwalletcli
+    helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 
 [alias]
     last = log -1 HEAD
@@ -42,7 +43,8 @@
 
 # http://blog.marcinchwedczuk.pl/use-meld-as-git-merge-diff-tool
 [diff]
-    tool = kdiff3
+    tool = meld
+    # tool = kdiff3
     # external = ~/.local/bin/git-diff-meld.sh
 
 [difftool]
@@ -57,8 +59,8 @@
     cmd = kdiff3 \"$LOCAL\" \"$REMOTE\"
 
 [merge]
-    #tool = meld
-    tool = kdiff3
+    tool = meld
+    #tool = kdiff3
 
 [mergetool "meld"]
     # 3 way 머지 중 가운데가 merged
