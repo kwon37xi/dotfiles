@@ -91,6 +91,7 @@
           - scrcpy
           - rclone
           - inotify-tools
+          - krusader
     - name: install claws-mail packages
       become: yes
       apt:
