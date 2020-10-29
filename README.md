@@ -28,9 +28,9 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/ubuntu
 ## 설치 후 할 일들
 * 후속 private dotfiles 설치
 
-## additional drivers n
+## additional drivers
 ```
-sudo software-properties-kde
+sudo software-properties-gtk
 ```
 
 ### xanmod microcode 설치
@@ -47,6 +47,8 @@ sudo apt install amd64-microcode
 ### Pop Gnome 설정
 * **설정 -> 지역 및 언어 -> Manage Installed Languages**에서 부족한 패키지 자동 설치
 * uim/fcitx 사용시에는  **설정 -> Keyboard**에서 **hangul** 제거
+* `/usr/share/themes/<원하는테마-보통 Pop-dark>/gnome-shell/gnome-shell.css` 파일에서 `.panel-button`의 `hpadding`항목 값들을
+  **1px**로 변경해주면 Panel 의 인디케이터 부분의 아이콘간 간격이 줄어들게 된다.
 
 ### Super 키 오작동 & 노트북 오른쪽 Alt/Ctrl 한영,한자키
 * `gnome-tweaks` -> 키보드와 마우스 -> 추가배치 옵션
@@ -55,6 +57,7 @@ sudo apt install amd64-microcode
   * 한국어 한/영, 한자키
     * 오른쪽 Alt를 한/영 키로 만들기
     * 오른쪽 Ctrl을 한/영 키로 만들기
+
 ### 입력장치
 * 터치패드
   * 탭으로 클릭 : 활성화
