@@ -14,7 +14,7 @@ My Linux dotfiles and installation scripts
 
 ## execute with wget
 ```
-bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/ubuntu-gnome-20-10/install_start.sh)"
+bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/install_start.sh)"
 ```
 
 * sudo 용 패스워드를 한 번 입력해주고 진행
@@ -52,6 +52,7 @@ sudo apt install amd64-microcode
 * uim/fcitx 사용시에는  **설정 -> Keyboard**에서 **hangul** 제거
 * `/usr/share/themes/<원하는테마-보통 Pop-dark>/gnome-shell/gnome-shell.css` 파일에서 `.panel-button`의 `hpadding`항목 값들을
   **1px**로 변경해주면 Panel 의 인디케이터 부분의 아이콘간 간격이 줄어들게 된다.
+  * `dash-to-panel` 사용시에는 해당 설정의 **Fine Tune** 에서 설정값으로 조정가능하다.
 
 ### Super 키 오작동 & 노트북 오른쪽 Alt/Ctrl 한영,한자키
 * `gnome-tweaks` -> 키보드와 마우스 -> 추가배치 옵션
