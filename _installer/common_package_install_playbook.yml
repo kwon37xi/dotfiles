@@ -110,12 +110,13 @@
     - name: uim initialize
       become: yes
       shell: |
-        update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-qt5 100
         update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk3-systray 100
         update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk-systray 100
-        #update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-qt5
         update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk3-systray
-        ! [ -f /usr/bin/uim-im-switcher-qt4 ] && ln -s /usr/bin/uim-im-switcher-qt5 /usr/bin/uim-im-switcher-qt4
-        ! [ -f /usr/bin/uim-pref-qt4 ] && ln -s /usr/bin/uim-pref-qt5 /usr/bin/uim-pref-qt4
+        # for gnome
+        gsettings set org.gnome.settings-daemon.plugins.keyboard active false
+        gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'uim'>}"
+        # disable ibus, 의존성 때문에 패키지 삭제가 불가해서 실행만 안되게 이름변경
+        sudo mv /usr/bin/ibus-daemon /usr/bin/ibus-daemon.distrib
     - name: set default im
       shell: "im-config -n uim"
