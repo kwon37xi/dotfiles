@@ -10,6 +10,7 @@ My Linux dotfiles and installation scripts
 * `_installer/vars.yml`의 각 수동 버전 명시 패키지들의 버전이 원하는 대로인지 확인 하고 수정 후 설치시작
 * Ubuntu Mirror 를 한국으로 변경한 뒤에 설치를 시작한다. : `http://mirror.kakao.com/ubuntu`
   * Pop! OS 는 **Pop Shop -> Settings -> Official Sources**에 추가해준다.
+  * `sudo apt update` 한 번 해준다.
 
 ## execute with wget
 ```
