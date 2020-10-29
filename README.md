@@ -14,7 +14,7 @@ My Linux dotfiles and installation scripts
 
 ## execute with wget
 ```
-bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/ubuntu-gnome-20-10/install_start.sh)"
+bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/install_start.sh)"
 ```
 
 * sudo 용 패스워드를 한 번 입력해주고 진행
