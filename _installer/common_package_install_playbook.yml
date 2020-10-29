@@ -79,7 +79,6 @@
           - openssh-server
           - openssh-sftp-server
           - sshpass
-          - ksshaskpass
           - putty
           - putty-tools
           - openssh-client
