@@ -15,3 +15,5 @@ sudo cp ~/.local/backup/etc/NetworkManager/system-connections/* /etc/NetworkMana
 sudo chown root:root /etc/NetworkManager/system-connections/
 sudo chmod 0600 /etc/NetworkManager/system-connections/*
 # todo restart kwallet
+
+sudo service networking restart
