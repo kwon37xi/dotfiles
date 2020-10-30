@@ -14,8 +14,8 @@
         - .local/bin
         - .config/nvim
         - .config/nvim-qt
-        - .config/plasma-workspace/env
         - .config/fcitx
+        - .config/autostart
         - .sdkman/etc
         - .vim
     - name: delete conflicting files
@@ -30,6 +30,7 @@
     - name: stow
       shell: "stow -d ~/.dotfiles -t ~/ -S {{ item }}"
       with_items:
+        - gnome
         - vim
         - uim
         - git

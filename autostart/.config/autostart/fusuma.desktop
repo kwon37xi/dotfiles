@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Fusuma
+GenericName=fusuma
+Exec=/usr/local/bin/fusuma
+Type=Application
+X-GNOME-Autostart-Delay=30

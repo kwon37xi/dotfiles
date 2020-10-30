@@ -75,17 +75,3 @@
       shell:
         cmd: ./install.sh --silent --no-modify-config
         chdir: ~/.bash_it
-    - name: add default autostarts
-      copy:
-        src: "{{ item }}"
-        dest: ~/.config/autostart/
-      with_items:
-        - /usr/share/applications/com.github.hluk.copyq.desktop
-        - /usr/share/applications/slack.desktop
-        - /usr/share/applications/guake.desktop
-    - name: slack startup without window
-      replace:
-        path: ~/.config/autostart/slack.desktop
-        regexp: '(/usr/bin/slack)\s+(%U)'
-        replace: '\1 --startup \2'
-        backup: no

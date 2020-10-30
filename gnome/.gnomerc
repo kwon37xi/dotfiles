@@ -1,0 +1,5 @@
+export QT_STYLE_OVERRIDE=kvantum
+
+# fzf 설정이 GVim 등에 먹게 하기 위해서.
+source ~/.dotfiles/bashrc.d/.config/bashrc.d/fzf.bashrc
+
