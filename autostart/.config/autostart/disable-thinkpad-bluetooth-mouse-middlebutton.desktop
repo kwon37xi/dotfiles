@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Disable thinkpad bluetooth mouse middle button
+GenericName=Disable thinkpad bluetooth mouse middle button
+# shellscript 에 ~/ 경로 사용이 안됐음.
+Exec=/home/kwon37xi/.local/bin/disable-thinkpad-bluetoothmouse-middlebutton.sh
+Comment=disable bluetoothmouse middle button
+Type=Application
+Terminal=false
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=5
