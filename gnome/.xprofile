@@ -3,5 +3,3 @@ export QT_STYLE_OVERRIDE=kvantum
 # fzf 설정이 GVim 등에 먹게 하기 위해서.
 source ~/.dotfiles/bashrc.d/.config/bashrc.d/fzf.bashrc
 
-# thinkpad bluetooth mouse middle button 앞으로/뒤로가기 방지
-xmodmap -e "pointer = 1 2 3 4 5 6 7 0 0 0 0 0 0"
