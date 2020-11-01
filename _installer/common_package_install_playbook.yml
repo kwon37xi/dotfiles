@@ -24,6 +24,7 @@
           - aptitude
           - dconf-editor
           - flatpak
+          - micro
           - vim-gtk
           - universal-ctags
           - ripgrep
