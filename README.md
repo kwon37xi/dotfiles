@@ -8,9 +8,9 @@ My Linux dotfiles and installation scripts
 
 ## 설치 전 확인사항
 * `_installer/vars.yml`의 각 수동 버전 명시 패키지들의 버전이 원하는 대로인지 확인 하고 수정 후 설치시작
-* Ubuntu Mirror 를 한국으로 변경한 뒤에 설치를 시작한다. : `http://mirror.kakao.com/ubuntu`
-  * Pop! OS 는 **Pop Shop -> Settings -> Official Sources**에 추가해준다.
-  * `sudo apt update` 한 번 해준다.
+* `software-properties-gtk` 를 실행하고,
+  * 미러를 `http://mirror.kakao.com/ubuntu` 정도의 한국 미러로 변경한다.
+  * 기타 소프트웨어에서 "Canonical Partner" 를 추가한다.
 
 ## execute with wget
 ```
