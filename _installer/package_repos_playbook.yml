@@ -80,3 +80,11 @@
       become: yes
       apt:
         update_cache: yes
+    - name: remove snapd
+      become: yes
+      shell: |
+        apt purge -y --autoremove snapd
+        rm -rf /snap
+        rm -rf /var/snap
+        rm -rf /var/lib/snapd
+        rm -rf /var/cache/snapd
