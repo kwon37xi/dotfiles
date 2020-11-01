@@ -42,6 +42,7 @@
         - tmux
         - fusuma
         - most
+        - autostart
     - name: stow with adopt
       shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
       with_items:

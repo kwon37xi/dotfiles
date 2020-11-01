@@ -96,6 +96,12 @@
       become: yes
       apt:
         package: [claws-mail,claws-mail-plugins,claws-mail-extra-plugins,claws-mail-tools,claws-mail-themes,claws-mail-feeds-reader]
+    - name: flatpak add remote
+      become: yes
+      flatpak_remote:
+        name: flathub
+        flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+        state: present
     - name: initialize docker
       become: yes
       shell: |
