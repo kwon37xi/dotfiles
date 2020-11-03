@@ -81,7 +81,9 @@ sudo apt install amd64-microcode
 ```
 ~/.local/opt/JetBrains/ideaIU/bin/idea.sh
 ```
-### Libreoffice
+* 설치 후 **Files -> Manage IDE Settings** 에서 온라인 동기화를 위해 로그인 할 것.
+
+### Libre Office
 * 도구 -> 기본설정 -> 보기 -> 아이콘 스타일 : dark 계통으로 변경한것. 그렇지 않으면 아이콘이 잘 안보인다.
 
 ### 4k 설정
