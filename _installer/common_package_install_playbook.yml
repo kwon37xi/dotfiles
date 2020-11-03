@@ -82,6 +82,7 @@
           - sshpass
           - putty
           - putty-tools
+          - filezilla
           - openssh-client
           - java-common
           - openjdk-11-jdk
