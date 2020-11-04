@@ -4,19 +4,25 @@ swipe:
       command: 'xdotool key alt+Right' # Browser back
     right: 
       command: 'xdotool key alt+Left' # Browser forward
-    up: # KDE Show Desktop Grid
-      command: 'qdbus org.kde.kglobalaccel /component/kwin invokeShortcut ShowDesktopGrid'
-    down: # KDE Show all windows
-      command: 'qdbus org.kde.kglobalaccel /component/kwin invokeShortcut ExposeAll'
+    up: # Gnome Overview
+      command: "dbus-send --session --type=method_call --dest=org.gnome.Shell /org/gnome/Shell org.gnome.Shell.Eval string:'Main.overview.toggle();'"
+    down: # Gnome Menu
+      command: "dbus-send --session --type=method_call --dest=org.gnome.Shell /org/gnome/Shell org.gnome.Shell.Eval string:'Main.shellDBusService.ShowApplications();'"
   4:
     left: 
       command: 'wmctrl -s 3' # to the last workspace
     right: 
       command: 'wmctrl -s 0' # to the first workspace
     up: 
-      command: '/home/kwon37xi/.local/bin/workspace-switcher.sh 4 Down'
+      command: '/home/kwon37xi/.local/bin/gnome-workspace-switcher.sh Down'
     down: 
-      command: '/home/kwon37xi/.local/bin/workspace-switcher.sh 4 Up'
+      command: '/home/kwon37xi/.local/bin/gnome-workspace-switcher.sh Up'
+pinch:
+  2: 
+    in:
+      command: '/home/kwon37xi/.local/bin/show-desktop.sh'
+    out:
+      command: "wmctrl -r ':ACTIVE:' -b toggle,fullscreen"
 threshold:
   swipe: 1
   pinch: 0.5
