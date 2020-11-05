@@ -16,6 +16,7 @@
         - .config/nvim-qt
         - .config/fcitx
         - .config/autostart
+        - .config/copyq
         - .sdkman/etc
         - .vim
     - name: delete conflicting files
@@ -43,6 +44,7 @@
         - fusuma
         - most
         - autostart
+        - copyq
     - name: stow with adopt
       shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
       with_items:
