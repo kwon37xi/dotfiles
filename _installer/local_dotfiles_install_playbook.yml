@@ -17,6 +17,8 @@
         - .config/plasma-workspace/env
         - .config/gtk-3.0
         - .config/fcitx
+        - .config/autostart
+        - .config/copyq
         - .sdkman/etc
         - .vim
     - name: delete conflicting files
@@ -44,6 +46,7 @@
         - yakuake
         - fusuma
         - most
+        - copyq
     - name: stow with adopt
       shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
       with_items:

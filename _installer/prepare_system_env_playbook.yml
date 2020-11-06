@@ -40,7 +40,6 @@
           - gnupg-agent
           - software-properties-common
           - software-properties-qt
-          - software-properties-qt
           - unzip
           - unrar
           - p7zip-full

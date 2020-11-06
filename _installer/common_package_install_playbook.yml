@@ -17,12 +17,14 @@
           - neofetch
           - ubuntu-restricted-addons
           - ubuntu-restricted-extras
+          - apt-file
           - htop
           - cpufrequtils
           - most
           - aptitude
           - dconf-editor
           - flatpak
+          - micro
           - vim-gtk
           - universal-ctags
           - ripgrep
@@ -83,6 +85,7 @@
           - ksshaskpass
           - putty
           - putty-tools
+          - filezilla
           - openssh-client
           - java-common
           - openjdk-11-jdk
@@ -93,6 +96,7 @@
           - scrcpy
           - rclone
           - inotify-tools
+          - krusader
     - name: install claws-mail packages
       become: yes
       apt:
