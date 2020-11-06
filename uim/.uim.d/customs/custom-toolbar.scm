@@ -1,5 +1,5 @@
 (define toolbar-display-time 'always)
-(define toolbar-show-action-based-switcher-button? #t)
+(define toolbar-show-action-based-switcher-button? #f)
 (define imsw-coverage 'system-global)
 (define toolbar-show-switcher-button? #f)
 (define toolbar-show-pref-button? #t)
