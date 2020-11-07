@@ -15,6 +15,7 @@
           - gnome-software-plugin-flatpak
           - guake
           - gnome-tweaks
+          - alacarte
           - chrome-gnome-shell
           - gnome-shell-extension-prefs
           - gnome-shell-extensions
