@@ -12,12 +12,14 @@
       with_items:
         - .config
         - .local/bin
+        - .local/share/applications
         - .config/nvim
         - .config/nvim-qt
         - .config/fcitx
         - .config/autostart
         - .config/copyq
         - .sdkman/etc
+        - Desktop
         - .vim
     - name: delete conflicting files
       file:

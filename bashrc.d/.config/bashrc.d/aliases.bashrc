@@ -6,3 +6,6 @@ alias fblog-logstash='fblog -m message -l level -t timestamp --main-line-format 
 # copy from/to clipboard for cli
 alias xccopy='xclip -i -sel clip'
 alias xcpaste='xclip -o -sel clip'
+
+# stow
+alias restow='stow -d ~/.dotfiles -t ~/ -R'
