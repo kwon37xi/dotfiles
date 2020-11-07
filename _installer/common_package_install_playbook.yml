@@ -17,6 +17,7 @@
           - neofetch
           - ubuntu-restricted-addons
           - ubuntu-restricted-extras
+          - ubuntu-wallpapers-*
           - apt-file
           - htop
           - cpufrequtils
