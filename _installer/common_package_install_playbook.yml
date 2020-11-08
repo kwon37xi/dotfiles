@@ -95,6 +95,7 @@
           - rclone
           - inotify-tools
           - krusader
+          - gparted
     - name: install claws-mail packages
       become: yes
       apt:
