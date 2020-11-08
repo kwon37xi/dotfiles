@@ -14,7 +14,7 @@ tar cvpzf /tmp/home-backups.tar.gz --one-file-system --exclude="Service Worker" 
     .local/share/JetBrains \
     .config/vivaldi/Default \
     .config/asbru \
+    .local/share/keyrings \
     .local/share/kwalletd \
     .local/share/DBeaverData \
-    .config/copyq \
     .local/backup
