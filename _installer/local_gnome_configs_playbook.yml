@@ -15,3 +15,17 @@
         dconf load /org/gnome/shell/extensions/dash-to-panel/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_dash-to-panel.dump
         dconf load /org/gnome/shell/extensions/nothing-to-say/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_nothing-to-say.dump
         dconf load /org/gnome/shell/keybindings/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_keybindings.dump
+        dconf load /org/gnome/desktop/peripherals/touchpad/ < ~/.dotfiles/_backup/gnome/org_gnome_desktop_peripherals_touchpad.dump
+    - name: dconf settings by cli
+      shell: |
+        # workspace 갯수 고정
+        gsettings set org.gnome.mutter dynamic-workspaces false
+        gsettings set org.gnome.desktop.wm.preferences num-workspaces 4
+        gsettings set org.gnome.desktop.wm.preferences workspace-names "['작업 공간 1', '작업 공간 2', '작업 공간 3', '작업 공간 4']"
+
+        # 현재 작업공간에서만 애플리케이션 스위칭
+        gsettings set org.gnome.shell.app-switcher current-workspace-only true
+        gsettings set org.gnome.shell.window-switcher current-workspace-only true
+
+        # Window Manager titlebar font
+        gsettings set org.gnome.desktop.wm.preferences titlebar-font '한글누리 Bold 11'
