@@ -86,8 +86,11 @@ sudo apt install amd64-microcode
 ### Libre Office
 * 도구 -> 기본설정 -> 보기 -> 아이콘 스타일 : dark 계통으로 변경한것. 그렇지 않으면 아이콘이 잘 안보인다.
 
+### Grub Customizer
+* Grub Theme 을 조정해준다.
+
 ### 4k 설정
-* 4k 모니터 Console 및 Grub 설정등
+* 4k 모니터 Console 설정
 ```
 ansible-playbook -vv ~/.dotfiles/_installer/4k_playbook.yml
 ```

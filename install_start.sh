@@ -44,6 +44,8 @@ ansible-playbook -vv ~/.dotfiles/_installer/local_gnome_configs_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/local_jdk_install_playbook.yml
 
+ansible-playbook -vv ~/.dotfiles/_installer/grub_themes_install_playbook.yml
+
 ansible-playbook -vv ~/.dotfiles/_installer/local_develop_env_playbook.yml
 
 echo "      installation finished. REBOOT! "
