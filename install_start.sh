@@ -18,7 +18,6 @@ ansible-playbook -vv ~/.dotfiles/_installer/package_repos_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/common_package_install_playbook.yml
 
-#ansible-playbook -vv ~/.dotfiles/_installer/kde_package_install_playbook.yml
 ansible-playbook -vv ~/.dotfiles/_installer/gnome_package_install_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/prepare_user_dirs_playbook.yml
@@ -41,7 +40,7 @@ ansible-playbook -vv ~/.dotfiles/_installer/fusuma_install_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/local_dotfiles_install_playbook.yml
 
-#ansible-playbook -vv ~/.dotfiles/_installer/local_kde_configs_playbook.yml
+ansible-playbook -vv ~/.dotfiles/_installer/local_gnome_configs_playbook.yml
 
 ansible-playbook -vv ~/.dotfiles/_installer/local_jdk_install_playbook.yml
 

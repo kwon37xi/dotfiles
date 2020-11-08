@@ -1,0 +1,17 @@
+[/]
+appicon-margin=1
+appicon-padding=1
+available-monitors=[0]
+dot-style-unfocused='DASHES'
+hot-keys=true
+hotkeys-overlay-combo='TEMPORARILY'
+isolate-monitors=true
+isolate-workspaces=true
+leftbox-padding=1
+panel-size=36
+primary-monitor=0
+status-icon-padding=1
+taskbar-locked=false
+trans-panel-opacity=0.0
+trans-use-custom-opacity=true
+tray-padding=1

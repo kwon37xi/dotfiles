@@ -1,0 +1,26 @@
+[/]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+help=@as []
+home=['<Super>e']
+mic-mute=['<Primary><Alt><Super>m']
+screencast=@as []
+terminal=['<Super>t']
+volume-down=['<Primary><Alt><Super>Down']
+volume-mute=['<Primary><Alt><Super>Delete']
+volume-up=['<Primary><Alt><Super>Up']
+www=['<Super>w']
+
+[custom-keybindings/custom0]
+binding='<Primary><Alt>End'
+command='gnome-session-quit --power-off'
+name='Shutdown'
+
+[custom-keybindings/custom1]
+binding='<Primary><Shift><Alt>End'
+command='gnome-session-quit --reboot'
+name='Reboot'
+
+[custom-keybindings/custom2]
+binding='<Super>Print'
+command='gnome-screenshot --interactive'
+name='Gnome Screenshot'

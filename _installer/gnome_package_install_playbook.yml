@@ -43,7 +43,3 @@
       shell: |
         cd /usr/share/doc/git/contrib/credential/libsecret
         make
-    - name: change lookandfeel
-      shell: |
-        echo "TODO change gnome/gtk theme by cli"
-        echo "TODO change qt theme by kvantum by cli"
