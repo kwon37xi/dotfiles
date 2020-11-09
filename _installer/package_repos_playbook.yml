@@ -83,7 +83,7 @@
     - name: remove snapd
       become: yes
       shell: |
-        apt purge -y --autoremove snapd
+        apt purge -y --autoremove snapd gnome-software-plugin-snap
         rm -rf /snap
         rm -rf /var/snap
         rm -rf /var/lib/snapd
