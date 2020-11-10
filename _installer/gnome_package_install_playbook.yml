@@ -36,6 +36,7 @@
           - papirus-icon-theme
           - papirus-folders
           - materia-gtk-theme
+          - materia-kde
           - arc-theme
           - dmz-cursor-theme
     - name: build git libsecret git credential helper
