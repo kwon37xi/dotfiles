@@ -47,7 +47,7 @@ sudo apt install intel-microcode iucode-tool
 sudo apt install amd64-microcode
 ```
 
-### Pop Gnome 설정
+### Gnome 설정
 * **설정 -> 지역 및 언어 -> Manage Installed Languages**에서 부족한 패키지 자동 설치
 * uim/fcitx 사용시에는  **설정 -> Keyboard**에서 **hangul** 제거
 * `/usr/share/themes/<원하는테마-보통 Pop-dark>/gnome-shell/gnome-shell.css` 파일에서 `.panel-button`의 `hpadding`항목 값들을
@@ -55,12 +55,14 @@ sudo apt install amd64-microcode
   * `dash-to-panel` 사용시에는 해당 설정의 **Fine Tune** 에서 설정값으로 조정가능하다.
 
 ### Super 키 오작동 & 노트북 오른쪽 Alt/Ctrl 한영,한자키
-* `gnome-tweaks` -> 키보드와 마우스 -> 추가배치 옵션
-  * Alt/Win 키 동작
-    * Hyper를 윈도우 키로 매핑
-  * 한국어 한/영, 한자키
-    * 오른쪽 Alt를 한/영 키로 만들기
-    * 오른쪽 Ctrl을 한/영 키로 만들기
+* `gnome-tweaks` -> 키보드와 마우스
+  * 바로가기 키 개요 : **오른쪽 Super 키** 로 변경한다. 이걸하면 왼쪽 Super 키가 올바르게 작동하고, 오른쪽 Super 키로 바로가기 개요를 볼 수 있다.
+  * 추가배치 옵션
+    * Alt/Win 키 동작 : 하지 말것. 더이살 불필요함.
+      * Hyper를 윈도우 키로 매핑
+    * 한국어 한/영, 한자키
+      * 오른쪽 Alt를 한/영 키로 만들기
+      * 오른쪽 Ctrl을 한/영 키로 만들기
 
 ### 입력장치
 * 터치패드
