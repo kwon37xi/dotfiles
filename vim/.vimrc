@@ -62,6 +62,11 @@ Plug 'https://github.com/mswift42/vim-themes.git'
 " File Type
 Plug 'elzr/vim-json'
 
+" JavaScript
+Plug 'pangloss/vim-javascript'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+
 call plug#end()
 
 filetype plugin indent on     " required!
@@ -276,6 +281,8 @@ let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
+" javascript/typescript
 
 " sytastic
 "set statusline+=%#warningmsg#
