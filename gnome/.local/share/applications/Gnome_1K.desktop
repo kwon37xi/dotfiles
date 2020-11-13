@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Gnome 4K
-Exec=/home/kwon37xi/.local/bin/gnome-monitor-4k.sh
-Comment=Gnome Display 설정에서 4K로 변경 후 Gnome 환경을 4K로 변경
-Terminal=false
-Icon=gnome-panel-launcher
-Type=Application

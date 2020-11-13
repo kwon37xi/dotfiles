@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Gnome 1k
+Exec=/home/kwon37xi/.local/bin/gnome-monitor-1k.sh
+Comment=Gnome Display 설정에서 1K 모니터로 변경 후 Gnome 전체 설정을 1K로 변경
+Terminal=false
+Icon=gnome-panel-launcher
+Type=Application
