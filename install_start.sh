@@ -10,7 +10,7 @@ read -s SUDO_PASSWORD
 echo "$SUDO_PASSWORD" | sudo -S apt-get -y install git ansible xz-utils unzip
 set -x
 
-git clone --depth=1 https://kwon37xi@github.com/kwon37xi/dotfiles.git ~/.dotfiles
+git clone https://kwon37xi@github.com/kwon37xi/dotfiles.git ~/.dotfiles
 
 ansible-playbook -vv ~/.dotfiles/_installer/prepare_system_env_playbook.yml --extra-vars="ansible_become_pass='{{ lookup('env', 'SUDO_PASSWORD') }}'"
 
