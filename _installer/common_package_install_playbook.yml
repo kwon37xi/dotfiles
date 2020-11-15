@@ -96,6 +96,7 @@
           - inotify-tools
           - krusader
           - gparted
+          - appimagelauncher
     - name: install claws-mail packages
       become: yes
       apt:

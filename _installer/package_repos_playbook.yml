@@ -65,6 +65,7 @@
         - ppa:graphics-drivers/ppa
         - ppa:linuxuprising/apps
         - ppa:papirus/papirus
+        - ppa:appimagelauncher-team/stable
     - name: multiverse universe
       become: yes
       shell: "apt-add-repository -y --no-update {{ item }}"
