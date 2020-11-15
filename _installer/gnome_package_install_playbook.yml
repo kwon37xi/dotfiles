@@ -39,6 +39,10 @@
           - materia-kde
           - arc-theme
           - dmz-cursor-theme
+          - numix-blue-gtk-theme
+          - numix-gtk-theme
+          - numix-icon-theme-circle
+          - numix-icon-theme
     - name: build git libsecret git credential helper
       become: yes
       shell: |
