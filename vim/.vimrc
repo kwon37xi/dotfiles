@@ -141,6 +141,10 @@ let NERDSpaceDelims=1
 let NERDTreeIgnore=['\.vim$', '\~$', '.*\.class$', '\.pyc$', 'CVS', 'classes','.*\.jar$', 'target']
 map <F12> :NERDTreeToggle<CR>
 
+" nerdtree 창에서는 다른 파일 못열게 하기. vim-plug 사용시 충돌 방지
+autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
+let g:plug_window = 'noautocmd vertical topleft new'
+
 " closetags
 let g:closetag_html_style=1
 " Ctrl+Shift+-  : 를 누르면 가장 가까운 안 닫힌 태그 찾아 닫아줌
