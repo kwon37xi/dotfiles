@@ -123,6 +123,13 @@
         # gnome 자체는 ibus 를 사용하고, 나머지는 uim 사용하게 복합 설정
         gsettings set org.gnome.settings-daemon.plugins.keyboard active true
         gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'ibus'>}"
+        # ibus 한글 관련 설정
+        gsettings set org.freedesktop.ibus.engine.hangul auto-reorder true
+        gsettings set org.freedesktop.ibus.engine.hangul hangul-keyboard '39'
+        gsettings set org.freedesktop.ibus.engine.hangul hanja-keys 'Hangul_Hanja,F9'
+        gsettings set org.freedesktop.ibus.engine.hangul switch-keys 'Hangul,Shift+space'
+        gsettings set org.freedesktop.ibus.engine.hangul word-commit false
+
         # gsettings set org.gnome.settings-daemon.plugins.keyboard active false
         # gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'uim'>}"
         # sudo mv /usr/bin/ibus-daemon /usr/bin/ibus-daemon.distrib
