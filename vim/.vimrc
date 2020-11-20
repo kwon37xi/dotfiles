@@ -67,6 +67,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
+" buffer https://github.com/jlanzarotta/bufexplorer
+Plug 'jlanzarotta/bufexplorer'
 call plug#end()
 
 filetype plugin indent on     " required!
@@ -179,8 +181,10 @@ let g:localvimrc_name = ".lvimrc"
 let g:localvimrc_ask = 0
 
 " bufexplorer
-map <Leader>be <ESC>:Buffers<CR>
-nnoremap <silent> <C-E> <ESC>:Buffers<CR>
+
+" fzf Buffers 가 화살표키 이동이 불가해서 bufexrplorer 로 돌아감
+" map <Leader>be <ESC>:Buffers<CR>
+" nnoremap <silent> <C-E> <ESC>:Buffers<CR>
 
 " Emmet.vim (Zen-Coding)
 " http://mattn.github.io/emmet-vim/
