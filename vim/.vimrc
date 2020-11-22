@@ -69,6 +69,10 @@ Plug 'maxmellon/vim-jsx-pretty'
 
 " buffer https://github.com/jlanzarotta/bufexplorer
 Plug 'jlanzarotta/bufexplorer'
+
+" autojump Plugin https://github.com/padde/jump.vim
+Plug 'padde/jump.vim'
+
 call plug#end()
 
 filetype plugin indent on     " required!
