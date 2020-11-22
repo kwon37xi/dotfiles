@@ -20,6 +20,7 @@
           - ubuntu-wallpapers-*
           - apt-file
           - htop
+          - stacer
           - cpufrequtils
           - most
           - aptitude
