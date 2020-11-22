@@ -97,6 +97,7 @@
           - krusader
           - gparted
           - appimagelauncher
+          - ulauncher
     - name: install claws-mail packages
       become: yes
       apt:

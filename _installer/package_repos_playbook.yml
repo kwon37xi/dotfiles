@@ -66,6 +66,7 @@
         - ppa:linuxuprising/apps
         - ppa:papirus/papirus
         - ppa:appimagelauncher-team/stable
+        - ppa:agornostal/ulauncher
     - name: multiverse universe
       become: yes
       shell: "apt-add-repository -y --no-update {{ item }}"
