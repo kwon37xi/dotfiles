@@ -1,5 +1,5 @@
 [/]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
 help=@as []
 home=['<Super>e']
 mic-mute=['<Primary><Alt><Super>m']
@@ -24,3 +24,8 @@ name='Reboot'
 binding='<Super>Print'
 command='gnome-screenshot --interactive'
 name='Gnome Screenshot'
+
+[custom-keybindings/custom3]
+binding='<Super>p'
+command=' gnome-control-center display'
+name='Display Settings'
