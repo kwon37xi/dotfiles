@@ -15,7 +15,8 @@ set nomousehide
 set ignorecase
 set smartcase
 
-" Copy & Paste Like Windows
+" Copy & Paste Like Windows - https://superuser.com/a/189198/368299
+" Linux 에서 PRIMARY 로 작동함.
 vmap <C-c> "+y
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
@@ -34,7 +35,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-scripts/closetag.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-scripts/localvimrc'
-"Plug 'vim-scripts/bufexplorer.zip'
 Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/taglist-plus'
