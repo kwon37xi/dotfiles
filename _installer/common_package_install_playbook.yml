@@ -101,6 +101,8 @@
           - appimagelauncher
           - ulauncher
           - stacer
+          - trash-cli
+          - ncdu
     - name: install claws-mail packages
       become: yes
       apt:
