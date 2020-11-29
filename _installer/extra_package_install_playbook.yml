@@ -54,6 +54,16 @@
         package:
           - rustc
           - cargo
+    - name: ocs-url dependencies
+      become: yes
+      apt:
+        package:
+          - libqt5svg5
+          - qml-module-qtquick-controls
+    - name: ocs-url install # https://www.opendesktop.org/p/1136805/
+      become: yes
+      apt:
+        deb: "/home/{{ current_user }}/.dotfiles/_backup/themes/ocs-url_3.1.0-0ubuntu1_amd64.deb"
     - name: zoom.us preparation
       become: yes
       apt:
