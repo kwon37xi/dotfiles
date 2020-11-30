@@ -1,9 +1,14 @@
 [/]
 clock-show-weekday=true
+cursor-theme='whiteglass'
 document-font-name='나눔고딕 11'
 enable-hot-corners=false
 font-name='나눔바른고딕 11'
 gtk-im-module='ibus'
+gtk-theme='NumixBlue'
+icon-theme='Numix-Circle'
 locate-pointer=true
 monospace-font-name='D2Coding 13'
+scaling-factor=uint32 1
 show-battery-percentage=true
+text-scaling-factor=1.0
