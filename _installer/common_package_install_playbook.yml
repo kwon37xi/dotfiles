@@ -103,6 +103,7 @@
           - stacer
           - trash-cli
           - ncdu
+          - bat
     - name: install claws-mail packages
       become: yes
       apt:

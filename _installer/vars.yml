@@ -2,8 +2,7 @@ ubuntu_release: "{{ lookup('pipe', 'lsb_release -cs') }}"
 ubuntu_version: "{{ lookup('pipe', 'lsb_release -rs') }}"
 current_user: "{{ lookup('env', 'USER') }}"
 local_bashrcs_dir: ~/.config/bashrc.d
-slack_version: 4.10.3
-hugo_version: 0.74.3
-jetbrains_intellij_idea_version: 2020.2.3
-bat_version: 0.15.4
+slack_version: 4.11.3
+hugo_version: 0.79.0
+jetbrains_intellij_idea_version: 2020.2.4
 duf_version: 0.4.0

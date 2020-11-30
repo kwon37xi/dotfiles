@@ -9,3 +9,6 @@ alias xcpaste='xclip -o -sel clip'
 
 # stow
 alias restow='stow -d ~/.dotfiles -t ~/ -R'
+
+# batcat -> bat
+alias bat='batcat'
