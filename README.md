@@ -50,22 +50,22 @@ sudo apt install amd64-microcode
 ### Gnome 설정
 * **설정 -> 지역 및 언어 -> Manage Installed Languages**에서 부족한 패키지 자동 설치
 * uim/fcitx 사용시에는  **설정 -> Keyboard**에서 **hangul** 제거
-* `/usr/share/themes/<원하는테마-보통 Pop-dark>/gnome-shell/gnome-shell.css` 파일에서 `.panel-button`의 `hpadding`항목 값들을
+* Top Bar 사용시 : `/usr/share/themes/<원하는테마>/gnome-shell/gnome-shell.css` 파일에서 `.panel-button`의 `hpadding`항목 값들을
   **1px**로 변경해주면 Panel 의 인디케이터 부분의 아이콘간 간격이 줄어들게 된다.
-  * `dash-to-panel` 사용시에는 해당 설정의 **Fine Tune** 에서 설정값으로 조정가능하다.
+* `dash-to-panel` 사용시에는 해당 설정의 **Fine Tune** 에서 설정값으로 padding 조정가능하다.
 
 ### Super 키 오작동 & 노트북 오른쪽 Alt/Ctrl 한영,한자키
 * `gnome-tweaks` -> 키보드와 마우스
   * 바로가기 키 개요 : **오른쪽 Super 키** 로 변경한다. 이걸하면 왼쪽 Super 키가 올바르게 작동하고, 오른쪽 Super 키로 바로가기 개요를 볼 수 있다.
   * 추가배치 옵션
-    * Alt/Win 키 동작 : 하지 말것. 더이살 불필요함.
-      * Hyper를 윈도우 키로 매핑
+    * Alt/Win 키 동작 : 하지 말것. 더이상 불필요함.
+      * -Hyper를 윈도우 키로 매핑-
     * 한국어 한/영, 한자키
       * 오른쪽 Alt를 한/영 키로 만들기
-      * 오른쪽 Ctrl을 한/영 키로 만들기
+      * 오른쪽 Ctrl을 한자 키로 만들기
 
 ### 입력장치
-* 터치패드
+* 터치패드 : dconf 설정에서 자동으로 하고 있음.
   * 탭으로 클릭 : 활성화
   * 스크롤
     * 두 손가락 : 활성화
@@ -76,7 +76,7 @@ sudo apt install amd64-microcode
 * 또한 KDE Panel 에 Input Method Widget을 추가해주면 좋다(kimpanel).
 
 ### 단축키 보정
-* 시스템 설정 열고 각종 단축키 설정 올바로 안 된 것들 보정
+* 시스템 설정 열고 각종 단축키 설정 올바로 안 된 것들 보정 : dconf 설정에서 자동으로 하고 있음.
 
 ### 개발 관련
 * IntelliJ Idea 설치
@@ -86,7 +86,7 @@ sudo apt install amd64-microcode
 * 설치 후 **Files -> Manage IDE Settings** 에서 온라인 동기화를 위해 로그인 할 것.
 
 ### Libre Office
-* 도구 -> 기본설정 -> 보기 -> 아이콘 스타일 : dark 계통으로 변경한것. 그렇지 않으면 아이콘이 잘 안보인다.
+* 도구 -> 기본설정 -> 보기 -> 아이콘 스타일 : dark 계통 테마일경우 아이콘 스타일을 dark 계통으로 변경한것. 그렇지 않으면 아이콘이 잘 안보인다.
 
 ### Grub Customizer
 * Grub Theme 을 조정해준다.
