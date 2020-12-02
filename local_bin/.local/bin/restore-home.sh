@@ -8,6 +8,7 @@ rm -rf ~/.config/vivaldi/Default
 rm -rf ~/.config/JetBrains
 rm -rf ~/.local/share/JetBrains
 rm -rf ~/.config/copyq
+rm -rf ~/.local/share/keyrings
 
 tar xvzf home-backups.tar.gz -C ~/
 
