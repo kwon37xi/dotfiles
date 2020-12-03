@@ -12,7 +12,6 @@
       become: yes
       apt:
         package:
-          - linux-xanmod
           - inxi
           - neofetch
           - ubuntu-restricted-addons
