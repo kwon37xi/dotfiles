@@ -42,6 +42,19 @@
         repo: "deb https://cli.github.com/packages {{ ubuntu_release }} main"
         filename: github-cli
         update_cache: no
+    - name: vscode key
+      become: yes
+      apt_key:
+        url: https://packages.microsoft.com/keys/microsoft.asc
+      register: vscode_key_installed
+      until: vscode_key_installed is not failed
+      retries: 3
+    - name: vscode repository
+      become: yes
+      apt_repository:
+        repo: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+        filename: vscode
+        update_check: no
     - name: typora key
       become: yes
       apt_key:

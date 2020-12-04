@@ -38,6 +38,7 @@
             #- asbru-cm
           - unetbootin
           - gh
+          - code
     - name: add architecture i386
       become: yes
       shell: "dpkg --add-architecture i386"
