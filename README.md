@@ -31,7 +31,15 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 ## 설치 후 할 일들
 * 후속 private dotfiles 설치
 
-## additional drivers
+### HOME 기본 디렉토리 다른 파티션으로 이동
+* 별도 디스크 혹은 파티션으로 홈에 있는 각 기본 디렉토리(Downloads,Documents,...)를 옮기고 싶다면,
+`$HOME/.local/bin/move-home-dirs.sh <대상Directory>` 를 실행한다.
+
+```
+~/.local/bin/move-home-dirs.sh /mnt/data
+```
+
+### additional drivers
 ```
 sudo software-properties-gtk
 ```
