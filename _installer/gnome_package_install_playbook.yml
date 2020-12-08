@@ -20,6 +20,15 @@
           - gnome-shell-extension-prefs
           - gnome-shell-extensions
           - gnome-shell-extension-dash-to-panel
+          - nautilus-admin
+          - gnome-sushi
+          - nautilus-megasync
+          - nautilus-script-audio-convert
+          - nautilus-image-converter
+          - nautilus-megasync
+          - nautilus-scripts-manager
+          - nautilus-sendto
+          - nautilus-share
           - network-manager-fortisslvpn-gnome
           - network-manager-openconnect-gnome
           - network-manager-openvpn-gnome
