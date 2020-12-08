@@ -17,4 +17,5 @@ tar cvpzf /tmp/home-backups.tar.gz --one-file-system --exclude="Service Worker" 
     .local/share/keyrings \
     .local/share/kwalletd \
     .local/share/DBeaverData \
+    .PlayOnLinux \
     .local/backup
