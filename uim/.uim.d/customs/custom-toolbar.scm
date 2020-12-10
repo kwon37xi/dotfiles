@@ -2,7 +2,7 @@
 (define toolbar-show-action-based-switcher-button? #f)
 (define imsw-coverage 'system-global)
 (define toolbar-show-switcher-button? #f)
-(define toolbar-show-pref-button? #t)
+(define toolbar-show-pref-button? #f)
 (define toolbar-show-dict-button? #f)
 (define toolbar-show-input-pad-button? #f)
 (define toolbar-show-handwriting-input-pad-button? #f)
