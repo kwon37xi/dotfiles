@@ -124,7 +124,7 @@
       shell: |
         update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk3-systray 100
         update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk-systray 100
-        update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk3-systray
+        update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk-systray
         # for gnome disable ibus, 의존성 때문에 패키지 삭제가 불가해서 실행만 안되게 이름변경. 아래 작업을 안하면 uim/ibus 동시 사용가능해짐
         # gnome 자체는 ibus 를 사용하고, 나머지는 uim 사용하게 복합 설정
         gsettings set org.gnome.settings-daemon.plugins.keyboard active true
