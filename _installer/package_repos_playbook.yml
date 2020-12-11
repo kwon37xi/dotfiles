@@ -68,6 +68,19 @@
         repo: deb https://typora.io/linux ./
         filename: typora
         update_cache: no
+    - name: nimf hamonikr key
+      become: yes
+      apt_key:
+        url: https://pkg.hamonikr.org/hamonikr-pkg.key
+      register: nimf_key_installed
+      until: nimf_key_installed is not failed
+      retries: 3
+    - name: nimf hamonikr repo
+      become: yes
+      apt_repository:
+        repo: "deb [arch=amd64] https://pkg.hamonikr.org {{ ubuntu_release }} main"
+        filename: nimf-hamonikr
+        update_cache: no
     - name: add PPAs
       become: yes
       shell: "add-apt-repository -y --no-update {{ item }}"

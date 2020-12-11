@@ -73,6 +73,8 @@
           - fcitx-ui-classic
           - fcitx-config-gtk
           - fcitx-frontend-all
+          - nimf
+          - nimf-libhangul
           - build-essential
           - make
           - cmake
@@ -140,4 +142,4 @@
         # gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'uim'>}"
         # sudo mv /usr/bin/ibus-daemon /usr/bin/ibus-daemon.distrib
     - name: set default im
-      shell: "im-config -n uim"
+      shell: "im-config -n nimf"

@@ -1,0 +1,12 @@
+[/]
+hidden-active-engines=['nimf-libhangul', 'nimf-system-keyboard']
+hotkeys=@as []
+setup-environment-variables=false
+
+[engines]
+default-engine='nimf-libhangul'
+
+[engines/nimf-libhangul]
+get-method-infos='39'
+shortcuts-to-lang=['Hangul', '<Shift> space']
+shortcuts-to-sys=['Hangul', 'Escape', '<Shift> space']
