@@ -12,7 +12,7 @@
       register: xanmod_kernal_key_installed
       until: xanmod_kernal_key_installed is not failed
       retries: 3
-    - name: xanmod kernel repo # linux-xanmod 패키지를 필요하면 설치해준다.
+    - name: xanmod kernel repo # linux-xanmod 패키지를 필요하면 설치해준다. LTS 권장. 기본 버전은 너무 최신이라 호환성 이슈 있을 수 있음.
       become: yes
       apt_repository:
         repo: deb http://deb.xanmod.org releases main
