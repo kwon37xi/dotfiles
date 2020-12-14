@@ -123,7 +123,8 @@ set fileencodings=utf8,cp949
 
 " Vim plug 자동 설치 전에는 해당 스킴이 없어서 오류가 발생함. 이를 없애는
 " 방법. slient! ...
-silent! colorscheme desertEx
+silent! colorscheme darktooth
+"silent! colorscheme desertEx
 "colorscheme zenburn
 "colorscheme desertEx
 "silent! colorscheme pyte
