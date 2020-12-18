@@ -89,7 +89,6 @@
     - name: youtube-dl
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/youtube-dl-download.sh"
     - name: bitwarden
-      become: yes
       flatpak:
         name: "com.bitwarden.desktop"
     - name: local applications dir

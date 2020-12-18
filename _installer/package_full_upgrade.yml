@@ -12,5 +12,4 @@
         autoclean: yes
         autoremove: yes
     - name: flatpak upgrade
-      become: yes
       shell: "flatpak update --system -y"
