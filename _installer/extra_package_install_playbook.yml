@@ -71,6 +71,8 @@
           - libgl1-mesa-glx
           - libegl1-mesa
           - libxcb-xtest0
+    - name: zoom.us install
+      command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/zoom-install.sh"
     - name: download DEBs install
       become: yes
       apt:
