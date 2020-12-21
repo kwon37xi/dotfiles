@@ -11,9 +11,6 @@ set nocompatible
 set backupdir=~/.local/tmp/vim/backup
 set directory=~/.local/tmp/vim/swap
 set undodir=~/.local/tmp/vim/undos
-set nomousehide
-set ignorecase
-set smartcase
 
 " Copy & Paste Like Windows - https://superuser.com/a/189198/368299
 " Linux 에서 PRIMARY 로 작동함.
@@ -78,7 +75,13 @@ call plug#end()
 filetype plugin indent on     " required!
 
 " For Programming
-set nu
+set nomousehide
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+set number
+set noswapfile
 syntax on
 set ai
 set smartindent
