@@ -32,6 +32,7 @@
           - ripgrep
           - fd-find
           - tmux
+          - fish
           - xclip
           - copyq
           - copyq-plugins
