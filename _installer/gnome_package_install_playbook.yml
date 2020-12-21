@@ -20,9 +20,9 @@
           - gnome-shell-extension-prefs
           - gnome-shell-extensions
           - gnome-shell-extension-dash-to-panel
+          - deja-dup
           - nautilus-admin
           - gnome-sushi
-          - nautilus-megasync
           - nautilus-script-audio-convert
           - nautilus-image-converter
           - nautilus-megasync

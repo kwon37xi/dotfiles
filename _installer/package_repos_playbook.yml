@@ -54,7 +54,7 @@
       apt_repository:
         repo: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
         filename: vscode
-        update_check: no
+        update_cache: no
     - name: typora key
       become: yes
       apt_key:

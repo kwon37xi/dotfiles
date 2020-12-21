@@ -105,6 +105,7 @@
           - trash-cli
           - ncdu
           - bat
+          - timeshift
     - name: install claws-mail packages
       become: yes
       apt:
