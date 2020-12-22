@@ -107,6 +107,8 @@
           - ncdu
           - bat
           - timeshift
+          - xsnow
+          - cmatrix
     - name: install claws-mail packages
       become: yes
       apt:
