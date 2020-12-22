@@ -29,6 +29,7 @@
           - audacious
           - kdenlive
           - handbrake
+          - gpick
     - name: install extra dev related packages
       become: yes
       apt:
