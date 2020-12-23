@@ -39,6 +39,11 @@
           - unetbootin
           - gh
           - code
+    - name: database clients
+      become: yes
+      apt:
+        package:
+          - mysql-client
     - name: add architecture i386
       become: yes
       shell: "dpkg --add-architecture i386"
