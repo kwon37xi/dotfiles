@@ -13,10 +13,3 @@ alias restow='stow -d ~/.dotfiles -t ~/ -R'
 
 # batcat -> bat
 alias bat='batcat'
-
-# mkdir & cd https://unix.stackexchange.com/questions/125385/combined-mkdir-and-cd
-mkcd()
-{
-  mkdir -p -- "$1"
-  cd -P -- "$1"
-}
