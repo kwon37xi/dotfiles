@@ -42,6 +42,7 @@
           - libreoffice-help-ko
           - libreoffice-l10n-ko
           - libreoffice-style-*
+          - libreoffice-sdbc-*
           - meld
           - tlp
           - tlp-rdw
