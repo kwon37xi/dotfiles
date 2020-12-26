@@ -41,6 +41,7 @@
           - libreoffice
           - libreoffice-help-ko
           - libreoffice-l10n-ko
+          - libreoffice-style-*
           - meld
           - tlp
           - tlp-rdw
