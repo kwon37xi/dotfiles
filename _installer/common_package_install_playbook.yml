@@ -79,6 +79,7 @@
           - nimf
           - nimf-libhangul
           - build-essential
+          - dkms
           - make
           - cmake
           - direnv
