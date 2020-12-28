@@ -121,6 +121,7 @@ set guifont=D2Coding\ 14
 " 툴바 안보이게 - 툴바를 안보이게 하면 화면 split 시에 커서가 사라짐
 " set guioptions-=T
 
+set toolbariconsize=large
 set fileformats=unix,dos
 set fileencodings=utf8,cp949
 
