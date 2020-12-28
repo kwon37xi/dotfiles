@@ -88,6 +88,7 @@
 }
 
 /* Pull Vivaldi icon over. Use the menu-style button. */
+/*
 button.vivaldi {
     position: absolute;
     right: 82px;
@@ -100,6 +101,7 @@ button.vivaldi svg {
     height:20px;
     margin-top:2px;
 }
+*/
 .linux #tabs-container.top {
     padding-right:120px;
 }
