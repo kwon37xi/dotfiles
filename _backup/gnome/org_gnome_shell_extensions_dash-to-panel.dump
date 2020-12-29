@@ -1,7 +1,7 @@
 [/]
 appicon-margin=1
 appicon-padding=1
-available-monitors=[1, 0]
+available-monitors=[0]
 dot-style-unfocused='SQUARES'
 hot-keys=true
 hotkeys-overlay-combo='TEMPORARILY'
