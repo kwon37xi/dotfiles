@@ -19,6 +19,7 @@
           - ubuntu-wallpapers-*
           - apt-file
           - htop
+          - bashtop
           - stacer
           - cpufrequtils
           - most
@@ -105,7 +106,6 @@
           - gparted
           - appimagelauncher
           - ulauncher
-          - stacer
           - trash-cli
           - ncdu
           - bat
