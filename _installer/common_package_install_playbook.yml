@@ -53,6 +53,8 @@
           - docker-compose
           - ctop
           - openconnect
+          - net-tools
+          - smbclient
           - network-manager-openconnect
           - openfortivpn
           - network-manager-fortisslvpn
