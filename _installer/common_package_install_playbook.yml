@@ -112,6 +112,7 @@
           - ncdu
           - bat
           - timeshift
+          - ranger
           - xsnow
           - cmatrix
     - name: install claws-mail packages
