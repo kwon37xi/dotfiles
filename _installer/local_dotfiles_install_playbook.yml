@@ -18,6 +18,7 @@
         - .config/fcitx
         - .config/autostart
         - .config/copyq
+        - .config/kitty
         - .sdkman/etc
         - Desktop
         - .vim
@@ -49,6 +50,7 @@
         - copyq
         - zoom
         - mysql
+        - kitty
     - name: stow with adopt
       shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
       with_items:
