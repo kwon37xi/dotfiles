@@ -32,8 +32,8 @@
           - universal-ctags
           - ripgrep
           - fd-find
+          - kitty
           - tmux
-          - fish
           - xclip
           - copyq
           - copyq-plugins
@@ -112,6 +112,7 @@
           - ncdu
           - bat
           - timeshift
+          - ranger
           - xsnow
           - cmatrix
     - name: install claws-mail packages
