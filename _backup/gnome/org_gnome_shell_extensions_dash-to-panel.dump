@@ -1,4 +1,6 @@
 [/]
+animate-app-switch=false
+animate-window-launch=false
 appicon-margin=1
 appicon-padding=1
 available-monitors=[0]
