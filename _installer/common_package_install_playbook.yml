@@ -45,6 +45,7 @@
           - libreoffice-style-*
           - libreoffice-sdbc-*
           - meld
+          - kdiff3
           - tlp
           - tlp-rdw
           - tlpui
