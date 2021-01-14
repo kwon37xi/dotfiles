@@ -37,3 +37,9 @@ function mkcd {
   mkdir -p -- "$1"
   cd -P -- "$1"
 }
+
+# 특정 port 를 사용중인 process 찾기
+# https://jink1982.tistory.com/72
+function lsport {
+    sudo lsof -i:"$1"
+}
