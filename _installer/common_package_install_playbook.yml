@@ -32,7 +32,6 @@
           - universal-ctags
           - ripgrep
           - fd-find
-          - kitty
           - tmux
           - xclip
           - copyq
