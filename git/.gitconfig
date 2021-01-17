@@ -44,8 +44,8 @@
 
 # http://blog.marcinchwedczuk.pl/use-meld-as-git-merge-diff-tool
 [diff]
-    # tool = meld
-    tool = kdiff3
+    tool = meld
+    # tool = kdiff3
     # external = ~/.local/bin/git-diff-meld.sh
 
 [difftool]
@@ -60,8 +60,8 @@
     cmd = kdiff3 \"$LOCAL\" \"$REMOTE\"
 
 [merge]
-    #tool = meld
-    tool = kdiff3
+    tool = meld
+    #tool = kdiff3
 
 [mergetool "meld"]
     # 3 way 머지 중 가운데가 merged
