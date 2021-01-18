@@ -48,6 +48,7 @@
           - tlp
           - tlp-rdw
           - tlpui
+          - powertop
           - ufw
           - gufw
           - docker
