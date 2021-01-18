@@ -1,5 +1,5 @@
 [/]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
 help=@as []
 home=['<Super>e']
 mic-mute=['<Primary><Alt><Super>m']
@@ -32,3 +32,8 @@ name='Gnome Screenshot'
 binding='<Super>p'
 command=' gnome-control-center display'
 name='Display Settings'
+
+[custom-keybindings/custom4]
+binding='<Super>grave'
+command='xfce4-terminal --hide-menubar --hide-borders --drop-down -x /usr/bin/tmux'
+name='dropdown terminal'

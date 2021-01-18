@@ -19,6 +19,7 @@
         - .config/autostart
         - .config/copyq
         - .config/ranger
+        - .config/xfce4/terminal
         - .sdkman/etc
         - Desktop
         - .vim
@@ -51,6 +52,7 @@
         - zoom
         - mysql
         - ranger
+        - xfce4-terminal
     - name: stow with adopt
       shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
       with_items:

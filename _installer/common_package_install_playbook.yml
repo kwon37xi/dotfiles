@@ -115,6 +115,7 @@
           - ranger
           - xsnow
           - cmatrix
+          - xfce4-terminal
     - name: install claws-mail packages
       become: yes
       apt:

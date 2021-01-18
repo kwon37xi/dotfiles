@@ -13,7 +13,6 @@
           - gdebi
           - gnome-software # gnome-software remove pop-shell!!
           - gnome-software-plugin-flatpak
-          - guake
           - gnome-tweaks
           - alacarte
           - chrome-gnome-shell
