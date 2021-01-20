@@ -10,8 +10,5 @@ alias xcpaste='xclip -o -sel clip'
 # stow
 alias restow='stow -d ~/.dotfiles -t ~/ -R'
 
-# batcat -> bat
-alias bat='batcat'
-
 # apt update/upgrade
 alias aptup='sudo apt update && sudo apt upgrade && sudo apt autoremove'
