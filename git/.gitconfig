@@ -32,9 +32,12 @@
     #helper = /usr/local/bin/git-credential-kwalletcli
     helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 
+# https://johngrib.github.io/wiki/git-alias/
 [alias]
     last = log -1 HEAD
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an %ae>%Creset' --abbrev-commit --
+    swf = "!git checkout $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
+    af = "!git add $(git status -s | fzf -m | awk '{print $2}')"
     ci = commit
     co = checkout
     st = status
