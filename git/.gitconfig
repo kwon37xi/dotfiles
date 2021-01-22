@@ -37,9 +37,6 @@
     alias = "!git config --list | egrep '^alias.+'"
     last = log -1 HEAD
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an %ae>%Creset' --abbrev-commit --
-    swf = "!git switch $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
-    swrf = "!git switch -t $(git branch -r -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
-    af = "!git add $(git status -s | fzf -m | awk '{print $2}')"
     ci = commit
     co = checkout
     st = status
@@ -47,6 +44,12 @@
     dt = difftool
     mt = mergetool
     cleanbranch = "!git branch -d $(git branch --merged | grep -v '^\\*\\|\\<master$')"
+    # fzf 기반
+    swf = "!git switch $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
+    swrf = "!git switch -t $(git branch -r -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
+    af = "!git add $(git status -s | fzf -m | awk '{print $2}')"
+    delbf = "!git branch -d $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
+    DELbf = "!git branch -D $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
 
 # http://blog.marcinchwedczuk.pl/use-meld-as-git-merge-diff-tool
 [diff]
