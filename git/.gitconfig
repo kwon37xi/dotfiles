@@ -47,6 +47,7 @@
     # fzf 기반
     swf = "!git switch $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
     swrf = "!git switch -t $(git branch -r -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
+    mf = "!git merge $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
     af = "!git add $(git status -s | fzf -m | awk '{print $2}')"
     delbf = "!git branch -d $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
     DELbf = "!git branch -D $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
