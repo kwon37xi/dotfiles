@@ -1,6 +1,8 @@
 # Path to the bash it configuration
 export BASH_IT=~/.bash_it
 
+export BASH_IT_CUSTOM=~/.config/.bash_it_custom
+
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.
 # location /.bash_it/themes/

@@ -23,6 +23,7 @@
         - .sdkman/etc
         - Desktop
         - .vim
+        - .config/.bash_it_custom
     - name: delete conflicting files
       file:
         path: "/home/{{ current_user }}/{{ item }}"
@@ -40,6 +41,7 @@
         - uim
         - git
         - bashrc.d
+        - bash_it_custom
         - neovim
         - sdkman
         - local_bin
