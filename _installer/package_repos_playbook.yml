@@ -93,6 +93,7 @@
         - ppa:papirus/papirus
         - ppa:appimagelauncher-team/stable
         - ppa:agornostal/ulauncher
+        - ppa:cappelikan/ppa # for mainline
     - name: multiverse universe
       become: yes
       shell: "apt-add-repository -y --no-update {{ item }}"

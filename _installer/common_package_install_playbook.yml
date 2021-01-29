@@ -117,6 +117,7 @@
           - xsnow
           - cmatrix
           - xfce4-terminal
+          - mainline
     - name: install claws-mail packages
       become: yes
       apt:
