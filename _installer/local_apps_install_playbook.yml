@@ -75,3 +75,5 @@
       shell:
         cmd: ./install.sh --silent --no-modify-config
         chdir: ~/.bash_it
+    - name: tldr update
+      shell: tldr -u
