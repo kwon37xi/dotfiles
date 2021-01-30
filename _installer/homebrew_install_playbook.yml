@@ -23,7 +23,6 @@
     - name: brew common packages
       homebrew:
         name:
-          - fzf # fzf apt 버전이 낮아서 brew로 설치
           - fblog
           - lazygit
           - lazydocker

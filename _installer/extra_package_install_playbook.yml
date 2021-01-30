@@ -125,3 +125,5 @@
         remote_src: yes
         dest: "/home/{{ current_user }}/.local/opt"
         creates: "/home/{{ current_user }}/.local/opt/mat"
+    - name: fzf
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fzf.sh"
