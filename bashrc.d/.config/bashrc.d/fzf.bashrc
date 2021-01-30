@@ -1,16 +1,16 @@
 # Setup fzf
 # ---------
-if [[ ! "$PATH" == */home/linuxbrew/.linuxbrew/opt/fzf/bin* ]]; then
-  export PATH="${PATH:+${PATH}:}/home/linuxbrew/.linuxbrew/opt/fzf/bin"
-fi
+#if [[ ! "$PATH" == */home/linuxbrew/.linuxbrew/opt/fzf/bin* ]]; then
+  #export PATH="${PATH:+${PATH}:}/home/linuxbrew/.linuxbrew/opt/fzf/bin"
+#fi
 
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/home/linuxbrew/.linuxbrew/opt/fzf/shell/completion.bash" 2> /dev/null
+[[ $- == *i* ]] && source "/usr/local/share/fzf/completion.bash" 2> /dev/null
 
 # Key bindings
 # ------------
-source "/home/linuxbrew/.linuxbrew/opt/fzf/shell/key-bindings.bash"
+source "/usr/local/share/fzf/key-bindings.bash"
 
 
 # FZF OPTS from https://www.youtube.com/watch?v=tB-AgxzBmH8
@@ -24,6 +24,4 @@ export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
 
 export FZF_TMUX=1
-
-alias fzf=fzf-tmux
 # todo TMUX options..
