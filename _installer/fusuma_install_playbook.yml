@@ -1,5 +1,5 @@
 ---
-- name: HomeBrew and install brew packages
+- name: fusuma install
   hosts: 127.0.0.1, localhost
   connection: local
   vars_files:
