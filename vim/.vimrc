@@ -72,6 +72,10 @@ Plug 'maxmellon/vim-jsx-pretty'
 " autojump Plugin https://github.com/padde/jump.vim
 Plug 'padde/jump.vim'
 
+" vim and tmux window/pane navigation
+" Ctrl-hjkl\ 연동
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
 filetype plugin indent on     " required!
