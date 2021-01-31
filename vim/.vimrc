@@ -39,8 +39,10 @@ Plug 'vim-scripts/snipMate'
 Plug 'vim-scripts/Align'
 Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
-Plug '/home/linuxbrew/.linuxbrew/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
+" fzf include ripgrep Rg
 "Plug 'jremmen/vim-ripgrep'
 "Plug 'vim-scripts/fcitx.vim'
 
@@ -250,6 +252,10 @@ nnoremap <silent> L :call ToggleMovement('L', 'H')<CR>
 let g:indentLine_setConceal = 0
 let g:vim_json_syntax_conceal = 0
 set conceallevel=0
+
+" vim-rooter
+let g:rooter_targets = '/,*'
+let g:rooter_patterns = ['.git', 'Makefile', 'settings.gradle']
 
 " fzf
 " fzf 자체의 vim 기본 플러그인을 로딩해야한다. fzf.vim 과 다름.
