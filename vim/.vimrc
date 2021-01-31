@@ -67,7 +67,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
 " buffer https://github.com/jlanzarotta/bufexplorer
-Plug 'jlanzarotta/bufexplorer'
+" Plug 'jlanzarotta/bufexplorer'
 
 " autojump Plugin https://github.com/padde/jump.vim
 Plug 'padde/jump.vim'
@@ -193,9 +193,11 @@ let g:localvimrc_ask = 0
 
 " bufexplorer
 
-" fzf Buffers 가 화살표키 이동이 불가해서 bufexrplorer 로 돌아감
-" map <Leader>be <ESC>:Buffers<CR>
-" nnoremap <silent> <C-E> <ESC>:Buffers<CR>
+" fzf Buffers 가 화살표키 이동이 불가한 경우는 버퍼가 단 두개뿐일때. 그 외는
+" 화살표 이동 작동함.
+"
+map <Leader>be <ESC>:Buffers<CR>
+nnoremap <silent> <C-E> <ESC>:Buffers<CR>
 
 " Emmet.vim (Zen-Coding)
 " http://mattn.github.io/emmet-vim/
