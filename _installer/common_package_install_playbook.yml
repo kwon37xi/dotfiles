@@ -120,6 +120,7 @@
           - cmatrix
           - xfce4-terminal
           - mainline
+          - convmv
     - name: install claws-mail packages
       become: yes
       apt:
