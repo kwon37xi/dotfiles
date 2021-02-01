@@ -127,3 +127,5 @@
         creates: "/home/{{ current_user }}/.local/opt/mat"
     - name: fzf
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fzf.sh"
+    - name: bitwarden-cli
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"

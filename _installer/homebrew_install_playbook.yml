@@ -29,7 +29,6 @@
           - jvmtop
           - sd
           - zenith
-          - bitwarden-cli
           - broot
           - tgotwig/linux-dust/dust
           - hashicorp/tap/terraform
