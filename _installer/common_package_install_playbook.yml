@@ -29,6 +29,7 @@
           - micro
           - vim-gtk
           - notepadqq
+          - xpad
           - universal-ctags
           - ripgrep
           - fd-find

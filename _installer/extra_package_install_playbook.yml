@@ -80,6 +80,8 @@
           - libxcb-xtest0
     - name: zoom.us install
       command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/zoom-install.sh"
+    - name: dbeaver install
+      command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/dbeaver-ce-install.sh"
     - name: download DEBs install
       become: yes
       apt:
@@ -90,9 +92,7 @@
       delay: 10
       with_items:
         - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-        - https://zoom.us/client/latest/zoom_amd64.deb
         - "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
-        - "https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
         - "https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/hugo_{{ hugo_version }}_Linux-64bit.deb"
         - "https://github.com/muesli/duf/releases/download/v0.4.0/duf_{{ duf_version }}_linux_amd64.deb"
     - name: youtube-dl
