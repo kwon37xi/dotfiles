@@ -97,6 +97,9 @@
         - "https://github.com/muesli/duf/releases/download/v0.4.0/duf_{{ duf_version }}_linux_amd64.deb"
     - name: youtube-dl
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/youtube-dl-download.sh"
+    - name: newsflash rss reader
+      flatpak:
+        name: "com.gitlab.newsflash"
     - name: bitwarden
       flatpak:
         name: "com.bitwarden.desktop"
