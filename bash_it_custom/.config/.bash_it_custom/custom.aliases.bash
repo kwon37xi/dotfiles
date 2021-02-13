@@ -20,7 +20,7 @@ alias unstow='stow -d ~/.dotfiles -t ~/ -D'
 alias aptup='sudo apt update && sudo apt upgrade && sudo apt autoremove'
 
 # exa as ls
-alias ls=exa
+#alias ls=exa
 alias ll='exa -lah'
 alias l='exa -lah'
 alias l1='exa -1'
