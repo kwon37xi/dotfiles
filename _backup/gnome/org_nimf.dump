@@ -8,5 +8,5 @@ default-engine='nimf-system-keyboard'
 
 [engines/nimf-libhangul]
 get-method-infos='39'
-shortcuts-to-lang=['Hangul', '<Shift> space']
-shortcuts-to-sys=['Hangul', 'Escape', '<Shift> space']
+shortcuts-to-lang=['Hangul', '<Shift> space', 'Alt_R']
+shortcuts-to-sys=['Hangul', 'Escape', '<Shift> space', 'Alt_R']
