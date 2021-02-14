@@ -262,6 +262,7 @@ set conceallevel=0
 " vim-rooter
 let g:rooter_targets = '/,*'
 let g:rooter_patterns = ['.git', 'Makefile', 'settings.gradle']
+let g:rooter_silent_chdir = 1
 
 " fzf
 " fzf 자체의 vim 기본 플러그인을 로딩해야한다. fzf.vim 과 다름.
