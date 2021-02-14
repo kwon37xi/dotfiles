@@ -40,6 +40,8 @@
           - unetbootin
           - gh
           - code
+          - packer
+          - terraform
     - name: database clients
       become: yes
       apt:

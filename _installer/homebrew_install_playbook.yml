@@ -28,7 +28,6 @@
           - lazydocker
           - jvmtop
           - sd
-          - zenith
           - broot
           - tgotwig/linux-dust/dust
           - hashicorp/tap/terraform

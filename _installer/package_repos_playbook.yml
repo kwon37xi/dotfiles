@@ -55,6 +55,19 @@
         repo: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
         filename: vscode
         update_cache: no
+    - name: hashicorp key
+      become: yes
+      apt_key:
+        url: https://apt.releases.hashicorp.com/gpg
+      register: hashicorp_key_installed
+      until: hashicorp_key_installed is not failed
+      retries: 3
+    - name: hashicorp repository
+      become: yes
+      apt_repository:
+        repo: "deb [arch=amd64] https://apt.releases.hashicorp.com {{ ubuntu_release }} main"
+        filename: hashicorp
+        update_cache: no
     - name: typora key
       become: yes
       apt_key:
