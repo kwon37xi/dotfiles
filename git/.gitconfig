@@ -25,6 +25,11 @@
     pager = most
     excludesfile = ~/.gitignore-for-user
 
+[pager]
+    # 특정 기능의 pager 를 끄고 싶으면 빈칸, 변경하고 싶으면 프로그램 이름을 지정해준다.
+    #diff =
+    #log = 
+
 [pull]
     rebase = false
 
@@ -42,6 +47,7 @@
     st = status
     unstage = reset HEAD --
     dt = difftool
+    dtv = difftool -y -t vimdiff
     mt = mergetool
     cleanbranch = "!git branch -d $(git branch --merged | grep -v '^\\*\\|\\<master$')"
     # fzf 기반
