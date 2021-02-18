@@ -50,7 +50,7 @@
     mf = "!git merge $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
     af = "!git add $(git status -s | fzf -m | awk '{print $2}')"
     delbf = "!git branch -d $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
-    DELbf = "!git branch -D $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
+    delbff = "!git branch -D $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
 
 # http://blog.marcinchwedczuk.pl/use-meld-as-git-merge-diff-tool
 [diff]
