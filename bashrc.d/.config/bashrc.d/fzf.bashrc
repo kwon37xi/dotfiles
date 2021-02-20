@@ -18,7 +18,7 @@ export FZF_DEFAULT_COMMAND='fdfind --follow --hidden --exclude .git --exclude "*
 export FZF_DEFAULT_OPTS='--no-height --ansi --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b --bind alt-j:down,alt-k:up'
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND --type f"
-export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :50 {}'"
+export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --line-range :50 {}'"
 
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
