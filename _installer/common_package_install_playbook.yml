@@ -27,6 +27,7 @@
           - dconf-editor
           - flatpak
           - micro
+          - vim-nox
           - vim-gtk
           - notepadqq
           - xpad
