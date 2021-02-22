@@ -152,6 +152,8 @@ imap <C-k> <Up>
 imap <C-h> <Left>
 imap <C-l> <Right>
 
+" Terminal
+map <Leader><Leader>t <ESC>:below terminal<CR>
 
 " NERDTree
 let NERDSpaceDelims=1
