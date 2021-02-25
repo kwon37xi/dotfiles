@@ -134,3 +134,18 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fzf.sh"
     - name: bitwarden-cli
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"
+    - name: bpytop
+      become: yes
+      community.general.snap:
+        name:
+          - bpytop
+        state: present
+    - name: bpytop permissions
+      become: yes
+      shell: |
+        snap connect bpytop:mount-observe
+        snap connect bpytop:network-control
+        snap connect bpytop:hardware-observe
+        snap connect bpytop:system-observe
+        snap connect bpytop:process-control
+        snap connect bpytop:physical-memory-observe
