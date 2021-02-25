@@ -30,8 +30,6 @@
           - sd
           - broot
           - tgotwig/linux-dust/dust
-          - hashicorp/tap/terraform
-          - hashicorp/tap/packer
         state: present
       register: brew_common_packages
       until: brew_common_packages is not failed
