@@ -21,7 +21,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND --type f"
 export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --line-range :50 {}'"
 
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
-export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
+#export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
+export FZF_ALT_C_OPTS="--preview 'exa --tree --level=2 --color=always {} | head -50'"
 
 export FZF_TMUX=1
 # todo TMUX options..
