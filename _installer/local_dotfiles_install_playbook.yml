@@ -20,6 +20,7 @@
         - .config/copyq
         - .config/ranger
         - .config/xfce4/terminal
+        - .config/procs
         - .sdkman/etc
         - Desktop
         - .vim
@@ -55,6 +56,7 @@
         - mysql
         - ranger
         - xfce4-terminal
+        - procs
     - name: stow with adopt
       shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
       with_items:
