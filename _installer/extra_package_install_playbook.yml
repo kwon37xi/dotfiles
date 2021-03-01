@@ -136,6 +136,8 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fblog.sh"
     - name: sd
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-sd.sh"
+    - name: broot
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-broot.sh"
     - name: bitwarden-cli
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"
     - name: bpytop
