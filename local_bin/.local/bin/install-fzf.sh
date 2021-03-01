@@ -6,6 +6,7 @@ curl -sL https://api.github.com/repos/junegunn/fzf/releases/latest | jq -r '.ass
 
 sudo tar xvzf /tmp/fzf-latest.tar.gz --directory=/usr/local/bin
 
+sudo chown root:root /usr/local/bin/fzf
 sudo chmod 755 /usr/local/bin/fzf
 
 sudo wget -O /usr/local/bin/fzf-tmux https://raw.githubusercontent.com/junegunn/fzf/master/bin/fzf-tmux

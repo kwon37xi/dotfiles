@@ -134,6 +134,8 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fzf.sh"
     - name: fblog
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fblog.sh"
+    - name: sd
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-sd.sh"
     - name: bitwarden-cli
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"
     - name: bpytop
