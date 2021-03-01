@@ -140,6 +140,8 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-broot.sh"
     - name: dust
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dust.sh"
+    - name: lazydocker
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-lazydocker.sh"
     - name: bitwarden-cli
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"
     - name: bpytop
