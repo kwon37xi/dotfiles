@@ -138,6 +138,8 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-sd.sh"
     - name: broot
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-broot.sh"
+    - name: dust
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dust.sh"
     - name: bitwarden-cli
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"
     - name: bpytop

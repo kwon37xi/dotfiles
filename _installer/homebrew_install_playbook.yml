@@ -25,7 +25,6 @@
         name:
           - lazygit
           - lazydocker
-          - tgotwig/linux-dust/dust
         state: present
       register: brew_common_packages
       until: brew_common_packages is not failed
