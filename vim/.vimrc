@@ -279,8 +279,11 @@ command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " Mapping selecting mappings
+" normal mode mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
+" visual mode mappings
 xmap <leader><tab> <plug>(fzf-maps-x)
+" operator-pending mappings
 omap <leader><tab> <plug>(fzf-maps-o)
 
 " Insert mode completion
