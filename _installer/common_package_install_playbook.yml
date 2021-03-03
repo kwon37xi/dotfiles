@@ -17,6 +17,7 @@
           - ubuntu-restricted-addons
           - ubuntu-restricted-extras
           - ubuntu-wallpapers-*
+          - gnome-backgrounds
           - apt-file
           - htop
           - bashtop
