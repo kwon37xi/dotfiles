@@ -8,5 +8,4 @@ dconf load /org/gnome/shell/extensions/dash-to-panel/ < ~/.dotfiles/_backup/gnom
 dconf load /org/gnome/shell/extensions/nothing-to-say/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_nothing-to-say.dump
 dconf load /org/gnome/shell/keybindings/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_keybindings.dump
 dconf load /org/gnome/desktop/peripherals/touchpad/ < ~/.dotfiles/_backup/gnome/org_gnome_desktop_peripherals_touchpad.dump
-dconf load /org/gnome/desktop/notifications/application/org-gnome-evolution-alarm-notify/ < ~/.dotfiles/_backup/gnome/org_gnome_desktop_notifications_application_org-gnome-evolution-alarm-notify.dump
 dconf load /org/nimf/ < ~/.dotfiles/_backup/gnome/org_nimf.dump

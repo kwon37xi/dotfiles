@@ -20,3 +20,6 @@
 
         # Window Manager titlebar font
         gsettings set org.gnome.desktop.wm.preferences titlebar-font '한글누리 Bold 11'
+
+        # disable gnome alert beep
+        dconf write /org/gnome/desktop/sound/event-sounds "false"
