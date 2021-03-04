@@ -96,7 +96,6 @@
         - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         - "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
         - "https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/hugo_{{ hugo_version }}_Linux-64bit.deb"
-        - "https://github.com/muesli/duf/releases/download/v0.4.0/duf_{{ duf_version }}_linux_amd64.deb"
     - name: youtube-dl
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/youtube-dl-download.sh"
     - name: newsflash rss reader
@@ -144,6 +143,8 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-lazydocker.sh"
     - name: procs
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-procs.sh"
+    - name: duf
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-duf.sh"
     - name: bitwarden-cli
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"
     - name: bpytop
