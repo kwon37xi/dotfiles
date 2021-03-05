@@ -107,6 +107,7 @@
         - ppa:appimagelauncher-team/stable
         - ppa:agornostal/ulauncher
         - ppa:cappelikan/ppa # for mainline
+        - ppa:kdenlive/kdenlive-stable
     - name: multiverse universe
       become: yes
       shell: "apt-add-repository -y --no-update {{ item }}"
