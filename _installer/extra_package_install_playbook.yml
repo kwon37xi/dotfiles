@@ -28,7 +28,6 @@
           - vlc
           - smplayer
           - audacious
-          - kdenlive
           - handbrake
           - gpick
     - name: install extra dev related packages
@@ -146,6 +145,8 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-duf.sh"
     - name: hugo
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-hugo.sh"
+    - name: shotcut
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-shotcut.sh"
     - name: bitwarden-cli
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"
     - name: bpytop
