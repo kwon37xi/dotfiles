@@ -68,19 +68,6 @@
         repo: "deb [arch=amd64] https://apt.releases.hashicorp.com {{ ubuntu_release }} main"
         filename: hashicorp
         update_cache: no
-    - name: typora key
-      become: yes
-      apt_key:
-        url: https://typora.io/linux/public-key.asc
-      register: typora_key_installed
-      until: typora_key_installed is not failed
-      retries: 3
-    - name: typora repo
-      become: yes
-      apt_repository:
-        repo: deb https://typora.io/linux ./
-        filename: typora
-        update_cache: no
     - name: nimf hamonikr key
       become: yes
       apt_key:
