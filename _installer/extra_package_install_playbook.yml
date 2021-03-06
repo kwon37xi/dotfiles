@@ -147,6 +147,8 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-hugo.sh"
     - name: shotcut
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-shotcut.sh"
+    - name: joplin
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-joplin.sh"
     - name: bitwarden-cli
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"
     - name: bpytop

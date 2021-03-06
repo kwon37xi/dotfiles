@@ -1,8 +1,8 @@
 #!/bin/sh
-# https://github.com/mltframework/shotcut
-APPLICATION_NAME=shotcut
-GITHUB_REPO=mltframework/shotcut
-PLATFORM_GREP='.*linux-x86_64.*\.AppImage'
+# https://github.com/laurent22/joplin
+APPLICATION_NAME=joplin
+GITHUB_REPO=laurent22/joplin
+PLATFORM_GREP='.*\.AppImage$'
 APP_IMAGE_HOME="$HOME/Applications"
 LATEST_PACKAGE_URL=$(curl -sL "https://api.github.com/repos/$GITHUB_REPO/releases/latest" | jq -r '.assets[].browser_download_url' | grep -e $PLATFORM_GREP)
 PACKAGE_NAME=$(basename "$LATEST_PACKAGE_URL")
