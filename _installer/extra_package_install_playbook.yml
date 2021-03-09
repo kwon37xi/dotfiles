@@ -102,6 +102,9 @@
     - name: shotcut
       flatpak:
         name: "org.shotcut.Shotcut"
+    - name: joplin
+      flatpak:
+        name: "net.cozic.joplin_desktop"
     - name: local applications dir
       file:
         path: "/home/{{ current_user }}/.local/share/applications"
@@ -145,8 +148,6 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-duf.sh"
     - name: hugo
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-hugo.sh"
-    - name: joplin
-      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-joplin.sh"
     - name: fluentreader
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fluentreader.sh"
     - name: delta
