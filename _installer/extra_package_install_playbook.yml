@@ -80,9 +80,7 @@
           - libegl1-mesa
           - libxcb-xtest0
     - name: zoom.us install
-      command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/zoom-install.sh"
-    - name: dbeaver install
-      command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/dbeaver-ce-install.sh"
+      command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-zoom.sh"
     - name: download DEBs install
       become: yes
       apt:
@@ -95,7 +93,7 @@
         - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         - "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
     - name: youtube-dl
-      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/youtube-dl-download.sh"
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-youtube-dl.sh"
     - name: bitwarden
       flatpak:
         name: "com.bitwarden.desktop"
@@ -130,6 +128,8 @@
         remote_src: yes
         dest: "/home/{{ current_user }}/.local/opt"
         creates: "/home/{{ current_user }}/.local/opt/mat"
+    - name: dbeaver install
+      command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dbeaver-ce.sh"
     - name: fzf
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fzf.sh"
     - name: fblog
