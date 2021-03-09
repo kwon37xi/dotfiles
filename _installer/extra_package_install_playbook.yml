@@ -149,6 +149,8 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-shotcut.sh"
     - name: joplin
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-joplin.sh"
+    - name: fluentreader
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fluentreader.sh"
     - name: delta
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-delta.sh"
     - name: bitwarden-cli
