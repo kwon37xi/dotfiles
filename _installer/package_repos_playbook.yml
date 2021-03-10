@@ -87,6 +87,7 @@
       with_items:
         - ppa:jonathonf/vim
         - ppa:gezakovacs/ppa
+        - ppa:libreoffice/ppa
         - ppa:git-core/ppa
         - ppa:graphics-drivers/ppa
         - ppa:linuxuprising/apps
