@@ -1,8 +1,9 @@
 [/]
 calculator=['Calculator']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
 help=@as []
 home=['<Super>e']
+logout=['<Primary><Alt>Delete']
 mic-mute=['<Primary><Alt><Super>m']
 next=['<Primary><Alt><Super>Right']
 play=['<Primary><Alt><Super>p']
@@ -33,3 +34,8 @@ name='Gnome Screenshot'
 binding='<Super>p'
 command=' gnome-control-center display'
 name='Display Settings'
+
+[custom-keybindings/custom4]
+binding='<Shift><Super>question'
+command='copy-text-to-clipboard.sh'
+name='Copy Text'

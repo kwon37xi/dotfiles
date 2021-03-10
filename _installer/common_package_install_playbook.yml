@@ -37,6 +37,7 @@
           - fd-find
           - tmux
           - xclip
+          - zenity
           - copyq
           - copyq-plugins
           - grub-customizer
