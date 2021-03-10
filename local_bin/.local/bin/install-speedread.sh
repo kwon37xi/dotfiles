@@ -11,3 +11,4 @@ sudo cp -R /tmp/$APPLICATION_NAME/* /opt/$APPLICATION_NAME
 
 sudo rm -f /usr/local/bin/speedread
 sudo ln -s /tmp/$APPLICATION_NAME/speedread /usr/local/bin/speedread
+sudo chmod 0755 /usr/local/bin/speedread
