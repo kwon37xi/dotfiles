@@ -152,6 +152,8 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fluentreader.sh"
     - name: delta
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-delta.sh"
+    - name: speedread
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-speedread.sh"
     - name: bitwarden-cli
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"
     - name: bpytop
