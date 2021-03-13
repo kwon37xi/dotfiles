@@ -1,1 +1,7 @@
 bind main P !git push origin
+
+# commit 의 diff 를 보다가 파일 이름 부분에서 ''H''를 누르면 해당 파일의 commit history 를 보여준다.
+bind diff H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
+
+# status view 에서 파일을 선택하고 ''H''를 누르면 해당 파일의 commit history 를 보여준다.
+bind status H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
