@@ -21,6 +21,7 @@
         - .config/ranger
         - .config/xfce4/terminal
         - .config/procs
+        - .config/ulauncher
         - .sdkman/etc
         - Desktop
         - .vim
@@ -57,6 +58,7 @@
         - ranger
         - xfce4-terminal
         - procs
+        - ulauncher
     - name: stow with adopt
       shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
       with_items:

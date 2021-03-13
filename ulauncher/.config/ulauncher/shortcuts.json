@@ -1,0 +1,42 @@
+{
+    "cf2a5c8c-0cb7-4da3-84d9-8e161083dece": {
+        "id": "cf2a5c8c-0cb7-4da3-84d9-8e161083dece",
+        "name": "Google Search",
+        "keyword": "g",
+        "cmd": "https://google.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1606046573.3774607
+    },
+    "0c71a9cb-3357-4ec8-98a8-015a37c53b16": {
+        "id": "0c71a9cb-3357-4ec8-98a8-015a37c53b16",
+        "name": "Stack Overflow",
+        "keyword": "so",
+        "cmd": "http://stackoverflow.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1606046573.3774915
+    },
+    "12e2efd0-e67e-47bd-abb5-16494b11d79d": {
+        "id": "12e2efd0-e67e-47bd-abb5-16494b11d79d",
+        "name": "Wikipedia",
+        "keyword": "wiki",
+        "cmd": "https://en.wikipedia.org/wiki/%s",
+        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1606046573.377511
+    },
+    "0a2053e4-e59f-470d-af03-7da4b8374ecf": {
+        "id": "0a2053e4-e59f-470d-af03-7da4b8374ecf",
+        "name": "Youtuble dl",
+        "keyword": "ydl",
+        "cmd": "#!/bin/bash\nyoutube_url=$(xclip -o -sel clip)\ngnome-terminal -- /usr/local/bin/youtube-dl -f ''bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio'' --merge-output-format mp4 -o \"${HOME}/Downloads/%(title)s-%(id)s.%(ext)s\" \"${youtube_url}\" &&  read -p \"\uc5d4\ud130\ud0a4\ub97c \ub204\ub974\uba74 \uc885\ub8cc\ub429\ub2c8\ub2e4.\"",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1615639779.9946067
+    }
+}
