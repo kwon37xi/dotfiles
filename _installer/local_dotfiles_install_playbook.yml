@@ -59,6 +59,7 @@
         - xfce4-terminal
         - procs
         - ulauncher
+        - tig
     - name: stow with adopt
       shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
       with_items:
