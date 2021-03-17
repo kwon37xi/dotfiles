@@ -38,5 +38,65 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1615639779.9946067
+    },
+    "6805813b-febc-497e-a6f8-1f8a9d8623dd": {
+        "id": "6805813b-febc-497e-a6f8-1f8a9d8623dd",
+        "name": "KwonNam Wiki",
+        "keyword": "kw",
+        "cmd": "https://kwonnam.pe.kr/wiki/root?do=search&id=root&q=%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1606442979.117524
+    },
+    "239da45c-6626-42fa-be59-b12a23b9f8db": {
+        "id": "239da45c-6626-42fa-be59-b12a23b9f8db",
+        "name": "KwonNam Wiki Exact go",
+        "keyword": "kwx",
+        "cmd": "https://kwonnam.pe.kr/wiki/%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1606442998.6921291
+    },
+    "c7f20760-3a24-40a3-b1de-833f54898360": {
+        "id": "c7f20760-3a24-40a3-b1de-833f54898360",
+        "name": "Woowahan \uc9c1\uc6d0",
+        "keyword": "wo",
+        "cmd": "https://office.woowa.in/WebSite/Extension/Search/Search.aspx?system=Board&alias=Board.KeywordSearch&SearchKeyword=%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1606443014.5591671
+    },
+    "57828b01-4cb9-4e44-9b50-8036c23a2c53": {
+        "id": "57828b01-4cb9-4e44-9b50-8036c23a2c53",
+        "name": "Woowahan Jira",
+        "keyword": "wj",
+        "cmd": "https://jira.woowa.in/browse/%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1606443030.866737
+    },
+    "06c1d26c-c41f-4b3f-97b1-f6f842ba85bd": {
+        "id": "06c1d26c-c41f-4b3f-97b1-f6f842ba85bd",
+        "name": "Woowahan Jira - \uac00\uac8c\uc2dc\uc2a4\ud15c\ud300",
+        "keyword": "wjs",
+        "cmd": "https://jira.woowa.in/browse/STORESYS-%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1606443054.5114512
+    },
+    "e61f8451-7b40-4ee0-8c4b-4f6a1c29d7ab": {
+        "id": "e61f8451-7b40-4ee0-8c4b-4f6a1c29d7ab",
+        "name": "\uc54c\ub77c\ub518",
+        "keyword": "ald",
+        "cmd": "https://www.aladin.co.kr/search/wsearchresult.aspx?SearchTarget=Book&SearchWord=%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1606443395.6360533
     }
 }
