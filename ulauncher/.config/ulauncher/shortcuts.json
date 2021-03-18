@@ -98,5 +98,25 @@
         "is_default_search": false,
         "run_without_argument": false,
         "added": 1606443395.6360533
+    },
+    "836b22ba-83b5-49dc-9631-62a9e8ab486b": {
+        "id": "836b22ba-83b5-49dc-9631-62a9e8ab486b",
+        "name": "Daum \uc0ac\uc804",
+        "keyword": "dd",
+        "cmd": "https://dic.daum.net/search.do?q=%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1616073693.6251981
+    },
+    "fa9f9474-6ed2-4d5f-913c-11791aab1f80": {
+        "id": "fa9f9474-6ed2-4d5f-913c-11791aab1f80",
+        "name": "Naver \uc0ac\uc804",
+        "keyword": "nd",
+        "cmd": "https://dict.naver.com/search.nhn?dicQuery=%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1616073715.6754186
     }
 }
