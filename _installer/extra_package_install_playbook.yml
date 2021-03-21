@@ -35,12 +35,10 @@
       apt:
         package:
           - vagrant
-            #- asbru-cm
           - unetbootin
           - gh
           - code
           - packer
-          - terraform
     - name: database clients
       become: yes
       apt:
@@ -156,6 +154,8 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-speedread.sh"
     - name: bitwarden-cli
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"
+    - name: tfenv
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-tfenv.sh"
     - name: bpytop
       become: yes
       community.general.snap:
