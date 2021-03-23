@@ -22,13 +22,27 @@
 
 [core]
     filemode = false
-    pager = most
+    #pager = most
+    pager = delta
     excludesfile = ~/.gitignore-for-user
 
 [pager]
     # 특정 기능의 pager 를 끄고 싶으면 빈칸, 변경하고 싶으면 프로그램 이름을 지정해준다.
-    #diff =
     #log = 
+    #diff = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    # https://github.com/dandavison/delta#git-config-files
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
 
 [pull]
     rebase = false
