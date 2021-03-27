@@ -118,5 +118,15 @@
         "is_default_search": false,
         "run_without_argument": false,
         "added": 1616073715.6754186
+    },
+    "77f267d7-8143-4598-97e2-e8fbd496ad2e": {
+        "id": "77f267d7-8143-4598-97e2-e8fbd496ad2e",
+        "name": "clipboard add commans",
+        "keyword": "comma",
+        "cmd": "#!/bin/sh\n$HOME/.local/bin/clipboard_add_commas.sh",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1616821173.5897734
     }
 }
