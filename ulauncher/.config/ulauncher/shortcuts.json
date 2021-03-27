@@ -121,12 +121,32 @@
     },
     "77f267d7-8143-4598-97e2-e8fbd496ad2e": {
         "id": "77f267d7-8143-4598-97e2-e8fbd496ad2e",
-        "name": "clipboard add commans",
-        "keyword": "comma",
+        "name": "\ud074\ub9bd\ubcf4\ub4dc \ub0b4\uc6a9 \uc904\ub05d\uc5d0 \uc27c\ud45c \ubd99\uc774\uae30",
+        "keyword": "ccm",
         "cmd": "#!/bin/sh\n$HOME/.local/bin/clipboard_add_commas.sh",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1616821173.5897734
+    },
+    "c701d6b3-f178-4374-bb85-04ad1fba153e": {
+        "id": "c701d6b3-f178-4374-bb85-04ad1fba153e",
+        "name": "\ud074\ub9bd\ubcf4\ub4dc \ub0b4\uc6a9 \uc904 \ud569\uce58\uae30",
+        "keyword": "cjl",
+        "cmd": "#!/bin/sh\n$HOME/.local/bin/clipboard_join_lines.sh $1",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1616830998.4463282
+    },
+    "071788b9-c240-4b87-b07a-d2956db1b32c": {
+        "id": "071788b9-c240-4b87-b07a-d2956db1b32c",
+        "name": "\ud074\ub9bd\ubcf4\ub4dc \ub0b4\uc6a9 \uc904 \ud569\uce58\uae30 - 10\uc904\uc529",
+        "keyword": "cjlx",
+        "cmd": "#!/bin/sh\n$HOME/.local/bin/clipboard_join_lines.sh 10",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1616831811.6537347
     }
 }
