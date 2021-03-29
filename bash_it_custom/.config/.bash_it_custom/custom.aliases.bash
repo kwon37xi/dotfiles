@@ -28,7 +28,7 @@ alias l='exa'
 alias l1='exa -1 --group-directories-first'
 
 # upgrade dotfiles
-alias dotup="git --git-dir=$HOME/.dotfiles/.git pull"
+alias dotup="git --git-dir=$HOME/.dotfiles/.git pull;restow bashrc.d;restow local_bin"
 
 # terraform
 alias tf=terraform
