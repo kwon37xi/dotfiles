@@ -76,6 +76,7 @@ Plug 'padde/jump.vim'
 " Ctrl-hjkl\ 연동
 Plug 'christoomey/vim-tmux-navigator'
 
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 filetype plugin indent on     " required!
