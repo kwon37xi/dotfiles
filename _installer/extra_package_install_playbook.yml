@@ -156,6 +156,8 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"
     - name: tfenv
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-tfenv.sh"
+    - name: awscli
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-awscli.sh"
     - name: bpytop
       become: yes
       community.general.snap:
