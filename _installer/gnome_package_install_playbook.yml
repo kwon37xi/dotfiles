@@ -15,6 +15,7 @@
           - gnome-software-plugin-flatpak
           - gnome-software-plugin-snap
           - gnome-tweaks
+          - gnome-clocks
           - alacarte
           - chrome-gnome-shell
           - gnome-shell-extension-prefs
