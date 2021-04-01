@@ -148,5 +148,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1616831811.6537347
+    },
+    "dc4b1c9d-bb12-47c3-8f59-b8c873719981": {
+        "id": "dc4b1c9d-bb12-47c3-8f59-b8c873719981",
+        "name": "uuid \uc790\ub3d9 \uc0dd\uc131\ud574\uc11c \ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ub123\uae30",
+        "keyword": "uuid",
+        "cmd": "#!/bin/sh\nuuidgen | tr '[A-Z]' '[a-z]' |  sed -z '$ s/\\n$//'  | xclip -i -sel clip ",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1617250915.3899593
     }
 }
