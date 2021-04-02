@@ -27,6 +27,11 @@ alias ll='exa -lah --colour=always --group-directories-first'
 alias l='exa'
 alias l1='exa -1 --group-directories-first'
 
+# 전체 경로 포함해서 출력. 파일과 링크
+alias lsfp='find $PWD -maxdepth 1 -type f,l'
+# 전체 경로 포함해서 출력 - 서브디렉토리까지
+alias lsfpall='find $PWD -type f,l'
+
 # upgrade dotfiles
 alias dotup="git --git-dir=$HOME/.dotfiles/.git pull;restow bashrc.d;restow local_bin"
 
