@@ -87,13 +87,15 @@ set hlsearch
 set ignorecase
 set incsearch
 set smartcase
-set number
 set noswapfile
 syntax on
 set ai
 set smartindent
 set clipboard=unnamed
 set synmaxcol=128
+" 상대/절대 줄번호 조합
+set relativenumber
+set number
 " long line 으로 인해 너무 느릴때 처리 - 그래도 느리면 :syntax off 호출할것.
 set ttyfast " u got a fast terminal
 set ttyscroll=3
