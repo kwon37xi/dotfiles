@@ -158,5 +158,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1617250915.3899593
+    },
+    "8853654a-4dc6-4ba2-ba81-f3ae547fe7f1": {
+        "id": "8853654a-4dc6-4ba2-ba81-f3ae547fe7f1",
+        "name": "Zoom \ud68c\uc758\uc2e4\uc785\uc7a5",
+        "keyword": "zm",
+        "cmd": "#!/bin/sh\nxdg-open \"zoommtg://zoom.us/join?action=join&confno=$1\"",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1617751641.2284803
     }
 }
