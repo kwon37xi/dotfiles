@@ -41,6 +41,10 @@
         clone: yes
         depth: 1
         dest: ~/.jenv
+    - name: jenv-export-plugin
+      shell: |
+        # jenv shellscript 분석해보니 아래명령으로 직접 실행가능
+        $HOME/.jenv/bin/jenv sh-enable-plugin export
     - name: sdkman
       shell: |
         curl -s "https://get.sdkman.io?rcupdate=false" | bash
