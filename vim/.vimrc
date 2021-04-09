@@ -37,7 +37,8 @@ Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/taglist-plus'
 Plug 'vim-scripts/snipMate'
 Plug 'vim-scripts/Align'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -127,10 +128,10 @@ set guifont=D2Coding\ 14
 "set guifont=DejaVu\ Sans\ Mono\ 11
 "set guifont=Fixedsys\ Excelsior\ 3.01\ 12
 
-" 툴바 안보이게 - 툴바를 안보이게 하면 화면 split 시에 커서가 사라짐
-" set guioptions-=T
+" 툴바 안보이게
+set guioptions-=T
 
-set toolbariconsize=large
+#set toolbariconsize=large
 set fileformats=unix,dos
 set fileencodings=utf8,cp949
 
@@ -322,6 +323,13 @@ let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
+" vim airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline_theme='base16'
 
 " javascript/typescript
 
