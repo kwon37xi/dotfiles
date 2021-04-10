@@ -153,9 +153,17 @@
         # ibus 한글 관련 설정
         gsettings set org.freedesktop.ibus.engine.hangul auto-reorder true
         gsettings set org.freedesktop.ibus.engine.hangul hangul-keyboard '39'
+        gsettings set org.freedesktop.ibus.engine.hangul initial-input-mode 'latin'
         gsettings set org.freedesktop.ibus.engine.hangul hanja-keys 'Hangul_Hanja,F9'
         gsettings set org.freedesktop.ibus.engine.hangul switch-keys 'Hangul,Shift+space'
         gsettings set org.freedesktop.ibus.engine.hangul word-commit false
+
+        # preedit-mode 는 원래 syllable 인데, word로 변경하면, chromium/electron 계열에서 한글입력이 잘된다.
+        gsettings set org.freedesktop.ibus.engine.hangul preedit-mode 'word'
+
+        # 한영키, ibus 관련 설정
+        gsettings set org.freedesktop.ibus.engine.hangul use-event-forwarding false
+        gsettings set org.gnome.desktop.input-sources xkb-options "['korean:ralt_hangul', 'korean:rctrl_hanja']"
 
         # gsettings set org.gnome.settings-daemon.plugins.keyboard active false
         # gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'uim'>}"
