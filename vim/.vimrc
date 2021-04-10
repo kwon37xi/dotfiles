@@ -331,6 +331,9 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_theme='molokai'
 
+" nrformats : 숫자와 알파벳 증가시키기 ^A, ^X
+set nrformats+=alpha
+
 " javascript/typescript
 
 " sytastic
