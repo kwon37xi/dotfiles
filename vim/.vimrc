@@ -12,13 +12,6 @@ set backupdir=~/.local/tmp/vim/backup
 set directory=~/.local/tmp/vim/swap
 set undodir=~/.local/tmp/vim/undos
 
-" Copy & Paste Like Windows - https://superuser.com/a/189198/368299
-" Linux 에서 PRIMARY 로 작동함.
-vmap <C-c> "+y
-vmap <C-x> "+c
-vmap <C-v> c<ESC>"+p
-imap <C-v> <C-r><C-o>+
-
 " leader
 let mapleader = ","
 let maplocalleader = mapleader
@@ -92,7 +85,6 @@ set noswapfile
 syntax on
 set ai
 set smartindent
-set clipboard=unnamed
 set synmaxcol=128
 " 상대/절대 줄번호 조합
 set relativenumber
@@ -101,6 +93,17 @@ set number
 set ttyfast " u got a fast terminal
 set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
+
+" clipboard - system clipboard 사용하게 변경. vim-gtk3 로 설치돼 있어야함.
+" https://www.youtube.com/watch?v=jfLABzLRCwo
+" Copy & Paste Like Windows - https://superuser.com/a/189198/368299
+" Linux 에서 PRIMARY 로 작동함.
+set clipboard=unnamedplus
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pi
+" imap <C-v> <C-r><C-o>+
 
 set laststatus=2
 " au BufNewFile,BufRead *.java :source ~/.vim/myjava.vim
@@ -324,12 +327,18 @@ hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=whi
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
+" Vim 모양새
 " vim airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_theme='molokai'
+
+" Status Line
+hi VertSplit ctermfg=black ctermbg=black
+hi StatusLine ctermfg=black
+hi StatusLineNC ctermfg=black
 
 " nrformats : 숫자와 알파벳 증가시키기 ^A, ^X
 set nrformats+=alpha
