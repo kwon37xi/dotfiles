@@ -101,8 +101,8 @@ set lazyredraw " to avoid scrolling problems
 set clipboard=unnamedplus
 vmap <C-c> "+yi
 vmap <C-x> "+c
-vmap <C-v> c<ESC>"+p
-imap <C-v> <ESC>"+pi
+"vmap <C-v> c<ESC>"+p " 작동 안했음.
+imap <C-v> <ESC>"+pa
 " imap <C-v> <C-r><C-o>+
 
 set laststatus=2
