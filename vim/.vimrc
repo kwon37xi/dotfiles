@@ -44,6 +44,11 @@ Plug 'airblade/vim-rooter'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+
+
+" https://github.com/terryma/vim-multiple-cursors
+Plug 'terryma/vim-multiple-cursors'
+
 " Programming Languages
 Plug 'vim-scripts/python.vim'
 Plug 'vim-scripts/ruby.vim'
