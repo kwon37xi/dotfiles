@@ -345,8 +345,8 @@ hi CursorLine   cterm=NONE ctermbg=239 guibg=gray39
 hi CursorColumn cterm=NONE ctermbg=239 guibg=gray39
 hi CursorLineNR cterm=bold ctermbg=239 guibg=gray39
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-set cursorline
-set cursorcolumn
+set nocursorline
+set nocursorcolumn
 
 " Vim 모양새
 " vim airline
@@ -368,6 +368,23 @@ set nrformats+=alpha
 highlight ExtraWhitespace ctermbg=yellow
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
+
+" gi-gutter config
+highlight GitGutterAdd ctermfg=2 guifg=Green
+highlight GitGutterChange ctermfg=3 guifg=Olive
+highlight GitGutterDelete ctermfg=1 guifg=Maroon
+highlight GitGutterChangeDelete ctermfg=4 guifg=Navy
+
+nmap ) <Plug>(GitGutterNextHunk)
+nmap ( <Plug>(GitGutterPrevHunk)
+
+let g:gitgutter_enabled = 0
+let g:gitgutter_map_keys = 0
+
+" 아래 두줄이 있어야만 최좌측 기호 컬럼 색깔이 정상 작동함
+" https://github.com/airblade/vim-gitgutter/issues/614
+let g:gitgutter_override_sign_column_highlight = 0
+highlight clear SignColumn
 
 " javascript/typescript
 
