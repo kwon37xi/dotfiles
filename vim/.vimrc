@@ -74,7 +74,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'hashivim/vim-terraform'
 
-Plug 'bronson/vim-trailing-whitespace'
+Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
 filetype plugin indent on     " required!
@@ -330,10 +330,11 @@ let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 " cursor line/column highlight
 " https://vim.fandom.com/wiki/Highlight_current_line
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-set cursorline cursorcolumn
+hi CursorLine   cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkred guifg=white
+"hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+nnoremap <Leader>c :set cursorline!<CR>
+set cursorline
 
 " Vim 모양새
 " vim airline
@@ -350,6 +351,11 @@ hi StatusLineNC ctermfg=black
 
 " nrformats : 숫자와 알파벳 증가시키기 ^A, ^X
 set nrformats+=alpha
+
+" trailing white space
+highlight ExtraWhitespace ctermbg=yellow
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
 
 " javascript/typescript
 
