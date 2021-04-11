@@ -130,11 +130,12 @@ set guifont=D2Coding\ 14
 "set guifont=Hwsr_9pt\ 9
 "set guifont=DejaVu\ Sans\ Mono\ 11
 "set guifont=Fixedsys\ Excelsior\ 3.01\ 12
-
-" 툴바 안보이게
-set guioptions-=T
-
+set guioptions-=T " Toolbar 숨기기
+set guioptions-=m " 메뉴 바 숨기기
+set guioptions-=r " 오른쪽 스크롤바 숨기기
+set guioptions-=L " 왼쪽 스크롤바 숨기기
 "set toolbariconsize=large
+
 set fileformats=unix,dos
 set fileencodings=utf8,cp949
 
