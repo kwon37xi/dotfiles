@@ -44,8 +44,7 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 sudo software-properties-gtk
 ```
 
-### xanmod microcode 설치
-* https://xanmod.org
+### microcode 설치
 * intel/amd 여부에 따라 서로 다르게 설치
 ```
 # intel
@@ -112,3 +111,6 @@ sudo apt install amd64-microcode
 ```
 ansible-playbook -vv ~/.dotfiles/_installer/4k_playbook.yml
 ```
+
+## JDK 디렉토리
+* `.local/opt/jdk` 에 JDK 들을 설치하고 있다.
