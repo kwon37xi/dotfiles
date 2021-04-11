@@ -335,13 +335,18 @@ let g:fzf_tags_command = 'ctags -R'
 " [Commands] --expect expression for directly executing the command
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
+" 256 Colors Cheat sheet : https://jonasjacek.github.io/colors/
 " cursor line/column highlight
 " https://vim.fandom.com/wiki/Highlight_current_line
-hi CursorLine   cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkred guifg=white
+"hi CursorLine   cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkred guifg=white
 "hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-nnoremap <Leader>c :set cursorline!<CR>
+hi CursorLine   cterm=NONE ctermbg=239 guibg=gray39
+hi CursorColumn cterm=NONE ctermbg=239 guibg=gray39
+hi CursorLineNR cterm=bold ctermbg=239 guibg=gray39
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 set cursorline
+set cursorcolumn
 
 " Vim 모양새
 " vim airline
