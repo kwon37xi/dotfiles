@@ -42,6 +42,8 @@ Plug 'airblade/vim-rooter'
 "Plug 'jremmen/vim-ripgrep'
 "Plug 'vim-scripts/fcitx.vim'
 
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 " Programming Languages
 Plug 'vim-scripts/python.vim'
 Plug 'vim-scripts/ruby.vim'
