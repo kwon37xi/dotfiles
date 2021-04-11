@@ -20,6 +20,8 @@ call plug#begin()
 
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
+" https://github.com/airblade/vim-gitgutter
+Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-scripts/closetag.vim'
@@ -71,6 +73,8 @@ Plug 'padde/jump.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'hashivim/vim-terraform'
+
+Plug 'bronson/vim-trailing-whitespace'
 call plug#end()
 
 filetype plugin indent on     " required!
@@ -113,7 +117,9 @@ augroup mkd
     autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
 augroup END
 
-au BufNewFile,BufRead *.gradle :set filetype=groovy
+au BufNewFile,BufRead *.groovy setf groovy
+au BufNewFile,BufRead *.gradle setf groovy
+
 
 " Vim 7.0 탭 매핑 from http://www.vim.org/tips/tip.php?tip_id=1221
 map th :tabprev<CR>
@@ -327,6 +333,7 @@ let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+set cursorline cursorcolumn
 
 " Vim 모양새
 " vim airline
