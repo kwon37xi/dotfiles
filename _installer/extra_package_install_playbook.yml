@@ -101,6 +101,9 @@
     - name: joplin
       flatpak:
         name: "net.cozic.joplin_desktop"
+    - name: todoist
+      flatpak:
+        name: "com.todoist.Todoist"
     - name: local applications dir
       file:
         path: "/home/{{ current_user }}/.local/share/applications"
