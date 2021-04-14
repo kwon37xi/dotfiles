@@ -168,5 +168,15 @@
         "is_default_search": false,
         "run_without_argument": false,
         "added": 1617751641.2284803
+    },
+    "8ad8ecba-334b-4430-a42d-af8ef796c8df": {
+        "id": "8ad8ecba-334b-4430-a42d-af8ef796c8df",
+        "name": "ibus-toggle-use-event-forwarding.sh",
+        "keyword": "ibusfix",
+        "cmd": "#!/bin/sh\n$HOME/.local/bin/ibus-toggle-use-event-forwarding.sh",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1618391909.4833667
     }
 }
