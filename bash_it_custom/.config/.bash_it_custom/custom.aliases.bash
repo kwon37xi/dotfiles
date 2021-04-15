@@ -37,3 +37,6 @@ alias dotup="git --git-dir=$HOME/.dotfiles/.git pull;restow bashrc.d;restow loca
 
 # terraform
 alias tf=terraform
+
+# df -> duf
+alias df="duf -hide loops"
