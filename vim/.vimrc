@@ -47,7 +47,8 @@ Plug 'tpope/vim-commentary'
 
 
 " https://github.com/terryma/vim-multiple-cursors
-Plug 'terryma/vim-multiple-cursors'
+" fzf.vim 과 충돌
+" Plug 'terryma/vim-multiple-cursors'
 
 " Programming Languages
 Plug 'vim-scripts/python.vim'
