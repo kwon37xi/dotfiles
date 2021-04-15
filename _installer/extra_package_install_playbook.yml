@@ -165,6 +165,8 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-sleek.sh"
     - name: go-jira
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-go-jira.sh"
+    - name: go-jira
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-yq.sh"
     - name: bpytop
       become: yes
       community.general.snap:
