@@ -10,6 +10,7 @@ rm -f /tmp/$PACKAGE_NAME
 wget -O "/tmp/$PACKAGE_NAME" "$LATEST_PACKAGE_URL"
 
 sudo mv /tmp/$PACKAGE_NAME /usr/local/bin/jira
+sudo chown root:root /usr/local/bin/jira
 sudo chmod 755 /usr/local/bin/jira
 
 rm -f /tmp/$PACKAGE_NAME
