@@ -66,10 +66,16 @@ map <leader>rr <Action>(RenameElement)
 map <leader>rc <Action>(ChangeSignature)
 map <leader>ri <Action>(Inline)
 
-" Actions - Find/Show
+" Actions - Find/Show/Navigation
 map <leader>fu <Action>(FindUsages)
 map <leader>th <Action>(TypeHierarchy)
 map <leader>ch <Action>(CallHierarchy)
+map <leader>nr <Action>(RecentFiles)
+
+" Actions - goto
+map <leader>gd <Action>(GoToDeclaration)
+map <leader>gi <Action>(GotoImplementation)
 
 " Actions - String Manipulation
 map <leader>sc <Action>(StringManipulation.Group.SwitchCase)
+
