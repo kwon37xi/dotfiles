@@ -161,8 +161,11 @@
         # preedit-mode 는 원래 syllable 인데, word로 변경하면, chromium/electron 계열에서 한글입력이 잘된다.
         gsettings set org.freedesktop.ibus.engine.hangul preedit-mode 'word'
 
-        # zoom 등 옛날 QT 라이브러리로 된 프로그램에서 backspace, arrow 키 잘 안먹는 문제 해결
-        gsettings set org.freedesktop.ibus.engine.hangul use-event-forwarding false
+        # zoom 등 옛날 QT 라이브러리로 된 프로그램에서 backspace, arrow 키 잘 안먹는 문제 해결하려면 이 값을 false로 변경한다.
+        # 그러나 현재 zoom 외에는 이 값이 true 인게 잘 작동한다. zoom 사용할 때만 일시적으로 false로 변경할 것.
+        # $HOME/.local/bin/ibus-toggle-use-event-forwarding.sh 사용
+        gsettings set org.freedesktop.ibus.engine.hangul use-event-forwarding true
+
         # 한영키 xkb, ibus 관련 설정
         gsettings set org.gnome.desktop.input-sources xkb-options "['korean:ralt_hangul', 'korean:rctrl_hanja']"
 
