@@ -110,7 +110,7 @@ set lazyredraw " to avoid scrolling problems
 " Copy & Paste Like Windows - https://superuser.com/a/189198/368299
 " Linux 에서 PRIMARY 로 작동함.
 set clipboard=unnamedplus
-vmap <C-c> "+yi
+vmap <C-c> "+y
 vmap <C-x> "+c
 "vmap <C-v> c<ESC>"+p " 작동 안했음.
 imap <C-v> <ESC>"+pa
