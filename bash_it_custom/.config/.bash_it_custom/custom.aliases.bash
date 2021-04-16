@@ -33,7 +33,7 @@ alias lsfp='find $PWD -maxdepth 1 -type f,l'
 alias lsfpall='find $PWD -type f,l'
 
 # upgrade dotfiles
-alias dotup="git --git-dir=$HOME/.dotfiles/.git pull;restow bashrc.d;restow local_bin"
+alias dotup="cd $HOME/.dotfiles;git pull;restow bashrc.d;restow local_bin;cd -"
 
 # terraform
 alias tf=terraform
