@@ -2,9 +2,11 @@
 cite 'about-alias'
 about-alias 'kwonnam''s custom aliases'
 
+alias ydl="/usr/local/bin/youtube-dl -o '%(title).36s-%(id)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
 
-alias ydl="/usr/local/bin/youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
+# 한국 Windows 에서 압축된 zip 파일 풀기
 alias kunzip="unzip -O cp949"
+
 # ubuntu fdfind 패키지는 fd 를 fdfind 로 변경해둔 상태임
 alias fd=fdfind
 alias fblog-logstash='fblog -m message -l level -t timestamp --main-line-format "{{fblog_timestamp}} {{level_style fblog_level}} [{{thread}}] ({{caller_file_name}}#{{caller_method_name}}) {{fblog_message}}"'
