@@ -9,4 +9,3 @@ dconf dump /org/gnome/desktop/wm/keybindings/ > org_gnome_desktop_wm_keybindings
 dconf dump /org/gnome/shell/extensions/dash-to-panel/ > org_gnome_shell_extensions_dash-to-panel.dump
 dconf dump /org/gnome/shell/extensions/nothing-to-say/ > org_gnome_shell_extensions_nothing-to-say.dump
 dconf dump /apps/guake/ > apps_guake.dump
-dconf dump /org/nimf/ > org_nimf.dump
