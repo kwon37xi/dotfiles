@@ -156,8 +156,9 @@
         gsettings set org.freedesktop.ibus.engine.hangul switch-keys 'Hangul,Shift+space'
         gsettings set org.freedesktop.ibus.engine.hangul word-commit false
         # emoji,unicode 입력 단축키 변경
+        gsettings set org.freedesktop.ibus.panel.emoji font "Noto Color Emoji 16"
         gsettings set org.freedesktop.ibus.panel.emoji hotkey "['<Shift><Super>e']"
-        gsettings set org.freedesktop.ibus.panel.emoji unicode-hotkey "['<Shift><Super>u']"
+        gsettings set org.freedesktop.ibus.panel.emoji unicode-hotkey "[]"
 
         # preedit-mode 는 원래 syllable 인데, word로 변경하면, chromium/electron 계열에서 한글입력이 잘된다.
         gsettings set org.freedesktop.ibus.engine.hangul preedit-mode 'word'
