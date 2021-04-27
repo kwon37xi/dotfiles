@@ -21,7 +21,7 @@ alias restow='stow -d ~/.dotfiles -t ~/ -R'
 alias unstow='stow -d ~/.dotfiles -t ~/ -D'
 
 # apt update/upgrade
-alias sysup='sudo apt update && sudo apt -y upgrade && sudo apt  -y autoremove && flatpak update -y'
+alias sysup='sudo apt update && sudo apt -y upgrade && sudo apt  -y autoremove && flatpak update -y && sdk selfupdate && bash_it update'
 
 # exa as ls
 #alias ls=exa
