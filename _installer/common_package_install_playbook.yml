@@ -85,8 +85,6 @@
           - fcitx-ui-classic
           - fcitx-config-gtk
           - fcitx-frontend-all
-          - nimf
-          - nimf-libhangul
           - build-essential
           - dkms
           - make
@@ -134,13 +132,13 @@
         name: flathub
         flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
         state: present
-    - name: initialize docker
+    - name: docker initialize
       become: yes
       shell: |
         usermod -aG docker {{ current_user }}
         systemctl enable docker
         service docker restart
-    - name: uim initialize
+    - name: input method initialize
       become: yes
       shell: |
         update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk3-systray 100
@@ -173,4 +171,4 @@
         # gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'uim'>}"
         # sudo mv /usr/bin/ibus-daemon /usr/bin/ibus-daemon.distrib
     - name: set default im
-      shell: "im-config -n nimf"
+      shell: "im-config -n ibus"
