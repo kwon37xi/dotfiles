@@ -17,7 +17,6 @@
         - .config/nvim-qt
         - .config/fcitx
         - .config/autostart
-        - .config/copyq
         - .config/ranger
         - .config/xfce4/terminal
         - .config/procs
@@ -53,7 +52,6 @@
         - fusuma
         - most
         - autostart
-        - copyq
         - zoom
         - mysql
         - ranger
