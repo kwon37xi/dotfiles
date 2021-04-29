@@ -24,7 +24,7 @@ alias unstow='stow -d ~/.dotfiles -t ~/ -D'
 alias sysup='sudo apt update && sudo apt -y upgrade && sudo apt  -y autoremove && flatpak update -y && sdk selfupdate && bash_it update'
 
 # exa as ls
-#alias ls=exa
+alias ls=exa
 alias ll='exa -lah --colour=always --group-directories-first'
 alias l='exa'
 alias l1='exa -1 --group-directories-first'
