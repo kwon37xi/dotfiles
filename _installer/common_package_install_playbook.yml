@@ -108,7 +108,6 @@
           - inotify-tools
           - krusader
           - gparted
-          - appimagelauncher
           - ulauncher
           - trash-cli
           - ncdu
