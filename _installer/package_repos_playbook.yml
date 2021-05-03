@@ -49,7 +49,6 @@
       shell: "add-apt-repository -y --no-update {{ item }}"
       with_items:
         - ppa:jonathonf/vim
-        - ppa:libreoffice/ppa
         - ppa:git-core/ppa
         - ppa:graphics-drivers/ppa
         - ppa:linuxuprising/apps
