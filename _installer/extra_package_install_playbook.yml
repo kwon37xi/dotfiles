@@ -35,8 +35,6 @@
       apt:
         package:
           - vagrant
-          - unetbootin
-          - gh
           - code
           - packer
     - name: database clients

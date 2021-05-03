@@ -31,17 +31,6 @@
         repo: deb https://repo.vivaldi.com/archive/deb/ stable main
         filename: vivaldi
         update_cache: no
-    - name: github cli key
-      become: yes
-      apt_key:
-        id: C99B11DEB97541F0
-        keyserver: keyserver.ubuntu.com
-    - name: github cli repo
-      become: yes
-      apt_repository:
-        repo: "deb https://cli.github.com/packages {{ ubuntu_release }} main"
-        filename: github-cli
-        update_cache: no
     - name: vscode key
       become: yes
       apt_key:
@@ -73,13 +62,11 @@
       shell: "add-apt-repository -y --no-update {{ item }}"
       with_items:
         - ppa:jonathonf/vim
-        - ppa:gezakovacs/ppa
         - ppa:libreoffice/ppa
         - ppa:git-core/ppa
         - ppa:graphics-drivers/ppa
         - ppa:linuxuprising/apps
         - ppa:papirus/papirus
-        - ppa:appimagelauncher-team/stable
         - ppa:agornostal/ulauncher
         - ppa:cappelikan/ppa # for mainline
     - name: multiverse universe
