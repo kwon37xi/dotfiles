@@ -35,7 +35,9 @@
           - seahorse
           - libsecret-1-0
           - libsecret-1-dev # for git credential
-          - kvantum # for qt5 theme
+          - qt5-style-kvantum # for qt5 theme
+          - qt5-style-kvantum-l10n # for qt5 theme
+          - qt5-style-kvantum-themes # for qt5 theme
           - qt5ct # for qt5 theme
         state: latest
     - name: install KDE/GNOME themes
