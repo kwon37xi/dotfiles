@@ -46,6 +46,8 @@
         export PATH="$HOME/.jenv/bin:$PATH"
         eval "$(jenv init -)"
         jenv enable-plugin export
+      args: # bash가 아니면 작동안함.
+        executable: /usr/bin/bash
     - name: sdkman
       shell: |
         curl -s "https://get.sdkman.io?rcupdate=false" | bash
