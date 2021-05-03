@@ -1,4 +1,5 @@
 #!/bin/sh
+mkdir -p $HOME/.local/bin
 mkdir -p $HOME/.local/share/tfenv
 rm -rf $HOME/.local/share/tfenv
 git clone https://github.com/tfutils/tfenv.git $HOME/.local/share/tfenv
