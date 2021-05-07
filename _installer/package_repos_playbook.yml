@@ -48,12 +48,9 @@
       become: yes
       shell: "add-apt-repository -y --no-update {{ item }}"
       with_items:
-        - ppa:jonathonf/vim
         - ppa:git-core/ppa
         - ppa:graphics-drivers/ppa
-        - ppa:linuxuprising/apps
         - ppa:papirus/papirus
-        - ppa:agornostal/ulauncher
         - ppa:cappelikan/ppa # for mainline
     - name: multiverse universe
       become: yes
