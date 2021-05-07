@@ -20,3 +20,14 @@
 
         # Window Manager titlebar font
         gsettings set org.gnome.desktop.wm.preferences titlebar-font '한글누리 Bold 11'
+    - name: ubuntu-dock settings
+      shell: |
+        gsettings set org.gnome.shell.extensions.dash-to-dock show-trash true
+        gsettings set org.gnome.shell.extensions.dash-to-dock running-indicator-style "DASHES"
+        gsettings set org.gnome.shell.extensions.dash-to-dock show-mounts true
+        gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 28
+        gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+
+        # ubuntu-dock app-icon change
+        mkdir -p ~/.icons/Yaru/scalable/actions
+        ln -s ~/.dotfiles/_icons/ubuntu_icon_01.png ~/.icons/Yaru/scalable/actions/view-app-grid-symbolic.png

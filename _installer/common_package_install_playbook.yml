@@ -120,6 +120,7 @@
           - cmatrix
           - mainline
           - convmv
+          - python3-pip
     - name: install claws-mail packages
       become: yes
       apt:
