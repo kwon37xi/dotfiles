@@ -102,6 +102,9 @@
     - name: todoist
       flatpak:
         name: "com.todoist.Todoist"
+    - name: flatseal
+      flatpak:
+        name: "com.github.tchx84.Flatseal"
     - name: local applications dir
       file:
         path: "/home/{{ current_user }}/.local/share/applications"
