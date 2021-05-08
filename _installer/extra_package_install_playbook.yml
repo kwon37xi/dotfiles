@@ -159,11 +159,9 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-tfenv.sh"
     - name: awscli
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-awscli.sh"
-    - name: sleek
-      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-sleek.sh"
     - name: go-jira
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-go-jira.sh"
-    - name: go-jira
+    - name: yq
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-yq.sh"
     - name: bpytop
       become: yes
