@@ -27,6 +27,7 @@
         gsettings set org.gnome.shell.extensions.dash-to-dock show-mounts true
         gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 28
         gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+        gsettings set org.gnome.shell.extensions.dash-to-dock isolate-monitors false
 
         # ubuntu-dock app-icon change
         mkdir -p ~/.icons/Yaru/scalable/actions
