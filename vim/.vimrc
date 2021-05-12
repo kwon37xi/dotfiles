@@ -277,10 +277,38 @@ nnoremap <silent> 0 :call ToggleMovement('^', '0')<CR>
 nnoremap <silent> ; :call ToggleMovement(';', ',')<CR>
 nnoremap <silent> , :call ToggleMovement(',', ';')<CR>
 
-" How about H and L
+" How about H and L : 화면 맨 위아래로 이동
 nnoremap <silent> H :call ToggleMovement('H', 'L')<CR>
 nnoremap <silent> L :call ToggleMovement('L', 'H')<CR>
 
+" 커서 위치를 세로 중앙으로 고정 toggle
+" https://vim.fandom.com/wiki/Keep_your_cursor_centered_vertically_on_the_screen
+set scrolloff=0
+if !exists('*VCenterCursor')
+  augroup VCenterCursor
+  au!
+  au OptionSet *,*.*
+    \ if and( expand("<amatch>")=='scrolloff' ,
+    \         exists('#VCenterCursor#WinEnter,WinNew,VimResized') )|
+    \   au! VCenterCursor WinEnter,WinNew,VimResized|
+    \ endif
+  augroup END
+  function VCenterCursor()
+    if !exists('#VCenterCursor#WinEnter,WinNew,VimResized')
+      let s:default_scrolloff=&scrolloff
+      let &scrolloff=winheight(win_getid())/2
+      au VCenterCursor WinEnter,WinNew,VimResized *,*.*
+        \ let &scrolloff=winheight(win_getid())/2
+    else
+      au! VCenterCursor WinEnter,WinNew,VimResized
+      let &scrolloff=s:default_scrolloff
+    endif
+  endfunction
+endif
+
+nnoremap <leader>zz :call VCenterCursor()<CR>
+" ----------------------
+"
 " disable json hidden quote
 let g:indentLine_setConceal = 0
 let g:vim_json_syntax_conceal = 0
