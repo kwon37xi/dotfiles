@@ -3,4 +3,3 @@ ubuntu_version: "{{ lookup('pipe', 'lsb_release -rs') }}"
 current_user: "{{ lookup('env', 'USER') }}"
 local_bashrcs_dir: ~/.config/bashrc.d
 slack_version: 4.15.0
-jetbrains_intellij_idea_version: 2021.1.1
