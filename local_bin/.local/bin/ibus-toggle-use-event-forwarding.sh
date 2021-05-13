@@ -4,8 +4,9 @@
 
 if $(gsettings get org.freedesktop.ibus.engine.hangul use-event-forwarding); then
     gsettings set org.freedesktop.ibus.engine.hangul use-event-forwarding false
+    notify-send "use-event-forwarding : false - Zoom QT 용"
 else
     gsettings set org.freedesktop.ibus.engine.hangul use-event-forwarding true
+    notify-send "use-event-forwarding : false - 일반 애플리케이션용"
 fi
 
-notify-send "Current ibus use-event-forwarding : $(gsettings get org.freedesktop.ibus.engine.hangul use-event-forwarding)"
