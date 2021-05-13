@@ -1,6 +1,10 @@
+" nnoremap 이 작동 안하는 듯?? noremap 만 됨.
 " leader
 let mapleader = ","
 let maplocalleader = mapleader
+
+" 설정 다시 읽기
+noremap \vr :source ~/.ideavimrc<CR>
 
 " tpope vim-surround emulation
 " ysiw감싸기문자 : 감싸기, 여는 괄호는 공백 추가, 닫는 괄호는 공백없이
@@ -25,6 +29,11 @@ set clipboard=unnamed
 " https://github.com/JetBrains/ideavim/wiki/%22ideajoin%22-examples
 " J 명령으로 여러줄 Join 시에 단순 줄 합치기가 아니라 문맥에 따라 적합하게 작동한다.
 set ideajoin
+
+" 항상 커서를 중간으로 유지
+noremap <leader>zz :set scrolloff=999<CR>
+noremap <leader>!zz :set scrolloff=0<CR>
+set scrolloff=999
 
 vmap <C-c> "+yi
 vmap <C-x> "+c
@@ -71,6 +80,7 @@ map <leader>fu <Action>(FindUsages)
 map <leader>th <Action>(TypeHierarchy)
 map <leader>ch <Action>(CallHierarchy)
 map <leader>nr <Action>(RecentFiles)
+map <leader>ff <Action>(Find)
 
 " Actions - goto
 map <leader>gd <Action>(GoToDeclaration)
@@ -78,4 +88,3 @@ map <leader>gi <Action>(GotoImplementation)
 
 " Actions - String Manipulation
 map <leader>sc <Action>(StringManipulation.Group.SwitchCase)
-
