@@ -116,9 +116,14 @@
       file:
         path: "/home/{{ current_user }}/.local/opt/JetBrains/ideaIU"
         state: directory
+    - name: intellij ultimate latest version
+      shell: curl -fsSL "https://data.services.jetbrains.com/products?code=IIU%2CIIC&release.type=release" | jq '[.[].releases[].version][0]'
+      register: jetbrains_intellij_idea_latest_version_result
+    - set_fact:
+        jetbrains_intellij_idea_latest_version={{ jetbrains_intellij_idea_latest_version_result.stdout }}
     - name: IntelliJ IDEA user install
       unarchive:
-        src: "https://download.jetbrains.com/idea/ideaIU-{{ jetbrains_intellij_idea_version }}.tar.gz"
+        src: "https://download.jetbrains.com/idea/ideaIU-{{ jetbrains_intellij_idea_latest_version }}.tar.gz"
         remote_src: yes
         dest: "/home/{{current_user}}/.local/opt/JetBrains/ideaIU"
         extra_opts: [--strip-components=1]
@@ -133,6 +138,10 @@
         remote_src: yes
         dest: "/home/{{ current_user }}/.local/opt"
         creates: "/home/{{ current_user }}/.local/opt/mat"
+      register: mat_installed
+      until: mat_installed is not failed
+      retries: 3
+      delay: 10
     - name: dbeaver install
       command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dbeaver-ce.sh"
     - name: fzf
