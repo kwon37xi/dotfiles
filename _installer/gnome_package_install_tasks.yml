@@ -1,0 +1,58 @@
+---
+- name: install GNOME packages
+  become: yes
+  apt:
+    package:
+      - synaptic
+      - gdebi
+      - gnome-software # gnome-software remove pop-shell!!
+      - gnome-software-plugin-flatpak
+      - gnome-software-plugin-snap
+      - gnome-tweaks
+      - gnome-clocks
+      - alacarte
+      - chrome-gnome-shell
+      - gnome-shell-extension-prefs
+      - gnome-shell-extensions
+      - gnome-shell-pomodoro
+      - gnome-shell-timer
+      - deja-dup
+      - nautilus-admin
+      - gnome-sushi
+      - nautilus-script-audio-convert
+      - nautilus-image-converter
+      - nautilus-scripts-manager
+      - nautilus-sendto
+      - nautilus-share
+      - network-manager-fortisslvpn-gnome
+      - network-manager-openconnect-gnome
+      - network-manager-openvpn-gnome
+      - seahorse
+      - libsecret-1-0
+      - libsecret-1-dev # for git credential
+      - qt5-style-kvantum # for qt5 theme
+      - qt5-style-kvantum-l10n # for qt5 theme
+      - qt5-style-kvantum-themes # for qt5 theme
+      - qt5ct # for qt5 theme
+    state: latest
+- name: install KDE/GNOME themes
+  become: yes
+  apt:
+    install_recommends: yes
+    package:
+      - papirus-icon-theme
+      - papirus-folders
+      - materia-gtk-theme
+      - materia-kde
+      - arc-theme
+      - dmz-cursor-theme
+      - xcursor-themes
+      - numix-blue-gtk-theme
+      - numix-gtk-theme
+      - numix-icon-theme-circle
+      - numix-icon-theme
+- name: build git libsecret git credential helper
+  become: yes
+  shell: |
+    cd /usr/share/doc/git/contrib/credential/libsecret
+    make

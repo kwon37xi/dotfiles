@@ -1,0 +1,38 @@
+---
+- name: add to sudoers
+  become: yes
+  copy:
+    dest: "/etc/sudoers.d/99-self"
+    content: "{{ current_user }}    ALL=(ALL:ALL) NOPASSWD: ALL"
+    mode: 0440
+    owner: root
+    group: root
+- name: change swappiness
+  become: yes
+  copy:
+    dest: "/etc/sysctl.d/99-vm-swappiness.conf"
+    content: "vm.swappiness=5"
+    owner: root
+    group: root
+- name: ubuntu update manager include pashed updates # gnome software 는 phased 를 안 따르기 때문에 업그레이드 패키지 불일치 발생하여 서로 맞춤.
+  become: yes
+  copy:
+    dest: "/etc/apt/apt.conf.d/99updatemanager-phased-update"
+    content: Update-Manager::Always-Include-Phased-Updates "True";
+    owner: root
+    group: root
+- name: install basically required packages
+  become: yes
+  apt:
+    pkg:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg-agent
+      - software-properties-common
+      - software-properties-gtk
+      - unzip
+      - unrar
+      - p7zip-full
+      - curl
+    autoclean: yes

@@ -1,0 +1,28 @@
+---
+- name: install packages for fusuma
+  become: yes
+  apt:
+    package:
+      - wmctrl
+      - xdotool
+      - libinput-tools
+      - ruby
+      - ruby-dev
+      - libevdev-dev
+- name: install fusuma
+  become: yes
+  shell: |
+    gem install fusuma
+    gem install fusuma-plugin-sendkey
+    gem install fusuma-plugin-tap
+    gem install fusuma-plugin-keypress
+    gem install fusuma-plugin-wmctrl
+  register: fusuma_installed
+  until: fusuma_installed is not failed
+  retries: 5
+  delay: 10
+- name: fusuma config for gnome
+  shell: gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled
+- name: user for input group
+  become: yes
+  shell: gpasswd -a {{ current_user }} input

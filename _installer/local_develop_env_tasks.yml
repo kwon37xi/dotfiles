@@ -1,0 +1,10 @@
+---
+- name: project dirs
+  file:
+    path: "/home/{{ current_user }}/projects/{{ item  }}"
+    state: directory
+    mode: 0700
+  with_items:
+    - personal
+    - woowabros
+    - observes

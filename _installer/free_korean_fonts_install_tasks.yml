@@ -1,0 +1,13 @@
+---
+- name: create .fonts dir
+  file:
+    path: ~/.fonts
+    state: directory
+- name: clone korean fonts
+  git:
+    repo: https://github.com/kwon37xi/free-korean-fonts.git
+    clone: yes
+    dest: ~/.fonts/free-korean-fonts
+    depth: 1
+- name: font cache update
+  shell: "fc-cache -v"

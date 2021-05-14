@@ -1,0 +1,59 @@
+---
+- name: vivaldi browser key
+  become: yes
+  apt_key:
+    url: https://repo.vivaldi.com/archive/linux_signing_key.pub
+  register: vivaldi_key_installed
+  until: vivaldi_key_installed is not failed
+  retries: 3
+- name: vivaldi browser repo
+  become: yes
+  apt_repository:
+    repo: deb https://repo.vivaldi.com/archive/deb/ stable main
+    filename: vivaldi
+    update_cache: no
+- name: vscode key
+  become: yes
+  apt_key:
+    url: https://packages.microsoft.com/keys/microsoft.asc
+  register: vscode_key_installed
+  until: vscode_key_installed is not failed
+  retries: 3
+- name: vscode repository
+  become: yes
+  apt_repository:
+    repo: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    filename: vscode
+    update_cache: no
+- name: hashicorp key
+  become: yes
+  apt_key:
+    url: https://apt.releases.hashicorp.com/gpg
+  register: hashicorp_key_installed
+  until: hashicorp_key_installed is not failed
+  retries: 3
+- name: hashicorp repository
+  become: yes
+  apt_repository:
+    repo: "deb [arch=amd64] https://apt.releases.hashicorp.com {{ ubuntu_release }} main"
+    filename: hashicorp
+    update_cache: no
+- name: add PPAs
+  become: yes
+  shell: "add-apt-repository -y --no-update {{ item }}"
+  with_items:
+    - ppa:git-core/ppa
+    - ppa:graphics-drivers/ppa
+    - ppa:papirus/papirus
+    - ppa:cappelikan/ppa # for mainline
+    - ppa:agornostal/ulauncher
+- name: multiverse universe
+  become: yes
+  shell: "apt-add-repository -y --no-update {{ item }}"
+  with_items:
+    - multiverse
+    - universe
+- name: update apt cache all
+  become: yes
+  apt:
+    update_cache: yes
