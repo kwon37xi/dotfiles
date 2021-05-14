@@ -1,0 +1,9 @@
+---
+- name: upgrade packages
+  become: yes
+  apt:
+    upgrade: full
+    autoclean: yes
+    autoremove: yes
+- name: flatpak upgrade
+  shell: "flatpak update --system -y"

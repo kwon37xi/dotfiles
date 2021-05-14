@@ -14,38 +14,6 @@ ansible-galaxy collection install community.general
 
 git clone https://kwon37xi@github.com/kwon37xi/dotfiles.git ~/.dotfiles
 
-ansible-playbook -vv ~/.dotfiles/_installer/prepare_system_env_playbook.yml --extra-vars="ansible_become_pass='{{ lookup('env', 'SUDO_PASSWORD') }}'"
-
-ansible-playbook -vv ~/.dotfiles/_installer/package_repos_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/common_package_install_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/gnome_package_install_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/prepare_user_dirs_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/extra_package_install_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/meganz_install_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/package_full_upgrade.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/free_korean_fonts_install_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/firewall_config_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/local_apps_install_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/fusuma_install_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/local_dotfiles_install_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/local_gnome_configs_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/local_jdk_install_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/grub_themes_install_playbook.yml
-
-ansible-playbook -vv ~/.dotfiles/_installer/local_develop_env_playbook.yml
+ansible-playbook -vv ~/.dotfiles/_installer/main_playbook.yml --extra-vars="ansible_become_pass='{{ lookup('env', 'SUDO_PASSWORD') }}'"
 
 echo "      installation finished. REBOOT! "

@@ -1,0 +1,172 @@
+---
+- name: prepare for ttf-mscorefonts auto install
+  become: yes
+  shell: "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections"
+- name: install common packages
+  become: yes
+  apt:
+    package:
+      - inxi
+      - neofetch
+      - ubuntu-restricted-addons
+      - ubuntu-restricted-extras
+      - ubuntu-wallpapers-*
+      - gnome-backgrounds
+      - apt-file
+      - htop
+      - bashtop
+      - stacer
+      - cpufrequtils
+      - most
+      - aptitude
+      - dconf-editor
+      - flatpak
+      - micro
+      - vim-nox
+      - vim-gtk3
+      - notepadqq
+      - xpad
+      - universal-ctags
+      - ripgrep
+      - fd-find
+      - tmux
+      - xclip
+      - zenity
+      - kdialog
+      - grub-customizer
+      - vivaldi-stable
+      - libreoffice
+      - libreoffice-help-ko
+      - libreoffice-l10n-ko
+      - libreoffice-style-*
+      - libreoffice-sdbc-*
+      - meld
+      - kdiff3
+      - tlp
+      - tlp-rdw
+      - powertop
+      - ufw
+      - gufw
+      - docker
+      - docker-compose
+      - ctop
+      - openconnect
+      - net-tools
+      - smbclient
+      - network-manager-openconnect
+      - openfortivpn
+      - network-manager-fortisslvpn
+      - fonts-alee
+      - fonts-lexi-gulim
+      - fonts-lexi-saebom
+      - fonts-nanum
+      - fonts-nanum-coding
+      - fonts-nanum-eco
+      - fonts-nanum-extra
+      - fonts-naver-d2coding
+      - fonts-unfonts-core
+      - fonts-unfonts-extra
+      - fonts-noto-cjk
+      - fonts-noto-cjk-extra
+      - ttf-mscorefonts-installer
+      - uim
+      - uim-byeoru
+      - fcitx
+      - fcitx-hangul
+      - fcitx-ui-classic
+      - fcitx-config-gtk
+      - fcitx-frontend-all
+      - build-essential
+      - dkms
+      - make
+      - cmake
+      - direnv
+      - autojump
+      - stow
+      - openssh-server
+      - openssh-sftp-server
+      - sshpass
+      - putty
+      - putty-tools
+      - filezilla
+      - openssh-client
+      - java-common
+      - openjdk-11-jdk
+      - freerdp2-x11
+      - git-flow
+      - tig
+      - qbittorrent
+      - scrcpy
+      - rclone
+      - inotify-tools
+      - krusader
+      - gparted
+      - ulauncher
+      - trash-cli
+      - ncdu
+      - bat
+      - exa
+      - tldr
+      - timeshift
+      - ranger
+      - xsnow
+      - cmatrix
+      - mainline
+      - convmv
+      - python3-pip
+- name: install claws-mail packages
+  become: yes
+  apt:
+    package: [claws-mail,claws-mail-plugins,claws-mail-extra-plugins,claws-mail-tools,claws-mail-themes,claws-mail-feeds-reader]
+- name: flatpak add remote
+  become: yes
+  flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    state: present
+- name: docker initialize
+  become: yes
+  shell: |
+    usermod -aG docker {{ current_user }}
+    systemctl enable docker
+    service docker restart
+- name: uim config
+  become: yes
+  shell: |
+    update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk3-systray 100
+    update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk-systray 100
+    update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk-systray
+- name: ibus config
+  shell: |
+    # for gnome disable ibus, 의존성 때문에 패키지 삭제가 불가해서 실행만 안되게 이름변경. 아래 작업을 안하면 uim/ibus 동시 사용가능해짐
+    # gnome 자체는 ibus 를 사용하고, 나머지는 uim 사용하게 복합 설정
+    gsettings set org.gnome.settings-daemon.plugins.keyboard active true
+    gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'ibus'>}"
+    # ibus 한글 관련 설정
+    gsettings set org.freedesktop.ibus.engine.hangul auto-reorder true
+    gsettings set org.freedesktop.ibus.engine.hangul hangul-keyboard '39'
+    gsettings set org.freedesktop.ibus.engine.hangul initial-input-mode 'latin'
+    gsettings set org.freedesktop.ibus.engine.hangul hanja-keys 'Hangul_Hanja,F9'
+    gsettings set org.freedesktop.ibus.engine.hangul switch-keys 'Hangul,Shift+space'
+    gsettings set org.freedesktop.ibus.engine.hangul word-commit false
+    # emoji,unicode 입력 단축키 변경
+    gsettings set org.freedesktop.ibus.panel.emoji font "Noto Color Emoji 16"
+    gsettings set org.freedesktop.ibus.panel.emoji hotkey "['<Shift><Super>e']"
+    gsettings set org.freedesktop.ibus.panel.emoji unicode-hotkey "[]"
+
+    # preedit-mode 는 원래 syllable 인데, word로 변경하면, chromium/electron 계열에서 한글입력이 잘된다.
+    gsettings set org.freedesktop.ibus.engine.hangul preedit-mode 'word'
+
+    # zoom 등 옛날 QT 라이브러리로 된 프로그램에서 backspace, arrow 키 잘 안먹는 문제 해결하려면 이 값을 false로 변경한다.
+    # 그러나 현재 zoom 외에는 이 값이 true 인게 잘 작동한다. zoom 사용할 때만 일시적으로 false로 변경할 것.
+    # $HOME/.local/bin/ibus-toggle-use-event-forwarding.sh 사용
+    gsettings set org.freedesktop.ibus.engine.hangul use-event-forwarding true
+
+    # 한영키 xkb, ibus 관련 설정
+    gsettings set org.gnome.desktop.input-sources xkb-options "['korean:ralt_hangul', 'korean:rctrl_hanja']"
+
+    # gsettings set org.gnome.settings-daemon.plugins.keyboard active false
+    # gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'uim'>}"
+    # sudo mv /usr/bin/ibus-daemon /usr/bin/ibus-daemon.distrib
+- name: set default im
+  shell: "im-config -n ibus"

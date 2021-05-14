@@ -1,0 +1,16 @@
+---
+- name: create theme directory
+  become: yes
+  file:
+    path: /boot/grub/themes
+    state: directory
+- name: install grub custom themes
+  become: yes
+  unarchive:
+    src: ~/.dotfiles/_backup/grub-themes/{{ item }}
+    dest: /boot/grub/themes
+  with_items:
+    - tela-4k.tar.gz
+    - tela-1k.tar.gz
+    - vimix-4k.tar.gz
+    - vimix-1k.tar.gz

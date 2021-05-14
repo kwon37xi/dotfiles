@@ -1,0 +1,24 @@
+---
+- name: main
+  hosts: 127.0.0.1
+  connection: local
+  vars_files:
+    - "vars.yml"
+  tasks:
+    - include_tasks: prepare_system_env_tasks.yml
+    - include_tasks: package_repos_tasks.yml
+    - include_tasks: common_package_install_tasks.yml
+    - include_tasks: gnome_package_install_tasks.yml
+    - include_tasks: prepare_user_dirs_tasks.yml
+    - include_tasks: extra_package_install_tasks.yml
+    - include_tasks: meganz_install_tasks.yml
+    - include_tasks: package_full_upgrade_tasks.yml
+    - include_tasks: free_korean_fonts_install_tasks.yml
+    - include_tasks: firewall_config_tasks.yml
+    - include_tasks: local_apps_install_tasks.yml
+    - include_tasks: fusuma_install_tasks.yml
+    - include_tasks: local_dotfiles_install_tasks.yml
+    - include_tasks: local_gnome_configs_tasks.yml
+    - include_tasks: local_jdk_install_tasks.yml
+    - include_tasks: grub_themes_install_tasks.yml
+    - include_tasks: local_develop_env_tasks.yml
