@@ -52,6 +52,7 @@
         - ppa:graphics-drivers/ppa
         - ppa:papirus/papirus
         - ppa:cappelikan/ppa # for mainline
+        - ppa:agornostal/ulauncher
     - name: multiverse universe
       become: yes
       shell: "apt-add-repository -y --no-update {{ item }}"

@@ -17,4 +17,4 @@ sudo chown root:root /etc/NetworkManager/system-connections/
 sudo chmod 0600 /etc/NetworkManager/system-connections/*
 # todo restart kwallet
 
-sudo service networking restart
+sudo systemctl restart NetworkManager.service

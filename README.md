@@ -55,6 +55,7 @@ sudo apt install amd64-microcode
 
 ### Gnome 설정
 * **설정 -> 지역 및 언어 -> Manage Installed Languages**에서 부족한 패키지 자동 설치
+* ibus 사용시에는 **설정 -> 지역 및 언어**에서 **한국어 (Hangul)**만 남기고 지운다.
 * uim/fcitx 사용시에는  **설정 -> Keyboard**에서 **hangul** 제거
 * Top Bar 사용시 : `/usr/share/themes/<원하는테마>/gnome-shell/gnome-shell.css` 파일에서 `.panel-button`의 `hpadding`항목 값들을
   **1px**로 변경해주면 Panel 의 인디케이터 부분의 아이콘간 간격이 줄어들게 된다.
@@ -63,6 +64,7 @@ sudo apt install amd64-microcode
 ### Super 키 오작동 & 노트북 오른쪽 Alt/Ctrl 한영,한자키
 * `gnome-tweaks` -> 키보드와 마우스
   * 바로가기 키 개요 : **오른쪽 Super 키** 로 변경한다. 이걸하면 왼쪽 Super 키가 올바르게 작동하고, 오른쪽 Super 키로 바로가기 개요를 볼 수 있다.
+    * Ubuntu 21.04 부터는 왼쪽 Super  키로 두어도 ''Super+다른키조합''이 잘 작동하고 있다.
   * 추가배치 옵션
     * Alt/Win 키 동작 : 하지 말것. 더이상 불필요함.
       * -Hyper를 윈도우 키로 매핑-
