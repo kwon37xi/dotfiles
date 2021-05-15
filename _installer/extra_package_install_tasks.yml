@@ -4,6 +4,7 @@
   apt:
     package:
       - virtualbox
+      - virtualbox-ext-pack
       - virtualbox-guest-additions-iso
       - qemu
       - aqemu
