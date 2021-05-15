@@ -23,7 +23,8 @@ do
     if ! [ -d $target_dir/$home_dir ]
     then
         echo "   디렉토리 생성 - $target_dir/$home_dir ..."
-        mkdir $target_dir/$home_dir
+        sudo mkdir $target_dir/$home_dir
+        sudo chown $USER:$USER $target_dir/$home_dir
     fi
 
     mv $HOME/$home_dir/* $target_dir/$home_dir
