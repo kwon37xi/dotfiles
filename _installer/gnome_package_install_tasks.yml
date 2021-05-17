@@ -16,6 +16,8 @@
       - gnome-shell-extensions
       - gnome-shell-pomodoro
       - gnome-shell-timer
+      - gnome-shell-extension-system-monitor
+      - gnome-shell-extension-caffeine
       - deja-dup
       - nautilus-admin
       - gnome-sushi
