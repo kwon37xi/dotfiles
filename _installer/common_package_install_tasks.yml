@@ -10,6 +10,7 @@
       - neofetch
       - ubuntu-restricted-addons
       - ubuntu-restricted-extras
+      - libavcodec58 # additional codecs
       - ubuntu-wallpapers-*
       - gnome-backgrounds
       - apt-file
