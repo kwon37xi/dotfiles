@@ -3,6 +3,7 @@
 let mapleader = ","
 let maplocalleader = mapleader
 
+
 " 설정 다시 읽기
 noremap \vr :source ~/.ideavimrc<CR>
 
@@ -18,7 +19,6 @@ set easymotion
 
 " tpope commentray.vim
 set commentary
-
 " https://github.com/terryma/vim-multiple-cursors
 set multiple-cursors
 
