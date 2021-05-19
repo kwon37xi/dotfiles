@@ -18,6 +18,7 @@
       - gnome-shell-timer
       - gnome-shell-extension-system-monitor
       - gnome-shell-extension-caffeine
+      - gnome-shell-extension-hide-activities
       - deja-dup
       - nautilus-admin
       - gnome-sushi
