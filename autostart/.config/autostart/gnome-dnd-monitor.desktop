@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Gnome DnD Monitor
+GenericName=Gnome DnD monitor
+# shellscript 에 ~/ 경로 사용이 안됐음.
+Exec=/home/kwon37xi/.local/bin/gnome-dnd-monitor.sh
+Comment=Gnome Do Not Disturb monitor and sync with apps
+Type=Application
+Terminal=false
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=0
