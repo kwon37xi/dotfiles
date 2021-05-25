@@ -43,8 +43,6 @@
       - libreoffice-sdbc-*
       - meld
       - kdiff3
-      - tlp
-      - tlp-rdw
       - powertop
       - ufw
       - gufw
