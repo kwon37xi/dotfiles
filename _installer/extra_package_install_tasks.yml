@@ -175,6 +175,8 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-go-jira.sh"
 - name: yq
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-yq.sh"
+- name: pacstall
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-pacstall.sh"
 - name: bpytop
   become: yes
   community.general.snap:
