@@ -1,5 +1,5 @@
 #!/bin/bash
-function change_app_show_banners() {
+function change_app_notification() {
     APPS=( $(dconf list "/org/gnome/desktop/notifications/application/") )
     declare -p APPS
 
@@ -16,12 +16,12 @@ function change_app_show_banners() {
 }
 
 # first sync current state
-change_app_show_banners $(gsettings get org.gnome.desktop.notifications show-banners)
+change_app_notification $(gsettings get org.gnome.desktop.notifications show-banners)
 
 # monitoring show-banners value
 while read line
 do
     show_banners=$(echo $line | cut -d' ' -f2)
     echo "current gnome notifications show-banners : $show_banners"
-    change_app_show_banners $show_banners
+    change_app_notification $show_banners
 done < <(gsettings monitor org.gnome.desktop.notifications show-banners)
