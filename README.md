@@ -99,6 +99,10 @@ sudo apt install amd64-microcode
 ### Grub Customizer
 * Grub Theme 을 조정해준다.
 
+### Conky
+* `~/.conky` 에 conky 설정 파일들과 실행 스크립트가 있다.
+* 시작 프로그램 설정을 통해 해당 스크립트를 실행하도록 한다.
+
 ### Vivaldi Browser Mod 설정
 * Vivaldi Mod 설정으로 창 최대화/최소화 버튼 모양을 테마와 일치시킬 수 있다.
 * vivaldi://experiments 열고
