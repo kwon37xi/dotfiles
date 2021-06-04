@@ -1,0 +1,10 @@
+---
+- name: install auto-cpufreq # https://github.com/AdnanHodzic/auto-cpufreq
+  become: yes
+  community.general.snap:
+    channel: stable
+    name: auto-cpufreq
+- name: auto-cpufreq daemon
+  become: yes
+  shell: |
+    auto-cpufreq --install
