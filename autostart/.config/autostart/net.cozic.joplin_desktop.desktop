@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Joplin
+Comment=Joplin for Desktop
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=joplin-desktop net.cozic.joplin_desktop
+Icon=net.cozic.joplin_desktop
+StartupWMClass=Joplin
+Type=Application
+Categories=Office;
+X-Flatpak=net.cozic.joplin_desktop
+X-GNOME-Autostart-Delay=70
