@@ -1,0 +1,50 @@
+conky.config = {
+	use_xft = true,
+	font = 'NanumBarunGothic:size=13',
+	xftalpha = 0.1,
+	update_interval = 1,
+	total_run_times = 0,
+
+	own_window = true,
+	own_window_type = 'dock',
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_colour = '#000000',
+	own_window_argb_visual = true,
+	own_window_argb_value = 0,
+
+	double_buffer = true,
+--minimum_size 250 5
+--maximum_width 500
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+	default_color = 'white',
+	default_shade_color = 'red',
+	default_outline_color = 'green',
+	alignment = 'top_middle',
+	gap_x = 0,
+	gap_y = 70,
+	no_buffers = true,
+	uppercase = false,
+	cpu_avg_samples = 2,
+	net_avg_samples = 1,
+	override_utf8_locale = true,
+	use_spacer = 'yes',
+
+
+	minimum_width = 0, minimum_height = 0,
+};
+
+conky.text = [[
+${voffset 10}${color EAEAEA}${font NanumBarunGothic:pixelsize=140}${time %I:%M}${font}${voffset -84}${offset 10}${color 1793D1}${font NanumBarunGothic:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font NanumBarunGothic:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 44}${font NanumBarunGothic:pixelsize=58}${offset -148}${time %A}${font}
+
+${voffset 1}${offset 12}${font :pixelsize=16}${color 1793D1}Boot ${offset 9}$color${fs_used /boot/efi} / ${fs_size /boot/efi}${offset 30}${color 1793D1}Root ${offset 9}$color${fs_used /} / ${fs_size /}${offset 30}${color 1793D1}Data ${offset 9}$color${fs_used /mnt/data} / ${fs_size /mnt/data}
+${voffset 1}${offset 12}${font :pixelsize=16}${color 1793D1}RAM ${offset 9}$color$mem / $memmax${offset 30}${color 1793D1}CPU ${offset 9}$color${cpu cpu0}%${offset 30}${color 1793D1}GPU ${offset 9}$color${nvidia gpuutil}%${offset 30}${color 1793D1}Uptime ${offset 9}$color${uptime}
+
+
+
+
+
+]];
