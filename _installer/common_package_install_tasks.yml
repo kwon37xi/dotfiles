@@ -43,8 +43,6 @@
       - libreoffice-sdbc-*
       - meld
       - kdiff3
-      - tlp
-      - tlp-rdw
       - powertop
       - ufw
       - gufw
@@ -114,6 +112,7 @@
       - cmatrix
       - mainline
       - convmv
+      - gnome-multi-writer
       - python3-pip
 - name: install claws-mail packages
   become: yes

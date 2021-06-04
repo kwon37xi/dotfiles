@@ -28,6 +28,7 @@
       - .config/fcitx/conf
       - .config/fcitx/config
       - .local/share/konsole
+      - .conky
 - name: stow
   shell: "stow -d ~/.dotfiles -t ~/ -S {{ item }}"
   with_items:
@@ -52,6 +53,7 @@
     - procs
     - ulauncher
     - tig
+    - conky
 - name: stow with adopt
   shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
   with_items:
