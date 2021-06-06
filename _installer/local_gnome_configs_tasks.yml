@@ -26,7 +26,18 @@
 
     # ubuntu-dock app-icon change
     mkdir -p ~/.icons/Yaru/scalable/actions
+    mkdir -p ~/.icons/Yaru/symbolic/actions
     ln -s ~/.dotfiles/_icons/ubuntu_icon_01.png ~/.icons/Yaru/scalable/actions/view-app-grid-symbolic.png
+    ln -s ~/.dotfiles/_icons/ubuntu_icon_01.png ~/.icons/Yaru/symbolic/actions/view-app-grid-symbolic.png
+
+    ln -s ~/.icons/Yaru ~/.icons/Papirus
+    ln -s ~/.icons/Yaru ~/.icons/Papirus-Dark
+    ln -s ~/.icons/Yaru ~/.icons/Papirus-Light
+    ln -s ~/.icons/Yaru ~/.icons/Numix
+    ln -s ~/.icons/Yaru ~/.icons/Numix-Circle
+    ln -s ~/.icons/Yaru ~/.icons/Numix-Circle-Light
+    ln -s ~/.icons/Yaru ~/.icons/Numix-Light
+
 - name: gnome-calendar
   shell: |
     # 달력 기본 응용프로그램을 Gnome Calendar로 설정 - 텍스트 편집기로 돼 있는 버그 존재
