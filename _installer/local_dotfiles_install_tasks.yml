@@ -19,6 +19,7 @@
     - Desktop
     - .vim
     - .config/.bash_it_custom
+    - .conky
 - name: delete conflicting files
   file:
     path: "/home/{{ current_user }}/{{ item }}"
