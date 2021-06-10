@@ -10,3 +10,14 @@
   with_items:
     - "https://mega.nz/linux/MEGAsync/xUbuntu_{{ ubuntu_version }}/amd64/megacmd-xUbuntu_{{ ubuntu_version }}_amd64.deb"
     - "https://mega.nz/linux/MEGAsync/xUbuntu_{{ ubuntu_version }}/amd64/megasync-xUbuntu_{{ ubuntu_version }}_amd64.deb"
+- name: update apt cache all
+  become: yes
+  apt:
+    update_cache: yes
+- name: install mega apps
+  become: yes
+  apt:
+    package:
+      - megadown
+      - megatools
+      - nautilus-megasync
