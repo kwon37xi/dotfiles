@@ -183,8 +183,7 @@
 - name: bpytop
   become: yes
   community.general.snap:
-    name:
-      - bpytop
+    name: bpytop
     state: present
 - name: bpytop permissions
   become: yes
@@ -195,3 +194,11 @@
     snap connect bpytop:system-observe
     snap connect bpytop:process-control
     snap connect bpytop:physical-memory-observe
+- name: dirsize # https://github.com/frossm/dirsize
+  become: yes
+  community.general.snap:
+    name: dirsize
+    state: present
+- name: diresize permission
+  shell: |
+    snap connect dirsize:system-backup
