@@ -23,4 +23,3 @@
     - include_tasks: grub_themes_install_tasks.yml
     - include_tasks: local_develop_env_tasks.yml
     - include_tasks: auto_cpufreq_tasks.yml
-    - include_tasks: jenkins_tasks.yml

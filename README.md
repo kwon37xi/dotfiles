@@ -103,6 +103,12 @@ sudo apt install amd64-microcode
 * `~/.conky` 에 conky 설정 파일들과 실행 스크립트가 있다.
 * 시작 프로그램 설정을 통해 해당 스크립트를 실행하도록 한다.
 
+### Jenkins 설치
+* Jenkins 설치를 자동화 해 두었다.
+```
+ansible-playbook -vv ~/.dotfiles/_installer/jenkins_playbook.yml
+```
+
 ### Vivaldi Browser Mod 설정
 * Vivaldi Mod 설정으로 창 최대화/최소화 버튼 모양을 테마와 일치시킬 수 있다.
 * vivaldi://experiments 열고
@@ -119,3 +125,4 @@ ansible-playbook -vv ~/.dotfiles/_installer/4k_playbook.yml
 
 ## JDK 디렉토리
 * `.local/opt/jdk` 에 JDK 들을 설치하고 있다.
+
