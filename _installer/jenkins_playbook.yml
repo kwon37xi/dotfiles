@@ -1,0 +1,45 @@
+---
+- name: main
+  hosts: 127.0.0.1
+  connection: local
+  vars_files:
+    - "vars.yml"
+  tasks:
+    - name: jenkins key
+      become: yes
+      apt_key:
+        url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+      register: jenkins_repo_key_installed
+      until: jenkins_repo_key_installed is not failed
+      retries: 3
+    - name: jenkins repo
+      become: yes
+      apt_repository:
+        repo: deb https://pkg.jenkins.io/debian-stable binary/
+        filename: jenkins
+        update_cache: yes
+    - name: install jenkins replated packages
+      become: yes
+      apt:
+        package:
+          - openjdk-11-jdk
+          - jenkins
+    - name: change jenkins user
+      become: yes
+      shell: |
+        systemctl stop jenkins
+
+        sed -i.bak -e "s/JENKINS_USER=\$NAME/JENKINS_USER={{ current_user }}/g" \
+            -e "s/JENKINS_GROUP=\$NAME/JENKINS_GROUP={{ current_user }}/g" \
+            -e "s/HTTP_PORT=8080/HTTP_PORT=9999/g" \
+            /etc/default/jenkins
+
+        mkdir -p /var/lib/jenkins/init.groovy.d
+
+        cp /home/{{ current_user }}/.dotfiles/_backup/jenkins/init_admin.groovy /var/lib/jenkins/init.groovy.d/
+
+        chown -R {{ current_user }}:{{ current_user }} /var/lib/jenkins
+        chown -R {{ current_user }}:{{ current_user }} /var/cache/jenkins
+        chown -R {{ current_user }}:{{ current_user }} /var/log/jenkins
+
+        systemctl start jenkins
