@@ -1,0 +1,12 @@
+---
+- name: Yaru sound theme alarm-clock-elapsed override # 기본 알람 소리가 너무 시끄러워서 변경함
+  become: yes
+  ansible.builtin.file:
+    src: /usr/share/sounds/gnome/default/alerts/glass.ogg
+    dest: /usr/share/sounds/Yaru/stereo/alarm-clock-elapsed.ogg
+    state: link
+- name: sound theme change to Yaru
+  shell: |
+    gsettings set org.gnome.desktop.sound theme-name "Yaru"
+    gsettings set org.gnome.desktop.sound input-feedback-sounds true
+    gsettings set org.gnome.desktop.sound event-sounds true
