@@ -180,6 +180,8 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-yq.sh"
 - name: pacstall
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-pacstall.sh"
+- name: etcher
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-etcher_appimage.sh"
 - name: remove snap-store
   become: yes
   community.general.snap:
