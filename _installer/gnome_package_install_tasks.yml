@@ -19,6 +19,7 @@
       - gnome-shell-extension-system-monitor
       - gnome-shell-extension-caffeine
       - gnome-shell-extension-hide-activities
+      - gnome-authenticator
       - deja-dup
       - nautilus-admin
       - gnome-sushi
