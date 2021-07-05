@@ -33,7 +33,7 @@
         "id": "0a2053e4-e59f-470d-af03-7da4b8374ecf",
         "name": "Youtuble dl",
         "keyword": "ydl",
-        "cmd": "#!/bin/bash\nyoutube_url=$(xclip -o -sel clip)\ngnome-terminal -- /usr/local/bin/youtube-dl -f ''bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio'' --merge-output-format mp4 -o \"${HOME}/Downloads/%(title)s-%(id)s.%(ext)s\" \"${youtube_url}\" &&  read -p \"\uc5d4\ud130\ud0a4\ub97c \ub204\ub974\uba74 \uc885\ub8cc\ub429\ub2c8\ub2e4.\"",
+        "cmd": "#!/bin/bash\nyoutube_url=$(zenity --entry --text \"Youtube URL \uc785\ub825\" --entry-text `xclip -o -sel clip`)\n\nNQDIR=$HOME/Videos nq /usr/local/bin/youtube-dl -f ''bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio'' --merge-output-format mp4 -o \"${HOME}/Downloads/%(title)s-%(id)s.%(ext)s\" \"${youtube_url}\"",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
@@ -178,5 +178,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1618391909.4833667
+    },
+    "11456eba-54c2-4e77-87c0-9c9422891e37": {
+        "id": "11456eba-54c2-4e77-87c0-9c9422891e37",
+        "name": "youtube-dl queue view",
+        "keyword": "ydlqv",
+        "cmd": "#!/bin/bash\nexport NQDIR=$HOME/Videos \ngnome-terminal -- /bin/bash -c 'fq -a; read -p \"Enter\ub97c \ub20c\ub7ec \uc885\ub8cc\ud558\uc138\uc694.\"'",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1625460614.5483437
     }
 }
