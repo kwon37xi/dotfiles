@@ -172,7 +172,7 @@
     "8ad8ecba-334b-4430-a42d-af8ef796c8df": {
         "id": "8ad8ecba-334b-4430-a42d-af8ef796c8df",
         "name": "ibus-toggle-use-event-forwarding.sh",
-        "keyword": "ibusfix",
+        "keyword": "ibf",
         "cmd": "#!/bin/sh\n$HOME/.local/bin/ibus-toggle-use-event-forwarding.sh",
         "icon": null,
         "is_default_search": false,
@@ -183,7 +183,7 @@
         "id": "11456eba-54c2-4e77-87c0-9c9422891e37",
         "name": "youtube-dl queue view",
         "keyword": "ydlqv",
-        "cmd": "#!/bin/bash\nmkdir -p /tmp/videos_nq\ngnome-terminal -- /bin/bash -c 'NQDIR=/tmp/videos_nq fq -a; read -p \"Enter\ub97c \ub20c\ub7ec \uc885\ub8cc\ud558\uc138\uc694.\"'",
+        "cmd": "#!/bin/bash\nmkdir -p /tmp/videos_nq\ngnome-terminal -- /bin/bash -c 'NQDIR=/tmp/videos_nq fq -a; read -p \"===== Enter\ub97c \ub20c\ub7ec \uc885\ub8cc\ud558\uc138\uc694.\"'",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
