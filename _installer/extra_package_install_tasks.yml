@@ -28,6 +28,7 @@
       - audacious
       - handbrake
       - gpick
+      - gromit-mpx
 - name: install extra dev related packages
   become: yes
   apt:
@@ -108,9 +109,6 @@
 - name: flatseal
   flatpak:
     name: "com.github.tchx84.Flatseal"
-- name: gromit-mpx
-  flatpak:
-    name: "net.christianbeier.Gromit-MPX"
 - name: local applications dir
   file:
     path: "/home/{{ current_user }}/.local/share/applications"
