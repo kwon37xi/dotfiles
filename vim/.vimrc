@@ -38,6 +38,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
+Plug 'ryanoasis/vim-devicons'
 " fzf include ripgrep Rg
 "Plug 'jremmen/vim-ripgrep'
 "Plug 'vim-scripts/fcitx.vim'
