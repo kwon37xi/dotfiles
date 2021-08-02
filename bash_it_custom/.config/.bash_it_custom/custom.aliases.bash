@@ -26,9 +26,9 @@ alias sysup='sudo apt update && sudo apt -y upgrade && sudo apt  -y autoremove &
 
 # exa as ls
 alias ls=exa
-alias ll='exa -lah --colour=always --group-directories-first'
+alias ll='exa -lah --colour=always --icons --group-directories-first'
 alias l='exa'
-alias l1='exa -1 --group-directories-first'
+alias l1='exa -1 --group-directories-first --icons'
 
 # 전체 경로 포함해서 출력. 파일과 링크
 alias lsfp='find $PWD -maxdepth 1 -type f,l'
