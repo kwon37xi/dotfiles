@@ -104,7 +104,7 @@ set relativenumber
 set number
 " long line 으로 인해 너무 느릴때 처리 - 그래도 느리면 :syntax off 호출할것.
 set ttyfast " u got a fast terminal
-set ttyscroll=3
+" set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
 
 " clipboard - system clipboard 사용하게 변경. vim-gtk3 로 설치돼 있어야함.
