@@ -114,6 +114,7 @@
       - nq
       - gnome-multi-writer
       - python3-pip
+      - cpulimit
 - name: install claws-mail packages
   become: yes
   apt:
