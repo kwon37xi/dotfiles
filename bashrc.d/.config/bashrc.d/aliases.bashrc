@@ -1,7 +1,4 @@
 # bash-it custom aliases
-cite 'about-alias'
-about-alias 'kwonnam''s custom aliases'
-
 alias ydl="/usr/local/bin/youtube-dl -o '%(title).36s-%(id)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
 alias ydlmp3="/usr/local/bin/youtube-dl -o '%(title).36s-%(id)s.%(ext)s' --extract-audio --audio-format mp3"
 

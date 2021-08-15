@@ -215,3 +215,8 @@
 - name: diresize permission
   shell: |
     snap connect dirsize:system-backup
+- name: starship
+  become: yes
+  community.general.snap:
+    name: starship
+    state: present

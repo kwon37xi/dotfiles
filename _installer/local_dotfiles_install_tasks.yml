@@ -18,7 +18,6 @@
     - .sdkman/etc
     - Desktop
     - .vim
-    - .config/.bash_it_custom
     - .conky
 - name: delete conflicting files
   file:
@@ -39,7 +38,6 @@
     - uim
     - git
     - bashrc.d
-    - bash_it_custom
     - neovim
     - sdkman
     - local_bin
@@ -55,6 +53,7 @@
     - ulauncher
     - tig
     - conky
+    - starship
 - name: stow with adopt
   shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
   with_items:
