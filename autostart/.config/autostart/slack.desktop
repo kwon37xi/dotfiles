@@ -9,4 +9,4 @@ Type=Application
 StartupNotify=true
 Categories=GNOME;GTK;Network;InstantMessaging;
 MimeType=x-scheme-handler/slack;
-X-GNOME-Autostart-Delay=30
+#X-GNOME-Autostart-Delay=30
