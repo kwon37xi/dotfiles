@@ -66,15 +66,5 @@
   until: sdk_package_installed is not failed
   retries: 3
   delay: 10
-- name: bash_it clone
-  git:
-    repo: https://github.com/Bash-it/bash-it.git
-    clone: yes
-    depth: 1
-    dest: ~/.bash_it
-- name: bash_it install
-  shell:
-    cmd: ./install.sh --silent --no-modify-config
-    chdir: ~/.bash_it
 - name: tldr update
   shell: tldr -u
