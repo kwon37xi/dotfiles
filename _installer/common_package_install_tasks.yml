@@ -115,6 +115,7 @@
       - gnome-multi-writer
       - python3-pip
       - cpulimit
+      - httpie
 - name: install claws-mail packages
   become: yes
   apt:
