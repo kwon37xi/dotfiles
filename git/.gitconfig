@@ -28,7 +28,7 @@
 
 [pager]
     # 특정 기능의 pager 를 끄고 싶으면 빈칸, 변경하고 싶으면 프로그램 이름을 지정해준다.
-    #log = 
+    #log =
     #diff = delta
 
 [interactive]
@@ -62,6 +62,14 @@
     unstage = reset HEAD --
     dt = difftool
     dtv = difftool -y -t vimdiff
+    diffprev = diff HEAD^
+    diffprev1 = diff HEAD^
+    diffprev2 = diff HEAD^^ HEAD^
+    diffprev3 = diff HEAD^^^ HEAD^^
+    dtprev = difftool HEAD^
+    dtprev1 = difftool HEAD^
+    dtprev2 = difftool HEAD^^ HEAD^
+    dtprev3 = difftool HEAD^^^ HEAD^^
     mt = mergetool
     cleanbranch = "!git branch -d $(git branch --merged | grep -v '^\\*\\|\\<master$')"
     # untracked 파일과 디렉토리 전체 삭제
