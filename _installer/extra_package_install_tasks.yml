@@ -106,6 +106,9 @@
 - name: Planner
   flatpak:
     name: "com.github.alainm23.planner"
+- name: Flameshot
+  flatpak:
+    name: "org.flameshot.Flameshot"
 - name: flatseal
   flatpak:
     name: "com.github.tchx84.Flatseal"

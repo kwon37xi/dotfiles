@@ -27,8 +27,8 @@ name='Reboot'
 
 [custom-keybindings/custom2]
 binding='<Super>Print'
-command='gnome-screenshot --interactive'
-name='Gnome Screenshot'
+command='flatpak run org.flameshot.Flameshot gui'
+name='Flameshot'
 
 [custom-keybindings/custom3]
 binding='<Super>p'
