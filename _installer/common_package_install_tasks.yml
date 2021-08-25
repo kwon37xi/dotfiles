@@ -103,7 +103,6 @@
       - trash-cli
       - ncdu
       - bat
-      - exa
       - tldr
       - timeshift
       - ranger
