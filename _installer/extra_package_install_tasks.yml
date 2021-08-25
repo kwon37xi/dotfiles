@@ -186,6 +186,8 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-pacstall.sh"
 - name: etcher
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-etcher_appimage.sh"
+- name: starship
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-starship.sh"
 - name: remove snap-store
   become: yes
   community.general.snap:
@@ -218,8 +220,3 @@
 - name: diresize permission
   shell: |
     snap connect dirsize:system-backup
-- name: starship
-  become: yes
-  community.general.snap:
-    name: starship
-    state: present
