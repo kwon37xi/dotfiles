@@ -249,7 +249,8 @@ nnoremap <expr> <silent> <C-A-Up> (&diff ? "[c" : ":cprev\<CR>")
 
 " Tags / ctags
 
-" Gutentags
+" Gutentags - .git, .hg 등의 디렉토리를 기준으로 변경된 파일에 대해서 자동으로
+" tag update
 " https://bolt80.com/gutentags/
 set statusline+=%{gutentags#statusline()}
 
@@ -257,6 +258,15 @@ set statusline+=%{gutentags#statusline()}
 nnoremap <F11> :TagbarToggle<CR>
 nnoremap <leader>Tj :TagbarJumpNext<CR>
 nnoremap <leader>Tk :TagbarJumpPrev<CR>
+nnoremap <A-Down> :TagbarJumpNext<CR>
+nnoremap <A-Up> :TagbarJumpPrev<CR>
+
+" fzf tags
+" Tags 전체를 탐색한다. tags 파일이 없으면 생성한다.
+nnoremap <leader>Tt :Tags<CR>
+nnoremap <leader>TT :BTags<CR>
+" intelliJ idea와 동일하게 맞춘 단축키
+nnoremap <C-F12> :BTags<CR>
 
 " Open in Browser
 nnoremap <leader>wf :exe ':silent !firefox %'<CR>
