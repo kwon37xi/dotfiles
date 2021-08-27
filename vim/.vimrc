@@ -29,7 +29,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'vim-scripts/localvimrc'
 Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/grep.vim'
-Plug 'vim-scripts/taglist-plus'
+Plug 'majutsushi/tagbar'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'vim-scripts/snipMate'
 Plug 'vim-scripts/Align'
 Plug 'vim-airline/vim-airline'
@@ -246,12 +247,16 @@ nnoremap <expr> <silent> <C-A-Up> (&diff ? "[c" : ":cprev\<CR>")
 " Recursive grep :Rgrep -i 검색어 *.txt
 " close grep window :cclose
 
-" TagList-plus
-" https://github.com/int3/vim-taglist-plus
-let Tlist_Inc_Winwidth=0
-let Tlist_Use_Right_Window=1
-nnoremap <silent> <F11> :TlistToggle<CR>
-nnoremap <silent> <C-F11> :w<CR>:TlistUpdate<CR>
+" Tags / ctags
+
+" Gutentags
+" https://bolt80.com/gutentags/
+set statusline+=%{gutentags#statusline()}
+
+" tagbar
+nnoremap <F11> :TagbarToggle<CR>
+nnoremap <leader>Tj :TagbarJumpNext<CR>
+nnoremap <leader>Tk :TagbarJumpPrev<CR>
 
 " Open in Browser
 nnoremap <leader>wf :exe ':silent !firefox %'<CR>
