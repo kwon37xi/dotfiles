@@ -211,8 +211,8 @@ set list lcs=tab:\┆\.,trail:~
 " Buffer 단축키
 map <leader>bp <esc>:bp<CR>
 map <leader>bn <ESC>:bn<CR>
-map <C-PageUp> :bp<CR>
-map <C-PageDown> :bn<CR>
+nnoremap <C-PageUp> :bp<CR>
+nnoremap <C-PageDown> :bn<CR>
 map <C-S-Tab> :bp<CR>
 map <C-Tab> :bn<CR>
 map <C-F4> :bdelete<CR>
