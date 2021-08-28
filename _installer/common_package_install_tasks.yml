@@ -27,7 +27,6 @@
       - vim-gtk3
       - notepadqq
       - xpad
-      - universal-ctags
       - ripgrep
       - fd-find
       - tmux
