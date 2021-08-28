@@ -212,11 +212,6 @@
     snap connect bpytop:system-observe
     snap connect bpytop:process-control
     snap connect bpytop:physical-memory-observe
-- name: universal-ctags
-  become: yes
-  community.general.snap:
-    name: universal-ctags
-    state: present
 - name: dirsize # https://github.com/frossm/dirsize
   become: yes
   community.general.snap:
