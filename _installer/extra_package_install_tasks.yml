@@ -226,3 +226,6 @@
 - name: lsd
   become: yes
   shell: pacstall -P -I lsd-deb
+- name: universal-ctags
+  become: yes
+  shell: pacstall -P -I universal-ctags-git
