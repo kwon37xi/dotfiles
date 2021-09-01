@@ -92,8 +92,6 @@
   with_items:
     - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
-- name: youtube-dl
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-youtube-dl.sh"
 - name: bitwarden
   flatpak:
     name: "com.bitwarden.desktop"
@@ -229,3 +227,6 @@
 - name: universal-ctags
   become: yes
   shell: pacstall -P -I universal-ctags-git
+- name: youtube-dl
+  become: yes
+  shell: pacstall -P -I youtube-dl-git
