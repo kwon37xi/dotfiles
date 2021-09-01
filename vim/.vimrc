@@ -182,10 +182,12 @@ map <Leader><Leader>t <ESC>:below terminal<CR>
 " NERDTree
 let NERDSpaceDelims=1
 let NERDTreeIgnore=['\.vim$', '\~$', '.*\.class$', '\.pyc$', 'CVS', 'classes','.*\.jar$', 'target']
-map <F12> :NERDTreeToggle<CR>
+nnoremap <F12> :NERDTreeToggle<CR>
+nnoremap <S-F12> :NERDTreeCWD<CR>
+nnoremap <leader>Nc :NERDTreeCWD<CR>
 
 " 현재 편집창에 열린 파일을 NERDTree 에서 활성화 시켜준다.
-nmap <Leader>n :NERDTreeFind<CR>
+nnoremap <Leader>Nf :NERDTreeFind<CR>
 
 " nerdtree 창에서는 다른 파일 못열게 하기. vim-plug 사용시 충돌 방지
 autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
