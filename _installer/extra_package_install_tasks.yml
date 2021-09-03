@@ -230,3 +230,6 @@
 - name: youtube-dl
   become: yes
   shell: pacstall -P -I youtube-dl-git
+- name: grive2
+  become: yes
+  shell: pacstall -P -I grive2
