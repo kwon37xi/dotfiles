@@ -144,12 +144,8 @@
   until: mat_installed is not failed
   retries: 3
   delay: 10
-- name: dbeaver install
-  command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dbeaver-ce.sh"
 - name: fzf
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fzf.sh"
-- name: fblog
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fblog.sh"
 - name: sd
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-sd.sh"
 - name: broot
@@ -160,14 +156,10 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-lazydocker.sh"
 - name: procs
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-procs.sh"
-- name: duf
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-duf.sh"
 - name: hugo
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-hugo.sh"
 - name: fluentreader
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fluentreader.sh"
-- name: delta
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-delta.sh"
 - name: speedread
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-speedread.sh"
 - name: bitwarden-cli
@@ -180,8 +172,6 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-yq.sh"
 - name: pacstall
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-pacstall.sh"
-- name: etcher
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-etcher_appimage.sh"
 - name: starship
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-starship.sh"
 - name: remove snap-store
@@ -234,3 +224,18 @@
 - name: aws-cli-v2
   become: yes
   shell: pacstall -P -I aws-cli-v2-bin
+- name: balena-etcher
+  become: yes
+  shell: pacstall -P -I balena-etcher-electron-deb
+- name: dbeaver-ce
+  become: yes
+  shell: pacstall -P -I dbeaver-ce-deb
+- name: git-delta
+  become: yes
+  shell: pacstall -P -I git-delta-deb
+- name: fblog
+  become: yes
+  shell: pacstall -P -I fblog-deb
+- name: duf
+  become: yes
+  shell: pacstall -P -I duf-deb
