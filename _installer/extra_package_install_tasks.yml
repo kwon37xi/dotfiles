@@ -174,8 +174,6 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"
 - name: tfenv
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-tfenv.sh"
-- name: awscli
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-awscli.sh"
 - name: go-jira
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-go-jira.sh"
 - name: yq
@@ -233,3 +231,6 @@
 - name: grive2
   become: yes
   shell: pacstall -P -I grive2
+- name: aws-cli-v2
+  become: yes
+  shell: pacstall -P -I aws-cli-v2-bin
