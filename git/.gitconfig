@@ -66,6 +66,7 @@
     diffprev1 = diff HEAD^
     diffprev2 = diff HEAD^^ HEAD^
     diffprev3 = diff HEAD^^^ HEAD^^
+    diffst = diff --staged
     dtprev = difftool HEAD^
     dtprev1 = difftool HEAD^
     dtprev2 = difftool HEAD^^ HEAD^
