@@ -43,3 +43,10 @@ function mkcd {
 function lsport {
     sudo lsof -P -i:"$1"
 }
+
+# sha256sum & copy to clipboard
+function s256 {
+    result=`sha256sum -z "$1" | cut -d' ' -f 1`
+    echo -n "sha256sum : ${result}"
+    echo -n "$result" | xclip -i -sel clip
+}
