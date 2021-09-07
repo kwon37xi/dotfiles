@@ -15,6 +15,7 @@
     - .config/xfce4/terminal
     - .config/procs
     - .config/ulauncher
+    - .config/fontconfig
     - .sdkman/etc
     - Desktop
     - .vim
@@ -51,6 +52,7 @@
     - xfce4-terminal
     - procs
     - ulauncher
+    - fontconfig
     - tig
     - conky
     - starship
