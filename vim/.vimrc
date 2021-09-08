@@ -143,8 +143,8 @@ map <F9> :make<CR>
 " GUI 설정
 "set guifont=D2Coding\ 14
 "set guifont=JetBrainsMono\ Nerd\ Font\ Mono\ 12
-set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 12
-"set guifont=CodeNewRoman\ Nerd\ Font\ Mono\ 12
+"set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 12
+set guifont=CodeNewRoman\ Nerd\ Font\ Mono\ 12
 "set guifont=NanumGothicCoding\ 12
 "set guifont=Hwsr_9pt\ 9
 "set guifont=DejaVu\ Sans\ Mono\ 11
