@@ -115,6 +115,7 @@
       - python3-pip
       - cpulimit
       - httpie
+      - exa
 - name: install claws-mail packages
   become: yes
   apt:
