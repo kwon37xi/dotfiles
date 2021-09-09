@@ -1,3 +1,3 @@
 # exa configuration
 
-export EXA_ICON_SPACING=2
+export EXA_ICON_SPACING=1

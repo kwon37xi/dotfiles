@@ -208,9 +208,6 @@
 - name: diresize permission
   shell: |
     snap connect dirsize:system-backup
-- name: exa
-  become: yes
-  shell: pacstall -P -I exa
 - name: lsd
   become: yes
   shell: pacstall -P -I lsd-deb
