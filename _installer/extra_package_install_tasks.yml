@@ -176,11 +176,6 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-starship.sh"
 - name: nerd-fonts
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-nerd-fonts.sh"
-- name: remove snap-store
-  become: yes
-  community.general.snap:
-    name: snap-store
-    state: absent
 - name: ascii-image-converter
   become: yes
   community.general.snap:

@@ -5,9 +5,6 @@
     package:
       - synaptic
       - gdebi
-      - gnome-software # gnome-software remove pop-shell!!
-      - gnome-software-plugin-flatpak
-      - gnome-software-plugin-snap
       - gnome-tweaks
       - gnome-clocks
       - alacarte
