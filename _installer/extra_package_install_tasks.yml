@@ -101,9 +101,9 @@
 - name: joplin
   flatpak:
     name: "net.cozic.joplin_desktop"
-- name: Planner
+- name: todoist
   flatpak:
-    name: "com.github.alainm23.planner"
+    name: "com.todoist.Todoist"
 - name: Flameshot
   flatpak:
     name: "org.flameshot.Flameshot"

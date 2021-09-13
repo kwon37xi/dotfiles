@@ -42,8 +42,8 @@ name='Copy Text'
 
 [custom-keybindings/custom5]
 binding='<Shift><Super>t'
-command='flatpak run com.github.alainm23.planner'
-name='Planner'
+command='flatpak run com.todoist.Todoist'
+name='Todoist'
 
 [custom-keybindings/custom6]
 binding='<Shift><Super>j'
