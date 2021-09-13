@@ -7,3 +7,9 @@ bind diff H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
 bind status H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
 
 bind branch n !@git switch -c %(prompt)
+
+# 일반 모드에서 9 를 누르면 commit hash 값을 클립보드로 복사해줌
+bind generic 9 !@sh -c "echo -n %(commit) | xclip -selection c && notify-send 'Commit %(commit) copied'"
+
+# commit amend
+bind generic + !git commit --amend
