@@ -116,6 +116,7 @@
       - cpulimit
       - httpie
       - exa
+      - keyutils
 - name: install claws-mail packages
   become: yes
   apt:
