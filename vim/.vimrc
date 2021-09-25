@@ -345,8 +345,10 @@ let g:rooter_silent_chdir = 1
 "call fzf#run(fzf#wrap({'source': 'fdfind --type file --type directory --follow --hidden --exclude ".git .class" --color=always'}))
 
 nnoremap <C-n> :Files<Cr>
+nmap <leader>ff :Files<Cr>
 " Open file under cursor
-nnoremap <C-S-n> :FZF -q <cword><Cr>
+" Terminal 에서는 작동안하고, gui에서만 작동함.
+nmap <leader>fw :FZF -q <cword><Cr>
 let g:zf_preview_window = 'right:60%'
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
