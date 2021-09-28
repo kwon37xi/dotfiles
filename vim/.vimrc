@@ -342,12 +342,16 @@ let g:rooter_silent_chdir = 1
 
 " fzf
 " fzf 자체의 vim 기본 플러그인을 로딩해야한다. fzf.vim 과 다름.
-"call fzf#run(fzf#wrap({'source': 'fdfind --type file --type directory --follow --hidden --exclude ".git .class" --color=always'}))
+command! -bang -nargs=? -complete=dir FilesOnly
+            \ call fzf#run(fzf#wrap({
+                \ 'source': 'fdfind --type file --follow --hidden --exclude ".git .class" --color=always',
+                \ 'options': '--preview "~/.vim/plugged/fzf.vim/bin/preview.sh {}"'}))
 
-nnoremap <C-n> :Files<Cr>
-nmap <leader>ff :Files<Cr>
+nnoremap <C-n> :FilesOnly<Cr>
+nmap <leader>ff :FilesOnly<Cr>
 " Open file under cursor
 " Terminal 에서는 작동안하고, gui에서만 작동함.
+" TODO FileOnly 사용하게 변경
 nmap <leader>fw :FZF -q <cword><Cr>
 let g:zf_preview_window = 'right:60%'
 command! -bang -nargs=? -complete=dir Files
