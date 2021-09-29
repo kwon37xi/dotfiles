@@ -350,6 +350,7 @@ command! -bang -nargs=? -complete=dir FilesOnly
                 \ 'options': '--preview "~/.vim/plugged/fzf.vim/bin/preview.sh {}"'}))
 
 " 현재 커서 아래에 있는 단어를 검색어로 파일 검색
+" https://github.com/junegunn/fzf.vim/issues/50
 command! -bang -nargs=? -complete=dir FilesUnderCursor
             \ call fzf#run(fzf#wrap({
                 \ 'source': 'fdfind --type file --follow --hidden --exclude ".git .class" --color=always',
