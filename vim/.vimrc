@@ -342,20 +342,24 @@ let g:rooter_silent_chdir = 1
 
 " fzf
 " fzf 자체의 vim 기본 플러그인을 로딩해야한다. fzf.vim 과 다름.
+
+" 환경변수로 지정된 것과 다른 옵션을 주기위해 파일명만으로 검색하는 함수 생성
 command! -bang -nargs=? -complete=dir FilesOnly
             \ call fzf#run(fzf#wrap({
                 \ 'source': 'fdfind --type file --follow --hidden --exclude ".git .class" --color=always',
                 \ 'options': '--preview "~/.vim/plugged/fzf.vim/bin/preview.sh {}"'}))
 
+" 현재 커서 아래에 있는 단어를 검색어로 파일 검색
+command! -bang -nargs=? -complete=dir FilesUnderCursor
+            \ call fzf#run(fzf#wrap({
+                \ 'source': 'fdfind --type file --follow --hidden --exclude ".git .class" --color=always',
+                \ 'options': '--preview "~/.vim/plugged/fzf.vim/bin/preview.sh {}" -q '.shellescape(expand('<cword>'))}))
+
 nnoremap <C-n> :FilesOnly<Cr>
 nmap <leader>ff :FilesOnly<Cr>
 " Open file under cursor
-" Terminal 에서는 작동안하고, gui에서만 작동함.
-" TODO FileOnly 사용하게 변경
-nmap <leader>fw :FZF -q <cword><Cr>
+nmap <leader>fw :FilesUnderCursor<Cr>
 let g:zf_preview_window = 'right:60%'
-command! -bang -nargs=? -complete=dir Files
-    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " Mapping selecting mappings
 " normal mode mappings
