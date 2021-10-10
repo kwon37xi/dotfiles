@@ -1,0 +1,24 @@
+---
+- name: install linux HomeBrew
+  shell: # echo for bypassing prompt
+  args:
+    cmd: echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    creates: /home/linuxbrew/.linuxbrew/bin/brew
+  register: brew_installed
+  until: brew_installed is not failed
+  retries: 5
+  delay: 10
+- name: update homebrew
+  homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+- name: brew common packages
+  homebrew:
+    name:
+      - lazygit
+      - fblog
+    state: present
+  register: brew_common_packages
+  until: brew_common_packages is not failed
+  retries: 3
+  delay: 10
