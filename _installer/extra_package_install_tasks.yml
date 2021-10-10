@@ -170,10 +170,20 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-go-jira.sh"
 - name: yq
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-yq.sh"
-- name: pacstall
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-pacstall.sh"
 - name: starship
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-starship.sh"
+- name: youtube-dl
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-youtube-dl.sh"
+- name: aws-cli
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-awscli.sh"
+- name: duf
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-duf.sh"
+- name: delta
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-delta.sh"
+- name: dbeaver-ce
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dbeaver-ce.sh"
+- name: balena-etcher
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-etcher_appimage.sh"
 - name: nerd-fonts
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-nerd-fonts.sh"
 - name: ascii-image-converter
@@ -203,33 +213,3 @@
 - name: diresize permission
   shell: |
     snap connect dirsize:system-backup
-- name: lsd
-  become: yes
-  shell: pacstall -P -I lsd-deb
-- name: universal-ctags
-  become: yes
-  shell: pacstall -P -I universal-ctags-git
-- name: youtube-dl
-  become: yes
-  shell: pacstall -P -I youtube-dl-git
-- name: grive2
-  become: yes
-  shell: pacstall -P -I grive2
-- name: aws-cli-v2
-  become: yes
-  shell: pacstall -P -I aws-cli-v2-bin
-- name: balena-etcher
-  become: yes
-  shell: pacstall -P -I balena-etcher-electron-deb
-- name: dbeaver-ce
-  become: yes
-  shell: pacstall -P -I dbeaver-ce-deb
-- name: git-delta
-  become: yes
-  shell: pacstall -P -I git-delta-deb
-- name: fblog
-  become: yes
-  shell: pacstall -P -I fblog-deb
-- name: duf
-  become: yes
-  shell: pacstall -P -I duf-deb
