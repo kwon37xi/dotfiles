@@ -1,5 +1,5 @@
 ---
-- name: install linux HomeBrew
+- name: install linux Homebrew
   shell: # echo for bypassing prompt
   args:
     cmd: echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -16,10 +16,33 @@
   homebrew:
     name:
       - lazygit
+      - lazydocker
       - fblog
       - fzf
+      - sd
+      - duf
+      - broot
+      - go-jira
+      - bitwarden-cli
+      - youtube-dl
+      - dust
+      - procs
+      - hugo
+      - speedread
+      - tfenv
+      - yq
+      - git-delta
+      - bpytop
+      - awscli
+      - eksctl
     state: present
   register: brew_common_packages
   until: brew_common_packages is not failed
   retries: 3
   delay: 10
+- name: tfenv-init
+  shell: |
+    tfenv install latest
+    tfenv use latest
+  args:
+    executable: /usr/bin/bash
