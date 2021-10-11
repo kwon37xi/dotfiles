@@ -144,8 +144,6 @@
   until: mat_installed is not failed
   retries: 3
   delay: 10
-- name: fzf
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fzf.sh"
 - name: sd
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-sd.sh"
 - name: broot

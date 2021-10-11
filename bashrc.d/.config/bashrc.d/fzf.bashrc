@@ -6,12 +6,11 @@
 
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/usr/local/share/fzf/completion.bash" 2> /dev/null
+[[ $- == *i* ]] && source "/home/linuxbrew/.linuxbrew/opt/fzf/shell/completion.bash" 2> /dev/null
 
 # Key bindings
 # ------------
-source "/usr/local/share/fzf/key-bindings.bash"
-
+source "/home/linuxbrew/.linuxbrew/opt/fzf/shell/key-bindings.bash"
 
 # FZF OPTS from https://www.youtube.com/watch?v=tB-AgxzBmH8
 export FZF_DEFAULT_COMMAND='fdfind --follow --hidden --exclude .git --exclude "*.class" --color=always'
