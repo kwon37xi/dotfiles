@@ -144,40 +144,10 @@
   until: mat_installed is not failed
   retries: 3
   delay: 10
-- name: sd
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-sd.sh"
-- name: broot
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-broot.sh"
-- name: dust
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dust.sh"
-- name: lazydocker
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-lazydocker.sh"
-- name: procs
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-procs.sh"
-- name: hugo
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-hugo.sh"
 - name: fluentreader
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fluentreader.sh"
-- name: speedread
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-speedread.sh"
-- name: bitwarden-cli
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-bitwarden-cli.sh"
-- name: tfenv
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-tfenv.sh"
-- name: go-jira
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-go-jira.sh"
-- name: yq
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-yq.sh"
 - name: starship
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-starship.sh"
-- name: youtube-dl
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-youtube-dl.sh"
-- name: aws-cli
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-awscli.sh"
-- name: duf
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-duf.sh"
-- name: delta
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-delta.sh"
 - name: dbeaver-ce
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dbeaver-ce.sh"
 - name: balena-etcher
@@ -189,20 +159,6 @@
   community.general.snap:
     name: ascii-image-converter
     state: present
-- name: bpytop
-  become: yes
-  community.general.snap:
-    name: bpytop
-    state: present
-- name: bpytop permissions
-  become: yes
-  shell: |
-    snap connect bpytop:mount-observe
-    snap connect bpytop:network-control
-    snap connect bpytop:hardware-observe
-    snap connect bpytop:system-observe
-    snap connect bpytop:process-control
-    snap connect bpytop:physical-memory-observe
 - name: dirsize # https://github.com/frossm/dirsize
   become: yes
   community.general.snap:
