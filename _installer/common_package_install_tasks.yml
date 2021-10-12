@@ -47,7 +47,6 @@
       - ufw
       - gufw
       - docker
-      - docker-compose
       - ctop
       - openconnect
       - net-tools

@@ -154,6 +154,8 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-etcher_appimage.sh"
 - name: nerd-fonts
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-nerd-fonts.sh"
+- name: docker-compose
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-docker-compose.sh"
 - name: ascii-image-converter
   become: yes
   community.general.snap:
