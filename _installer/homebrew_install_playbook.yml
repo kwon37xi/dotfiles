@@ -37,6 +37,8 @@
       - bpytop
       - awscli
       - eksctl
+      - minikube
+      - kubectl
     state: present
   register: brew_common_packages
   until: brew_common_packages is not failed
