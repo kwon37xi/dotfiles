@@ -19,7 +19,7 @@ alias restow='stow -d ~/.dotfiles -t ~/ -R'
 alias unstow='stow -d ~/.dotfiles -t ~/ -D'
 
 # apt update/upgrade
-alias sysup='sudo apt update && sudo apt -y upgrade && sudo apt  -y autoremove && flatpak update -y && sdk selfupdate && sdk update'
+alias sysup='sudo apt update && sudo apt -y upgrade && sudo apt  -y autoremove && flatpak update -y && brew update && brew upgrade && sdk selfupdate && sdk update'
 
 # exa as ls
 alias ls='exa -lah --colour=always --icons --git --group-directories-first'
