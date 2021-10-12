@@ -39,7 +39,6 @@
     - uim
     - git
     - bashrc.d
-    - neovim
     - sdkman
     - local_bin
     - fcitx

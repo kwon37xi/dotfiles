@@ -15,6 +15,8 @@
 - name: brew common packages
   homebrew:
     name:
+      - neovim
+      - neovim-remote
       - lazygit
       - lazydocker
       - fblog
