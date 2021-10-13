@@ -7,4 +7,4 @@ Icon=ulauncher
 Terminal=false
 Type=Application
 X-GNOME-Autostart-enabled=true
-X-GNOME-Autostart-Delay=15
+X-GNOME-Autostart-Delay=7
