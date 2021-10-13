@@ -10,4 +10,4 @@ Comment=The Best To-Do List App & Task Manager
 Categories=Office;
 X-Flatpak-Tags=proprietary;
 X-Flatpak=com.todoist.Todoist
-X-GNOME-Autostart-Delay=50
+X-GNOME-Autostart-Delay=10
