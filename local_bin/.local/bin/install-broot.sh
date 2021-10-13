@@ -1,6 +1,5 @@
 #!/bin/sh
 # https://dystroy.org/broot/
-https://dystroy.org/broot/download/x86_64-linux/broot
 
 sudo rm -f /usr/local/bin/broot
 sudo wget -O /usr/local/bin/broot "https://dystroy.org/broot/download/x86_64-linux/broot"
