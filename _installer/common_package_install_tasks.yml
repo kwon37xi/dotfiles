@@ -11,8 +11,6 @@
       - ubuntu-restricted-addons
       - ubuntu-restricted-extras
       - libavcodec58 # additional codecs
-      - ubuntu-wallpapers-*
-      - gnome-backgrounds
       - apt-file
       - htop
       - bashtop
@@ -36,44 +34,17 @@
       - kdialog
       - grub-customizer
       - vivaldi-stable
-      - libreoffice
-      - libreoffice-help-ko
-      - libreoffice-l10n-ko
-      - libreoffice-style-*
-      - libreoffice-sdbc-*
       - meld
       - kdiff3
       - powertop
       - ufw
       - gufw
-      - docker
-      - ctop
       - openconnect
       - net-tools
       - smbclient
       - network-manager-openconnect
       - openfortivpn
       - network-manager-fortisslvpn
-      - fonts-alee
-      - fonts-lexi-gulim
-      - fonts-lexi-saebom
-      - fonts-nanum
-      - fonts-nanum-coding
-      - fonts-nanum-eco
-      - fonts-nanum-extra
-      - fonts-naver-d2coding
-      - fonts-unfonts-core
-      - fonts-unfonts-extra
-      - fonts-noto-cjk
-      - fonts-noto-cjk-extra
-      - ttf-mscorefonts-installer
-      - uim
-      - uim-byeoru
-      - fcitx
-      - fcitx-hangul
-      - fcitx-ui-classic
-      - fcitx-config-gtk
-      - fcitx-frontend-all
       - build-essential
       - dkms
       - make
@@ -119,22 +90,69 @@
       - cowsay
       - fortune-mod
       - lolcat
-- name: install claws-mail packages
+- name: install deb fonts
   become: yes
   apt:
-    package: [claws-mail,claws-mail-plugins,claws-mail-extra-plugins,claws-mail-tools,claws-mail-themes,claws-mail-feeds-reader]
+    package:
+      - fonts-alee
+      - fonts-lexi-gulim
+      - fonts-lexi-saebom
+      - fonts-nanum
+      - fonts-nanum-coding
+      - fonts-nanum-eco
+      - fonts-nanum-extra
+      - fonts-naver-d2coding
+      - fonts-unfonts-core
+      - fonts-unfonts-extra
+      - fonts-noto-cjk
+      - fonts-noto-cjk-extra
+      - ttf-mscorefonts-installer
+- name: install wallpapers
+  become: yes
+  apt:
+    package:
+      - ubuntu-wallpapers-*
+      - gnome-backgrounds
+- name: install libreoffice
+  become: yes
+  apt:
+    package:
+      - libreoffice
+      - libreoffice-help-ko
+      - libreoffice-l10n-ko
+      - libreoffice-style-*
+      - libreoffice-sdbc-*
 - name: flatpak add remote
   become: yes
   flatpak_remote:
     name: flathub
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
     state: present
+- name: install docker
+  become: yes
+  apt:
+    package:
+      - docker
+      - ctop
 - name: docker initialize
   become: yes
   shell: |
     usermod -aG docker {{ current_user }}
     systemctl enable docker
     service docker restart
+- name: install input methods
+  become: yes
+  apt:
+    package:
+      - ibus
+      - ibus-hangul
+      - uim
+      - uim-byeoru
+      - fcitx
+      - fcitx-hangul
+      - fcitx-ui-classic
+      - fcitx-config-gtk
+      - fcitx-frontend-all
 - name: uim config
   become: yes
   shell: |
