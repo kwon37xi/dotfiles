@@ -154,7 +154,7 @@
   become: yes
   apt:
     package:
-      - docker
+      - docker.io
       - ctop
 - name: docker initialize
   become: yes
