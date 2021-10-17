@@ -46,7 +46,6 @@
   become: yes
   apt:
     package:
-    state: latest
       - chrome-gnome-shell
       - gnome-shell-extension-prefs
       - gnome-shell-extensions
