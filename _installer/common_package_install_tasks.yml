@@ -2,94 +2,19 @@
 - name: prepare for ttf-mscorefonts auto install
   become: yes
   shell: "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections"
-- name: install common packages
+- name: install ubuntu base packages
   become: yes
   apt:
     package:
-      - inxi
-      - neofetch
       - ubuntu-restricted-addons
       - ubuntu-restricted-extras
       - libavcodec58 # additional codecs
       - apt-file
-      - htop
-      - bashtop
-      - stacer
-      - cpufrequtils
-      - most
       - aptitude
-      - dconf-editor
       - flatpak
-      - micro
-      - vim-nox
-      - vim-gtk3
-      - notepadqq
-      - xpad
-      - universal-ctags
-      - ripgrep
-      - fd-find
-      - tmux
-      - xclip
-      - zenity
-      - kdialog
-      - grub-customizer
-      - vivaldi-stable
-      - meld
-      - kdiff3
-      - powertop
-      - ufw
-      - gufw
-      - openconnect
-      - net-tools
-      - smbclient
-      - network-manager-openconnect
-      - openfortivpn
-      - network-manager-fortisslvpn
-      - build-essential
-      - dkms
-      - make
-      - cmake
-      - direnv
-      - autojump
-      - stow
-      - openssh-server
-      - openssh-sftp-server
-      - sshpass
-      - putty
-      - putty-tools
-      - filezilla
-      - openssh-client
-      - java-common
-      - openjdk-11-jdk
-      - freerdp2-x11
-      - git-flow
-      - tig
-      - qbittorrent
-      - scrcpy
-      - rclone
       - inotify-tools
-      - krusader
-      - gparted
-      - trash-cli
-      - ncdu
-      - bat
-      - tldr
-      - timeshift
-      - ranger
-      - xsnow
-      - cmatrix
-      - mainline
-      - convmv
-      - nq
-      - gnome-multi-writer
-      - python3-pip
-      - cpulimit
-      - httpie
-      - exa
-      - keyutils
-      - cowsay
-      - fortune-mod
-      - lolcat
+      - inxi
+      - neofetch
 - name: install deb fonts
   become: yes
   apt:
@@ -122,6 +47,103 @@
       - libreoffice-l10n-ko
       - libreoffice-style-*
       - libreoffice-sdbc-*
+- name: install utils
+  become: yes
+  apt:
+    package:
+      - ripgrep
+      - fd-find
+      - tmux
+      - xclip
+      - htop
+      - bashtop
+      - stacer
+      - cpufrequtils
+      - most
+      - direnv
+      - autojump
+      - stow
+      - scrcpy
+      - rclone
+      - krusader
+      - trash-cli
+      - ncdu
+      - bat
+      - tldr
+      - timeshift
+      - ranger
+      - xsnow
+      - cmatrix
+      - convmv
+      - nq
+      - cpulimit
+      - httpie
+      - exa
+      - keyutils
+      - cowsay
+      - fortune-mod
+      - lolcat
+      - gnome-multi-writer
+- name: install system tools
+  become: yes
+  apt:
+    package:
+      - powertop
+      - mainline
+      - gparted
+      - dconf-editor
+      - grub-customizer
+- name: install development tools
+  become: yes
+  apt:
+    package:
+      - kdialog
+      - zenity
+      - universal-ctags
+      - java-common
+      - openjdk-11-jdk
+      - build-essential
+      - dkms
+      - make
+      - cmake
+      - git-flow
+      - tig
+      - meld
+      - kdiff3
+      - python3-pip
+- name: install network tools
+  become: yes
+  apt:
+    package:
+      - inxi
+      - neofetch
+      - ufw
+      - gufw
+      - openconnect
+      - net-tools
+      - smbclient
+      - network-manager-openconnect
+      - openfortivpn
+      - network-manager-fortisslvpn
+      - openssh-client
+      - freerdp2-x11
+      - openssh-server
+      - openssh-sftp-server
+      - sshpass
+      - putty
+      - putty-tools
+      - filezilla
+      - qbittorrent
+      - vivaldi-stable
+- name: install editors
+  become: yes
+  apt:
+    package:
+      - micro
+      - vim-nox
+      - vim-gtk3
+      - notepadqq
+      - xpad
 - name: flatpak add remote
   become: yes
   flatpak_remote:
