@@ -8,6 +8,42 @@
       - gnome-tweaks
       - gnome-clocks
       - alacarte
+      - gnome-authenticator
+      - deja-dup
+    state: latest
+- name: install nautilus packages
+  become: yes
+  apt:
+    package:
+      - nautilus-admin
+      - gnome-sushi
+      - nautilus-script-audio-convert
+      - nautilus-image-converter
+      - nautilus-scripts-manager
+      - nautilus-sendto
+      - nautilus-share
+    state: latest
+- name: install GNOME network packages
+  become: yes
+  apt:
+    package:
+      - network-manager-fortisslvpn-gnome
+      - network-manager-openconnect-gnome
+      - network-manager-openvpn-gnome
+    state: latest
+- name: install libsecret packages
+  become: yes
+  apt:
+    package:
+      - seahorse
+      - libsecret-1-0
+      - libsecret-1-dev # for git credential
+    state: latest
+- name: install shell extensions packages
+  become: yes
+  apt:
+    package:
+    state: latest
       - chrome-gnome-shell
       - gnome-shell-extension-prefs
       - gnome-shell-extensions
@@ -16,21 +52,11 @@
       - gnome-shell-extension-system-monitor
       - gnome-shell-extension-caffeine
       - gnome-shell-extension-hide-activities
-      - gnome-authenticator
-      - deja-dup
-      - nautilus-admin
-      - gnome-sushi
-      - nautilus-script-audio-convert
-      - nautilus-image-converter
-      - nautilus-scripts-manager
-      - nautilus-sendto
-      - nautilus-share
-      - network-manager-fortisslvpn-gnome
-      - network-manager-openconnect-gnome
-      - network-manager-openvpn-gnome
-      - seahorse
-      - libsecret-1-0
-      - libsecret-1-dev # for git credential
+    state: latest
+- name: install qt themes
+  become: yes
+  apt:
+    package:
       - qt5-style-kvantum # for qt5 theme
       - qt5-style-kvantum-l10n # for qt5 theme
       - qt5-style-kvantum-themes # for qt5 theme
@@ -52,6 +78,7 @@
       - numix-gtk-theme
       - numix-icon-theme-circle
       - numix-icon-theme
+    state: latest
 - name: build git libsecret git credential helper
   become: yes
   shell: |
