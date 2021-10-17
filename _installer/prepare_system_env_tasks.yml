@@ -25,7 +25,7 @@
       @sudo         hard    nproc           10000
     owner: root
     group: root
-- name: ubuntu update manager include pashed updates # gnome software 는 phased 를 안 따르기 때문에 업그레이드 패키지 불일치 발생하여 서로 맞춤.
+- name: ubuntu update manager include phased updates # gnome software 는 phased 를 안 따르기 때문에 업그레이드 패키지 불일치 발생하여 서로 맞춤.
   become: yes
   copy:
     dest: "/etc/apt/apt.conf.d/99updatemanager-phased-update"
