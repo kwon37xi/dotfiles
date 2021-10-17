@@ -81,17 +81,23 @@
       - libxcb-xtest0
 - name: zoom.us install
   command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-zoom.sh"
-- name: download DEBs install
+- name: google chrome install
   become: yes
   apt:
-    deb: "{{ item }}"
-  register: download_debs_installed
-  until: download_debs_installed is not failed
+    deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  register: google_chrome_installed
+  until: google_chrome_installed is not failed
   retries: 3
   delay: 10
   with_items:
-    - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    - "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
+- name: slack install
+  become: yes
+  apt:
+    deb: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
+  register: slack_installed
+  until: slack_installed is not failed
+  retries: 3
+  delay: 10
 - name: bitwarden
   community.general.flatpak:
     name: "com.bitwarden.desktop"
@@ -148,8 +154,6 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-ulauncher.sh"
 - name: fluentreader
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fluentreader.sh"
-- name: starship
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-starship.sh"
 - name: dbeaver-ce
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dbeaver-ce.sh"
 - name: balena-etcher
