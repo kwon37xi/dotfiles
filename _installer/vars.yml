@@ -2,4 +2,3 @@ ubuntu_release: "{{ lookup('pipe', 'lsb_release -cs') }}"
 ubuntu_version: "{{ lookup('pipe', 'lsb_release -rs') }}"
 current_user: "{{ lookup('env', 'USER') }}"
 local_bashrcs_dir: ~/.config/bashrc.d
-slack_version: 4.20.0
