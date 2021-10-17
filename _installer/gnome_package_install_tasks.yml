@@ -10,6 +10,9 @@
       - alacarte
       - gnome-authenticator
       - deja-dup
+      - gnome-software
+      - gnome-software-plugin-flatpak
+      - gnome-software-plugin-snap
     state: latest
 - name: install nautilus packages
   become: yes
