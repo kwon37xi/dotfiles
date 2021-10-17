@@ -144,6 +144,8 @@
   until: mat_installed is not failed
   retries: 3
   delay: 10
+- name: ulauncher
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-ulauncher.sh"
 - name: fluentreader
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fluentreader.sh"
 - name: starship

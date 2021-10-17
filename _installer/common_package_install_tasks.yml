@@ -99,7 +99,6 @@
       - inotify-tools
       - krusader
       - gparted
-      - ulauncher
       - trash-cli
       - ncdu
       - bat
