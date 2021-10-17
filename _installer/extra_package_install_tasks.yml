@@ -93,22 +93,22 @@
     - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
 - name: bitwarden
-  flatpak:
+  community.general.flatpak:
     name: "com.bitwarden.desktop"
 - name: shotcut
-  flatpak:
+  community.general.flatpak:
     name: "org.shotcut.Shotcut"
 - name: joplin
-  flatpak:
+  community.general.flatpak:
     name: "net.cozic.joplin_desktop"
 - name: todoist
-  flatpak:
+  community.general.flatpak:
     name: "com.todoist.Todoist"
 - name: Flameshot
-  flatpak:
+  community.general.flatpak:
     name: "org.flameshot.Flameshot"
 - name: flatseal
-  flatpak:
+  community.general.flatpak:
     name: "com.github.tchx84.Flatseal"
 - name: local applications dir
   file:
