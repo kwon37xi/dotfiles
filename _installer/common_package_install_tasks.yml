@@ -84,6 +84,7 @@
       - fortune-mod
       - lolcat
       - gnome-multi-writer
+      - bd
 - name: install system tools
   become: yes
   apt:
