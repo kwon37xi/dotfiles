@@ -8,6 +8,40 @@
   environment:
     PATH: "{{ lookup('env', 'PATH') }}:/home/linuxbrew/.linuxbrew/bin"
   tasks:
+    - name: install KDE/GNOME themes
+      become: yes
+      apt:
+        install_recommends: yes
+        package:
+          - papirus-icon-theme
+          - papirus-folders
+          - materia-gtk-theme
+          - materia-kde
+          - arc-theme
+          - dmz-cursor-theme
+          - xcursor-themes
+          - numix-blue-gtk-theme
+          - numix-gtk-theme
+          - numix-icon-theme-circle
+          - numix-icon-theme
+        state: latest
+    - name: install libreoffice
+      become: yes
+      apt:
+        package:
+          - libreoffice
+          - libreoffice-help-ko
+          - libreoffice-l10n-ko
+          - libreoffice-style-*
+          - libreoffice-sdbc-*
+        state: latest
+    - name: install wallpapers
+      become: yes
+      apt:
+        package:
+          - ubuntu-wallpapers-*
+          - gnome-backgrounds
+        state: latest
     - name: prepare for virtualbox-ext-pack PUEL accept # https://askubuntu.com/questions/811488/command-to-accept-virtualbox-puel-for-virtualbox-ext-pack-installation
       become: yes
       shell: "echo virtualbox-ext-pack virtualbox-ext-pack/license select true | debconf-set-selections"

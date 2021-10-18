@@ -34,23 +34,6 @@
       - fonts-noto-cjk-extra
       - ttf-mscorefonts-installer
     state: latest
-- name: install wallpapers
-  become: yes
-  apt:
-    package:
-      - ubuntu-wallpapers-*
-      - gnome-backgrounds
-    state: latest
-- name: install libreoffice
-  become: yes
-  apt:
-    package:
-      - libreoffice
-      - libreoffice-help-ko
-      - libreoffice-l10n-ko
-      - libreoffice-style-*
-      - libreoffice-sdbc-*
-    state: latest
 - name: install utils
   become: yes
   apt:
