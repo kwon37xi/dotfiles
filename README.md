@@ -29,6 +29,7 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 * gnu `stow` 명령으로 링크할 dotfiles 설정파일들이 있다.
 
 ## 설치 후 할 일들
+* `install_extra_packages.sh` 를 실행하여 부가 패키지들(당장 개발에 필요는 없지만 일상생활에 필요한)을 설치한다.
 * 후속 private dotfiles 설치
 
 ### HOME 기본 디렉토리 다른 파티션으로 이동
