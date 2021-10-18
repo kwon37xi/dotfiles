@@ -14,6 +14,8 @@ ansible-galaxy collection install community.general
 
 git clone https://kwon37xi@github.com/kwon37xi/dotfiles.git ~/.dotfiles
 
-ansible-playbook -vv ~/.dotfiles/_installer/main_playbook.yml --extra-vars="ansible_become_pass='{{ lookup('env', 'SUDO_PASSWORD') }}'"
+ANSIBLE_CONFIG=~/.dotfiles/_installer/ansible.cfg \
+    ansible-playbook -vv ~/.dotfiles/_installer/main_playbook.yml \
+    --extra-vars="ansible_become_pass='{{ lookup('env', 'SUDO_PASSWORD') }}'"
 
 echo "      installation finished. REBOOT! "
