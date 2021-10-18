@@ -1,3 +1,17 @@
+# cd up
+
+alias up="cd .."
+alias up1="cd .."
+alias up2="cd ../.."
+alias up3="cd ../../.."
+alias up4="cd ../../../.."
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# see functions
+
 # bash-it custom aliases
 alias ydl="youtube-dl -o '%(title).36s-%(id)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
 alias ydlmp3="youtube-dl -o '%(title).36s-%(id)s.%(ext)s' --extract-audio --audio-format mp3"
