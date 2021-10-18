@@ -64,23 +64,6 @@
       - qt5-style-kvantum-themes # for qt5 theme
       - qt5ct # for qt5 theme
     state: latest
-- name: install KDE/GNOME themes
-  become: yes
-  apt:
-    install_recommends: yes
-    package:
-      - papirus-icon-theme
-      - papirus-folders
-      - materia-gtk-theme
-      - materia-kde
-      - arc-theme
-      - dmz-cursor-theme
-      - xcursor-themes
-      - numix-blue-gtk-theme
-      - numix-gtk-theme
-      - numix-icon-theme-circle
-      - numix-icon-theme
-    state: latest
 - name: build git libsecret git credential helper
   become: yes
   shell: |
