@@ -9,6 +9,7 @@
       - ruby
       - ruby-dev
       - libevdev-dev
+    state: latest
 - name: install fusuma
   become: yes
   shell: |

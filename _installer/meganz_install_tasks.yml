@@ -21,3 +21,4 @@
       - megadown
       - megatools
       - nautilus-megasync
+    state: latest

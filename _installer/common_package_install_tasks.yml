@@ -15,6 +15,7 @@
       - inotify-tools
       - inxi
       - neofetch
+    state: latest
 - name: install deb fonts
   become: yes
   apt:
@@ -32,12 +33,14 @@
       - fonts-noto-cjk
       - fonts-noto-cjk-extra
       - ttf-mscorefonts-installer
+    state: latest
 - name: install wallpapers
   become: yes
   apt:
     package:
       - ubuntu-wallpapers-*
       - gnome-backgrounds
+    state: latest
 - name: install libreoffice
   become: yes
   apt:
@@ -47,6 +50,7 @@
       - libreoffice-l10n-ko
       - libreoffice-style-*
       - libreoffice-sdbc-*
+    state: latest
 - name: install utils
   become: yes
   apt:
@@ -85,6 +89,7 @@
       - lolcat
       - gnome-multi-writer
       - bd
+    state: latest
 - name: install system tools
   become: yes
   apt:
@@ -94,6 +99,7 @@
       - gparted
       - dconf-editor
       - grub-customizer
+    state: latest
 - name: install development tools
   become: yes
   apt:
@@ -112,6 +118,7 @@
       - meld
       - kdiff3
       - python3-pip
+    state: latest
 - name: install network tools
   become: yes
   apt:
@@ -136,6 +143,7 @@
       - filezilla
       - qbittorrent
       - vivaldi-stable
+    state: latest
 - name: install editors
   become: yes
   apt:
@@ -145,6 +153,7 @@
       - vim-gtk3
       - notepadqq
       - xpad
+    state: latest
 - name: flatpak add remote
   become: yes
   flatpak_remote:
@@ -157,6 +166,7 @@
     package:
       - docker.io
       - ctop
+    state: latest
 - name: docker initialize
   become: yes
   shell: |
@@ -176,6 +186,7 @@
       - fcitx-ui-classic
       - fcitx-config-gtk
       - fcitx-frontend-all
+    state: latest
 - name: uim config
   become: yes
   shell: |

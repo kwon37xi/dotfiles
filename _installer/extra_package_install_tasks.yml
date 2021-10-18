@@ -13,6 +13,7 @@
       - aqemu
       - qemu-kvm
       - virt-manager
+    state: latest
 - name: install video audio graphic packages
   become: yes
   apt:
@@ -29,6 +30,7 @@
       - handbrake
       - gpick
       - gromit-mpx
+    state: latest
 - name: install extra dev related packages
   become: yes
   apt:
@@ -36,16 +38,19 @@
       - vagrant
       - code
       - packer
+    state: latest
 - name: database clients
   become: yes
   apt:
     package:
       - mysql-client
+    state: latest
 - name: install typora
   become: yes
   apt:
     package:
       - typora
+    state: latest
 - name: add architecture i386
   become: yes
   shell: "dpkg --add-architecture i386"
@@ -56,18 +61,21 @@
       - wine
       - winetricks
       - playonlinux
+    state: latest
 - name: install rust and cargo
   become: yes
   apt:
     package:
       - rustc
       - cargo
+    state: latest
 - name: ocs-url dependencies
   become: yes
   apt:
     package:
       - libqt5svg5
       - qml-module-qtquick-controls
+    state: latest
 - name: ocs-url install # https://www.opendesktop.org/p/1136805/
   become: yes
   apt:
@@ -79,6 +87,7 @@
       - libgl1-mesa-glx
       - libegl1-mesa
       - libxcb-xtest0
+    state: latest
 - name: zoom.us install
   command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-zoom.sh"
 - name: google chrome install
