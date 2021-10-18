@@ -14,6 +14,15 @@
       - qemu-kvm
       - virt-manager
     state: latest
+- name: install GIMP
+  become: yes
+  apt:
+    package:
+      - gimp
+      - gimp-gmic
+      - gimp-data-extras
+      - gimp-help-ko
+    state: latest
 - name: install video audio graphic packages
   become: yes
   apt:
@@ -31,12 +40,23 @@
       - gpick
       - gromit-mpx
     state: latest
-- name: install extra dev related packages
+# ubuntu 21.10 에서 code, packer, vagrant 를 동시 설치시에 ansible 종료 문제가 발생해서 분리함
+- name: install vscode
+  become: yes
+  apt:
+    package:
+      - code
+    state: latest
+- name: install vagrant
   become: yes
   apt:
     package:
       - vagrant
-      - code
+    state: latest
+- name: install packer
+  become: yes
+  apt:
+    package:
       - packer
     state: latest
 - name: database clients
@@ -61,13 +81,6 @@
       - wine
       - winetricks
       - playonlinux
-    state: latest
-- name: install rust and cargo
-  become: yes
-  apt:
-    package:
-      - rustc
-      - cargo
     state: latest
 - name: ocs-url dependencies
   become: yes
