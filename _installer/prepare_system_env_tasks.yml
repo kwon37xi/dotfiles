@@ -47,3 +47,4 @@
       - p7zip-full
       - curl
     autoclean: yes
+    state: latest
