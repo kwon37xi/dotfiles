@@ -10,7 +10,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# see functions
+alias bd=". bd -si"
 
 # bash-it custom aliases
 alias ydl="youtube-dl -o '%(title).36s-%(id)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
