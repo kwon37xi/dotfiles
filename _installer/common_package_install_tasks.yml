@@ -83,7 +83,7 @@
       - dconf-editor
       - grub-customizer
     state: latest
-- name: install development tools
+- name: install development base tools
   become: yes
   apt:
     package:
