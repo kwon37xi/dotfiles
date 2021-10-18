@@ -20,6 +20,7 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 
 ## _installer
 * 설치에 필요한 ansible playbook 들이 있다.
+* ansible log 는 `/var/log/ansible-dotfiles.log` 로 남는다.
 
 ## _backup
 * 복사 방식으로 처리할 설정파일들이 들어있다.
