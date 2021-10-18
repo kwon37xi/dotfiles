@@ -1,46 +1,4 @@
 ---
-- name: prepare for virtualbox-ext-pack PUEL accept # https://askubuntu.com/questions/811488/command-to-accept-virtualbox-puel-for-virtualbox-ext-pack-installation
-  become: yes
-  shell: "echo virtualbox-ext-pack virtualbox-ext-pack/license select true | debconf-set-selections"
-- name: install virtualization
-  become: yes
-  apt:
-    package:
-      - virtualbox
-      - virtualbox-ext-pack
-      - virtualbox-guest-additions-iso
-      - qemu
-      - aqemu
-      - qemu-kvm
-      - virt-manager
-    state: latest
-- name: install GIMP
-  become: yes
-  apt:
-    package:
-      - gimp
-      - gimp-gmic
-      - gimp-data-extras
-      - gimp-help-ko
-    state: latest
-- name: install video audio graphic packages
-  become: yes
-  apt:
-    package:
-      - gimp
-      - gimp-gmic
-      - gimp-data-extras
-      - gimp-help-ko
-      - nomacs
-      - sxiv
-      - vlc
-      - smplayer
-      - audacious
-      - handbrake
-      - gpick
-      - gromit-mpx
-    state: latest
-# ubuntu 21.10 에서 code, packer, vagrant 를 동시 설치시에 ansible 종료 문제가 발생해서 분리함
 - name: install vscode
   become: yes
   apt:
@@ -65,34 +23,6 @@
     package:
       - mysql-client
     state: latest
-- name: install typora
-  become: yes
-  apt:
-    package:
-      - typora
-    state: latest
-- name: add architecture i386
-  become: yes
-  shell: "dpkg --add-architecture i386"
-- name: install wine & playonlinux
-  become: yes
-  apt:
-    package:
-      - wine
-      - winetricks
-      - playonlinux
-    state: latest
-- name: ocs-url dependencies
-  become: yes
-  apt:
-    package:
-      - libqt5svg5
-      - qml-module-qtquick-controls
-    state: latest
-- name: ocs-url install # https://www.opendesktop.org/p/1136805/
-  become: yes
-  apt:
-    deb: "/home/{{ current_user }}/.dotfiles/_backup/themes/ocs-url_3.1.0-0ubuntu1_amd64.deb"
 - name: zoom.us preparation
   become: yes
   apt:
@@ -117,9 +47,6 @@
 - name: bitwarden
   community.general.flatpak:
     name: "com.bitwarden.desktop"
-- name: shotcut
-  community.general.flatpak:
-    name: "org.shotcut.Shotcut"
 - name: joplin
   community.general.flatpak:
     name: "net.cozic.joplin_desktop"
@@ -129,9 +56,6 @@
 - name: Flameshot
   community.general.flatpak:
     name: "org.flameshot.Flameshot"
-- name: flatseal
-  community.general.flatpak:
-    name: "com.github.tchx84.Flatseal"
 - name: local applications dir
   file:
     path: "/home/{{ current_user }}/.local/share/applications"
@@ -168,27 +92,7 @@
   delay: 10
 - name: ulauncher
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-ulauncher.sh"
-- name: fluentreader
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fluentreader.sh"
-- name: dbeaver-ce
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dbeaver-ce.sh"
-- name: balena-etcher
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-etcher_appimage.sh"
 - name: nerd-fonts
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-nerd-fonts.sh"
 - name: docker-compose
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-docker-compose.sh"
-- name: ascii-image-converter
-  become: yes
-  community.general.snap:
-    name: ascii-image-converter
-    state: present
-- name: dirsize # https://github.com/frossm/dirsize
-  become: yes
-  community.general.snap:
-    name: dirsize
-    state: present
-- name: diresize permission
-  become: yes
-  shell: |
-    snap connect dirsize:system-backup

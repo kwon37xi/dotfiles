@@ -1,0 +1,105 @@
+---
+# 당장 개발에 필수는 아닌 애플리케이션들 설치
+- name: main
+  hosts: 127.0.0.1
+  connection: local
+  vars_files:
+    - "vars.yml"
+  environment:
+    PATH: "{{ lookup('env', 'PATH') }}:/home/linuxbrew/.linuxbrew/bin"
+  tasks:
+    - name: prepare for virtualbox-ext-pack PUEL accept # https://askubuntu.com/questions/811488/command-to-accept-virtualbox-puel-for-virtualbox-ext-pack-installation
+      become: yes
+      shell: "echo virtualbox-ext-pack virtualbox-ext-pack/license select true | debconf-set-selections"
+    - name: install kvm-qemu # kvm/qemu 설치시 가상머신 ubuntu가 down되는 현상이 발생하는것으로 예상. 21.10
+      become: yes
+      apt:
+        package:
+          - virtualbox
+          - virtualbox-ext-pack
+          - virtualbox-guest-additions-iso
+          - qemu
+          - aqemu
+          - qemu-kvm
+          - virt-manager
+        state: latest
+    - name: install GIMP
+      become: yes
+      apt:
+        package:
+          - gimp
+          - gimp-gmic
+          - gimp-data-extras
+          - gimp-help-ko
+        state: latest
+    - name: install video audio graphic packages
+      become: yes
+      apt:
+        package:
+          - gimp
+          - gimp-gmic
+          - gimp-data-extras
+          - gimp-help-ko
+          - nomacs
+          - sxiv
+          - vlc
+          - smplayer
+          - audacious
+          - handbrake
+          - gpick
+          - gromit-mpx
+        state: latest
+    - name: install typora
+      become: yes
+      apt:
+        package:
+          - typora
+        state: latest
+    - name: add architecture i386
+      become: yes
+      shell: "dpkg --add-architecture i386"
+    - name: install wine & playonlinux
+      become: yes
+      apt:
+        package:
+          - wine
+          - winetricks
+          - playonlinux
+        state: latest
+    - name: ocs-url dependencies
+      become: yes
+      apt:
+        package:
+          - libqt5svg5
+          - qml-module-qtquick-controls
+        state: latest
+    - name: ocs-url install # https://www.opendesktop.org/p/1136805/
+      become: yes
+      apt:
+        deb: "/home/{{ current_user }}/.dotfiles/_backup/themes/ocs-url_3.1.0-0ubuntu1_amd64.deb"
+    - name: shotcut
+      community.general.flatpak:
+        name: "org.shotcut.Shotcut"
+    - name: flatseal
+      community.general.flatpak:
+        name: "com.github.tchx84.Flatseal"
+    - name: fluentreader
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fluentreader.sh"
+    - name: dbeaver-ce
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dbeaver-ce.sh"
+    - name: balena-etcher
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-etcher_appimage.sh"
+    - name: ascii-image-converter
+      become: yes
+      community.general.snap:
+        name: ascii-image-converter
+        state: present
+    - name: dirsize # https://github.com/frossm/dirsize
+      become: yes
+      community.general.snap:
+        name: dirsize
+        state: present
+    - name: diresize permission
+      become: yes
+      shell: |
+        snap connect dirsize:system-backup
