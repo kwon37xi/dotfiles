@@ -1,4 +1,19 @@
 ---
+- name: prepare for virtualbox-ext-pack PUEL accept # https://askubuntu.com/questions/811488/command-to-accept-virtualbox-puel-for-virtualbox-ext-pack-installation
+  become: yes
+  shell: "echo virtualbox-ext-pack virtualbox-ext-pack/license select true | debconf-set-selections"
+- name: install kvm-qemu
+  become: yes
+  apt:
+    package:
+      - virtualbox
+      - virtualbox-ext-pack
+      - virtualbox-guest-additions-iso
+      - qemu
+      - aqemu
+      - qemu-kvm
+      - virt-manager
+    state: latest
 - name: install vscode
   become: yes
   apt:
