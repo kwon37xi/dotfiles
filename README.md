@@ -18,6 +18,14 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 
 * sudo 용 패스워드를 한 번 입력해주고 진행
 
+## 가상머신에서 테스트 할경우
+* VirtualBox Guest Addition 을 미리 설치
+* `설정 -> 전원`에서 빈화면 절전 안하게 변경
+* 웹 브라우저등에 https://github.com/kwon37xi/dotfiles 미리 북마크
+* Terminal 바로가기 설정
+* `sudo apt update; sudo apt upgrade`
+* 이 상태로 종료하고 Snapshot 을 저장해둔다.
+
 ## _installer
 * 설치에 필요한 ansible playbook 들이 있다.
 * ansible log 는 `/var/log/ansible-dotfiles.log` 로 남는다.
