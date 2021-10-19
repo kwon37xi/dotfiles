@@ -42,21 +42,6 @@
           - ubuntu-wallpapers-*
           - gnome-backgrounds
         state: latest
-    - name: prepare for virtualbox-ext-pack PUEL accept # https://askubuntu.com/questions/811488/command-to-accept-virtualbox-puel-for-virtualbox-ext-pack-installation
-      become: yes
-      shell: "echo virtualbox-ext-pack virtualbox-ext-pack/license select true | debconf-set-selections"
-    - name: install kvm-qemu # kvm/qemu 설치시 가상머신 ubuntu가 down되는 현상이 발생하는것으로 예상. 21.10
-      become: yes
-      apt:
-        package:
-          - virtualbox
-          - virtualbox-ext-pack
-          - virtualbox-guest-additions-iso
-          - qemu
-          - aqemu
-          - qemu-kvm
-          - virt-manager
-        state: latest
     - name: install GIMP
       become: yes
       apt:
@@ -137,3 +122,18 @@
       become: yes
       shell: |
         snap connect dirsize:system-backup
+    - name: prepare for virtualbox-ext-pack PUEL accept # https://askubuntu.com/questions/811488/command-to-accept-virtualbox-puel-for-virtualbox-ext-pack-installation
+      become: yes
+      shell: "echo virtualbox-ext-pack virtualbox-ext-pack/license select true | debconf-set-selections"
+    - name: install kvm-qemu # kvm/qemu 설치시 가상머신 ubuntu 21.10 가 down되는 현상이 발생하는것으로 예상. 그래서 마지막에 설치
+      become: yes
+      apt:
+        package:
+          - virtualbox
+          - virtualbox-ext-pack
+          - virtualbox-guest-additions-iso
+          - qemu
+          - aqemu
+          - qemu-kvm
+          - virt-manager
+        state: latest
