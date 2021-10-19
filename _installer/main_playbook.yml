@@ -14,7 +14,6 @@
     - include_tasks: prepare_user_dirs_tasks.yml
     - include_tasks: development_package_install_tasks.yml
     - include_tasks: homebrew_install_playbook.yml
-    - include_tasks: meganz_install_tasks.yml
     - include_tasks: package_full_upgrade_tasks.yml
     - include_tasks: free_korean_fonts_install_tasks.yml
     - include_tasks: firewall_config_tasks.yml
