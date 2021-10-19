@@ -2,7 +2,7 @@
 - name: prepare for virtualbox-ext-pack PUEL accept # https://askubuntu.com/questions/811488/command-to-accept-virtualbox-puel-for-virtualbox-ext-pack-installation
   become: yes
   shell: "echo virtualbox-ext-pack virtualbox-ext-pack/license select true | debconf-set-selections"
-- name: install kvm-qemu
+- name: install virtualization
   become: yes
   apt:
     package:
