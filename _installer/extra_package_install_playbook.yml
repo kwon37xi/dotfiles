@@ -122,3 +122,27 @@
       become: yes
       shell: |
         snap connect dirsize:system-backup
+    - name: download meganz
+      become: yes
+      apt:
+        deb: "{{ item }}"
+      register: meganz_debs_installed
+      until: meganz_debs_installed is not failed
+      retries: 3
+      delay: 10
+      with_items:
+        - "https://mega.nz/linux/MEGAsync/xUbuntu_{{ ubuntu_version }}/amd64/megacmd-xUbuntu_{{ ubuntu_version }}_amd64.deb"
+        - "https://mega.nz/linux/MEGAsync/xUbuntu_{{ ubuntu_version }}/amd64/megasync-xUbuntu_{{ ubuntu_version }}_amd64.deb"
+    - name: update apt cache all
+      become: yes
+      apt:
+        update_cache: yes
+        state: fixed
+    - name: install mega apps
+      become: yes
+      apt:
+        package:
+          - megadown
+          - megatools
+          - nautilus-megasync
+        state: latest
