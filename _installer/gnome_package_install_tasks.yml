@@ -54,11 +54,8 @@
       - chrome-gnome-shell
       - gnome-shell-extension-prefs
       - gnome-shell-extensions
-      - gnome-shell-pomodoro
-      - gnome-shell-timer
       - gnome-shell-extension-system-monitor
       - gnome-shell-extension-caffeine
-      - gnome-shell-extension-hide-activities
     state: latest
 - name: install qt themes
   become: yes
