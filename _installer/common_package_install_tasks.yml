@@ -65,7 +65,6 @@
       - nq
       - cpulimit
       - httpie
-      - exa
       - keyutils
       - cowsay
       - fortune-mod

@@ -40,6 +40,7 @@
       - minikube
       - kubectl
       - starship
+      - exa # ubuntu 기본 버전에 문제가 있음. brew 로 설치
     state: present
   register: brew_common_packages
   until: brew_common_packages is not failed
