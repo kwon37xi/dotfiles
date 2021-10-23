@@ -47,7 +47,7 @@
     curl -s "https://get.sdkman.io?rcupdate=false" | bash
   args:
     creates: ~/.sdkman/etc/config
-- name: sdkman config auto_answer
+- name: sdkman config auto_answer # 추후 자동생성 ~/.sdkman/etc/config 는 dotfiles 처리시 삭제되고 내 저장소의 것으로 갈아끼워짐
   shell: sed -i  -e "s/sdkman_auto_answer=false/sdkman_auto_answer=true/g" ~/.sdkman/etc/config
 - name: sdkman default package install
   shell: |

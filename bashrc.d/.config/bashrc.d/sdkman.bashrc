@@ -2,4 +2,5 @@
 export SDKMAN_DIR="/home/${USER}/.sdkman"
 [[ -s "/home/${USER}/.sdkman/bin/sdkman-init.sh" ]] && source "/home/${USER}/.sdkman/bin/sdkman-init.sh"
 
-source <(sdk completion bash)
+# 아래는 더이상 불필요함
+#source <(sdk completion bash)
