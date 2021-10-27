@@ -10,6 +10,7 @@
     - include_tasks: prepare_system_env_tasks.yml
     - include_tasks: package_repos_tasks.yml
     - include_tasks: common_package_install_tasks.yml
+    - include_tasks: docker_install_tasks.yml
     - include_tasks: gnome_package_install_tasks.yml
     - include_tasks: prepare_user_dirs_tasks.yml
     - include_tasks: development_package_install_tasks.yml
