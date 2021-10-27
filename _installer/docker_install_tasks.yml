@@ -17,7 +17,8 @@
   become: yes
   ansible.builtin.user:
     name: "{{ current_user }}"
-    group: docker
+    groups:
+      - docker
     append: yes
 - name: docker systemd enable
   become: yes
