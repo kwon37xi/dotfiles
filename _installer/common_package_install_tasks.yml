@@ -147,7 +147,9 @@
   become: yes
   apt:
     package:
-      - docker.io
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
       - ctop
     state: latest
 - name: docker initialize
