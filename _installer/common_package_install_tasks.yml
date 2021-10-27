@@ -143,21 +143,6 @@
     name: flathub
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
     state: present
-- name: install docker
-  become: yes
-  apt:
-    package:
-      - docker-ce
-      - docker-ce-cli
-      - containerd.io
-      - ctop
-    state: latest
-- name: docker initialize
-  become: yes
-  shell: |
-    usermod -aG docker {{ current_user }}
-    systemctl enable docker
-    service docker restart
 - name: install input methods
   become: yes
   apt:
