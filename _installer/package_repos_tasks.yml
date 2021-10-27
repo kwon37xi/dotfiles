@@ -1,4 +1,18 @@
 ---
+- name: docker key
+  become: yes
+  ansible.builtin.apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    keyring: /etc/apt/trusted.gpg.d/docker-archive-keyring.gpg
+  register: docker_key_installed
+  until: docker_key_installed is not failed
+  retries: 3
+- name: docker repository # docker repository는 Ubuntu release 후 10일 이상 지나야 추가되는 편임.
+  become: yes
+  apt_repository:
+    repo: "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu {{ ubuntu_release }} stable"
+    filename: docker
+    update_cache: no
 - name: vivaldi browser key
   become: yes
   ansible.builtin.apt_key:
