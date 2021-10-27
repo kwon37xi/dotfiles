@@ -14,7 +14,7 @@
       - qemu-kvm
       - virt-manager
     state: latest
-- name: install node.js
+- name: install node.js # vim markdown plugin에 필요함.
   become: yes
   apt:
     package:

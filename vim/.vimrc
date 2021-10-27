@@ -85,6 +85,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'hashivim/vim-terraform'
 
 Plug 'ntpeters/vim-better-whitespace'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarnpkg install'  }
 call plug#end()
 
 filetype plugin indent on     " required!
@@ -461,8 +463,11 @@ highlight clear SignColumn
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 
+source $HOME/.vimrcs/markdown-previewrc
+
 " 각 PC별 특별 설정이 있다면 ~/.vimrc_pc 파일을 만들어
 " 해당 파일에 설정을 넣어 두면 된다.
 if (filereadable($HOME . "/.vimrc_pc"))
     :source $HOME/.vimrc_pc
 endif
+
