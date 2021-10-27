@@ -61,3 +61,6 @@ alias dux="du --human-readable --max-depth=1 --one-file-system"
 
 # flameshot
 alias flameshot="flatpak run org.flameshot.Flameshot"
+
+# node.js yarn
+alias yarn="yarnpkg"
