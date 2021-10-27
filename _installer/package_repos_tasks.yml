@@ -1,7 +1,7 @@
 ---
 - name: vivaldi browser key
   become: yes
-  apt_key:
+  ansible.builtin.apt_key:
     url: https://repo.vivaldi.com/archive/linux_signing_key.pub
   register: vivaldi_key_installed
   until: vivaldi_key_installed is not failed
@@ -14,20 +14,21 @@
     update_cache: no
 - name: vscode key
   become: yes
-  apt_key:
+  ansible.builtin.apt_key:
     url: https://packages.microsoft.com/keys/microsoft.asc
+    keyring: /etc/apt/trusted.gpg.d/packages.microsoft.gpg
   register: vscode_key_installed
   until: vscode_key_installed is not failed
   retries: 3
 - name: vscode repository
   become: yes
   apt_repository:
-    repo: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    repo: "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main"
     filename: vscode
     update_cache: no
 - name: hashicorp key
   become: yes
-  apt_key:
+  ansible.builtin.apt_key:
     url: https://apt.releases.hashicorp.com/gpg
   register: hashicorp_key_installed
   until: hashicorp_key_installed is not failed
@@ -40,7 +41,7 @@
     update_cache: no
 - name: typora key
   become: yes
-  apt_key:
+  ansible.builtin.apt_key:
     url: https://typora.io/linux/public-key.asc
   register: typora_key_installed
   until: typora_key_installed is not failed
