@@ -14,6 +14,13 @@
     content: "vm.swappiness=5"
     owner: root
     group: root
+- name: change fs.inotify.max_user_watches
+  become: yes
+  copy:
+    dest: "/etc/sysctl.d/99-fs-inotify-max-user-watches.conf"
+    content: "fs.inotify.max_user_watches = 524288"
+    owner: root
+    group: root
 - name: change limits
   become: yes
   copy:
