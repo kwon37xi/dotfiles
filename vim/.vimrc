@@ -11,6 +11,7 @@ set nocompatible
 set backupdir=~/.local/tmp/vim/backup
 set directory=~/.local/tmp/vim/swap
 set undodir=~/.local/tmp/vim/undos
+set ignorecase
 
 " leader
 let mapleader = ","
