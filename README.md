@@ -117,7 +117,7 @@ sudo apt install amd64-microcode
 ### Jenkins 설치
 * Jenkins 설치를 자동화 해 두었다.
 ```
-ansible-playbook -vv ~/.dotfiles/_installer/jenkins_playbook.yml
+~/.dotfiles/install_jenkins.sh
 ```
 
 ### Vivaldi Browser Mod 설정
@@ -131,7 +131,7 @@ ansible-playbook -vv ~/.dotfiles/_installer/jenkins_playbook.yml
 ### 4k 설정
 * 4k 모니터 Console 설정
 ```
-ansible-playbook -vv ~/.dotfiles/_installer/4k_playbook.yml
+~/.dotfiles/install_4k.sh
 ```
 
 ## JDK 디렉토리
