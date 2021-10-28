@@ -182,7 +182,8 @@ imap <C-h> <Left>
 imap <C-l> <Right>
 
 " Terminal
-map <Leader><Leader>t <ESC>:below terminal<CR>
+nnoremap <Leader>T :wa \| below terminal<CR>
+nnoremap <Leader>t :wa \| vertical botright terminal<CR>
 
 " NERDTree
 let NERDSpaceDelims=1
