@@ -186,6 +186,7 @@ nnoremap <Leader>T :wa \| below terminal<CR>
 nnoremap <Leader>t :wa \| vertical botright terminal<CR>
 
 " NERDTree
+let g:NERDTreeWinSize=40
 let NERDSpaceDelims=1
 let NERDTreeIgnore=['\.vim$', '\~$', '.*\.class$', '\.pyc$', 'CVS', 'classes','.*\.jar$', 'target']
 nnoremap <F12> :NERDTreeToggle<CR>
