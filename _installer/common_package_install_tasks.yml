@@ -44,6 +44,7 @@
       - xclip
       - htop
       - bashtop
+      - tilix
       - stacer
       - cpufrequtils
       - most
