@@ -183,14 +183,16 @@ imap <C-h> <Left>
 imap <C-l> <Right>
 
 " Terminal
-nnoremap <Leader>T :wa \| below terminal<CR>
-nnoremap <Leader>t :wa \| vertical botright terminal<CR>
+nnoremap <leader><leader>t :wa \| below terminal<CR>
+nnoremap <leader>tu :wa \| above terminal<CR>
+nnoremap <leader>tr :wa \| vertical botright terminal<CR>
 
 " NERDTree
 let g:NERDTreeWinSize=40
 let NERDSpaceDelims=1
 let NERDTreeIgnore=['\.vim$', '\~$', '.*\.class$', '\.pyc$', 'CVS', 'classes','.*\.jar$', 'target']
 nnoremap <F12> :NERDTreeToggle<CR>
+nnoremap <leader>NN :NERDTreeToggle<CR>
 nnoremap <S-F12> :NERDTreeCWD<CR>
 nnoremap <leader>Nc :NERDTreeCWD<CR>
 
@@ -239,8 +241,8 @@ let g:localvimrc_ask = 0
 " fzf Buffers 가 화살표키 이동이 불가한 경우는 버퍼가 단 두개뿐일때. 그 외는
 " 화살표 이동 작동함.
 "
-map <Leader>be <ESC>:Buffers<CR>
-nnoremap <silent> <C-E> <ESC>:Buffers<CR>
+nnoremap <Leader>be :Buffers<CR>
+nnoremap <silent> <C-E> :Buffers<CR>
 
 " Emmet.vim (Zen-Coding)
 " http://mattn.github.io/emmet-vim/
