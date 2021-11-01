@@ -57,7 +57,6 @@
       - trash-cli
       - ncdu
       - bat
-      - tldr
       - timeshift
       - ranger
       - xsnow
