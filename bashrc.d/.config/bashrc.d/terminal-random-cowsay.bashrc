@@ -1,2 +1,2 @@
 # 운세 혹은 격언
-\tldr --random-example | cowsay | lolcat
+\tldr --random | cowsay -W 100 -f tux | lolcat
