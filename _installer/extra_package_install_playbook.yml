@@ -102,6 +102,9 @@
     - name: flatseal
       community.general.flatpak:
         name: "com.github.tchx84.Flatseal"
+    - name: blanket
+      community.general.flatpak:
+        name: "com.rafaelmardojai.Blanket"
     - name: fluentreader
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fluentreader.sh"
     - name: dbeaver-ce
