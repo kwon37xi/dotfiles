@@ -30,7 +30,7 @@
     path: ~/.bashrc
     line: "for bashrc in {{ local_bashrcs_dir }}/*.bashrc; do source \"$bashrc\"; done;"
 - name: tldr install
-  shell: ~/.local/bin/install-tldr-node-client.sh
+  shell: ~/.dotfiles/local_bin/.local/bin/install-tldr-node-client.sh
 - name: tldr update
   shell: "/home/{{ current_user }}/.local/bin/tldr --update"
 - name: jenv
