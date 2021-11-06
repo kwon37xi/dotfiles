@@ -29,6 +29,10 @@
   lineinfile:
     path: ~/.bashrc
     line: "for bashrc in {{ local_bashrcs_dir }}/*.bashrc; do source \"$bashrc\"; done;"
+- name: tldr install
+  shell: ~/.local/bin/install-tldr-node-client.sh
+- name: tldr update
+  shell: "/home/{{ current_user }}/.local/bin/tldr --update"
 - name: jenv
   git:
     repo: https://github.com/jenv/jenv.git
@@ -66,15 +70,3 @@
   until: sdk_package_installed is not failed
   retries: 3
   delay: 10
-- name: tldr install
-  shell: |
-    mkdir -p ~/.local/share/tldr
-    cd ~/.local/share/tldr
-    npm install tldr
-
-    mkdir -p ~/.local/bin
-    ln -s ~/.local/share/tldr/node_modules/tldr/bin/tldr ~/.local/bin/tldr
-  args:
-    executable: /usr/bin/bash
-- name: tldr update
-  shell: tldr --update
