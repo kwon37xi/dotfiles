@@ -9,11 +9,11 @@
   retries: 5
   delay: 10
 - name: update homebrew
-  homebrew:
+  community.general.homebrew:
     update_homebrew: yes
     upgrade_all: yes
 - name: brew common packages
-  homebrew:
+  community.general.homebrew:
     name:
       - neovim
       - neovim-remote
