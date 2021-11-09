@@ -88,6 +88,9 @@ Plug 'hashivim/vim-terraform'
 Plug 'ntpeters/vim-better-whitespace'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarnpkg install'  }
+
+Plug 'pearofducks/ansible-vim'
+Plug 'chr4/nginx.vim'
 call plug#end()
 
 filetype plugin indent on     " required!
