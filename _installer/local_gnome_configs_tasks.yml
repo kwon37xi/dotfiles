@@ -6,7 +6,7 @@
     # workspace 갯수 고정
     gsettings set org.gnome.mutter dynamic-workspaces false
     gsettings set org.gnome.desktop.wm.preferences num-workspaces 4
-    gsettings set org.gnome.desktop.wm.preferences workspace-names "['작업 공간 1', '작업 공간 2', '작업 공간 3', '작업 공간 4']"
+    gsettings set org.gnome.desktop.wm.preferences workspace-names "['1', '2', '3', '4']"
 
     # 현재 작업공간에서만 애플리케이션 스위칭
     gsettings set org.gnome.shell.app-switcher current-workspace-only true
