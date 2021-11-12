@@ -33,6 +33,8 @@
   shell: ~/.dotfiles/local_bin/.local/bin/install-tldr-node-client.sh
 - name: tldr update
   shell: "/home/{{ current_user }}/.local/bin/tldr --update"
+- name: zap install
+  shell: ~/.dotfiles/local_bin/.local/bin/install-zap.sh
 - name: jenv
   git:
     repo: https://github.com/jenv/jenv.git
