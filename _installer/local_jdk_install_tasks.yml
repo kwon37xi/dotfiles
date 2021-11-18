@@ -8,6 +8,7 @@
     src: "{{ item }}"
     remote_src: yes
     dest: "/home/{{current_user}}/.local/opt/jdk"
+    validate_certs: no
   register: temurinopenjdk_installed
   until: temurinopenjdk_installed is not failed
   retries: 3
