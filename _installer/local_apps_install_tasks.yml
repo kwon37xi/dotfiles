@@ -29,6 +29,10 @@
   lineinfile:
     path: ~/.bashrc
     line: "for bashrc in {{ local_bashrcs_dir }}/*.bashrc; do source \"$bashrc\"; done;"
+- name: add seesyouspacecowboy to ~/.bash_logout
+  lineinfile:
+    path: ~/.bash_logout
+    line: "bash ~/.local/bin/seeyouspacecowboy.sh; sleep 2"
 - name: tldr install
   shell: ~/.dotfiles/local_bin/.local/bin/install-tldr-node-client.sh
 - name: tldr update
