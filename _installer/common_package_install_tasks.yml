@@ -125,6 +125,7 @@
       - putty-tools
       - filezilla
       - qbittorrent
+      - xpad
       - vivaldi-stable
     state: latest
 - name: install editors
@@ -134,8 +135,8 @@
       - micro
       - vim-nox
       - vim-gtk3
-      - notepadqq
-      - xpad
+      - geany
+      - geany-plugins
     state: latest
 - name: flatpak add remote
   become: yes
