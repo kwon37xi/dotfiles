@@ -52,7 +52,7 @@ name='Joplin'
 
 [custom-keybindings/custom7]
 binding='<Shift><Super>s'
-command='slack'
+command='flatpak run flatpak run com.slack.Slack'
 name='Slack'
 
 [custom-keybindings/custom8]
