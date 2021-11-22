@@ -7,6 +7,6 @@ PACKAGE_NAME=$(basename "$LATEST_PACKAGE_URL")
 rm -f /tmp/$PACKAGE_NAME
 wget -O "/tmp/$PACKAGE_NAME" "$LATEST_PACKAGE_URL"
 
-sudo apt install /tmp/$PACKAGE_NAME
+sudo apt install -y /tmp/$PACKAGE_NAME
 
 rm -f /tmp/$PACKAGE_NAME
