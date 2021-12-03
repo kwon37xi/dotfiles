@@ -5,5 +5,8 @@
     upgrade: full
     autoclean: yes
     autoremove: yes
+- name: apt clean again # ansible의 autoclean 은 clean이 아니다.
+    become: yes
+    command: apt clean
 - name: flatpak upgrade
   shell: "flatpak update --system -y"
