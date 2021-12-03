@@ -105,6 +105,9 @@
     - name: blanket
       community.general.flatpak:
         name: "com.rafaelmardojai.Blanket"
+    - name: OTPClient
+      community.general.flatpak:
+        name: "com.github.paolostivanin.OTPClient"
     - name: fluentreader
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fluentreader.sh"
     - name: dbeaver-ce
