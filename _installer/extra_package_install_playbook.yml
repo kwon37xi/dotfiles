@@ -25,16 +25,17 @@
           - numix-icon-theme-circle
           - numix-icon-theme
         state: latest
-    - name: install libreoffice
+    - name: remove libreoffice deb packages
       become: yes
       apt:
         package:
           - libreoffice
-          - libreoffice-help-ko
-          - libreoffice-l10n-ko
-          - libreoffice-style-*
-          - libreoffice-sdbc-*
-        state: latest
+          - libreoffice-*
+        autoremove: yes
+        state: absent
+    - name: install libreoffice flatpak
+      community.general.flatpak:
+        name: org.libreoffice.LibreOffice
     - name: install wallpapers
       become: yes
       apt:
