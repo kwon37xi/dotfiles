@@ -68,12 +68,6 @@
           - gpick
           - gromit-mpx
         state: latest
-    - name: install typora
-      become: yes
-      apt:
-        package:
-          - typora
-        state: latest
     - name: add architecture i386
       become: yes
       shell: "dpkg --add-architecture i386"
