@@ -39,7 +39,7 @@
       become: yes
       apt:
         package:
-          - ubuntu-wallpapers-*
+          - ubuntu-wallpapers
           - gnome-backgrounds
         state: latest
     - name: install GIMP
@@ -102,8 +102,6 @@
     - name: OTPClient
       community.general.flatpak:
         name: "com.github.paolostivanin.OTPClient"
-    - name: fluentreader
-      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-fluentreader.sh"
     - name: dbeaver-ce
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dbeaver-ce.sh"
     - name: balena-etcher
