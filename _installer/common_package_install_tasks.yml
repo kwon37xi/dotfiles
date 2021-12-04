@@ -44,7 +44,6 @@
       - xclip
       - htop
       - bashtop
-      - tilix
       - stacer
       - cpufrequtils
       - most
@@ -72,6 +71,8 @@
       - gnome-multi-writer
       - bd
       - jq
+      - iotop
+      - atop
     state: latest
 - name: install system tools
   become: yes
