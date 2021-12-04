@@ -160,7 +160,7 @@
     state: latest
 - name: apt clean # ansible의 autoclean 은 clean이 아니다.
   become: yes
-  command: apt clean
+  ansible.builtin.command: apt clean
 - name: uim config
   become: yes
   shell: |
