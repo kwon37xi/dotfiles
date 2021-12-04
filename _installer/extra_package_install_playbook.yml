@@ -80,6 +80,9 @@
           - winetricks
           - playonlinux
         state: latest
+    - name: apt clean # ansible의 autoclean 은 clean이 아니다.
+      become: yes
+      ansible.builtin.command: apt clean
     - name: ocs-url dependencies
       become: yes
       apt:
