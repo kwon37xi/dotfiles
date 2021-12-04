@@ -120,14 +120,6 @@ sudo apt install amd64-microcode
 ~/.dotfiles/install_jenkins.sh
 ```
 
-### Vivaldi Browser Mod 설정
-* Vivaldi Mod 설정으로 창 최대화/최소화 버튼 모양을 테마와 일치시킬 수 있다.
-* vivaldi://experiments 열고
-* "Allow for using CSS modifications" 활성화
-* **설정 → 모양(Appearance)** **수정금지** 항목에서
-* mod `*.css` 파일이 있는 디렉토리를 선택한다. `~/.dotfiles/_backup/vivaldi-themes/vivaldi-yaru-mod`
-* Vivaldi 를 완전 종료하고 재시작한다.
-
 ### 4k 설정
 * 4k 모니터 Console 설정
 ```

@@ -13,19 +13,6 @@
     repo: "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu {{ ubuntu_release }} stable"
     filename: docker
     update_cache: no
-- name: vivaldi browser key
-  become: yes
-  ansible.builtin.apt_key:
-    url: https://repo.vivaldi.com/archive/linux_signing_key.pub
-  register: vivaldi_key_installed
-  until: vivaldi_key_installed is not failed
-  retries: 3
-- name: vivaldi browser repo
-  become: yes
-  apt_repository:
-    repo: deb https://repo.vivaldi.com/archive/deb/ stable main
-    filename: vivaldi
-    update_cache: no
 - name: vscode key
   become: yes
   ansible.builtin.apt_key:

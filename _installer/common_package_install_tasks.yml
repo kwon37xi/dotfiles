@@ -127,7 +127,6 @@
       - filezilla
       - qbittorrent
       - xpad
-      - vivaldi-stable
     state: latest
 - name: install editors
   become: yes
@@ -151,23 +150,10 @@
     package:
       - ibus
       - ibus-hangul
-      - uim
-      - uim-byeoru
-      - fcitx
-      - fcitx-hangul
-      - fcitx-ui-classic
-      - fcitx-config-gtk
-      - fcitx-frontend-all
     state: latest
 - name: apt clean # ansible의 autoclean 은 clean이 아니다.
   become: yes
   ansible.builtin.command: apt clean
-- name: uim config
-  become: yes
-  shell: |
-    update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk3-systray 100
-    update-alternatives --install /usr/bin/uim-toolbar uim-toolbar  /usr/bin/uim-toolbar-gtk-systray 100
-    update-alternatives --set uim-toolbar /usr/bin/uim-toolbar-gtk-systray
 - name: ibus config
   shell: |
     # for gnome disable ibus, 의존성 때문에 패키지 삭제가 불가해서 실행만 안되게 이름변경. 아래 작업을 안하면 uim/ibus 동시 사용가능해짐
