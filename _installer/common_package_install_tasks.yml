@@ -125,7 +125,6 @@
       - putty
       - putty-tools
       - filezilla
-      - qbittorrent
       - xpad
     state: latest
 - name: install editors
