@@ -97,6 +97,9 @@
     - name: shotcut
       community.general.flatpak:
         name: "org.shotcut.Shotcut"
+    - name: qbittorrent
+      community.general.flatpak:
+        name: "org.qbittorrent.qBittorrent"
     - name: flatseal
       community.general.flatpak:
         name: "com.github.tchx84.Flatseal"
