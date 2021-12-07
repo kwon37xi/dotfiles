@@ -3,3 +3,5 @@
 export TERM=screen-256color
 
 export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+# history 명령에 날짜 출력
+export HISTTIMEFORMAT="%Y-%m-%d %T "
