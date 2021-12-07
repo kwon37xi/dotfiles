@@ -125,7 +125,6 @@
       - putty
       - putty-tools
       - filezilla
-      - xpad
     state: latest
 - name: install editors
   become: yes
