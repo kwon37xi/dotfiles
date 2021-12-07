@@ -32,6 +32,13 @@
       @sudo         hard    nproc           10000
     owner: root
     group: root
+- name: systemd user limits directory
+  become: yes
+  file:
+    path: "/etc/systemd/user.conf.d"
+    state: directory
+    owner: root
+    group: root
 - name: change limits for systemd
   become: yes
   copy:
