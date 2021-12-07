@@ -32,6 +32,16 @@
       @sudo         hard    nproc           10000
     owner: root
     group: root
+- name: change limits for systemd
+  become: yes
+  copy:
+    dest: "/etc/systemd/user.conf.d/99-user-systemd-limits.conf"
+    content: |
+      [Manager]
+      DefaultLimitNOFILE=50000
+      DefaultLimitNPROC=10000
+    owner: root
+    group: root
 - name: ubuntu update manager include phased updates # gnome software 는 phased 를 안 따르기 때문에 업그레이드 패키지 불일치 발생하여 서로 맞춤.
   become: yes
   copy:
