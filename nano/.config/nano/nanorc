@@ -19,7 +19,7 @@
 ## Automatically indent a newly created line to the same number of
 ## tabs and/or spaces as the preceding line -- or as the next line
 ## if the preceding line is the beginning of a paragraph.
-# set autoindent
+set autoindent
 
 ## Back up files to the current filename plus a tilde.
 # set backup
@@ -63,7 +63,7 @@
 set historylog
 
 ## Display a "scrollbar" on the righthand side of the edit window.
-# set indicator
+set indicator
 
 ## Scroll the buffer contents per half-screen instead of per line.
 # set jumpyscrolling
@@ -203,14 +203,14 @@ set tabstospaces
 ## Paint the interface elements of nano.  These are examples;
 ## by default there are no colors, except for errorcolor.
 set titlecolor bold,black,lightblack
-# set statuscolor bold,lightwhite,green
+set statuscolor bold,lightwhite,green
 # set errorcolor bold,lightwhite,red
-# set selectedcolor lightwhite,magenta
+set selectedcolor lightwhite,magenta
 # set stripecolor ,yellow
-# set scrollercolor cyan
+set scrollercolor cyan
 set numbercolor bold,black,lightblack
-# set keycolor cyan
-# set functioncolor green
+set keycolor lightyellow
+set functioncolor lightgreen
 
 ## In root's .nanorc you might want to use:
 # set titlecolor bold,lightwhite,magenta
@@ -266,7 +266,7 @@ bind ^Q exit all
 bind ^S savefile main
 bind ^W writeout main
 bind ^O insert main
-bind ^H help all
+bind M-H help all
 bind ^H exit help
 bind ^F whereis all
 bind ^G findnext all
