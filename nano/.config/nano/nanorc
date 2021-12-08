@@ -272,7 +272,7 @@ bind ^F whereis all
 bind ^G findnext all
 bind ^B wherewas all
 bind ^D findprevious all
-bind ^R replace main
+bind M-F replace main
 bind M-X flipnewbuffer all
 bind ^X cut all
 bind ^C copy main
@@ -283,13 +283,17 @@ unbind ^K main
 unbind ^U all
 unbind ^N main
 unbind ^Y all
+# HOME key
+unbind ^A all
+# END key
+unbind ^E all
 unbind M-J main
 unbind M-T main
 bind ^T gotoline main
 bind ^T gotodir browser
 bind ^Y speller main
-bind M-U undo main
+bind M-Z undo main
 bind M-R redo main
-bind ^U undo main
-bind ^E redo main
+bind ^Z undo main
+bind ^R redo main
 set multibuffer
