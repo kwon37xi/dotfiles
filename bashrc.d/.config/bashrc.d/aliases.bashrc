@@ -67,3 +67,7 @@ alias yarn="yarnpkg"
 
 # tldr
 alias tldr="tldr --theme=ocean"
+
+# editor
+alias se=sudoedit
+alias nn=nano
