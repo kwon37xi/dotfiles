@@ -81,7 +81,7 @@ Plug 'padde/jump.vim'
 
 " vim and tmux window/pane navigation
 " Ctrl-hjkl\ 연동
-Plug 'christoomey/vim-tmux-navigator'
+" Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'hashivim/vim-terraform'
 

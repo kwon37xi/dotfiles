@@ -296,4 +296,8 @@ bind M-Z undo main
 bind M-R redo main
 bind ^Z undo main
 bind ^R redo main
+bind ^J down main
+bind ^K up main
+bind ^H left main
+bind ^L right main
 set multibuffer
