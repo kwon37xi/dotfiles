@@ -92,7 +92,12 @@
       - zenity
       - universal-ctags
       - java-common
+      - openjdk-17-jdk
+      - openjdk-17-source
       - openjdk-11-jdk
+      - openjdk-11-source
+      - openjdk-8-jdk
+      - openjdk-8-source
       - build-essential
       - dkms
       - make
