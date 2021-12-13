@@ -8,42 +8,12 @@
   until: brew_installed is not failed
   retries: 5
   delay: 10
-- name: update homebrew
-  community.general.homebrew:
-    update_homebrew: yes
-    upgrade_all: yes
-- name: brew common packages
-  community.general.homebrew:
-    name:
-      - neovim
-      - neovim-remote
-      - lazygit
-      - lazydocker
-      - fblog
-      - fzf
-      - sd
-      - duf
-      - broot
-      - go-jira
-      - bitwarden-cli
-      - youtube-dl
-      - dust
-      - procs
-      - hugo
-      - speedread
-      - tfenv
-      - yq
-      - git-delta
-      - bpytop
-      - awscli
-      - eksctl
-      - minikube
-      - kubectl
-      - starship
-      - exa # ubuntu 기본 버전에 문제가 있음. brew 로 설치
-    state: present
-  register: brew_common_packages
-  until: brew_common_packages is not failed
+- name: brew bundle install
+  shell: "/home/linuxbrew/.linuxbrew/bin/brew bundle --file=/home/{{ current_user }}/.dotfiles/_backup/brew/Brewfile --no-lock"
+  args:
+    executable: /usr/bin/bash
+  register: brew_bundle
+  until: brew_bundle is not failed
   retries: 3
   delay: 10
 - name: tfenv-init
