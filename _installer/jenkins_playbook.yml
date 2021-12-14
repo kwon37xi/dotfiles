@@ -29,9 +29,11 @@
       shell: |
         systemctl stop jenkins
 
+        # Java 1.8, 11만 지원함. java 11로 강제 지정
         sed -i.bak -e "s/JENKINS_USER=\$NAME/JENKINS_USER={{ current_user }}/g" \
             -e "s/JENKINS_GROUP=\$NAME/JENKINS_GROUP={{ current_user }}/g" \
             -e "s/HTTP_PORT=8080/HTTP_PORT=9999/g" \
+            -e '$aJAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"'
             /etc/default/jenkins
 
         mkdir -p /var/lib/jenkins/init.groovy.d
