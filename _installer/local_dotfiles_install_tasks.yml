@@ -67,3 +67,5 @@
     src: "/home/{{ current_user }}/.dotfiles/_profiles/손권남_Time.jpg"
     state: link
     force: yes
+- name: nano syntax highlights
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/install-nanorc.sh"
