@@ -28,7 +28,13 @@
 - name: add reading *.bashrc to ~/.bashrc
   lineinfile:
     path: ~/.bashrc
-    line: "for bashrc in {{ local_bashrcs_dir }}/*.bashrc; do source \"$bashrc\"; done;"
+    line: |
+    # 오름차순 정렬을 위해서 ls 명령으로 순회한다.
+    for bashrc in `ls ~/.config/bashrc.d/*.sh`
+    do
+        logger "bashrc loading - $bashrc"
+        source "$bashrc"
+    done
 - name: add seesyouspacecowboy to ~/.bash_logout
   lineinfile:
     path: ~/.bash_logout
