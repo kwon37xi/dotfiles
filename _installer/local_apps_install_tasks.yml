@@ -26,9 +26,9 @@
     - ~/.local/share/applications
     - ~/.config/autostart
 - name: add reading *.bashrc to ~/.bashrc
-  lineinfile:
+  blockinfile:
     path: ~/.bashrc
-    line: |
+    block: |
     # 오름차순 정렬을 위해서 ls 명령으로 순회한다.
     for bashrc in `ls ~/.config/bashrc.d/*.sh`
     do
