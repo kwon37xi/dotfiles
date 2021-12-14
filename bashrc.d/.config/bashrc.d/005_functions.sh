@@ -50,3 +50,13 @@ function s256 {
     echo -n "sha256sum : ${result}"
     echo -n "$result" | xclip -i -sel clip
 }
+
+# https://meyerweb.com/eric/thoughts/2020/09/29/polite-bash-commands/
+# 바로 직전 명령을 sudo 를 붙여서 다시 실행해준다.
+please() {
+	if [ "$1" ]; then
+		sudo $@
+	else
+		sudo "$BASH" -c "$(history -p !!)"
+	fi
+}

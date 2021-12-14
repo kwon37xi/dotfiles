@@ -1,5 +1,5 @@
 ---
-- name: create base dirs # 파일 단위로만 관리하고 싶은 경우 디렉토리 미리 생성. bashrc.d 는 directory 전체 stow
+- name: create base dirs # 파일 단위로만 관리하고 싶은 경우 디렉토리 미리 생성.
   file:
     path: "/home/{{ current_user }}/{{ item }}"
     state: directory
@@ -17,6 +17,7 @@
     - .config/ulauncher
     - .config/fontconfig
     - .config/nano
+    - .config/bashrc.d
     - .sdkman/etc
     - Desktop
     - .vim
