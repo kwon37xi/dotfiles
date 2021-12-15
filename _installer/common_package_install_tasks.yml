@@ -50,7 +50,6 @@
       - direnv
       - autojump
       - stow
-      - scrcpy
       - rclone
       - krusader
       - trash-cli
