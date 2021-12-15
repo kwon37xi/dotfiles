@@ -230,7 +230,16 @@ set functioncolor lightgreen
 ## To include most of the existing syntax definitions, you can do:
 include "/usr/share/nano/*.nanorc"
 
-include "~/.config/nano/syntaxhighlights/*.nanorc"
+# 필요한 것만 추려서 include 한다.
+#include "~/.config/nano/syntaxhighlights/*.nanorc"
+include "~/.config/nano/syntaxhighlights/yaml.nanorc"
+include "~/.config/nano/syntaxhighlights/scala.nanorc"
+include "~/.config/nano/syntaxhighlights/Dockerfile.nanorc"
+include "~/.config/nano/syntaxhighlights/nginx.nanorc"
+include "~/.config/nano/syntaxhighlights/properties.nanorc"
+include "~/.config/nano/syntaxhighlights/gradle.nanorc"
+include "~/.config/nano/syntaxhighlights/kotlin.nanorc"
+include "~/.config/nano/syntaxhighlights/asciidoc.nanorc"
 
 ## Or you can select just the ones you need.  For example:
 # include "/usr/share/nano/html.nanorc"
