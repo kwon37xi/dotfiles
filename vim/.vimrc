@@ -421,6 +421,12 @@ nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 set nocursorline
 set nocursorcolumn
 
+" https://vimtricks.com/p/vimtrick-column-highlighting/
+au BufNewFile,BufRead *.yml :set cursorcolumn
+au BufNewFile,BufRead *.yaml :set cursorcolumn
+au BufNewFile,BufRead *.json :set cursorcolumn
+au BufNewFile,BufRead *.py :set cursorcolumn
+
 " Vim 모양새
 " vim airline
 "let g:airline#extensions#tabline#enabled = 1
