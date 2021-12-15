@@ -1,0 +1,7 @@
+---
+- name: keep usb tethring connected
+  become: yes
+  ansible.builtin.systemd:
+    name: ModemManager.service
+    enabled: no
+    state: stopped
