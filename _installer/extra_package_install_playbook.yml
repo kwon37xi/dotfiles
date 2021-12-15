@@ -113,6 +113,11 @@
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dbeaver-ce.sh"
     - name: balena-etcher
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-etcher_appimage.sh"
+    - name: scrcpy
+      become: yes
+      community.general.snap:
+        name: scrcpy
+        state: present
     - name: ascii-image-converter
       become: yes
       community.general.snap:
