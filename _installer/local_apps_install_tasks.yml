@@ -43,19 +43,6 @@
   shell: ~/.dotfiles/local_bin/.local/bin/install-tldr-node-client.sh
 - name: tldr update
   shell: "/home/{{ current_user }}/.local/bin/tldr --update"
-- name: jenv
-  git:
-    repo: https://github.com/jenv/jenv.git
-    clone: yes
-    depth: 1
-    dest: ~/.jenv
-- name: jenv-export-plugin
-  shell: |
-    export PATH="$HOME/.jenv/bin:$PATH"
-    eval "$(jenv init -)"
-    jenv enable-plugin export
-  args: # bash가 아니면 작동안함.
-    executable: /usr/bin/bash
 - name: sdkman
   shell: |
     curl -s "https://get.sdkman.io?rcupdate=false" | bash
