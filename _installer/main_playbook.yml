@@ -23,8 +23,8 @@
     - import_tasks: local_dotfiles_install_tasks.yml
     - import_tasks: local_gnome_configs_tasks.yml
     - import_tasks: sound_theme_tasks.yml
-    - import_tasks: local_jdk_install_tasks.yml
     - import_tasks: grub_themes_install_tasks.yml
     - import_tasks: local_develop_env_tasks.yml
     - import_tasks: keep_usb_tethering_tasks.yml
-      #- import_tasks: auto_cpufreq_tasks.yml
+    # - import_tasks: local_jdk_install_tasks.yml
+    #- import_tasks: auto_cpufreq_tasks.yml
