@@ -153,12 +153,6 @@
     name: flathub
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
     state: present
-- name: flatpak add remote kdeapps
-  become: yes
-  flatpak_remote:
-    name: kdeapps
-    flatpakrepo_url: https://distribute.kde.org/kdeapps.flatpakrepo
-    state: present
 - name: install input methods
   become: yes
   apt:
