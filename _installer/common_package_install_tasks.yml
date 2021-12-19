@@ -72,6 +72,7 @@
       - jq
       - iotop
       - atop
+      - conky-all
     state: latest
 - name: install system tools
   become: yes
