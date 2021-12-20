@@ -33,6 +33,9 @@
       - fonts-noto-cjk
       - fonts-noto-cjk-extra
       - ttf-mscorefonts-installer
+      - fonts-croscore # Chrome OS core fonts
+      - fonts-crosextra-carlito # Chrome OS core extra - MS Calibri 대체
+      - fonts-crosextra-caladea # Chrome OS core extra - MS Cambria 대체
     state: latest
 - name: install utils
   become: yes
