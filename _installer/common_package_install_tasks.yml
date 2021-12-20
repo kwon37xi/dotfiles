@@ -76,6 +76,7 @@
       - iotop
       - atop
       - conky-all
+      - python3-argcomplete # ansible bash auto completion
     state: latest
 - name: install system tools
   become: yes
