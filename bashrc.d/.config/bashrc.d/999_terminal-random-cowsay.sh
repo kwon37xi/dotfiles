@@ -10,5 +10,5 @@ then
 fi
 if [ $random_tldr -eq 1 ]
 then
-    \tldr --random | cowsay -W 100 -f tux | lolcat
+    ~/.local/bin/tldr --random | cowsay -W 100 -f tux | lolcat
 fi
