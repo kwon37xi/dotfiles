@@ -1,0 +1,8 @@
+# .bashrc 에서 이 파일을 읽어서 개인 설정을 확장한다.
+
+# 오름차순 정렬을 위해서 ls 명령으로 순회한다.
+for bashrc in `ls ~/.config/bashrc.d/*.sh`
+do
+    logger "bashrc loading - $bashrc"
+    source "$bashrc"
+done
