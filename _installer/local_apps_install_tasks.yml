@@ -29,12 +29,8 @@
   blockinfile:
     path: ~/.bashrc
     block: |
-      # 오름차순 정렬을 위해서 ls 명령으로 순회한다.
-      for bashrc in `ls ~/.config/bashrc.d/*.sh`
-      do
-        logger "bashrc loading - $bashrc"
-        source "$bashrc"
-      done
+      # 다양한 개인 설정을 읽어들이는 bashrc
+      source ~/.mybashrc
 - name: add seesyouspacecowboy to ~/.bash_logout
   lineinfile:
     path: ~/.bash_logout
