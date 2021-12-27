@@ -1,15 +1,15 @@
 ---
-- name: add backup-networkmanager cron.d
+- name: add backup-networkmanager cron.daily
   become: yes
   ansible.builtin.copy:
-    src: "/home/{{ current_user }}/.dotfiles/_backup/cron.d/backup-networkmanager-cron"
-    dest: "/etc/cron.d/backup-networkmanager-cron"
+    src: "/home/{{ current_user }}/.dotfiles/_backup/cron.daily/backup-networkmanager-cron.sh"
+    dest: "/etc/cron.daily/backup-networkmanager-cron.sh"
     owner: "root"
     group: "root"
     mode: "0644"
-- name: replace current_user backup-networkmanager cron.d
+- name: replace current_user backup-networkmanager cron.daily
   become: yes
   ansible.builtin.replace:
-    path: "/etc/cron.d/backup-networkmanager-cron"
-    regexp: "current_user"
+    path: "/etc/cron.daily/backup-networkmanager-cron.sh"
+    regexp: ":CURRENT_USER:"
     replace: "{{ current_user }}"

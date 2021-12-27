@@ -1,7 +1,0 @@
-PATH=/bin:/usr/bin:/sbin:/usr/sbin
-
-# daily backup networkmanager
-# daily restart of atop at midnight
-# current_user 를 실제 사용자로 변경해야한다.
-30 12 * * * current_user /home/current_user/.dotfiles/local_bin/.local/bin/backup-networkmanager.sh > /dev/null 2>&1
-30 22 * * * current_user /home/current_user/.dotfiles/local_bin/.local/bin/backup-networkmanager.sh > /dev/null 2>&1
