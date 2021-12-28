@@ -6,7 +6,7 @@
     dest: "/etc/cron.daily/backup-networkmanager-cron.sh"
     owner: "root"
     group: "root"
-    mode: "0644"
+    mode: "0744"
 - name: replace current_user backup-networkmanager cron.daily
   become: yes
   ansible.builtin.replace:
