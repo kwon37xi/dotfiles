@@ -111,6 +111,7 @@
       - meld
       - kdiff3
       - python3-pip
+      - shellcheck
     state: latest
 - name: update-alternatives java # java 11을 기본으로. java 17 아직 지원안하는 애플리케이션이 많음.
   become: yes
