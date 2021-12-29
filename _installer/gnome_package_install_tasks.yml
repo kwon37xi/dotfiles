@@ -65,6 +65,7 @@
       - qt5-style-kvantum-l10n # for qt5 theme
       - qt5-style-kvantum-themes # for qt5 theme
       - qt5ct # for qt5 theme
+      - breeze
     state: latest
 - name: build git libsecret git credential helper
   become: yes
