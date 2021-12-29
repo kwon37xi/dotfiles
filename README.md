@@ -21,10 +21,11 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 ## 가상머신에서 테스트 할경우
 * VirtualBox Guest Addition 을 미리 설치
 * 간혹 VirtualBox + wayland 에서 사용시 설치 과정에서 wayland가 다운됨. X org 로 전환해서 테스트 할 것.
+  * `/etc/gdm3/custom.conf` 에서 `WaylandEnable=false`
 * `설정 -> 전원`에서 빈화면 절전 안하게 변경
 * 웹 브라우저등에 https://github.com/kwon37xi/dotfiles 미리 북마크
 * Terminal 바로가기 설정
-* `sudo apt update; sudo apt upgrade`
+* `sudo apt update; sudo apt upgrade; sudo snap refresh`
 * 이 상태로 종료하고 Snapshot 을 저장해둔다.
 
 ## _installer
