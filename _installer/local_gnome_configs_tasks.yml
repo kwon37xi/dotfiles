@@ -42,5 +42,3 @@
   shell: |
     # 달력 기본 응용프로그램을 Gnome Calendar로 설정 - 텍스트 편집기로 돼 있는 버그 존재
     gio mime text/calendar org.gnome.Calendar.desktop
-- name: copy templates
-  shell: cp ~/.dotfiles/_backup/templates/* ~/Templates
