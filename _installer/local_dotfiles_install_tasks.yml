@@ -18,6 +18,7 @@
     - .config/fontconfig
     - .config/nano
     - .config/bashrc.d
+    - .config/Code/User
     - .sdkman/etc
     - Desktop
     - .vim
@@ -31,6 +32,7 @@
       - .config/fcitx/conf
       - .config/fcitx/config
       - .local/share/konsole
+      - .config/Code/User/snippets # snippets directory stow
       - .conky
 - name: stow
   shell: "stow -d ~/.dotfiles -t ~/ -S {{ item }}"
@@ -41,6 +43,7 @@
     - uim
     - git
     - bashrc.d
+    - vscode
     - sdkman
     - local_bin
     - fcitx
@@ -70,3 +73,5 @@
     force: yes
 - name: nano syntax highlights
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-nanorc.sh"
+- name: vscode extensions install
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-vscode-extensions.sh"

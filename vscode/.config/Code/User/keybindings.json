@@ -1,0 +1,11 @@
+// 키 바인딩을 이 파일에 넣어서 기본값 재정의auto[]
+[
+    {
+        "key": "ctrl+shift+0",
+        "command": "workbench.action.zoomReset"
+    },
+    {
+        "key": "ctrl+numpad0",
+        "command": "-workbench.action.zoomReset"
+    }
+]
