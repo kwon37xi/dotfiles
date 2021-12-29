@@ -14,6 +14,9 @@
 
     # Window Manager titlebar font
     gsettings set org.gnome.desktop.wm.preferences titlebar-font '한글누리 Bold 11'
+
+    # Mouse 위치 찾기 끄기
+    gsettings set org.gnome.desktop.interface locate-pointer false
 - name: ubuntu-dock settings
   shell: |
     gsettings set org.gnome.shell.extensions.dash-to-dock show-trash true
