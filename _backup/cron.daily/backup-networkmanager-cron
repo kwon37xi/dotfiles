@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 # NetworkManager의 설정 정보들을 local 로 백업한다.
 # 이 백업된 정보들은 다시 pika/dejadup 등을 통해 원격지로 백업된다.
 # 이 파일은 cron 에 의해 root 권한으로 실행된다.
@@ -12,6 +12,6 @@ logger "networkmanager connections backup started"
 rm -rf "/home/$TARGET_USER/.local/backup/networkmanager"
 mkdir -p "/home/$TARGET_USER/.local/backup/networkmanager/etc/NetworkManager"
 cp -R /etc/NetworkManager/system-connections "/home/$TARGET_USER/.local/backup/networkmanager/etc/NetworkManager"
-chown -R "$TARGET_USER:$TARGET_USER" "/home/$TARGET_USER/.local"
-
+chown -R "$TARGET_USER:$TARGET_USER" "/home/$TARGET_USER/.local/backup"
+chmod -R og-rwx "/home/$TARGET_USER/.local/backup"
 logger "networkmanager connections backuped successfully"
