@@ -71,3 +71,6 @@ alias tldr="tldr --theme=ocean"
 # editor
 alias se=sudoedit
 alias nn=nano
+
+# nvidia, intel graphic
+alias nvidiastats="nvidia-smi -q -g 0 -d UTILIZATION -l 1"
