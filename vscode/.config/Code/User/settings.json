@@ -4,9 +4,7 @@
         "**/.classpath": true,
         "**/.project": true,
         "**/.settings": true,
-        "**/.factorypath": true,
-        ".gradle": true,
-        "**/build": true
+        "**/.factorypath": true
     },
     "search.exclude": {
         "**/node_modules": true,
@@ -15,7 +13,8 @@
         "**/.settings": true,
         "**/.factorypath": true,
         ".gradle": true,
-        "**/build": true
+        "**/build": true,
+        "**/bin": true
     },
     "workbench.iconTheme": "material-icon-theme",
     "editor.suggestSelection": "first",
