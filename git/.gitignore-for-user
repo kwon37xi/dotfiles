@@ -1,3 +1,5 @@
 .java-version
 .envrc
 tags
+**/bin/
+**/build/
