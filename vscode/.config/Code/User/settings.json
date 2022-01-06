@@ -37,6 +37,9 @@
     "[typescript]": {
         "editor.formatOnSave": true
     },
+    "[java]": {
+        "editor.defaultFormatter": "mwpb.java-prettier-formatter"
+    },
     "window.titleBarStyle": "custom",
     "java.codeGeneration.toString.codeStyle": "STRING_BUILDER_CHAINED",
     "java.configuration.runtimes": [

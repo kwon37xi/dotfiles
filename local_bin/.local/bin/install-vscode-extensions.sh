@@ -81,6 +81,7 @@ extensions=(
     wix.vscode-import-cost
     wmaurer.change-case
     wmaurer.vscode-jumpy
+    mwpb.java-prettier-formatter
 )
 
 for extension in "${extensions[@]}"; do
