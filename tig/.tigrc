@@ -1,4 +1,5 @@
-bind main P !git push origin
+# https://jonas.github.io/tig/doc/tigrc.5.html
+bind generic <C-P> !git push origin
 
 # commit 의 diff 를 보다가 파일 이름 부분에서 ''H''를 누르면 해당 파일의 commit history 를 보여준다.
 bind diff H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
@@ -13,3 +14,6 @@ bind generic 9 !@sh -c "echo -n %(commit) | xclip -selection c && notify-send -i
 
 # commit amend
 bind generic + !git commit --amend
+
+# 실행후 즉시 tig로 복귀
+bind tree <C-L> >tig %(file)
