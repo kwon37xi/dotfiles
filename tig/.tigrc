@@ -15,5 +15,8 @@ bind generic 9 !@sh -c "echo -n %(commit) | xclip -selection c && notify-send -i
 # commit amend
 bind generic + !git commit --amend
 
-# 실행후 즉시 tig로 복귀
+# File log 보여주기
 bind tree <C-L> >tig %(file)
+
+# switch local 브랜치들
+bind main <C-S> >sh -c "git switch $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
