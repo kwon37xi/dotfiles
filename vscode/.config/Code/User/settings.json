@@ -108,5 +108,8 @@
         "rgba(79,236,236,0.07)"
       ],
       "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
-      "indentRainbow.tabmixColor": "rgba(128,32,96,0.6)"
+    "indentRainbow.tabmixColor": "rgba(128,32,96,0.6)",
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "aws.sam.enableCodeLenses": false
 }
