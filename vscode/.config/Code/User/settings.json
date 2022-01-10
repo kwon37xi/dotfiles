@@ -14,7 +14,9 @@
         "**/.factorypath": true,
         ".gradle": true,
         "**/build": true,
-        "**/bin": true
+        "**/build/**/*.*": true,
+        "**/bin": true,
+        "**/bin/**/*.*": true
     },
     "workbench.iconTheme": "material-icon-theme",
     "editor.suggestSelection": "first",
