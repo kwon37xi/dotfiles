@@ -12,6 +12,7 @@ extensions=(
     christian-kohler.npm-intellisense
     DavidAnson.vscode-markdownlint
     dbaeumer.vscode-eslint
+    doggy8088.quicktype-refresh
     donjayamanne.githistory
     dsznajder.es7-react-js-snippets
     eamodio.gitlens
@@ -26,6 +27,8 @@ extensions=(
     fwcd.kotlin
     GabrielBB.vscode-lombok
     GitHub.github-vscode-theme
+    GitHub.remotehub
+    GitHub.vscode-pull-request-github
     golang.go
     hashicorp.terraform
     HookyQR.beautify
@@ -47,6 +50,7 @@ extensions=(
     ms-vscode.vscode-typescript-tslint-plugin
     ms-vsliveshare.vsliveshare
     mtxr.sqltools
+    mwpb.java-prettier-formatter
     naco-siren.gradle-language
     oderwat.indent-rainbow
     p1c2u.docker-compose
@@ -61,9 +65,11 @@ extensions=(
     Remisa.shellman
     ritwickdey.LiveServer
     rogalmic.bash-debug
+    ryanolsonx.solarized
     solnurkarim.html-to-css-autocompletion
     SonarSource.sonarlint-vscode
     steoates.autoimport
+    stevencl.addDocComments
     tht13.html-preview-vscode
     timonwong.shellcheck
     Tyriar.sort-lines
@@ -81,7 +87,6 @@ extensions=(
     wix.vscode-import-cost
     wmaurer.change-case
     wmaurer.vscode-jumpy
-    mwpb.java-prettier-formatter
 )
 
 for extension in "${extensions[@]}"; do
