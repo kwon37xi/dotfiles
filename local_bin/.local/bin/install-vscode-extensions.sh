@@ -2,42 +2,52 @@
 
 extensions=(
     2gua.rainbow-brackets
-    aaron-bond.better-comments
     AdsonCicilioti.yaru-vscode
+    DavidAnson.vscode-markdownlint
+    EditorConfig.EditorConfig
+    GabrielBB.vscode-lombok
+    GitHub.github-vscode-theme
+    GitHub.remotehub
+    GitHub.vscode-pull-request-github
+    HookyQR.beautify
+    MS-CEINTL.vscode-language-pack-ko
+    PKief.material-icon-theme
+    Perkovec.emoji
+    Pivotal.vscode-boot-dev-pack
+    Pivotal.vscode-spring-boot
+    Remisa.shellman
+    SonarSource.sonarlint-vscode
+    Tyriar.sort-lines
+    VisualStudioExptTeam.vscodeintellicode
+    aaron-bond.better-comments
     alefragnani.Bookmarks
     amazonwebservices.aws-toolkit-vscode
     atlassian.atlascode
     azemoh.one-monokai
     bajdzis.vscode-database
     christian-kohler.npm-intellisense
-    DavidAnson.vscode-markdownlint
     dbaeumer.vscode-eslint
     doggy8088.quicktype-refresh
     donjayamanne.githistory
     dsznajder.es7-react-js-snippets
     eamodio.gitlens
     ecmel.vscode-html-css
-    EditorConfig.EditorConfig
     eg2.vscode-npm-script
     esbenp.prettier-vscode
+    evan-buss.font-switcher
     formulahendry.auto-rename-tag
     formulahendry.code-runner
     formulahendry.theme-ubuntu-style
     foxundermoon.shell-format
     fwcd.kotlin
-    GabrielBB.vscode-lombok
-    GitHub.github-vscode-theme
-    GitHub.remotehub
-    GitHub.vscode-pull-request-github
     golang.go
     hashicorp.terraform
-    HookyQR.beautify
     humao.rest-client
+    jspolancor.presentationmode
     mads-hartmann.bash-ide-vscode
     mechatroner.rainbow-csv
     moyu.snapcode
     ms-azuretools.vscode-docker
-    MS-CEINTL.vscode-language-pack-ko
     ms-kubernetes-tools.vscode-kubernetes-tools
     ms-python.python
     ms-python.vscode-pylance
@@ -54,27 +64,19 @@ extensions=(
     naco-siren.gradle-language
     oderwat.indent-rainbow
     p1c2u.docker-compose
-    Perkovec.emoji
-    Pivotal.vscode-boot-dev-pack
-    Pivotal.vscode-spring-boot
-    PKief.material-icon-theme
     pranaygp.vscode-css-peek
     redhat.ansible
     redhat.java
     redhat.vscode-yaml
-    Remisa.shellman
     ritwickdey.LiveServer
     rogalmic.bash-debug
     ryanolsonx.solarized
     solnurkarim.html-to-css-autocompletion
-    SonarSource.sonarlint-vscode
     steoates.autoimport
     stevencl.addDocComments
     tht13.html-preview-vscode
     timonwong.shellcheck
-    Tyriar.sort-lines
     usernamehw.errorlens
-    VisualStudioExptTeam.vscodeintellicode
     vscjava.vscode-gradle
     vscjava.vscode-java-debug
     vscjava.vscode-java-dependency
