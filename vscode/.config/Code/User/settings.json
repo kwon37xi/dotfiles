@@ -96,7 +96,7 @@
         "!Split sequence"
     ],
     "yaml.schemas": {
-        "file:///home/kwon37xi/.vscode/extensions/atlassian.atlascode-2.10.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/kwon37xi/.vscode/extensions/atlassian.atlascode-2.10.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "redhat.telemetry.enabled": true,
     "indentRainbow.includedLanguages": ["javascript", "python", "markdown", "java", "ruby", "go", "rust", "html", "xml", "json", "yaml"],
@@ -111,5 +111,7 @@
     "indentRainbow.tabmixColor": "rgba(128,32,96,0.6)",
     "gitlens.codeLens.recentChange.enabled": false,
     "gitlens.codeLens.authors.enabled": false,
-    "aws.sam.enableCodeLenses": false
+    "aws.sam.enableCodeLenses": false,
+    "editor.minimap.enabled": false,
+    "git.confirmSync": false
 }
