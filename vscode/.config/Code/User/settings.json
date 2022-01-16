@@ -113,5 +113,7 @@
     "gitlens.codeLens.authors.enabled": false,
     "aws.sam.enableCodeLenses": false,
     "editor.minimap.enabled": false,
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "window.zoomLevel": 0,
+    "presentationMode.zoomLevel": 2
 }

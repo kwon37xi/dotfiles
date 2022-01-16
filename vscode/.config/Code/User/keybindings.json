@@ -27,5 +27,9 @@
     {
         "key": "alt+insert",
         "command": "java.view.package.newJavaClass"
+    },
+    {
+        "key": "ctrl+shift+alt+p",
+        "command": "extension.presentationMode"
     }
 ]
