@@ -26,6 +26,7 @@ extensions=(
     azemoh.one-monokai
     bajdzis.vscode-database
     christian-kohler.npm-intellisense
+    christian-kohler.path-intellisense
     dbaeumer.vscode-eslint
     doggy8088.quicktype-refresh
     donjayamanne.githistory
@@ -43,6 +44,7 @@ extensions=(
     golang.go
     hashicorp.terraform
     humao.rest-client
+    johnpapa.vscode-peacock
     jspolancor.presentationmode
     mads-hartmann.bash-ide-vscode
     mechatroner.rainbow-csv
@@ -64,6 +66,7 @@ extensions=(
     naco-siren.gradle-language
     oderwat.indent-rainbow
     p1c2u.docker-compose
+    pflannery.vscode-versionlens
     pranaygp.vscode-css-peek
     redhat.ansible
     redhat.java
@@ -74,6 +77,7 @@ extensions=(
     solnurkarim.html-to-css-autocompletion
     steoates.autoimport
     stevencl.addDocComments
+    techer.open-in-browser
     tht13.html-preview-vscode
     timonwong.shellcheck
     usernamehw.errorlens
