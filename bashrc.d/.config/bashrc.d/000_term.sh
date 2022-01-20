@@ -10,7 +10,7 @@ export VISUAL=nano
 export EDITOR=$VISUAL
 export SUDO_EDITOR=$VISUAL
 
-export CDPATH=$HOME:$HOME/projects/personal:$HOME/projects/woowabros
+export CDPATH=.:$HOME:$HOME/projects/personal:$HOME/projects/woowabros
 
 # https://apple.stackexchange.com/questions/88515/how-do-i-edit-current-shell-command-in-vi
 # Ctrl+X Ctrl+E 를 누르면 현재 명령을 vi 에디터에서 편집할 수 있다.
