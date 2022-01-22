@@ -40,10 +40,15 @@
         "editor.formatOnSave": true
     },
     "[java]": {
-        "editor.defaultFormatter": "mwpb.java-prettier-formatter"
+        "editor.defaultFormatter": "redhat.java"
     },
     "window.titleBarStyle": "custom",
+    "java.debug.settings.console": "internalConsole",
+    "java.debug.settings.forceBuildBeforeLaunch": false,
+    "java.silentNotification": true,
     "java.codeGeneration.toString.codeStyle": "STRING_BUILDER_CHAINED",
+    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+    "java.format.settings.profile": "GoogleStyle",
     "java.configuration.runtimes": [
         {
             "name": "JavaSE-1.8",
@@ -96,7 +101,7 @@
         "!Split sequence"
     ],
     "yaml.schemas": {
-        "file:///home/kwon37xi/.vscode/extensions/atlassian.atlascode-2.10.4/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/kwon37xi/.vscode/extensions/atlassian.atlascode-2.10.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "redhat.telemetry.enabled": true,
     "indentRainbow.includedLanguages": ["javascript", "python", "markdown", "java", "ruby", "go", "rust", "html", "xml", "json", "yaml"],
@@ -113,6 +118,7 @@
     "gitlens.codeLens.authors.enabled": false,
     "aws.sam.enableCodeLenses": false,
     "editor.minimap.enabled": false,
+    "editor.gotoLocation.multipleDefinitions": "goto",
     "git.confirmSync": false,
     "window.zoomLevel": 0,
     "presentationMode.zoomLevel": 2
