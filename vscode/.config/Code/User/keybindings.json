@@ -31,5 +31,9 @@
     {
         "key": "ctrl+shift+alt+p",
         "command": "extension.presentationMode"
+    },
+    {
+        "key": "ctrl+shift+g p",
+        "command": "git.push"
     }
 ]
