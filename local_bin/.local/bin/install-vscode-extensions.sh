@@ -20,6 +20,7 @@ extensions=(
     Tyriar.sort-lines
     VisualStudioExptTeam.vscodeintellicode
     aaron-bond.better-comments
+    adpyke.codesnap
     alefragnani.Bookmarks
     amazonwebservices.aws-toolkit-vscode
     atlassian.atlascode
