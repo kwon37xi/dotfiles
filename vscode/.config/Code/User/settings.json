@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Yaru Dark Pumpkin",
+    "workbench.colorTheme": "Monokai",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -18,7 +18,6 @@
         "**/bin": true,
         "**/bin/**/*.*": true
     },
-    "workbench.iconTheme": "material-icon-theme",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "java.imports.gradle.wrapper.checksums": [
@@ -121,5 +120,6 @@
     "editor.gotoLocation.multipleDefinitions": "goto",
     "git.confirmSync": false,
     "window.zoomLevel": 0,
-    "presentationMode.zoomLevel": 2
+    "presentationMode.zoomLevel": 2,
+    "workbench.iconTheme": "material-icon-theme"
 }
