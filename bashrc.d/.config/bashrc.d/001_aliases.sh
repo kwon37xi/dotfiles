@@ -38,8 +38,8 @@ alias sysup='sudo apt update && sudo apt -y upgrade && sudo apt  -y autoremove &
 alias aptsearch='apt search --names-only'
 
 # exa as ls
-alias ls='exa -lah --colour=always --icons --git --group-directories-first'
-alias ll='exa -lah --colour=always --icons --git --group-directories-first'
+alias ls='exa -lgah --colour=always --icons --git --group-directories-first'
+alias ll='exa -lgah --colour=always --icons --git --group-directories-first'
 alias lt='exa -lah --colour=always --icons --git --group-directories-first --tree'
 alias l='exa'
 alias l1='exa -1 --group-directories-first --icons'
