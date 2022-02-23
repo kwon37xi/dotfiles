@@ -106,6 +106,9 @@
     - name: blanket
       community.general.flatpak:
         name: "com.rafaelmardojai.Blanket"
+    - name: extensionmanager
+      community.general.flatpak:
+        name: "com.mattjakeman.ExtensionManager"
     - name: OTPClient
       community.general.flatpak:
         name: "com.github.paolostivanin.OTPClient"
