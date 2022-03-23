@@ -13,7 +13,7 @@ alias .....="cd ../../../.."
 alias bd=". bd -si"
 
 # bash-it custom aliases
-alias ydl="youtube-dl -o '%(title).36s-%(id)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
+alias ydl="youtube-dl -o '%(title).36s-%(id)s.%(ext)s"
 alias ydlmp3="youtube-dl -o '%(title).36s-%(id)s.%(ext)s' --extract-audio --audio-format mp3"
 
 # 한국 Windows 에서 압축된 zip 파일 풀기
