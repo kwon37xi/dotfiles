@@ -33,7 +33,7 @@
         "id": "0a2053e4-e59f-470d-af03-7da4b8374ecf",
         "name": "Youtuble dl",
         "keyword": "ydl",
-        "cmd": "#!/bin/bash\nmkdir -p /tmp/videos_nq\nyoutube_url=$(zenity --entry --text \"Youtube URL \uc785\ub825\" --entry-text `xclip -o -sel clip`)\n\nNQDIR=/tmp/videos_nq nq /home/linuxbrew/.linuxbrew/bin/youtube-dl -f ''bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio'' --merge-output-format mp4 -o \"${HOME}/Videos/%(title)s-%(id)s.%(ext)s\" \"${youtube_url}\"",
+        "cmd": "#!/bin/bash\nmkdir -p /tmp/videos_nq\nyoutube_url=$(zenity --entry --text \"Youtube URL \uc785\ub825\" --entry-text `xclip -o -sel clip`)\n\nNQDIR=/tmp/videos_nq nq /home/linuxbrew/.linuxbrew/bin/youtube-dl -o \"${HOME}/Videos/%(title)s-%(id)s.%(ext)s\" \"${youtube_url}\"",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
@@ -198,5 +198,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1630537318.851396
+    },
+    "22626ea6-4aae-4ea7-98de-66ed0bc780ec": {
+        "id": "22626ea6-4aae-4ea7-98de-66ed0bc780ec",
+        "name": "bmart-platform-daily zoom",
+        "keyword": "bpdz",
+        "cmd": "#!/bin/sh\n~/.local/bin/zoom-bmart-platform-daily.sh",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1647996374.0568354
     }
 }
