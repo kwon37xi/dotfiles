@@ -48,6 +48,7 @@
     - ppa:graphics-drivers/ppa
     - ppa:papirus/papirus
     - ppa:cappelikan/ppa # for mainline
+    - ppa:gerardpuig/ppa # for ubuntu cleaner
 - name: multiverse universe
   become: yes
   shell: "apt-add-repository -y --no-update {{ item }}"

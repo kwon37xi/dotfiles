@@ -77,6 +77,7 @@
       - atop
       - conky-all
       - python3-argcomplete # ansible bash auto completion
+      - ubuntu-cleaner
     state: latest
 - name: install system tools
   become: yes
