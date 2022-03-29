@@ -60,6 +60,7 @@ alias df="duf -hide loops"
 
 # 오직 현재 파티션에 속하는 디렉토리에 대한 사용량 검사
 alias dux="du --human-readable --max-depth=1 --one-file-system"
+alias ncdu="ncdu -x --color dark"
 
 # flameshot
 alias flameshot="flatpak run org.flameshot.Flameshot"
