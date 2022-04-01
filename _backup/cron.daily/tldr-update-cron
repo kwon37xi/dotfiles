@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# tldr update for kwon37xi
+# https://askubuntu.com/questions/1105542/run-etc-cron-daily-from-specific-user
+TARGET_USER=:CURRENT_USER:
+logger "tldr update starting..."
+
+if [ "$(id -u)" -eq 0 ]; then
+    exec sudo -H -u "${TARGET_USER}" $0 "$@"
+fi
+
+/home/${TARGET_USER}/.local/bin/tldr --update
+
+exit 0;

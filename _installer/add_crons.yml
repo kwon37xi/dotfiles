@@ -1,0 +1,15 @@
+---
+- name: add tldr-update cron.daily
+  become: yes
+  ansible.builtin.copy:
+    src: "/home/{{ current_user }}/.dotfiles/_backup/cron.daily/tldr-update-cron"
+    dest: "/etc/cron.daily/tldr-update-cron"
+    owner: "root"
+    group: "root"
+    mode: "0744"
+- name: replace current_user tldr-update cron.daily
+  become: yes
+  ansible.builtin.replace:
+    path: "/etc/cron.daily/tldr-update-cron"
+    regexp: ":CURRENT_USER:"
+    replace: "{{ current_user }}"
