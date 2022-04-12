@@ -28,5 +28,4 @@
     - import_tasks: keep_usb_tethering_tasks.yml
     - import_tasks: backup_tasks.yml
     - import_tasks: add_crons.yml
-    # - import_tasks: local_jdk_install_tasks.yml
     #- import_tasks: auto_cpufreq_tasks.yml
