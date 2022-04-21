@@ -60,3 +60,9 @@ please() {
 		sudo "$BASH" -c "$(history -p !!)"
 	fi
 }
+
+# jenv functions
+jenvinit() {
+    echo "$(jenv versions --bare | fzf)" > .java-version
+}
+
