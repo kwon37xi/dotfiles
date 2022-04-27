@@ -1,2 +1,2 @@
 # load starship
-eval "$(starship init bash)"
+eval "$($HOMEBREW_PREFIX/bin/starship init bash)"
