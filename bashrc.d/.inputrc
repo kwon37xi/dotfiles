@@ -1,4 +1,17 @@
+# https://catonmat.net/ftp/bash-vi-editing-mode-cheat-sheet.pdf
 set editing-mode vi
 set show-mode-in-prompt on
 set vi-ins-mode-string +
 set vi-cmd-mode-string :
+
+# see https://wiki.archlinux.org/title/readline
+# 자동완성 컬러화 - 디렉토리와 파일 등 구분
+set colored-stats on
+
+# 자동완성시 prefix 컬러화
+set Colored-completion-prefix on
+
+# 자동완성 tab 한번으로 처리
+set show-all-if-ambiguous on
+# 자동완성 대소문자 무시
+set completion-ignore-case on
