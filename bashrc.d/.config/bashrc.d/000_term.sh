@@ -31,8 +31,8 @@ bind '"\e\C-a": alias-expand-line'
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
-# Ctrl-b : 부모 디렉토리로
-bind '"\C-b": "cd ..\n"'
+# Alt+Ctrl-k : 부모 디렉토리로, 처음에는 \n 으로 엔터를 했으나 작동 안해서 \C-m 으로 변경함.
+bind '"\e\C-k": "cd ..\C-m"'
 # meta(alt)-s : 현재 명령에 sudo 붙여주기 - vi mode. \C-[ 는 ESC 키를 의미함.
 bind '"\es": "\C-[Isudo \C-[$a"'
 # emacs mode : "\C-asudo \C-e"
