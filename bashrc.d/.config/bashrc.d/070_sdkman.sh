@@ -16,7 +16,7 @@ jd() {
 
 # install jdk
 ji() {
-    sdk install java "$(sdk list java | grep '|' | grep -v '^\sVendor' | grep -v 'installed\|local only' | awk '{print $NF}' | fzf)"
+    sdk install java "$(sdk list java | grep -E '(.+\|){5}' | grep -v '^\sVendor' | grep -v 'installed\|local only' | awk '{print $NF}' | fzf)"
 }
 
 # installed JDK list
@@ -27,7 +27,7 @@ _sdkman_ji() {
 
 # JDK list except installed
 _sdkman_jl() {
-    sdk list java | grep  '|' | grep -v '^\sVendor' | grep -v 'installed\|local only' | awk '{print $NF}' |
+    sdk list java | grep -E '(.+\|){5}' | grep -v '^\sVendor' | grep -v 'installed\|local only' | awk '{print $NF}' |
         fzf --header "Choose JDK"
 }
 
