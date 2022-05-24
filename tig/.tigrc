@@ -12,7 +12,7 @@ bind tree H >sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
 #bind tree <C-L> >tig %(file)
 
 # 신규 local 브랜치 생성
-bind branch n !@git switch -c %(prompt)
+bind branch n !@git switch -c "%(prompt New Branch name: )"
 
 # 일반 모드에서 9 를 누르면 commit hash 값을 클립보드로 복사해줌
 bind generic 9 !@sh -c "echo -n %(commit) | xclip -selection c && notify-send -i edit-copy 'Commit copied - %(commit)'"
@@ -23,6 +23,9 @@ bind generic + !git commit --amend
 
 # switch local 브랜치들
 bind main <C-S> >sh -c "git switch $(git branch -vv | grep -v '^\\*' | fzf | awk '{print $1}')"
+
+# git pull
+bind main <C-T> !git pull --rebase
 
 # chocolate Theme : https://github.com/jonas/tig/blob/master/contrib/chocolate.theme.tigrc
 color diff-stat			95	default
