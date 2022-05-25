@@ -17,5 +17,5 @@ fi
 
 if [ $random_tldr -eq 1 ]
 then
-    ~/.local/bin/tldr --random | cowsay -W 100 -f tux | lolcat
+    ~/.local/bin/tldr --random | cowsay -W 80 -f $(\ls /usr/share/cowsay/cows/*.cow | sort -R | head -n 1 | xargs basename -s .cow) | lolcat
 fi
