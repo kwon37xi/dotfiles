@@ -10,6 +10,21 @@ is_in_git_repo() {
   git rev-parse HEAD > /dev/null 2>&1
 }
 
+# git 관련 메뉴 출력
+_git_menu() {
+  is_in_git_repo || return
+  local menu=$(echo -e "files\nbranches\ntags\nhistories\nremotes\nstashes" | fzf --prompt "git 행동 선택 > ")
+  case $menu in
+    "files") _gf;;
+    "branches") _gb;;
+    "tags") _gt;;
+    "histories") _gh;;
+    "remotes") _gr;;
+    "stashes") _gs;;
+    *) echo "unknown command";;
+ esac
+}
+
 # git 변경된 파일 목록 선택
 _gf() {
   is_in_git_repo || return
@@ -81,6 +96,7 @@ if [[ $- =~ i ]]; then
   bind '"\C-g\C-h": "$(_gh)\e\C-l\er"'
   bind '"\C-g\C-r": "$(_gr)\e\C-l\er"'
   bind '"\C-g\C-s": "$(_gs)\e\C-l\er"'
+  bind '"\C-g\C-g": "$(_git_menu)\e\C-l\er"'
 
   # Extra
   bind '"\C-g\C-p": "$(_gp)\e\C-l\er"'
