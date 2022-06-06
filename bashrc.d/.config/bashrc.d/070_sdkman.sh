@@ -6,29 +6,62 @@ export SDKMAN_DIR="/home/${USER}/.sdkman"
 # https://www.grailbox.com/2021/04/switch-among-java-versions-fzf-and-sdkman/
 # 현재 shell 용 java version 지정
 ju() {
-    sdk use java "$(sdk list java | grep 'installed\|local only' | grep -v '>>>' | awk '{print $NF}' | fzf)"
+    local javaversion="$(sdk list java | grep 'installed\|local only' | grep -v '>>>' | awk '{print $NF}' | fzf --prompt '사용할 Java 버전 > ')"
+    if [ -z "$javaversion" ]
+    then
+        echo "Java 버전을 지정하지 않았습니다."
+    else
+        echo "Java ${javaversion}을 사용합니다."
+        sdk use java "${javaversion}"
+    fi
 }
 
 # default java 버전 지정
 jd() {
-    sdk default java "$(sdk list java | grep 'installed\|local only' | awk '{print $NF}' | fzf)"
+    local javaversion="$(sdk list java | grep 'installed\|local only' | awk '{print $NF}' | fzf --prompt '기본으로 지정할 Java 버전 > ')"
+    if [ -z "$javaversion" ]
+    then
+        echo "Java 버전을 지정하지 않았습니다."
+    else
+        echo "Java ${javaversion}을 기본값으로 지정합니다."
+        sdk default java "${javaversion}"
+    fi
 }
 
 # install jdk
 ji() {
-    sdk install java "$(sdk list java | grep -E '(.+\|){5}' | grep -v '^\sVendor' | grep -v 'installed\|local only' | awk '{print $NF}' | fzf)"
+    local javaversion="$(sdk list java | grep -E '(.+\|){5}' | grep -v '^\sVendor' | grep -v 'installed\|local only' | awk '{print $NF}' | fzf --prompt '설치할 Java 버전 > ')"
+    if [ -z "$javaversion" ]
+    then
+        echo "Java 버전을 지정하지 않았습니다."
+    else
+        echo "Java ${javaversion}을 설치합니다."
+        sdk install java "${javaversion}"
+    fi
+}
+
+# remoev jdk
+jr() {
+    local javaversion="$(sdk list java | grep 'installed\|local only' | grep -v '>>>' | awk '{print $NF}' | fzf --prompt '삭제할 Java 버전 > ')"
+    if [ -z "$javaversion" ]
+    then
+        echo "Java 버전을 지정하지 않았습니다."
+    else
+        echo "Java ${javaversion}을 삭제합니다."
+        sdk uninstall java "${javaversion}"
+    fi
 }
 
 # installed JDK list
 _sdkman_ji() {
     sdk list java | grep 'installed\|local only' | grep -v '>>>' | awk '{print $NF}' |
-        fzf --header "Choose installed JDK"
+        fzf --prompt "설치된 Java 버전목록 > "
 }
 
 # JDK list except installed
 _sdkman_jl() {
     sdk list java | grep -E '(.+\|){5}' | grep -v '^\sVendor' | grep -v 'installed\|local only' | awk '{print $NF}' |
-        fzf --header "Choose JDK"
+        fzf --prompt "설치할 Java 버전목록 > "
 }
 
 # $- =~ i : interactive shell 일 경우
