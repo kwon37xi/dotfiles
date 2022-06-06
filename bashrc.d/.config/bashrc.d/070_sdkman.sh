@@ -64,11 +64,17 @@ _sdkman_jl() {
         fzf --prompt "설치하지 않은 Java 버전목록 > "
 }
 
+_sdkman_jall() {
+    sdk list java | grep -E '(.+\|){5}' | grep -v '^\sVendor' | awk '{ if ($(NF-2) == "only" || $(NF-2) == "installed") print "* " $NF; else print "- " $NF } ' |
+        fzf --prompt "모든 Java 버전목록 (*: installed, -: not installed) > " | awk '{ print $NF }'
+}
+
 _sdkman_menu() {
-    local menu=$(echo -e "local Java Versions\nremote Java Versions" | fzf)
+    local menu=$(echo -e "all Java Versions\nlocal Java Versions\nremote Java Versions" | fzf)
     case $menu in
         "local Java Versions") _sdkman_ji;;
-        *) _sdkman_jl;;
+        "remote Java Versions") _sdkman_jl;;
+        *) _sdkman_jall;;
     esac
 }
 
@@ -77,6 +83,7 @@ if [[ $- =~ i ]]; then
   # tmux 가 아닌경우 redraw-current-line 이 필요할 수있음.
   bind '"\er": redraw-current-line'
   # shell-expand-line 은 bind-x*.bashrc에서 \e\C-l 로 지정했음.
+  bind '"\C-j\C-a": "$(_sdkman_jall)\e\C-l\er"'
   bind '"\C-j\C-i": "$(_sdkman_ji)\e\C-l\er"'
   bind '"\C-j\C-l": "$(_sdkman_jl)\e\C-l\er"'
   bind '"\C-j\C-j": "$(_sdkman_menu)\e\C-l\er"'
