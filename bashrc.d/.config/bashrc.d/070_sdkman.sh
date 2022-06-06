@@ -61,7 +61,15 @@ _sdkman_ji() {
 # JDK list except installed
 _sdkman_jl() {
     sdk list java | grep -E '(.+\|){5}' | grep -v '^\sVendor' | grep -v 'installed\|local only' | awk '{print $NF}' |
-        fzf --prompt "설치할 Java 버전목록 > "
+        fzf --prompt "설치하지 않은 Java 버전목록 > "
+}
+
+_sdkman_menu() {
+    local menu=$(echo -e "local Java Versions\nremote Java Versions" | fzf)
+    case $menu in
+        "local Java Versions") _sdkman_ji;;
+        *) _sdkman_jl;;
+    esac
 }
 
 # $- =~ i : interactive shell 일 경우
@@ -71,4 +79,5 @@ if [[ $- =~ i ]]; then
   # shell-expand-line 은 bind-x*.bashrc에서 \e\C-l 로 지정했음.
   bind '"\C-j\C-i": "$(_sdkman_ji)\e\C-l\er"'
   bind '"\C-j\C-l": "$(_sdkman_jl)\e\C-l\er"'
+  bind '"\C-j\C-j": "$(_sdkman_menu)\e\C-l\er"'
 fi
