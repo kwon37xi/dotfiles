@@ -208,5 +208,25 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1647996374.0568354
+    },
+    "4bb4e30a-0fb8-46ae-804b-9a4a5821c777": {
+        "id": "4bb4e30a-0fb8-46ae-804b-9a4a5821c777",
+        "name": "Laptop Monitor Brighter",
+        "keyword": "monitor bright \ubc1d\uac8c",
+        "cmd": "#!/bin/sh\nxrandr --output eDP-1-1 --brightness 1.0",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1655104116.8233562
+    },
+    "976d72be-d3cf-4159-83bc-e29e7faa3186": {
+        "id": "976d72be-d3cf-4159-83bc-e29e7faa3186",
+        "name": "Laptop Monitor Dark",
+        "keyword": "laptop monitor dark \uc5b4\ub461\uac8c",
+        "cmd": "#!/bin/sh\nxrandr --output eDP-1-1 --brightness 0.4",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1655104138.8368993
     }
 }
