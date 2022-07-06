@@ -228,5 +228,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1655104138.8368993
+    },
+    "83ad6d43-d4ad-4b75-9dc4-81bc743a90a5": {
+        "id": "83ad6d43-d4ad-4b75-9dc4-81bc743a90a5",
+        "name": "scrcpy - android view",
+        "keyword": "andview",
+        "cmd": "#!/bin/sh\nscrcpy --hid-keyboard --stay-awake",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1657068855.6458433
     }
 }
