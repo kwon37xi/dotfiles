@@ -1,5 +1,5 @@
 #!/bin/bash
-current_dir=`pwd`
+current_dir=`pwd -P` # -L for symlink
 while [ "$current_dir" != "/" ]
 do
     if [ -f "$current_dir/gradlew" ]
