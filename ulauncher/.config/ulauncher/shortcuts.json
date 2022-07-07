@@ -63,7 +63,7 @@
         "id": "c7f20760-3a24-40a3-b1de-833f54898360",
         "name": "Woowahan \uc9c1\uc6d0",
         "keyword": "wo",
-        "cmd": "https://office.woowa.in/WebSite/Extension/Search/Search.aspx?system=Board&alias=Board.KeywordSearch&SearchKeyword=%s",
+        "cmd": "#!/bin/sh\n$HOME/.local/bin/ulauncher-private-search.sh WOOWAHAN_OFFICE_SEARCH_URL $1",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": false,
@@ -73,21 +73,11 @@
         "id": "57828b01-4cb9-4e44-9b50-8036c23a2c53",
         "name": "Woowahan Jira",
         "keyword": "wj",
-        "cmd": "https://jira.woowa.in/browse/%s",
+        "cmd": "#!/bin/sh\n$HOME/.local/bin/ulauncher-private-search.sh WOOWAHAN_JIRA_SEARCH_URL $1\n",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": false,
         "added": 1606443030.866737
-    },
-    "06c1d26c-c41f-4b3f-97b1-f6f842ba85bd": {
-        "id": "06c1d26c-c41f-4b3f-97b1-f6f842ba85bd",
-        "name": "Woowahan Jira - \uac00\uac8c\uc2dc\uc2a4\ud15c\ud300",
-        "keyword": "wjs",
-        "cmd": "https://jira.woowa.in/browse/STORESYS-%s",
-        "icon": null,
-        "is_default_search": false,
-        "run_without_argument": false,
-        "added": 1606443054.5114512
     },
     "e61f8451-7b40-4ee0-8c4b-4f6a1c29d7ab": {
         "id": "e61f8451-7b40-4ee0-8c4b-4f6a1c29d7ab",
@@ -211,7 +201,7 @@
     },
     "4bb4e30a-0fb8-46ae-804b-9a4a5821c777": {
         "id": "4bb4e30a-0fb8-46ae-804b-9a4a5821c777",
-        "name": "Laptop Monitor Brighter",
+        "name": "Laptop Monitor Bright",
         "keyword": "monitor bright \ubc1d\uac8c",
         "cmd": "#!/bin/sh\nxrandr --output eDP-1-1 --brightness 1.0",
         "icon": null,
