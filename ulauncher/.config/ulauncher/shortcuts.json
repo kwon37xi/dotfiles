@@ -228,5 +228,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1657068855.6458433
+    },
+    "c9de56bd-322d-42fd-8792-6f02a89ddcae": {
+        "id": "c9de56bd-322d-42fd-8792-6f02a89ddcae",
+        "name": "ddterm presentation mode toggle",
+        "keyword": "ddtermpm",
+        "cmd": "#!/bin/sh\n$HOME/.local/bin/ddterm-presentation-mode-toggle.sh",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1657243331.9449716
     }
 }
