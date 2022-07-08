@@ -99,15 +99,7 @@
   retries: 3
   delay: 10
 - name: Memory Analyzer(MAT)
-  unarchive:
-    src: http://mirror.kakao.com/eclipse/mat/1.10.0/rcp/MemoryAnalyzer-1.10.0.20200225-linux.gtk.x86_64.zip
-    remote_src: yes
-    dest: "/home/{{ current_user }}/.local/opt"
-    creates: "/home/{{ current_user }}/.local/opt/mat"
-  register: mat_installed
-  until: mat_installed is not failed
-  retries: 3
-  delay: 10
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-mat.sh"
 - name: ulauncher
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-ulauncher.sh"
 - name: nerd-fonts

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Eclipse Memory Analyzer
+Exec=/home/kwon37xi/.local/opt/mat/MemoryAnalyzer
+Comment=
+Terminal=false
+Icon=/home/kwon37xi/.dotfiles/_icons/eclipse-memory-analyzer.png
+Type=Application
