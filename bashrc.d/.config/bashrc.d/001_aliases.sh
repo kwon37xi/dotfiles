@@ -77,3 +77,7 @@ alias nn=nano
 
 # nvidia, intel graphic
 alias nvidiastats="nvidia-smi -q -g 0 -d UTILIZATION -l 1"
+
+# start
+alias start=xdg-open
+alias xo=xdg-open
