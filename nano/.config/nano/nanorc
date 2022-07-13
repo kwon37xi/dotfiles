@@ -308,4 +308,5 @@ bind M-R redo main
 bind ^Z undo main
 bind ^R redo main
 bind ^/ help all
+bind M-Q tabstospaces main
 set multibuffer
