@@ -120,5 +120,6 @@
     "git.confirmSync": false,
     "window.zoomLevel": 0,
     "presentationMode.zoomLevel": 2,
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "aws.samcli.enableCodeLenses": false
 }
