@@ -9,7 +9,7 @@ My Linux dotfiles and installation scripts
 ## 설치 전 확인사항
 * `_installer/vars.yml`의 각 수동 버전 명시 패키지들의 버전이 원하는 대로인지 확인 하고 수정 후 설치시작
 * `software-properties-gtk` 를 실행하고,
-  * 미러를 `http://mirror.kakao.com/ubuntu` 정도의 한국 미러로 변경한다.
+  * 미러를 한국 미러로 변경한다. **단 kakao 등의 특정 미러로 변경하지 말것. 모든 일부 미러는 패키지가 동기화가 안되고 있다.**
 
 ## execute with wget
 ```
