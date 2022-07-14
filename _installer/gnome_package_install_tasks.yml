@@ -54,8 +54,7 @@
       - chrome-gnome-shell
       - gnome-shell-extension-prefs
       - gnome-shell-extensions
-      - gnome-shell-extension-system-monitor
-      - gnome-shell-extension-caffeine
+      - gnome-shell-extension-manager
     state: latest
 - name: install qt themes
   become: yes
