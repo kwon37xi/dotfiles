@@ -143,8 +143,8 @@
       retries: 3
       delay: 10
       with_items:
-        - "https://mega.nz/linux/MEGAsync/xUbuntu_{{ ubuntu_version }}/amd64/megacmd-xUbuntu_{{ ubuntu_version }}_amd64.deb"
-        - "https://mega.nz/linux/MEGAsync/xUbuntu_{{ ubuntu_version }}/amd64/megasync-xUbuntu_{{ ubuntu_version }}_amd64.deb"
+        - "https://mega.nz/linux/repo/xUbuntu_{{ ubuntu_version }}/amd64/megacmd-xUbuntu_{{ ubuntu_version }}_amd64.deb"
+        - "https://mega.nz/linux/repo/xUbuntu_{{ ubuntu_version }}/amd64/megasync-xUbuntu_{{ ubuntu_version }}_amd64.deb"
     - name: update apt cache all
       become: yes
       apt:
