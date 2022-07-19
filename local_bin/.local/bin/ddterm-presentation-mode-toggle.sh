@@ -6,9 +6,9 @@ current_font="${current_font#\'}"
 current_font_size=$(echo $current_font | awk '{print $NF}')
 case $current_font_size in
     16)
-        dconf write '/com/github/amezin/ddterm/custom-font' "'CodeNewRoman Nerd Font Mono 12'"
+        dconf write '/com/github/amezin/ddterm/custom-font' "'SauceCodePro Nerd Font Mono 12'"
         ;;
     *)
-        dconf write '/com/github/amezin/ddterm/custom-font' "'CodeNewRoman Nerd Font Mono 16'"
+        dconf write '/com/github/amezin/ddterm/custom-font' "'SauceCodePro Nerd Font Mono 16'"
         ;;
 esac
