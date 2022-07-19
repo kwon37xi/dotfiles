@@ -9,6 +9,7 @@
       - gnome-clocks
       - alacarte
       - gnome-authenticator
+      - python3-pydrive # for deja-dup
       - deja-dup
       - gnome-software
       - gnome-software-plugin-flatpak
