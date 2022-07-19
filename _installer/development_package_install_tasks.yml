@@ -84,6 +84,8 @@
     state: directory
 - name: intellij ultimate latest version
   shell: curl -fsSL "https://data.services.jetbrains.com/products?code=IIU%2CIIC&release.type=release" | jq -r '[.[].releases[].version][0]'
+  args:
+    warn: false
   register: jetbrains_intellij_idea_latest_version_result
 - set_fact:
     jetbrains_intellij_idea_latest_version={{ jetbrains_intellij_idea_latest_version_result.stdout }}
