@@ -29,15 +29,20 @@
     update_cache: no
 - name: hashicorp key
   become: yes
-  ansible.builtin.apt_key:
-    url: https://apt.releases.hashicorp.com/gpg
+  shell: |
+    wget -qO- https://apt.releases.hashicorp.com/gpg | \
+    gpg --dearmor | \
+    tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+  args:
+    creates: /usr/share/keyrings/hashicorp-archive-keyring.pgp
+    warn: false
   register: hashicorp_key_installed
   until: hashicorp_key_installed is not failed
   retries: 3
 - name: hashicorp repository
   become: yes
   apt_repository:
-    repo: "deb [arch=amd64] https://apt.releases.hashicorp.com {{ ubuntu_release }} main"
+    repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com {{ ubuntu_release }} main"
     filename: hashicorp
     update_cache: no
 - name: add PPAs
