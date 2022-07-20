@@ -1,0 +1,7 @@
+---
+- name: nvidia screen-tearing fix
+  become: yes
+  ansible.builtin.file:
+    src: "/home/{{ current_user }}/.dotfiles/_backup/nvidia/99-nvidia-myoptions.conf"
+    dest: "/etc/X11/xorg.conf.d/99-nvidia-myoptions.conf"
+    state: link
