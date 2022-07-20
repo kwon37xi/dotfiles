@@ -27,6 +27,8 @@ bind main <C-S> >sh -c "git switch $(git branch -vv | grep -v '^\\*' | fzf | awk
 # git pull
 bind main <C-T> !git pull --rebase
 
+set reference-format = [branch] <tag> {remote} ~replace~
+
 # chocolate Theme : https://github.com/jonas/tig/blob/master/contrib/chocolate.theme.tigrc
 color diff-stat			95	default
 color date			172	default
