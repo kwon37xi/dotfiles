@@ -121,5 +121,8 @@
     "window.zoomLevel": 0,
     "presentationMode.zoomLevel": 2,
     "workbench.iconTheme": "material-icon-theme",
-    "aws.samcli.enableCodeLenses": false
+    "aws.samcli.enableCodeLenses": false,
+    "atlascode.jira.enabled": true,
+    "atlascode.bitbucket.enabled": false,
+    "npm.keybindingsChangedWarningShown": true
 }
