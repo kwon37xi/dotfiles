@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Kanbanflow
+Exec=/home/kwon37xi/.local/opt/kanbanflow-linux-x64/kanbanflow
+Comment=Kanbanflow nativefier
+Terminal=false
+Icon=/home/kwon37xi/.local/opt/kanbanflow-linux-x64/resources/app/icon.png
+Type=Application

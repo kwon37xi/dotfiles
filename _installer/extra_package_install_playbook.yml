@@ -1,6 +1,6 @@
 ---
 # 당장 개발에 필수는 아닌 애플리케이션들 설치
-- name: main
+- name: extra packages
   hosts: 127.0.0.1
   connection: local
   vars_files:
@@ -158,3 +158,8 @@
           - megatools
           - nautilus-megasync
         state: latest
+    - name: kanbanflow nativefy
+      shell: |
+        mkdir -p $HOME/.local/opt
+        cd $HOME/.local/opt
+        nativefier --name=kanbanflow --tray --single-instance https://kanbanflow.com/
