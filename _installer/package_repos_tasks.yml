@@ -51,7 +51,6 @@
   with_items:
     - ppa:git-core/ppa
     - ppa:graphics-drivers/ppa
-    - ppa:papirus/papirus
     - ppa:cappelikan/ppa # for mainline
     - ppa:gerardpuig/ppa # for ubuntu cleaner
     - ppa:danielrichter2007/grub-customizer
