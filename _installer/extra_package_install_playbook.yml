@@ -103,10 +103,13 @@
     - name: OTPClient
       community.general.flatpak:
         name: "com.github.paolostivanin.OTPClient"
+    - name: pinta
+      community.general.flatpak:
+        name: "com.github.PintaProject.Pinta"
     - name: dbeaver-ce
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dbeaver-ce.sh"
     - name: balena-etcher
-      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-etcher_appimage.sh"
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-etcher.sh"
     - name: scrcpy
       become: yes
       community.general.snap:
