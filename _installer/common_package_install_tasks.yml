@@ -46,7 +46,8 @@
       - tmux
       - xclip
       - htop
-      - bashtop
+      - btop
+      - bpytop
       - stacer
       - cpufrequtils
       - most
