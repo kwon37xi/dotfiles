@@ -7,8 +7,10 @@ current_font_size=$(echo $current_font | awk '{print $NF}')
 case $current_font_size in
     16)
         dconf write '/com/github/amezin/ddterm/custom-font' "'SauceCodePro Nerd Font Mono 12'"
+        dconf write '/com/github/amezin/ddterm/window-size' 1.0
         ;;
     *)
         dconf write '/com/github/amezin/ddterm/custom-font' "'SauceCodePro Nerd Font Mono 16'"
+        dconf write '/com/github/amezin/ddterm/window-size' 0.6
         ;;
 esac
