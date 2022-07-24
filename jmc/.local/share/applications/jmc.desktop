@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=JMC / Java Mission Control
+Exec=env GTK_THEME=Yaru /home/kwon37xi/.local/opt/jmc/jmc
+Comment=Java Mission Control
+Terminal=false
+Icon=/home/kwon37xi/.local/opt/jmc/icon.xpm
+Type=Application
+Categories=Development;

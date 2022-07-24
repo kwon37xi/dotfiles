@@ -102,6 +102,8 @@
   delay: 10
 - name: Memory Analyzer(MAT)
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-mat.sh"
+- name: Java Mission Control
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-jmc.sh"
 - name: ulauncher
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-ulauncher.sh"
 - name: nerd-fonts

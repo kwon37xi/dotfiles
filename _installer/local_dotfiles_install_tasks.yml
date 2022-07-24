@@ -62,6 +62,7 @@
     - starship
     - nano
     - mat
+    - jmc
     - kanbanflow
 - name: stow with adopt
   shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
