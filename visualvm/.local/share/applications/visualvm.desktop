@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=VisualVM
+Exec=env GTK_THEME=Yaru /home/kwon37xi/.sdkman/candidates/visualvm/current/bin/visualvm
+Comment="Java VisualVM"
+Terminal=false
+Icon=/home/kwon37xi/.dotfiles/_icons/visualvm.png
+Type=Application
+Categories=Development;
