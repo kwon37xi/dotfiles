@@ -204,7 +204,7 @@ set tabstospaces
 ## by default there are no colors, except for errorcolor.
 set titlecolor bold,black,lightblack
 set statuscolor bold,lightwhite,green
-# set errorcolor bold,lightwhite,red
+set errorcolor bold,lightwhite,red
 set selectedcolor lightwhite,magenta
 # set stripecolor ,yellow
 set scrollercolor cyan
@@ -282,7 +282,7 @@ bind ^F whereis all
 bind F3 findnext all
 bind F4 findprevious all
 bind ^B wherewas all
-bind ^H replace main
+bind M-R replace main
 bind M-X flipnewbuffer all
 bind ^X cut all
 bind ^C copy main
@@ -303,8 +303,7 @@ unbind ^/ main
 bind ^G gotoline main
 bind ^T gotodir browser
 bind ^Y speller main
-bind M-Z undo main
-bind M-R redo main
+unbind M-Z main
 bind ^Z undo main
 bind ^R redo main
 bind ^/ help all
