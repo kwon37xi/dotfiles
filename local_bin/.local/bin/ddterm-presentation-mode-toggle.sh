@@ -6,7 +6,6 @@ current_font="${current_font#\'}"
 current_font_size=$(echo $current_font | awk '{print $NF}')
 case $current_font_size in
     16) # to normal mode
-        notify-send -t 1000 "Presentation Mode OFF"
         dconf write '/com/github/amezin/ddterm/custom-font' "'SauceCodePro Nerd Font Mono 12'"
         dconf write '/com/github/amezin/ddterm/window-size' 1.0
         gsettings set org.gnome.desktop.notifications show-banners true
@@ -15,6 +14,7 @@ case $current_font_size in
         ;;
     *) # to presentation mode
         notify-send -t 1000 "Presentation Mode ON"
+        sleep 1
         dconf write '/com/github/amezin/ddterm/custom-font' "'SauceCodePro Nerd Font Mono 16'"
         dconf write '/com/github/amezin/ddterm/window-size' 0.6
         gsettings set org.gnome.desktop.notifications show-banners false
