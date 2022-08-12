@@ -223,7 +223,7 @@
         "id": "83ad6d43-d4ad-4b75-9dc4-81bc743a90a5",
         "name": "scrcpy - android view",
         "keyword": "andview",
-        "cmd": "#!/bin/sh\nscrcpy --hid-keyboard --stay-awake",
+        "cmd": "#!/bin/sh\nscrcpy.adb shell ime set \"com.egloos.woongyee.sesak/.SesakKeyboardService\"\nscrcpy --hid-keyboard --stay-awake --turn-screen-off\nscrcpy.adb shell ime set \"com.lge.ime/.LgeImeImpl\"\n",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
