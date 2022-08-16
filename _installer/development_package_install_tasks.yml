@@ -110,3 +110,5 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-nerd-fonts.sh"
 - name: docker-compose
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-docker-compose.sh"
+- name: wrappers-easy-executor
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-wrappers-easy-executor.sh"
