@@ -1,0 +1,8 @@
+[/]
+clear-history=['<Shift><Super>h']
+display-mode=0
+next-entry=@as []
+prev-entry=@as []
+preview-size=30
+toggle-menu=['<Super>h']
+topbar-preview-size=9
