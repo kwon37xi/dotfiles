@@ -12,3 +12,4 @@ dconf dump /org/gnome/shell/extensions/nothing-to-say/ > org_gnome_shell_extensi
 dconf dump /com/github/amezin/ddterm/ > com_github_amezin_ddterm.dump
 dconf dump /apps/guake/ > apps_guake.dump
 dconf dump /org/gnome/shell/extensions/tiling-assistant/ > org_gnome_shell_extensions_tiling-assistant.dump
+dconf dump /org/gnome/shell/extensions/date-menu-formatter/ > org_gnome_shell_extensions_date-menu-formatter.dump

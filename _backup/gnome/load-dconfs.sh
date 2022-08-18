@@ -11,3 +11,4 @@ dconf load /org/gnome/shell/keybindings/ < ~/.dotfiles/_backup/gnome/org_gnome_s
 dconf load /org/gnome/desktop/peripherals/touchpad/ < ~/.dotfiles/_backup/gnome/org_gnome_desktop_peripherals_touchpad.dump
 dconf load /com/github/amezin/ddterm/ < ~/.dotfiles/_backup/gnome/com_github_amezin_ddterm.dump
 dconf load /org/gnome/shell/extensions/tiling-assistant/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_tiling-assistant.dump
+dconf load /org/gnome/shell/extensions/date-menu-formatter/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_date-menu-formatter.dump
