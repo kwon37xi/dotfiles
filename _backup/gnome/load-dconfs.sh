@@ -10,3 +10,4 @@ dconf load /org/gnome/shell/extensions/nothing-to-say/ < ~/.dotfiles/_backup/gno
 dconf load /org/gnome/shell/keybindings/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_keybindings.dump
 dconf load /org/gnome/desktop/peripherals/touchpad/ < ~/.dotfiles/_backup/gnome/org_gnome_desktop_peripherals_touchpad.dump
 dconf load /com/github/amezin/ddterm/ < ~/.dotfiles/_backup/gnome/com_github_amezin_ddterm.dump
+dconf load /org/gnome/shell/extensions/tiling-assistant/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_tiling-assistant.dump
