@@ -1,3 +1,4 @@
 [/]
+show-screen-recording-ui=['<Primary><Alt>Print']
 toggle-application-view=['<Super>slash']
 toggle-message-tray=['<Super>v']
