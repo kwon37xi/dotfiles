@@ -9,7 +9,6 @@ extensions=(
     GitHub.github-vscode-theme
     GitHub.remotehub
     GitHub.vscode-pull-request-github
-    HookyQR.beautify
     MS-CEINTL.vscode-language-pack-ko
     PKief.material-icon-theme
     Perkovec.emoji
@@ -79,7 +78,6 @@ extensions=(
     steoates.autoimport
     stevencl.addDocComments
     techer.open-in-browser
-    tht13.html-preview-vscode
     timonwong.shellcheck
     usernamehw.errorlens
     vscjava.vscode-gradle
@@ -94,6 +92,7 @@ extensions=(
     wix.vscode-import-cost
     wmaurer.change-case
     wmaurer.vscode-jumpy
+    george-alisson.html-preview-vscode
 )
 
 for extension in "${extensions[@]}"; do
