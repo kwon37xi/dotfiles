@@ -2,3 +2,5 @@
 .envrc
 tags
 .sdkmanrc
+tags.lock
+tags.temp
