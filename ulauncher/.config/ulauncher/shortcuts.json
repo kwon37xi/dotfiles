@@ -111,7 +111,7 @@
     },
     "77f267d7-8143-4598-97e2-e8fbd496ad2e": {
         "id": "77f267d7-8143-4598-97e2-e8fbd496ad2e",
-        "name": "\ud074\ub9bd\ubcf4\ub4dc \ub0b4\uc6a9 \uc904\ub05d\uc5d0 \uc27c\ud45c \ubd99\uc774\uae30",
+        "name": "\ud074\ub9bd\ubcf4\ub4dc \ub0b4\uc6a9 \uc904\ub05d\uc5d0 \uc27c\ud45c \ubd99\uc774\uae30 clipboard comma",
         "keyword": "ccm",
         "cmd": "#!/bin/sh\n$HOME/.local/bin/clipboard_add_commas.sh",
         "icon": null,
@@ -121,7 +121,7 @@
     },
     "c701d6b3-f178-4374-bb85-04ad1fba153e": {
         "id": "c701d6b3-f178-4374-bb85-04ad1fba153e",
-        "name": "\ud074\ub9bd\ubcf4\ub4dc \ub0b4\uc6a9 \uc904 \ud569\uce58\uae30",
+        "name": "\ud074\ub9bd\ubcf4\ub4dc \ub0b4\uc6a9 \uc904 \ud569\uce58\uae30 clipboard line join",
         "keyword": "cjl",
         "cmd": "#!/bin/sh\n$HOME/.local/bin/clipboard_join_lines.sh $1",
         "icon": null,
@@ -131,7 +131,7 @@
     },
     "071788b9-c240-4b87-b07a-d2956db1b32c": {
         "id": "071788b9-c240-4b87-b07a-d2956db1b32c",
-        "name": "\ud074\ub9bd\ubcf4\ub4dc \ub0b4\uc6a9 \uc904 \ud569\uce58\uae30 - 10\uc904\uc529",
+        "name": "\ud074\ub9bd\ubcf4\ub4dc \ub0b4\uc6a9 \uc904 \ud569\uce58\uae30 - 10\uc904\uc529 clipboard line join 10lines",
         "keyword": "cjlx",
         "cmd": "#!/bin/sh\n$HOME/.local/bin/clipboard_join_lines.sh 10",
         "icon": null,
@@ -238,5 +238,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1657243331.9449716
+    },
+    "c62ee2b5-5c77-40e0-b1ee-9d4071c1b269": {
+        "id": "c62ee2b5-5c77-40e0-b1ee-9d4071c1b269",
+        "name": "BMart \ud300\uc6d0 IDs copy",
+        "keyword": "bmartteam",
+        "cmd": "#!/bin/sh\n~/.local/bin/bmart-copy-team-members.sh\n",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1671588503.1981423
     }
 }
