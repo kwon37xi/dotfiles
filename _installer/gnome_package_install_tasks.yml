@@ -29,7 +29,6 @@
       - nautilus-script-audio-convert
       - nautilus-image-converter
       - nautilus-scripts-manager
-      - nautilus-sendto
       - nautilus-share
     state: latest
 - name: install GNOME network packages
