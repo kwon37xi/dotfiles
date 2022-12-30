@@ -8,7 +8,6 @@
     package:
       - ubuntu-restricted-addons
       - ubuntu-restricted-extras
-      - libavcodec58 # additional codecs
       - apt-file
       - aptitude
       - flatpak
