@@ -6,7 +6,6 @@
       - docker-ce
       - docker-ce-cli
       - containerd.io
-      - ctop
     state: latest
 - name: docker group
   become: yes
