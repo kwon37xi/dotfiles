@@ -7,7 +7,7 @@ shopt -s failglob
 set +x
 echo -n "Password for sudo: "
 read -s SUDO_PASSWORD
-echo "$SUDO_PASSWORD" | sudo add-apt-repository ppa:ansible/ansible # ansible ubuntu 기본 버전의 버그가 간혹 있어서 PPA로 설치
+echo "$SUDO_PASSWORD" | sudo -S add-apt-repository -y ppa:ansible/ansible # ansible ubuntu 기본 버전의 버그가 간혹 있어서 PPA로 설치
 echo "$SUDO_PASSWORD" | sudo -S apt-get -y install git ansible xz-utils unzip
 set -x
 
