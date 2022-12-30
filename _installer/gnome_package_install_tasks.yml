@@ -14,6 +14,7 @@
       - gnome-software
       - gnome-software-plugin-flatpak
       - gnome-software-plugin-snap
+      - gnome-clocks
     state: latest
 - name: remove snap-store # use gnome-software
   become: yes
