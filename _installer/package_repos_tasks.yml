@@ -54,7 +54,6 @@
     - ppa:cappelikan/ppa # for mainline
     - ppa:gerardpuig/ppa # for ubuntu cleaner
     - ppa:danielrichter2007/grub-customizer
-    - ppa:gezakovacs/ppa # unetbootin
 - name: multiverse universe
   become: yes
   shell: "apt-add-repository -y --no-update {{ item }}"

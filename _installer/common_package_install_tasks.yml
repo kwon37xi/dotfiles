@@ -77,7 +77,6 @@
       - iotop
       - atop
       - conky-all
-      - unetbootin
       - python3-argcomplete # ansible bash auto completion
       - ubuntu-cleaner
     state: latest
