@@ -22,7 +22,6 @@
     - import_tasks: fusuma_install_tasks.yml
     - import_tasks: local_dotfiles_install_tasks.yml
     - import_tasks: local_gnome_configs_tasks.yml
-    - import_tasks: sound_theme_tasks.yml
     - import_tasks: grub_themes_install_tasks.yml
     - import_tasks: local_develop_env_tasks.yml
     - import_tasks: keep_usb_tethering_tasks.yml
@@ -30,3 +29,4 @@
     - import_tasks: add_crons.yml
     - import_tasks: nvidia_screen_tearing_fix.yml
     #- import_tasks: auto_cpufreq_tasks.yml
+    #- import_tasks: sound_theme_tasks.yml # 22.10 부터 override 불필요해진듯.
