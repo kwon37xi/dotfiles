@@ -18,6 +18,13 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/i
 
 * sudo 용 패스워드를 한 번 입력해주고 진행
 
+## 중간에 실패시
+* 중간 태스크에서 실패할경우 다음 명령으로 중간부터 재시작한다. 재시작할 태스크를 적어준다.
+```
+cd ~/.dotfiles
+./install_start-at-task.sh <task>
+```
+
 ## 가상머신에서 테스트 할경우
 * VirtualBox Guest Addition 을 미리 설치
 ```
