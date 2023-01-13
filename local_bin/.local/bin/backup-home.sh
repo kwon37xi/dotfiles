@@ -10,10 +10,12 @@ rm -rf ~/.local/backup
 tar cvpzf /tmp/home-backups.tar.gz --one-file-system --exclude="Service Worker" -C ~ \
     .config/JetBrains \
     .local/share/JetBrains \
-    .config/vivaldi/Default \
-    .config/asbru \
     .local/share/keyrings \
-    .local/share/kwalletd \
     .local/share/DBeaverData \
-    .PlayOnLinux \
     .local/backup
+
+# 더이상 안 사용하는 부분들 
+#    .config/vivaldi/Default \
+#    .config/asbru \
+#    .local/share/kwalletd \
+#    .PlayOnLinux \
