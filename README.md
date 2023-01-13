@@ -128,8 +128,9 @@ sudo apt install amd64-microcode
 
 ### 4k 설정
 * 4k 모니터 Console 설정
+* 4k 모니터 설정시에 grub 화면 반응속도가 너무 느리다. [Linux Grub](https://kwonnam.pe.kr/wiki/linux/grub)을 참조하여 해상도를 FHD 로 변경하는게 낫다.
 ```
-~/.dotfiles/install_4k.sh
+~/.dotfiles/install_grub_4k.sh
 ```
 
 ## JDK 디렉토리

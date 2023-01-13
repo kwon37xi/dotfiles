@@ -56,7 +56,6 @@
     - gradle
     - groovy
     - kotlin
-    - maven
     - springboot
     - visualvm
   register: sdk_package_installed
