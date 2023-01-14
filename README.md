@@ -123,6 +123,20 @@ sudo apt install amd64-microcode
 ### Grub Customizer
 * Grub Theme 을 조정해준다.
 
+### nvidia - screen tearing
+* X windows + nvidia 그래픽 카드일 경우 screen tearing 이 발생할 수 있다.
+* [Linux Nvidia Graphic Card](https://kwonnam.pe.kr/wiki/linux/nvidia) 를 보고 처리해준다.
+* `/etc/X11/xorg.conf.d/99-nvidia-myoptions.conf`
+```
+Section "OutputClass"
+    Identifier "nvidia"
+    MatchDriver "nvidia-drm"
+    Driver "nvidia"
+    Option "ForceCompositionPipeline" "true"
+    #Option "ForceFullCompositionPipeline" "true"
+EndSection
+```
+
 ### Conky
 * `~/.conky` 에 conky 설정 파일들과 실행 스크립트가 있다.
 * 시작 프로그램 설정을 통해 해당 스크립트를 실행하도록 한다.
