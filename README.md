@@ -125,16 +125,17 @@ sudo apt install amd64-microcode
 
 ### nvidia - screen tearing
 * X windows + nvidia 그래픽 카드일 경우 screen tearing 이 발생할 수 있다.
-* [Linux Nvidia Graphic Card](https://kwonnam.pe.kr/wiki/linux/nvidia) 를 보고 처리해준다.
-* `/etc/X11/xorg.conf.d/99-nvidia-myoptions.conf`
+* [Linux Nvidia Graphic Card](https://kwonnam.pe.kr/wiki/linux/nvidia) 에 따라 이미 처리 돼 있다. nvidia + X 상황에서만 활성화 된다.
+* `/etc/X11/xorg.conf.d/99-nvidia-myoptions.conf` 파일 참조
+
+### nvidia - prime 설치 및 확인
+* nvidia/intel dual 일경우 `prime-select` 가 필요하다.
 ```
-Section "OutputClass"
-    Identifier "nvidia"
-    MatchDriver "nvidia-drm"
-    Driver "nvidia"
-    Option "ForceCompositionPipeline" "true"
-    #Option "ForceFullCompositionPipeline" "true"
-EndSection
+sudo apt install nvidia-prime
+
+# nvidia 로 기본 설정 변경
+sudo prime-select nvidia
+sudo reboot
 ```
 
 ### Conky
