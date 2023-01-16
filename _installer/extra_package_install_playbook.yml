@@ -106,6 +106,9 @@
     - name: pinta
       community.general.flatpak:
         name: "com.github.PintaProject.Pinta"
+    - name: login manager settings
+      community.general.flatpak:
+        name: "io.github.realmazharhussain.GdmSettings"
     - name: dbeaver-ce
       shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dbeaver-ce.sh"
     - name: balena-etcher
