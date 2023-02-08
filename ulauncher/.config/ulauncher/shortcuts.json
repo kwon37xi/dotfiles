@@ -33,7 +33,7 @@
         "id": "0a2053e4-e59f-470d-af03-7da4b8374ecf",
         "name": "Youtuble dl",
         "keyword": "ydl",
-        "cmd": "#!/bin/bash\nmkdir -p /tmp/videos_nq\nyoutube_url=$(zenity --entry --text \"Youtube URL \uc785\ub825\" --entry-text `xclip -o -sel clip`)\n\n/home/linuxbrew/.linuxbrew/bin/yt-dlp\n\nNQDIR=/tmp/videos_nq nq /home/linuxbrew/.linuxbrew/bin/yt-dlp -P \"$HOME/Videos\" -o \"%(title)s-%(id)s.%(ext)s\" --trim-filenames 120 \"${youtube_url}\"",
+        "cmd": "#!/bin/bash\nmkdir -p /tmp/videos_nq\nyoutube_url=$(zenity --entry --text \"Youtube URL \uc785\ub825\" --entry-text `xclip -o -sel clip`)\n\nNQDIR=/tmp/videos_nq nq /home/linuxbrew/.linuxbrew/bin/yt-dlp -P \"$HOME/Videos\" -o \"%(playlist_index)03d-%(title)s-%(id)s.%(ext)s\" --trim-filenames 120 \"${youtube_url}\"",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
@@ -248,5 +248,25 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1671588503.1981423
+    },
+    "d84efce6-e4b6-4ce0-8060-feba740b0c4e": {
+        "id": "d84efce6-e4b6-4ce0-8060-feba740b0c4e",
+        "name": "BMart \ud300\uc6d0 \uc804\uc2dc/\uc0c1\ud488 IDs copy",
+        "keyword": "bmartteamproduct",
+        "cmd": "#!/bin/sh\n~/.local/bin/bmart-copy-team-members-\uc804\uc2dc\uc0c1\ud488.sh\n",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1675825188.9238248
+    },
+    "39f0a560-bcf9-491b-87bc-1a6a8cd81960": {
+        "id": "39f0a560-bcf9-491b-87bc-1a6a8cd81960",
+        "name": "BMart \ud300\uc6d0 \uc8fc\ubb38 IDs copy",
+        "keyword": "bmartteamorder",
+        "cmd": "#!/bin/sh\n~/.local/bin/bmart-copy-team-members-\uc8fc\ubb38.sh",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1675825242.3279757
     }
 }
