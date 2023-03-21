@@ -35,7 +35,6 @@
     tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
   args:
     creates: /usr/share/keyrings/hashicorp-archive-keyring.pgp
-    warn: false
   register: hashicorp_key_installed
   until: hashicorp_key_installed is not failed
   retries: 3
