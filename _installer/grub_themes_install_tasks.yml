@@ -16,11 +16,13 @@
     - vimix-1k.tar.gz
 - name: grub customize gfxmode
   become: yes
-  ansible.builtin.lineinfile: /etc/default/grub
+  ansible.builtin.lineinfile:
+    path: /etc/default/grub
     line: GRUB_GFXMODE="1920x1080x32"
 - name: grub customize 1k theme
   become: yes
-  ansible.builtin.lineinfile: /etc/default/grub
+  ansible.builtin.lineinfile:
+    path: /etc/default/grub
     line: GRUB_THEME="/boot/grub/themes/tela-1k/theme.txt"
 - name: grub customize apply
   become: yes
