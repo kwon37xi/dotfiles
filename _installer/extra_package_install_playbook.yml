@@ -63,7 +63,7 @@
     - name: add architecture i386
       become: yes
       shell: "dpkg --add-architecture i386"
-    - name: install wine & playonlinux
+    - name: install wine
       become: yes
       apt:
         package:
