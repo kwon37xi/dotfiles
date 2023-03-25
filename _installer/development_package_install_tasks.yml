@@ -87,13 +87,6 @@
   until: joplin_installed is not failed
   retries: 3
   delay: 10
-- name: todoist
-  community.general.flatpak:
-    name: "com.todoist.Todoist"
-  register: todoist_installed
-  until: todoist_installed is not failed
-  retries: 3
-  delay: 10
 - name: Flameshot
   community.general.flatpak:
     name: "org.flameshot.Flameshot"
