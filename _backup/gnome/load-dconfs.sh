@@ -13,5 +13,6 @@ dconf load /com/github/amezin/ddterm/ < ~/.dotfiles/_backup/gnome/com_github_ame
 dconf load /org/gnome/shell/extensions/tiling-assistant/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_tiling-assistant.dump
 dconf load /org/gnome/shell/extensions/date-menu-formatter/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_date-menu-formatter.dump
 dconf load /org/gnome/shell/extensions/clipboard-indicator/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_clipboard-indicator.dump
+dconf load /org/gnome/shell/extensions/desktop-cube/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_desktop-cube.dump
 dconf load /org/gnome/shell/extensions/status-area-horizontal-spacing/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_status-area-horizontal-spacing.dump
-dconf load /org/gnome/shell/extensions/space-bar/ < org_gnome_shell_extensions_space-bar.dump
+dconf load /org/gnome/shell/extensions/space-bar/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_space-bar.dump
