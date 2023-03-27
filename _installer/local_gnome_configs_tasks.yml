@@ -28,11 +28,9 @@
     gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
 
     # ubuntu-dock app-icon change
-    mkdir -p ~/.icons/Yaru/scalable/actions
-    mkdir -p ~/.icons/Yaru/symbolic/actions
-    ln -s ~/.dotfiles/_icons/ubuntu/cof_orange_hex.png ~/.icons/Yaru/scalable/actions/view-app-grid-symbolic.png
-    ln -s ~/.dotfiles/_icons/ubuntu/cof_orange_hex.png ~/.icons/Yaru/symbolic/actions/view-app-grid-symbolic.png
+    ~/.dotfiles/local_bin/.local/bin/set-app-grid-icon.sh ~/.dotfiles/_icons/ubuntu/cof_orange_hex.png
 
+    # 유사 테마에 .icons override
     ln -s ~/.icons/Yaru ~/.icons/Papirus
     ln -s ~/.icons/Yaru ~/.icons/Papirus-Dark
     ln -s ~/.icons/Yaru ~/.icons/Papirus-Light
