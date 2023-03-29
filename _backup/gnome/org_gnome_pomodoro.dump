@@ -1,0 +1,4 @@
+[/]
+enabled-plugins=['sounds', 'dark-theme']
+pause-when-idle=false
+toggle-timer-key=['<Shift><Super><Ctrl>P']

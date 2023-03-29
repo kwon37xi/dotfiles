@@ -56,6 +56,7 @@
       - gnome-shell-extension-prefs
       - gnome-shell-extensions
       - gnome-shell-extension-manager
+      - gnome-shell-pomodoro
     state: latest
 - name: install qt themes
   become: yes

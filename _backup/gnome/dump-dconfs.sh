@@ -17,3 +17,4 @@ dconf dump /org/gnome/shell/extensions/desktop-cube/ > org_gnome_shell_extension
 dconf dump /org/gnome/shell/extensions/clipboard-indicator/ > org_gnome_shell_extensions_clipboard-indicator.dump
 dconf dump /org/gnome/shell/extensions/status-area-horizontal-spacing/ > org_gnome_shell_extensions_status-area-horizontal-spacing.dump
 dconf dump /org/gnome/shell/extensions/space-bar/ > org_gnome_shell_extensions_space-bar.dump
+dconf dump /org/gnome/pomodoro/preferences/ > org_gnome_pomodoro.dump
