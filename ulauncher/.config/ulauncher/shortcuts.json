@@ -33,7 +33,7 @@
         "id": "0a2053e4-e59f-470d-af03-7da4b8374ecf",
         "name": "Youtuble dl",
         "keyword": "ydl",
-        "cmd": "#!/bin/bash\nmkdir -p /tmp/videos_nq\nyoutube_url=$(zenity --entry --text \"Youtube URL \uc785\ub825\" --entry-text `xclip -o -sel clip`)\n\nNQDIR=/tmp/videos_nq nq /home/linuxbrew/.linuxbrew/bin/yt-dlp -P \"$HOME/Videos\" -o \"%(playlist_index)03d-%(title)s-%(id)s.%(ext)s\" --trim-filenames 120 \"${youtube_url}\"",
+        "cmd": "#!/bin/bash\nmkdir -p /tmp/videos_nq\nyoutube_url=$(zenity --entry --text=\"Youtube URL \uc785\ub825\" --entry-text=\"`xclip -o -sel clip`\")\n\nNQDIR=/tmp/videos_nq nq /home/linuxbrew/.linuxbrew/bin/yt-dlp -P \"$HOME/Videos\" -o \"%(playlist_index)03d-%(title)s-%(id)s.%(ext)s\" --trim-filenames 120 \"${youtube_url}\"",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
