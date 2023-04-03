@@ -78,6 +78,7 @@
       - conky-all
       - python3-argcomplete # ansible bash auto completion
       - ubuntu-cleaner
+      - urlview # for tmux urlview
     state: latest
 - name: install system tools
   become: yes
