@@ -19,6 +19,7 @@
     - .config/nano
     - .config/bashrc.d
     - .config/Code/User
+    - .config/mpv
     - .sdkman/etc
     - Desktop
     - .vim
@@ -64,6 +65,7 @@
     - mat
     - jmc
     - visualvm
+    - mpv
     - kanbanflow
 - name: stow with adopt
   shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
