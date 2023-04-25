@@ -155,8 +155,3 @@
           - megatools
           - nautilus-megasync
         state: latest
-    - name: kanbanflow nativefy
-      shell: |
-        mkdir -p $HOME/.local/opt
-        cd $HOME/.local/opt
-        nativefier --name=kanbanflow --tray --single-instance https://kanbanflow.com/
