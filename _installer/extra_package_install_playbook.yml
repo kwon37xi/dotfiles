@@ -102,6 +102,13 @@
     - name: pinta
       community.general.flatpak:
         name: "com.github.PintaProject.Pinta"
+    - name: celluloid
+      community.general.flatpak:
+        name: "io.github.celluloid_player.Celluloid"
+      register: celluloid_package_installed
+      until: celluloid_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: login manager settings
       community.general.flatpak:
         name: "io.github.realmazharhussain.GdmSettings"
