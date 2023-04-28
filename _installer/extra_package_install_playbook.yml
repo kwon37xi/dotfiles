@@ -87,9 +87,6 @@
     - name: shotcut
       community.general.flatpak:
         name: "org.shotcut.Shotcut"
-    - name: qbittorrent
-      community.general.flatpak:
-        name: "org.qbittorrent.qBittorrent"
     - name: flatseal
       community.general.flatpak:
         name: "com.github.tchx84.Flatseal"
@@ -108,10 +105,6 @@
     - name: login manager settings
       community.general.flatpak:
         name: "io.github.realmazharhussain.GdmSettings"
-    - name: dbeaver-ce
-      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-dbeaver-ce.sh"
-    - name: balena-etcher
-      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-etcher_appimage.sh"
     - name: scrcpy
       become: yes
       community.general.snap:
