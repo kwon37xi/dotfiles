@@ -14,6 +14,13 @@
     content: "vm.swappiness=5"
     owner: root
     group: root
+- name: change vm.max_map_count
+  become: yes
+  copy:
+    dest: "/etc/sysctl.d/99-vm-max-map-count.conf"
+    content: "vm.max_map_count=2147483642"
+    owner: root
+    group: root
 - name: change fs.inotify.max_user_watches
   become: yes
   copy:
