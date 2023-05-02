@@ -27,6 +27,10 @@
     - name: install libreoffice flatpak
       community.general.flatpak:
         name: org.libreoffice.LibreOffice
+      register: libreoffice_package_installed
+      until: libreoffice_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: install wallpapers
       become: yes
       apt:
@@ -54,7 +58,6 @@
           - nomacs
           - sxiv
           - vlc
-          - smplayer
           - audacious
           - handbrake
           - gpick
@@ -87,21 +90,45 @@
     - name: shotcut
       community.general.flatpak:
         name: "org.shotcut.Shotcut"
+      register: shotcut_package_installed
+      until: shotcut_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: flatseal
       community.general.flatpak:
         name: "com.github.tchx84.Flatseal"
+      register: flatseal_package_installed
+      until: flatseal_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: blanket
       community.general.flatpak:
         name: "com.rafaelmardojai.Blanket"
+      register: blanket_package_installed
+      until: blanket_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: extensionmanager
       community.general.flatpak:
         name: "com.mattjakeman.ExtensionManager"
+      register: extensionmanager_package_installed
+      until: extensionmanager_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: OTPClient
       community.general.flatpak:
         name: "com.github.paolostivanin.OTPClient"
+      register: otpclient_package_installed
+      until: otpclient_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: pinta
       community.general.flatpak:
         name: "com.github.PintaProject.Pinta"
+      register: pinta_package_installed
+      until: pinta_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: celluloid
       community.general.flatpak:
         name: "io.github.celluloid_player.Celluloid"
@@ -112,21 +139,37 @@
     - name: login manager settings
       community.general.flatpak:
         name: "io.github.realmazharhussain.GdmSettings"
+      register: loginmanager_package_installed
+      until: loginmanager_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: scrcpy
       become: yes
       community.general.snap:
         name: scrcpy
         state: present
+      register: scrcpy_package_installed
+      until: scrcpy_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: ascii-image-converter
       become: yes
       community.general.snap:
         name: ascii-image-converter
         state: present
+      register: asscii_image_converter_package_installed
+      until: asscii_image_converter_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: dirsize # https://github.com/frossm/dirsize
       become: yes
       community.general.snap:
         name: dirsize
         state: present
+      register: dirsize_package_installed
+      until: dirsize_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: diresize permission
       become: yes
       shell: |
