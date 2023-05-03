@@ -21,6 +21,8 @@ alias kunzip="unzip -O cp949"
 
 # ubuntu fdfind 패키지는 fd 를 fdfind 로 변경해둔 상태임
 alias fd=fdfind
+alias fdh='fdfind --glob --hidden'
+
 alias fblog-logstash='fblog -m message -l level -t timestamp --main-line-format "{{fblog_timestamp}} {{level_style fblog_level}} [{{thread}}] ({{caller_file_name}}#{{caller_method_name}}) {{fblog_message}}"'
 # ubuntu bat package는 bat 을 batcat 명령으로 변경해 둔상태임
 alias bat=batcat
