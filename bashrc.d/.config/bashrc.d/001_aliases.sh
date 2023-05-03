@@ -79,6 +79,7 @@ alias nn=nano
 
 # nvidia, intel graphic
 alias nvidiastats="nvidia-smi -q -g 0 -d UTILIZATION -l 1"
+alias intelstats="sudo intel_gpu_top"
 
 # start
 alias start=xdg-open
