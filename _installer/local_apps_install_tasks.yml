@@ -62,3 +62,10 @@
   until: sdk_package_installed is not failed
   retries: 3
   delay: 10
+- name: nvm init
+  shell: |
+    source ~/.dotfiles/bashrc.d/.config/bashrc.d/077_nvm.sh
+    nvm install --lts
+    nvm alias default system
+  args:
+    executable: /usr/bin/bash
