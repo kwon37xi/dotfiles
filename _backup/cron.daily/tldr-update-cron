@@ -2,12 +2,13 @@
 # tldr update for kwon37xi
 # https://askubuntu.com/questions/1105542/run-etc-cron-daily-from-specific-user
 TARGET_USER=:CURRENT_USER:
-logger "tldr update starting..."
+echo "start..." | logger -i -t "TLDR Update"
 
 if [ "$(id -u)" -eq 0 ]; then
-    exec sudo -H -u "${TARGET_USER}" $0 "$@"
+        echo "[TLDR] change target user..." | logger -i -t "TLDR Update"
+        exec sudo -H -u "${TARGET_USER}" $0 "$@"
 fi
 
-/home/${TARGET_USER}/.local/bin/tldr --update
+/home/${TARGET_USER}/.local/bin/tldr --update 2>&1 | logger -i -t "TLDR Update"
 
 exit 0;
