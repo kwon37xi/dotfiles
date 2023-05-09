@@ -6,7 +6,7 @@
     dest: "/etc/cron.daily/tldr-update-cron"
     owner: "root"
     group: "root"
-    mode: "0744"
+    mode: "0755"
 - name: replace current_user tldr-update cron.daily
   become: yes
   ansible.builtin.replace:
