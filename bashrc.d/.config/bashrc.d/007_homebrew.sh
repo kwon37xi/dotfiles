@@ -1,3 +1,7 @@
+# MANPATH 가 설정돼 있지 않으면 HOMEBREW 가 기본값을 없애고 linuxbrew 경로로 덮어써버린다.
+# manpath --quiet 명령으로 /etc/manpath.config 값을 환경 변수로 미리 넣어줘야 한다.
+export MANPATH=$(manpath --quiet)
+
 OLDPATH=$PATH
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 # https://unix.stackexchange.com/questions/537062/homebrew-replaced-python3-how-to-reverse
