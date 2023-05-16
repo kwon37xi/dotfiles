@@ -67,10 +67,8 @@
   retries: 3
   delay: 10
 - name: IntelliJIDEA
-  community.general.snap: # intellij는 snap 버전이 더 잘 작동하고 관리가 잘됨
-    name: intellij-idea-ultimate
-    classic: true
-    state: present
+  community.general.flatpak:
+    name: "com.jetbrains.IntelliJ-IDEA-Ultimate"
   register: intellij_idea_installed
   until: intellij_idea_installed is not failed
   retries: 3
