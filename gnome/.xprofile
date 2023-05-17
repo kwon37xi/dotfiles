@@ -1,9 +1,0 @@
-# 이제 breeze 테마로 그냥 사용
-#export QT_STYLE_OVERRIDE=kvantum
-
-# fzf 설정이 GVim 등에 먹게 하기 위해서.
-source ~/.config/bashrc.d/020_fzf.sh
-
-if [ -f ~/.local/bin/snixembed ]; then
-    ~/.local/bin/snixembed --fork
-fi

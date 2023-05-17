@@ -38,7 +38,6 @@
 - name: stow
   shell: "stow -d ~/.dotfiles -t ~/ -S {{ item }}"
   with_items:
-    - gnome
     - vim
     - ideavim
     - uim
