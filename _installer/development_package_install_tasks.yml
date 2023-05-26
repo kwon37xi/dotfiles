@@ -66,13 +66,6 @@
   until: slack_installed is not failed
   retries: 3
   delay: 10
-- name: IntelliJIDEA
-  community.general.flatpak:
-    name: "com.jetbrains.IntelliJ-IDEA-Ultimate"
-  register: intellij_idea_installed
-  until: intellij_idea_installed is not failed
-  retries: 3
-  delay: 10
 - name: bitwarden
   community.general.flatpak:
     name: "com.bitwarden.desktop"
@@ -110,3 +103,23 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-docker-compose.sh"
 - name: wrappers-easy-executor
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-wrappers-easy-executor.sh"
+- name: IntelliJ IDEA target dir
+  file:
+    path: "/home/{{ current_user }}/.local/opt/JetBrains/ideaIU"
+    state: directory
+- name: intellij ultimate latest version
+  shell: curl -fsSL "https://data.services.jetbrains.com/products?code=IIU%2CIIC&release.type=release" | jq -r '[.[].releases[].version][0]'
+  register: jetbrains_intellij_idea_latest_version_result
+- set_fact:
+    jetbrains_intellij_idea_latest_version={{ jetbrains_intellij_idea_latest_version_result.stdout }}
+- name: IntelliJ IDEA user install
+  unarchive: # https://download-cdn.jetbrains.com/idea/ideaIU-2022.1.3.tar.gz
+    src: "https://download-cdn.jetbrains.com/idea/ideaIU-{{ jetbrains_intellij_idea_latest_version }}.tar.gz"
+    remote_src: yes
+    dest: "/home/{{current_user}}/.local/opt/JetBrains/ideaIU"
+    extra_opts: [--strip-components=1]
+    creates: "/home/{{ current_user }}/.local/opt/JetBrains/ideaIU/bin/idea.sh"
+  register: intellij_idea_installed
+  until: intellij_idea_installed is not failed
+  retries: 3
+  delay: 10
