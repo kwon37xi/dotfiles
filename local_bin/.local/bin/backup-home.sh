@@ -8,12 +8,13 @@ rm -rf ~/.local/backup
 
 # "Service Worker"는 vivald의 캐시 디렉토리로, 백업 불필요.
 tar cvpzf /tmp/home-backups.tar.gz --one-file-system --exclude="Service Worker" -C ~ \
-    .var/app/com.jetbrains.IntelliJ-IDEA-Ultimate \
+    .config/JetBrains \
+    .local/share/JetBrains \
     .local/share/keyrings \
     .local/share/DBeaverData \
     .local/backup
 
-# 더이상 안 사용하는 부분들
+# 더이상 안 사용하는 부분들 
 #    .config/vivaldi/Default \
 #    .config/asbru \
 #    .local/share/kwalletd \
