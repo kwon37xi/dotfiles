@@ -52,7 +52,6 @@
     - ppa:graphics-drivers/ppa
     - ppa:cappelikan/ppa # for mainline
     - ppa:gerardpuig/ppa # for ubuntu cleaner
-    - ppa:danielrichter2007/grub-customizer
 - name: multiverse universe
   become: yes
   shell: "apt-add-repository -y --no-update {{ item }}"
