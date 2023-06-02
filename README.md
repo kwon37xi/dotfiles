@@ -27,6 +27,7 @@ cd ~/.dotfiles
 
 ## 가상머신에서 테스트 할경우
 * VirtualBox Guest Addition 을 미리 설치
+* Video Memory 를 32mb 정도로 해둬야 해상도 변경에 유연하게 대응됨.
 ```
 # Kernel 컴파일을 위한 패키지 설치
 sudo apt install make gcc perl
