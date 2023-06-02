@@ -27,7 +27,6 @@
     package:
       - nautilus-admin
       - gnome-sushi
-      - nautilus-script-audio-convert
       - nautilus-image-converter
       - nautilus-scripts-manager
       - nautilus-share
