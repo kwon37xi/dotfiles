@@ -80,13 +80,6 @@
   until: joplin_installed is not failed
   retries: 3
   delay: 10
-- name: Flameshot
-  community.general.flatpak:
-    name: "org.flameshot.Flameshot"
-  register: flameshot_installed
-  until: flameshot_installed is not failed
-  retries: 3
-  delay: 10
 - name: local applications dir
   file:
     path: "/home/{{ current_user }}/.local/share/applications"
