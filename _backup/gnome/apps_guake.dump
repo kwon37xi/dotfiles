@@ -3,7 +3,11 @@ abbreviate-tab-names=false
 compat-delete='delete-sequence'
 default-shell='/usr/bin/tmux'
 display-n=0
+display-tab-names=0
+gtk-use-system-default-theme=true
+hide-tabs-if-one-tab=false
 history-size=1000
+load-guake-yml=true
 max-tab-name-length=100
 mouse-display=true
 open-tab-cwd=true
@@ -27,7 +31,7 @@ window-tabbar=false
 window-width=100
 
 [keybindings/global]
-show-hide='<Super>grave'
+show-hide='disabled'
 
 [style/background]
 transparency=100

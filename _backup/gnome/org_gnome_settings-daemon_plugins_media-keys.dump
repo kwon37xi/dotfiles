@@ -1,6 +1,6 @@
 [/]
 calculator=['Calculator']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
 help=@as []
 home=['<Super>e']
 logout=['<Primary><Alt>Delete']
@@ -25,10 +25,40 @@ binding='<Primary><Shift><Alt>End'
 command='gnome-session-quit --reboot'
 name='Reboot'
 
+[custom-keybindings/custom10]
+binding='F9'
+command='gromit-mpx --toggle'
+name='gromit-mpx-wayland-hotkey --toggle'
+
+[custom-keybindings/custom11]
+binding='<Shift>F9'
+command='gromit-mpx --clear'
+name='gromit-mpx-wayland-hotkey --clear'
+
+[custom-keybindings/custom12]
+binding='<Ctrl>F9'
+command='gromit-mpx --visibility'
+name='gromit-mpx-wayland-hotkey --visibility'
+
+[custom-keybindings/custom13]
+binding='<Alt>F9'
+command='gromit-mpx --quit'
+name='gromit-mpx-wayland-hotkey --quit'
+
+[custom-keybindings/custom14]
+binding='F8'
+command='gromit-mpx --undo'
+name='gromit-mpx-wayland-hotkey --undo'
+
+[custom-keybindings/custom15]
+binding='<Shift>F8'
+command='gromit-mpx --redo'
+name='gromit-mpx-wayland-hotkey --redo'
+
 [custom-keybindings/custom2]
-binding='<Super>Print'
-command='flatpak run org.flameshot.Flameshot gui'
-name='Flameshot'
+binding='<Super>grave'
+command='guake-toggle'
+name='guake on wayland'
 
 [custom-keybindings/custom3]
 binding='<Super>p'
