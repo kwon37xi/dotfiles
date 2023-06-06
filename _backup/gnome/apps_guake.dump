@@ -2,14 +2,14 @@
 abbreviate-tab-names=false
 compat-delete='delete-sequence'
 default-shell='/usr/bin/tmux'
-display-n=0
+display-n=-1
 display-tab-names=0
 gtk-use-system-default-theme=true
 hide-tabs-if-one-tab=false
 history-size=1000
 load-guake-yml=true
 max-tab-name-length=100
-mouse-display=true
+mouse-display=false
 open-tab-cwd=true
 prompt-on-quit=true
 quick-open-command-line='gedit %(file_path)s'
@@ -17,6 +17,7 @@ restore-tabs-notify=true
 restore-tabs-startup=false
 save-tabs-when-changed=true
 scroll-keystroke=true
+start-at-login=true
 start-fullscreen=false
 use-default-font=false
 use-popup=false
@@ -34,7 +35,7 @@ window-width=100
 show-hide='disabled'
 
 [style/background]
-transparency=100
+transparency=98
 
 [style/font]
 allow-bold=true
