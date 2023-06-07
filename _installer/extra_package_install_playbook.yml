@@ -71,6 +71,7 @@
       apt:
         package:
           - wine
+          - wine:i386
           - winetricks
         state: latest
     - name: apt clean # ansible의 autoclean 은 clean이 아니다.
