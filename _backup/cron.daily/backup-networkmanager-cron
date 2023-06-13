@@ -14,4 +14,7 @@ mkdir -p "/home/$TARGET_USER/.local/backup/networkmanager/etc/NetworkManager"
 cp -R /etc/NetworkManager/system-connections "/home/$TARGET_USER/.local/backup/networkmanager/etc/NetworkManager"
 chown -R "$TARGET_USER:$TARGET_USER" "/home/$TARGET_USER/.local/backup"
 chmod -R og-rwx "/home/$TARGET_USER/.local/backup"
+
+# woowanet 은 백업 불필요
+rm -f "/home/$TARGET_USER/.local/backup/networkmanager/etc/NetworkManager/system-connections"/woowanet*
 logger "networkmanager connections backuped successfully"
