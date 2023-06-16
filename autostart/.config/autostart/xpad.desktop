@@ -1,0 +1,46 @@
+[Desktop Entry]
+Version=1.0
+
+Name[af]=Xpad
+Name[bg]=Xpad
+Name[cs]=Xpad
+Name[da]=Xpad
+Name[de]=Xpad
+Name[en_GB]=Xpad
+Name[es]=Xpad
+Name[et]=Xpad
+Name[fi]=Xpad
+Name[fr]=Xpad
+Name[ga]=Xpad
+Name[hr]=Xpad
+Name[hu]=Xpad
+Name[it]=Xpad
+Name[ja]=Xpad
+Name[ko]=Xpad
+Name[lv]=Xpad
+Name[nl]=Xpad
+Name[pt]=Xpad
+Name[ro]=Xpad
+Name[ru]=Xpad
+Name[sv]=Xpad
+Name[th]=Xpad
+Name[tr]=Xpad
+Name[vi]=Xpad
+Name[zh_CN]=Xpad
+Name[zh_TW]=Xpad
+Name=Xpad
+GenericName=Sticky Notes
+Comment=Jot down notes for later
+
+TryExec=xpad
+Exec=xpad
+Terminal=false
+Icon=xpad
+
+StartupNotify=true
+StartupWMClass=xpad
+
+Type=Application
+Categories=GTK;Utility;
+X-LXQt-Need-Tray=true
+Keywords=notes;postit

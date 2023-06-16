@@ -80,6 +80,7 @@
       - python3-argcomplete # ansible bash auto completion
       - ubuntu-cleaner
       - urlview # for tmux urlview
+      - xpad # sticky note
     state: latest
 - name: install system tools
   become: yes
