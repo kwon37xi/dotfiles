@@ -14,10 +14,10 @@ tar cvpzf /tmp/home-backups.tar.gz --one-file-system --exclude="Service Worker" 
     .local/share/DBeaverData \
     .local/backup
 
-# 더이상 안 사용하는 부분들 
+# 더이상 안 사용하는 부분들
 #    .config/vivaldi/Default \
 #    .config/asbru \
 #    .local/share/kwalletd \
 #    .PlayOnLinux \
 
-echo "/tmp/home-backups.tar.gz" 로 모든 백업이 완료됨"
+echo "/tmp/home-backups.tar.gz 로 모든 백업이 완료됨"
