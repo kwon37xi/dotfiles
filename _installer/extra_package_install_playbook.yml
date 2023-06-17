@@ -66,6 +66,11 @@
     - name: add architecture i386
       become: yes
       shell: "dpkg --add-architecture i386"
+    - name: update apt cache all # architecture 추가시에 cache 도 갱신해야함.
+      become: yes
+      apt:
+        update_cache: yes
+        upgrade: full
     - name: install wine
       become: yes
       apt:
