@@ -23,7 +23,6 @@
     - .sdkman/etc
     - Desktop
     - .vim
-    - .conky
 - name: delete conflicting files
   file:
     path: "/home/{{ current_user }}/{{ item }}"
@@ -34,7 +33,6 @@
       - .config/fcitx/config
       - .local/share/konsole
       - .config/Code/User/snippets # snippets directory stow
-      - .conky
 - name: stow
   shell: "stow -d ~/.dotfiles -t ~/ -S {{ item }}"
   with_items:
@@ -58,7 +56,6 @@
     - ulauncher
     - fontconfig
     - tig
-    - conky
     - starship
     - nano
     - mat

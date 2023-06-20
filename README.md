@@ -143,10 +143,6 @@ sudo reboot
 * tmux 를 실행하고서 `<prefix>+I(대문자)` 를 누르면 플러그인이 설치된다.
 * 현재 `<prefix>` 는 `Ctrl+A` 이다.
 
-### Conky
-* `~/.conky` 에 conky 설정 파일들과 실행 스크립트가 있다.
-* 시작 프로그램 설정을 통해 해당 스크립트를 실행하도록 한다.
-
 ### Jenkins 설치
 * Jenkins 설치를 자동화 해 두었다.
 ```
