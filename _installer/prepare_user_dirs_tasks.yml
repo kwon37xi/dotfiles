@@ -9,11 +9,11 @@
   args:
     creates: ~/Downloads
     removes: ~/다운로드
-- name: 템플릿 to Templates
-  shell: mv ~/템플릿 ~/Templates
+- name: 서식 to Templates
+  shell: mv ~/서식 ~/Templates
   args:
     creates: ~/Templates
-    removes: ~/템플릿
+    removes: ~/서식
 - name: 공개 to Public
   shell: mv ~/공개 ~/Public
   args:
