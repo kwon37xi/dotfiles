@@ -168,6 +168,13 @@
     name: flathub
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
     state: present
+- name: firefox flatpak
+  community.general.flatpak:
+    name: "org.mozilla.firefox"
+  register: firefox_flatpak_package_installed
+  until: firefox_flatpak_package_installed is not failed
+  retries: 3
+  delay: 10
 - name: install input methods
   become: yes
   apt:

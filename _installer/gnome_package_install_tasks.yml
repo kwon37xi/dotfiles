@@ -13,6 +13,11 @@
       - deja-dup
       - gnome-clocks
     state: latest
+- name: remove snap firefox
+  become: yes
+  community.general.snap:
+    name: firefox
+    state: absent
 - name: install nautilus packages
   become: yes
   apt:
