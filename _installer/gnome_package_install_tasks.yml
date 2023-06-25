@@ -18,6 +18,12 @@
   community.general.snap:
     name: firefox
     state: absent
+- name: remove apt firefox
+  become: yes
+  apt:
+    package:
+      - firefox
+    state: absent
 - name: install nautilus packages
   become: yes
   apt:
