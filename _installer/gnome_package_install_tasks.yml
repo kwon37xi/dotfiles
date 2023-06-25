@@ -11,16 +11,8 @@
       - gnome-authenticator
       - python3-pydrive # for deja-dup
       - deja-dup
-      - gnome-software
-      - gnome-software-plugin-flatpak
-      - gnome-software-plugin-snap
       - gnome-clocks
     state: latest
-- name: remove snap-store # use gnome-software
-  become: yes
-  community.general.snap:
-    name: snap-store
-    state: absent
 - name: install nautilus packages
   become: yes
   apt:
