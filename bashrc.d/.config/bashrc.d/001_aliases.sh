@@ -35,7 +35,7 @@ alias restow='stow -d ~/.dotfiles -t ~/ -R'
 alias unstow='stow -d ~/.dotfiles -t ~/ -D'
 
 # apt update/upgrade
-alias sysup='sudo apt update && sudo apt -y upgrade && sudo apt  -y autoremove && sudo apt clean && flatpak update -y && sudo snap refresh && brew update && brew upgrade && brew autoremove && brew cleanup --prune=all && sdk update && sdk upgrade'
+alias sysup='sudo apt update && sudo apt -y upgrade && sudo apt  -y autoremove && sudo apt clean && flatpak update -y && sudo snap refresh && brew update && brew upgrade && brew autoremove && brew cleanup --prune=all && sdk update && sdk upgrade && cd ~/.dotfiles && git pull --rebase && cd ~/.dotfiles-private && git pull --rebase'
 # apt search names only
 alias aptsearch='apt search --names-only'
 
