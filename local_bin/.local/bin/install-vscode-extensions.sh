@@ -1,7 +1,6 @@
 #!/usr/bin/bash
 
 extensions=(
-    2gua.rainbow-brackets
     AdsonCicilioti.yaru-vscode
     DavidAnson.vscode-markdownlint
     EditorConfig.EditorConfig
@@ -33,7 +32,6 @@ extensions=(
     dsznajder.es7-react-js-snippets
     eamodio.gitlens
     ecmel.vscode-html-css
-    eg2.vscode-npm-script
     esbenp.prettier-vscode
     evan-buss.font-switcher
     formulahendry.auto-rename-tag
@@ -59,7 +57,6 @@ extensions=(
     ms-vscode-remote.remote-ssh-edit
     ms-vscode-remote.remote-wsl
     ms-vscode-remote.vscode-remote-extensionpack
-    ms-vscode.vscode-typescript-tslint-plugin
     ms-vsliveshare.vsliveshare
     mtxr.sqltools
     mwpb.java-prettier-formatter
