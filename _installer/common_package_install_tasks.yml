@@ -73,6 +73,7 @@
       - gnome-multi-writer
       - bd
       - jq
+      - jc
       - iotop
       - atop
       - guake
