@@ -49,9 +49,9 @@
   shell: "add-apt-repository -y --no-update {{ item }}"
   with_items:
     - ppa:git-core/ppa
-    - ppa:graphics-drivers/ppa
     - ppa:cappelikan/ppa # for mainline
     - ppa:gerardpuig/ppa # for ubuntu cleaner
+      #- ppa:graphics-drivers/ppa # 최신 nvidia driver 가 굳이 필요해보이지는 않아서 일단 disable
 - name: multiverse universe
   become: yes
   shell: "apt-add-repository -y --no-update {{ item }}"
