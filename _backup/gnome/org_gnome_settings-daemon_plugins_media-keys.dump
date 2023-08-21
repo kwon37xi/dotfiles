@@ -1,6 +1,6 @@
 [/]
 calculator=['Calculator']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
 help=@as []
 home=['<Super>e']
 logout=['<Primary><Alt>Delete']
@@ -63,7 +63,7 @@ name='guake on wayland'
 [custom-keybindings/custom3]
 binding='<Super>p'
 command=' gnome-control-center display'
-name='Display Settings'
+name='Gnome Display'
 
 [custom-keybindings/custom4]
 binding='<Shift><Super>question'
@@ -77,15 +77,10 @@ name='ulauncher toggle for wayland'
 
 [custom-keybindings/custom7]
 binding='<Shift><Super>s'
-command='flatpak run com.slack.Slack'
+command='slack'
 name='Slack'
 
 [custom-keybindings/custom8]
 binding='<Shift><Super>v'
 command='gnome-notification-toggle.sh'
 name='Toggle Gnome notification show-banners'
-
-[custom-keybindings/custom9]
-binding='<Primary><Super>Print'
-command='gnome-screenshot --interactive'
-name='gnome-screenshot'
