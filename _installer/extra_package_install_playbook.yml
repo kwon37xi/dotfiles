@@ -93,13 +93,6 @@
       become: yes
       apt:
         deb: "/home/{{ current_user }}/.dotfiles/_backup/themes/ocs-url_3.1.0-0ubuntu1_amd64.deb"
-    - name: shotcut
-      community.general.flatpak:
-        name: "org.shotcut.Shotcut"
-      register: shotcut_package_installed
-      until: shotcut_package_installed is not failed
-      retries: 3
-      delay: 10
     - name: flatseal
       community.general.flatpak:
         name: "com.github.tchx84.Flatseal"
