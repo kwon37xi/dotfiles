@@ -6,7 +6,7 @@ export SDKMAN_DIR="/home/${USER}/.sdkman"
 # https://www.grailbox.com/2021/04/switch-among-java-versions-fzf-and-sdkman/
 # 현재 shell 용 java version 지정
 ju() {
-    local javaversion="$(sdk list java | grep 'installed\|local only' | grep -v '>>>' | awk '{print $NF}' | fzf --prompt '사용할 Java 버전 > ')"
+    local javaversion="$(\ls ~/.sdkman/candidates/java | grep -v current | fzf --prompt '사용할 Java 버전 > ')"
     if [ -z "$javaversion" ]
     then
         echo "Java 버전을 지정하지 않았습니다."
@@ -18,7 +18,7 @@ ju() {
 
 # default java 버전 지정
 jd() {
-    local javaversion="$(sdk list java | grep 'installed\|local only' | awk '{print $NF}' | fzf --prompt '기본으로 지정할 Java 버전 > ')"
+    local javaversion="$(\ls ~/.sdkman/candidates/java | grep -v current |  fzf --prompt '기본으로 지정할 Java 버전 > ')"
     if [ -z "$javaversion" ]
     then
         echo "Java 버전을 지정하지 않았습니다."
@@ -42,7 +42,7 @@ ji() {
 
 # remoev jdk
 jr() {
-    local javaversion="$(sdk list java | grep 'installed\|local only' | grep -v '>>>' | awk '{print $NF}' | fzf --prompt '삭제할 Java 버전 > ')"
+    local javaversion="$(\ls ~/.sdkman/candidates/java | grep -v current | fzf --prompt '삭제할 Java 버전 > ')"
     if [ -z "$javaversion" ]
     then
         echo "Java 버전을 지정하지 않았습니다."
@@ -54,7 +54,7 @@ jr() {
 
 # installed JDK list
 _sdkman_ji() {
-    sdk list java | grep 'installed\|local only' | grep -v '>>>' | awk '{print $NF}' |
+    \ls ~/.sdkman/candidates/java | grep -v current |
         fzf --prompt "설치된 Java 버전목록 > "
 }
 
