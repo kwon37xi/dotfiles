@@ -90,6 +90,7 @@
       - mainline
       - gparted
       - dconf-editor
+      - blueman
     state: latest
 - name: install development base tools
   become: yes
