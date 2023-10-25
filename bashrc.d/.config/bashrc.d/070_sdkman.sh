@@ -16,6 +16,20 @@ ju() {
     fi
 }
 
+# 현재 shell 용 JDK를 선택하고 그 것으로 현재 디렉토리에서 sdk env init 실행
+jei() {
+    local javaversion="$(\ls ~/.sdkman/candidates/java | grep -v current | fzf --prompt '현재 디렉토리의 기본 Java 버전 > ')"
+    if [ -z "$javaversion" ]
+    then
+        echo "Java 버전을 지정하지 않았습니다."
+    else
+        echo "Java ${javaversion}을 사용하고 .sdkmanrc 를 현재 디렉토리에 생성합니다."
+        sdk use java "${javaversion}"
+        rm -f .sdkmanrc
+        sdk env init
+    fi
+}
+
 # default java 버전 지정
 jd() {
     local javaversion="$(\ls ~/.sdkman/candidates/java | grep -v current |  fzf --prompt '기본으로 지정할 Java 버전 > ')"
