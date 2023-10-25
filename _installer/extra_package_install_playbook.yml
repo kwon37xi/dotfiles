@@ -130,6 +130,13 @@
       until: pinta_package_installed is not failed
       retries: 3
       delay: 10
+    - name: haruna
+      community.general.flatpak:
+        name: "org.kde.haruna"
+      register: haruna_package_installed
+      until: haruna_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: celluloid
       community.general.flatpak:
         name: "io.github.celluloid_player.Celluloid"
