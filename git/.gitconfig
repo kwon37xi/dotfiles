@@ -72,6 +72,8 @@
     dtprev1 = difftool HEAD^
     dtprev2 = difftool HEAD^^ HEAD^
     dtprev3 = difftool HEAD^^^ HEAD^^
+    # commit log diff 를 하는데 merge 는 제외하고 보여줌
+    diffcommit = log --oneline --no-merges --no-decorate
     mt = mergetool
     cleanbranch = "!git branch -d $(git branch --merged | grep -v '^\\*\\|\\<master$')"
     # untracked 파일과 디렉토리 전체 삭제
