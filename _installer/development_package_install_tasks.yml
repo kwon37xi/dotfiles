@@ -23,18 +23,6 @@
     package:
       - code
     state: latest
-- name: install vagrant
-  become: yes
-  apt:
-    package:
-      - vagrant
-    state: latest
-- name: install packer
-  become: yes
-  apt:
-    package:
-      - packer
-    state: latest
 - name: database clients
   become: yes
   apt:
