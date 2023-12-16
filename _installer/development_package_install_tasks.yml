@@ -29,16 +29,6 @@
     package:
       - mysql-client
     state: latest
-- name: zoom.us preparation
-  become: yes
-  apt:
-    package:
-      - libgl1-mesa-glx
-      - libegl1-mesa
-      - libxcb-xtest0
-    state: latest
-- name: zoom.us install
-  ansible.builtin.command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-zoom.sh"
 - name: google chrome install
   become: yes
   apt:
