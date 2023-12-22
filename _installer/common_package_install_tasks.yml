@@ -81,6 +81,8 @@
       - ubuntu-cleaner
       - urlview # for tmux urlview
       - xpad # sticky note
+      - transmission
+      - remmina
     state: latest
 - name: install system tools
   become: yes
