@@ -14,7 +14,6 @@ dconf load /org/gnome/shell/extensions/date-menu-formatter/ < ~/.dotfiles/_backu
 dconf load /org/gnome/shell/extensions/clipboard-indicator/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_clipboard-indicator.dump
 dconf load /org/gnome/shell/extensions/desktop-cube/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_desktop-cube.dump
 dconf load /org/gnome/shell/extensions/status-area-horizontal-spacing/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_status-area-horizontal-spacing.dump
-dconf load /org/gnome/shell/extensions/space-bar/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_space-bar.dump
 dconf load /org/gnome/shell/extensions/screenshot-window-sizer/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_screenshot-window-sizer.dump
 dconf load /org/gnome/pomodoro/preferences/ < ~/.dotfiles/_backup/gnome/org_gnome_pomodoro.dump
 dconf load /org/gnome/shell/extensions/panel-date-format/ <  ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_panel_date_format.dump
