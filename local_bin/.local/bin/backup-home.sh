@@ -11,6 +11,7 @@ mkdir -p ~/.local/share/JetBrains
 mkdir -p ~/.local/share/keyrings
 mkdir -p ~/.local/share/DBeaverData
 mkdir -p ~/.local/backup
+mkdir -p ~/.config/xpad
 
 # "Service Worker"는 vivald의 캐시 디렉토리로, 백업 불필요.
 tar cvpzf /tmp/home-backups.tar.gz --one-file-system --exclude="Service Worker" -C ~ \
@@ -18,6 +19,7 @@ tar cvpzf /tmp/home-backups.tar.gz --one-file-system --exclude="Service Worker" 
     .local/share/JetBrains \
     .local/share/keyrings \
     .local/share/DBeaverData \
+    .config/xpad \
     .local/backup
 
 # 더이상 안 사용하는 부분들

@@ -9,6 +9,7 @@ rm -rf ~/.config/JetBrains
 rm -rf ~/.local/share/JetBrains
 #rm -rf ~/.config/copyq
 rm -rf ~/.local/share/keyrings
+rm -rf ~/.config/xpad
 
 tar xvzf home-backups.tar.gz -C ~/
 
