@@ -33,9 +33,8 @@
   become: yes
   apt:
     package:
-      - libgl1-mesa-glx
       - libegl1-mesa
-      - libxcb-xtest0
+      - libgl1-mesa-glx
     state: latest
 - name: zoom.us install
   ansible.builtin.command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-zoom.sh"
