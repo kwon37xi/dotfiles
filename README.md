@@ -11,6 +11,12 @@ My Linux dotfiles and installation scripts
 * `software-properties-gtk` 를 실행하고,
   * 미러를 한국 미러로 변경한다. **단 kakao 등의 특정 미러로 변경하지 말것. 모든 일부 미러는 패키지가 동기화가 안되고 있다.**
 
+## 백업
+```
+backup-home.sh
+```
+이후 `/tmp/home-backups.tar.gz` 파일을 안전한 곳에 복사한다
+
 ## execute with wget
 ```
 bash -c "$(wget -qO - https://raw.githubusercontent.com/kwon37xi/dotfiles/main/install_start.sh)"
@@ -63,6 +69,13 @@ sudo apt install make gcc perl
 ~/.local/bin/move-home-dirs.sh /mnt/data
 ```
 
+### 백업 복구
+```
+# home-backups.tar.gz 파일이 있는 디렉토리로 이동
+
+restore-home.sh
+```
+
 ### additional drivers
 ```
 sudo software-properties-gtk
@@ -87,7 +100,7 @@ sudo apt install amd64-microcode
 * `dash-to-panel` 사용시에는 해당 설정의 **Fine Tune** 에서 설정값으로 padding 조정가능하다.
 
 ### Super 키 오작동 & 노트북 오른쪽 Alt/Ctrl 한영,한자키
-* `gnome-tweaks` -> 키보드와 마우스
+* `gnome-tweaks` -> 키보드와 마우스 : **하지말것. 이제는 거의 문제 안됨**
   * 바로가기 키 개요 : **오른쪽 Super 키** 로 변경한다. 이걸하면 왼쪽 Super 키가 올바르게 작동하고, 오른쪽 Super 키로 바로가기 개요를 볼 수 있다.
     * Ubuntu 21.04 부터는 왼쪽 Super  키로 두어도 ''Super+다른키조합''이 잘 작동하고 있다.
   * 추가배치 옵션

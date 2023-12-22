@@ -6,6 +6,12 @@ rm -rf ~/.local/backup
 # NetworkManager WiFi, VPN 접속정보들 백업
 ~/.dotfiles/local_bin/.local/bin/backup-networkmanager.sh
 
+mkdir -p ~/.config/JetBrains
+mkdir -p ~/.local/share/JetBrains
+mkdir -p ~/.local/share/keyrings
+mkdir -p ~/.local/share/DBeaverData
+mkdir -p ~/.local/backup
+
 # "Service Worker"는 vivald의 캐시 디렉토리로, 백업 불필요.
 tar cvpzf /tmp/home-backups.tar.gz --one-file-system --exclude="Service Worker" -C ~ \
     .config/JetBrains \
