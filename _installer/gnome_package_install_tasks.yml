@@ -12,6 +12,7 @@
       - python3-pydrive # for deja-dup
       - deja-dup
       - gnome-clocks
+      - gnome-calendar
     state: latest
 - name: remove snap firefox
   become: yes
