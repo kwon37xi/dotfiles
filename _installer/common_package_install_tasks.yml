@@ -83,6 +83,7 @@
       - xpad # sticky note
       - transmission
       - remmina
+      - intel-gpu-tools
     state: latest
 - name: install system tools
   become: yes
