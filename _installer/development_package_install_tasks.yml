@@ -30,6 +30,7 @@
       - mysql-client
     state: latest
 - name: zoom.us install
+  become: yes
   ansible.builtin.command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-zoom.sh"
 - name: google chrome install
   become: yes
