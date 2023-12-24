@@ -29,9 +29,6 @@
     package:
       - mysql-client
     state: latest
-- name: zoom.us install
-  become: yes
-  ansible.builtin.command: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-zoom.sh"
 - name: google chrome install
   become: yes
   apt:
@@ -46,6 +43,13 @@
     deb: https://downloads.slack-edge.com/releases/linux/4.33.90/prod/x64/slack-desktop-4.33.90-amd64.deb
   register: slack_installed
   until: slack_installed is not failed
+  retries: 3
+  delay: 10
+- name: zoom
+  community.general.flatpak:
+    name: "us.zoom.Zoom"
+  register: zoom_installed
+  until: zoom_installed is not failed
   retries: 3
   delay: 10
 - name: bitwarden
