@@ -67,6 +67,15 @@
   until: joplin_installed is not failed
   retries: 3
   delay: 10
+- name: multipass
+  become: yes
+  community.general.snap:
+    channel: stable
+    name: multipass
+- name: multipass connect
+  become: yes
+  shell: |
+    snap connect multipass:firewall-control snapd:firewall-control
 - name: local applications dir
   file:
     path: "/home/{{ current_user }}/.local/share/applications"
