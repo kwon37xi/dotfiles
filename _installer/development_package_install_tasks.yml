@@ -9,6 +9,7 @@
       - virtualbox
       - virtualbox-ext-pack
       - virtualbox-guest-additions-iso
+      - vagrant
     state: latest
 - name: install node.js # vim markdown plugin에 필요함.
   become: yes
