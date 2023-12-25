@@ -81,7 +81,7 @@
       - ubuntu-cleaner
       - urlview # for tmux urlview
       - xpad # sticky note
-      - transmission
+      - transmission-qt
       - remmina
       - intel-gpu-tools
     state: latest
