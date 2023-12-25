@@ -46,7 +46,6 @@
     - local_bin
     - fcitx
     - tmux
-    - fusuma
     - most
     - autostart
     - mysql
