@@ -3,11 +3,9 @@ Name=Slack
 StartupWMClass=Slack
 Comment=Slack Desktop
 GenericName=Slack Client for Linux
-# --starup 옵션을 주면, 2021년 현재 empty window가 뜨는 버그가 존재함. 일시 정지
-Exec=flatpak run com.slack.Slack
+Exec=/usr/bin/slack %U
 Icon=/usr/share/pixmaps/slack.png
 Type=Application
-StartupNotify=false
+StartupNotify=true
 Categories=GNOME;GTK;Network;InstantMessaging;
 MimeType=x-scheme-handler/slack;
-#X-GNOME-Autostart-Delay=30
