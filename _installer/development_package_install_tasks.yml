@@ -75,6 +75,7 @@
   become: yes
   shell: |
     snap connect multipass:firewall-control snapd:firewall-control
+    snap connect multipass:multipass-support snapd:multipass-support
 - name: local applications dir
   file:
     path: "/home/{{ current_user }}/.local/share/applications"
