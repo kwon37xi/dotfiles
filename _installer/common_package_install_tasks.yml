@@ -82,7 +82,6 @@
       - urlview # for tmux urlview
       - xpad # sticky note
       - transmission-qt
-      - remmina
       - intel-gpu-tools
     state: latest
 - name: install system tools
@@ -147,6 +146,16 @@
       - putty
       - putty-tools
       - filezilla
+    state: latest
+- name: install remote desktop
+  become: yes
+  apt:
+    package:
+      - remmina
+      - remmina-plugin-spice
+      - remmina-plugin-x2go
+      - remmina-plugin-vnc
+      - remmina-plugin-rdp
     state: latest
 - name: install system-monitor-next extension dependencies
   become: yes
