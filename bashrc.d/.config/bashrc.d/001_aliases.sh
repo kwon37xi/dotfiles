@@ -84,3 +84,6 @@ alias intelstats="sudo intel_gpu_top"
 # start
 alias start=xdg-open
 alias xo=xdg-open
+
+# multipass
+alias mp=multipass
