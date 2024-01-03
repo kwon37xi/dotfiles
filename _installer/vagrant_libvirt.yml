@@ -1,0 +1,3 @@
+---
+- name: vagrant libvirt plugin # brew vagrant 때문에 나중에 설치함
+  shell: vagrant plugin install vagrant-libvirt
