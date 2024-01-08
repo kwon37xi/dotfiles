@@ -1,0 +1,9 @@
+---
+- name: vagrant libvirt plugin # brew vagrant 때문에 나중에 설치함
+  shell: vagrant plugin install vagrant-libvirt
+- name: vagrant bash auto completion
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/hashicorp/vagrant/main/contrib/bash/completion.sh
+    dest: "/home/{{ current_user }}/.config/bashrc.d/083_vagrant_autocompletion.sh"
+    force: true
+    timeout: 30

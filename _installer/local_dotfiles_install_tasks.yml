@@ -22,6 +22,7 @@
     - .config/Code/User
     - .config/mpv
     - .sdkman/etc
+    - .local/share/bash-completion/completions
     - Desktop
     - .vim
 - name: delete conflicting files
