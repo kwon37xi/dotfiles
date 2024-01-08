@@ -144,6 +144,20 @@
       until: celluloid_package_installed is not failed
       retries: 3
       delay: 10
+    - name: pdfarranger
+      community.general.flatpak:
+        name: "com.github.jeromerobert.pdfarranger"
+      register: pdfarranger_package_installed
+      until: pdfarranger_package_installed is not failed
+      retries: 3
+      delay: 10
+    - name: krop
+      community.general.flatpak:
+        name: "com.github.arminstraub.krop"
+      register: krop_package_installed
+      until: krop_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: scrcpy
       become: yes
       community.general.snap:
