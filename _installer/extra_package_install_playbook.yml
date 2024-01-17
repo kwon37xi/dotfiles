@@ -63,6 +63,13 @@
           - gpick
           - gromit-mpx
         state: latest
+    - name: install pdftools
+      become: yes
+      apt:
+        package:
+          - pdftk
+          - texlive-extra-utils
+        state: latest
     - name: add architecture i386
       become: yes
       shell: "dpkg --add-architecture i386"
