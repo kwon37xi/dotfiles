@@ -80,6 +80,7 @@
       - xpad # sticky note
       - transmission-qt
       - intel-gpu-tools
+      - ksnip # for image/screenshot annotation
     state: latest
 - name: install system tools
   become: yes
