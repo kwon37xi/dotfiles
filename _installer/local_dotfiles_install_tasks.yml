@@ -18,6 +18,7 @@
     - .config/ulauncher
     - .config/fontconfig
     - .config/nano
+    - .config/ksnip
     - .config/bashrc.d
     - .config/Code/User
     - .config/mpv
@@ -78,3 +79,5 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-nanorc.sh"
 - name: vscode extensions install
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-vscode-extensions.sh"
+- name: ksnip default config copy # 복사로 해야함. 나머지 설정을 공유할 필요가 없음.
+  shell: "cp ~/.dotfiles/_backup/kde/ksnip/ksnip-base.conf ~/.config/ksnip/ksnip.conf"
