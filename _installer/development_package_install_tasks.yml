@@ -54,8 +54,9 @@
   retries: 3
   delay: 10
 - name: zoom
-  community.general.flatpak:
-    name: "us.zoom.Zoom"
+  become: yes
+  apt:
+    deb: https://zoom.us/client/latest/zoom_amd64.deb
   register: zoom_installed
   until: zoom_installed is not failed
   retries: 3
