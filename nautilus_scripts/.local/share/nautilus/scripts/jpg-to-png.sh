@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # 현재 선택된 파일 목록
 files="$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS"
