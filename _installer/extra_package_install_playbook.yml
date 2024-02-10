@@ -165,37 +165,6 @@
       until: krop_package_installed is not failed
       retries: 3
       delay: 10
-    - name: scrcpy
-      become: yes
-      community.general.snap:
-        name: scrcpy
-        state: present
-      register: scrcpy_package_installed
-      until: scrcpy_package_installed is not failed
-      retries: 3
-      delay: 10
-    - name: ascii-image-converter
-      become: yes
-      community.general.snap:
-        name: ascii-image-converter
-        state: present
-      register: asscii_image_converter_package_installed
-      until: asscii_image_converter_package_installed is not failed
-      retries: 3
-      delay: 10
-    - name: dirsize # https://github.com/frossm/dirsize
-      become: yes
-      community.general.snap:
-        name: dirsize
-        state: present
-      register: dirsize_package_installed
-      until: dirsize_package_installed is not failed
-      retries: 3
-      delay: 10
-    - name: diresize permission
-      become: yes
-      shell: |
-        snap connect dirsize:system-backup
     - name: download meganz
       become: yes
       apt:
