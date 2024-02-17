@@ -1,0 +1,19 @@
+# ppa 패키지 우선순위 높이기
+Package: firefox*
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 501
+
+# ubuntu 패키지 우선순위 낮추기
+Package: firefox*
+Pin: release o=Ubuntu
+Pin-Priority: -1
+
+# ppa 패키지 우선순위 높이기
+Package: thunderbird*
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 501
+
+# ubuntu 패키지 우선순위 낮추기
+Package: thunderbird*
+Pin: release o=Ubuntu
+Pin-Priority: -1

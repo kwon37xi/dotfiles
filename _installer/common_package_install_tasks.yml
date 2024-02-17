@@ -174,19 +174,22 @@
       - geany
       - geany-plugins
     state: latest
-- name: flatpak add remote flathub
+- name: copy mozilla-ppa-conf
   become: yes
-  community.general.flatpak_remote:
-    name: flathub
-    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
-    state: present
-- name: firefox flatpak
-  community.general.flatpak:
-    name: "org.mozilla.firefox"
-  register: firefox_flatpak_package_installed
-  until: firefox_flatpak_package_installed is not failed
-  retries: 3
-  delay: 10
+  ansible.builtin.copy:
+    src: "/home/{{ current_user }}/.dotfiles/_backup/mozilla-ppa/99mozillateamppa"
+    dest: "/etc/apt/preferences.d/99mozillateamppa"
+    mode: 0644
+    owner: root
+    group: root
+- name: install firefox-thunderbird
+  become: yes
+  apt:
+    package:
+      - firefox
+      - firefox-locale-ko
+      - thunderbird
+      - thunderbird-locale-ko
 - name: install input methods
   become: yes
   apt:
@@ -194,6 +197,12 @@
       - ibus
       - ibus-hangul
     state: latest
+- name: flatpak add remote flathub
+  become: yes
+  community.general.flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    state: present
 - name: apt clean # ansible의 autoclean 은 clean이 아니다.
   become: yes
   ansible.builtin.command: apt clean
