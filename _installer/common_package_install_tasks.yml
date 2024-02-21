@@ -81,6 +81,7 @@
       - transmission-qt
       - intel-gpu-tools
       - ksnip # for image/screenshot annotation
+      - adb # for android development and scrcpy
     state: latest
 - name: install system tools
   become: yes
