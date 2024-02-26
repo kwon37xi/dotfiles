@@ -1,8 +1,8 @@
 #!/bin/bash
 # install MAT
 # 최신 버전 참조 : https://www.eclipse.org/mat/downloads.php
-VERSION=1.13.0
-RELEASE_DATE=20220615
+VERSION=1.15.0
+RELEASE_DATE=20231206
 
 echo "${VERSION}.${RELEASE_DATE}"
 
