@@ -5,7 +5,7 @@
     "grab-mouse-pointer": true,
     "hotkey-show-app": "<Primary><Shift><Alt><Super>Scroll_Lock",
     "render-on-screen": "default-monitor",
-    "show-indicator-icon": true,
+    "show-indicator-icon": false,
     "show-recent-apps": "0",
     "terminal-command": "",
     "theme-name": "ubuntu"

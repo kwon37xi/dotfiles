@@ -179,16 +179,6 @@
         "run_without_argument": true,
         "added": 1625460614.5483437
     },
-    "ccce31a2-a4a1-41dd-b150-b87025583349": {
-        "id": "ccce31a2-a4a1-41dd-b150-b87025583349",
-        "name": "Symantec Antivirus \ucc3d \ucd5c\uc18c\ud654",
-        "keyword": "savtraym",
-        "cmd": "#!/bin/sh\nxdotool search --onlyvisible --name savtray windowminimize",
-        "icon": null,
-        "is_default_search": false,
-        "run_without_argument": true,
-        "added": 1630537318.851396
-    },
     "22626ea6-4aae-4ea7-98de-66ed0bc780ec": {
         "id": "22626ea6-4aae-4ea7-98de-66ed0bc780ec",
         "name": "bmart-platform-daily zoom",
@@ -223,7 +213,7 @@
         "id": "83ad6d43-d4ad-4b75-9dc4-81bc743a90a5",
         "name": "scrcpy - android view",
         "keyword": "andview",
-        "cmd": "#!/bin/sh\nadb shell ime set \"com.egloos.woongyee.sesak/.SesakKeyboardService\"\n/home/linuxbrew/.linuxbrew/bin/scrcpy --hid-keyboard --stay-awake --turn-screen-off\nadb shell ime set \"com.lge.ime/.LgeImeImpl\"\n",
+        "cmd": "#!/bin/sh\nadb shell ime set \"com.egloos.woongyee.sesak/.SesakKeyboardService\"\n/home/linuxbrew/.linuxbrew/bin/scrcpy --keyboard=uhid --stay-awake --turn-screen-off\nadb shell ime set \"com.lge.ime/.LgeImeImpl\"\n",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
