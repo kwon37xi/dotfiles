@@ -4,13 +4,15 @@
   #export PATH="${PATH:+${PATH}:}/home/linuxbrew/.linuxbrew/opt/fzf/bin"
 #fi
 
+eval "$(fzf --bash)"
+
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/home/linuxbrew/.linuxbrew/opt/fzf/shell/completion.bash" 2> /dev/null
+#[[ $- == *i* ]] && source "/home/linuxbrew/.linuxbrew/opt/fzf/shell/completion.bash" 2> /dev/null
 
 # Key bindings
 # ------------
-source "/home/linuxbrew/.linuxbrew/opt/fzf/shell/key-bindings.bash"
+#source "/home/linuxbrew/.linuxbrew/opt/fzf/shell/key-bindings.bash"
 
 # FZF OPTS from https://www.youtube.com/watch?v=tB-AgxzBmH8
 export FZF_DEFAULT_COMMAND='fdfind --follow --hidden --exclude .git --exclude "*.class" --color=always'
