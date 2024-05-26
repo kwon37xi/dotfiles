@@ -40,6 +40,7 @@
   become: yes
   apt:
     package:
+      - eza
       - ripgrep
       - fd-find
       - tmux

@@ -16,9 +16,3 @@
   until: brew_bundle is not failed
   retries: 3
   delay: 10
-- name: tfenv-init
-  shell: |
-    tfenv install latest
-    tfenv use latest
-  args:
-    executable: /usr/bin/bash

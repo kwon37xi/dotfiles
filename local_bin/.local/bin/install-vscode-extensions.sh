@@ -4,7 +4,6 @@ extensions=(
     AdsonCicilioti.yaru-vscode
     DavidAnson.vscode-markdownlint
     EditorConfig.EditorConfig
-    GabrielBB.vscode-lombok
     GitHub.github-vscode-theme
     GitHub.remotehub
     GitHub.vscode-pull-request-github

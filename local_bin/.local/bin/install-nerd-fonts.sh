@@ -34,6 +34,6 @@ install_nerd_fonts firacode "https://github.com/ryanoasis/nerd-fonts/releases/do
 install_nerd_fonts hack "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip"
 install_nerd_fonts jetbrainsmono "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip"
 install_nerd_fonts saucecodepro "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip"
-install_nerd_fonts terminess "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Terminus.zip"
+install_nerd_fonts terminus "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Terminus.zip"
 
 fc-cache -vf
