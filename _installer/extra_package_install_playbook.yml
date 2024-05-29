@@ -8,12 +8,6 @@
   environment:
     PATH: "{{ lookup('env', 'PATH') }}:/home/linuxbrew/.linuxbrew/bin"
   tasks:
-    - name: install libfuse2 #for appimage
-      become: yes
-      apt:
-        install_recommends: yes
-        package:
-          - libfuse2
     - name: install KDE/GNOME themes
       become: yes
       apt:
