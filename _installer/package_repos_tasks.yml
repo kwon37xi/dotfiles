@@ -39,6 +39,20 @@
     repo: "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main"
     filename: vscode
     update_cache: no
+- name: vivaldi key
+  become: yes
+  ansible.builtin.apt_key:
+    url: http://repo.vivaldi.com/stable/linux_signing_key.pub
+    keyring: /etc/apt/trusted.gpg.d/packages.vivaldi.gpg
+  register: vivaldi_key_installed
+  until: vivaldi_key_installed is not failed
+  retries: 3
+- name: vivaldi repository
+  become: yes
+  apt_repository:
+    repo: "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.vivaldi.gpg] http://repo.vivaldi.com/archive/deb/ stable main"
+    filename: vivaldi
+    update_cache: no
 - name: add PPAs
   become: yes
   shell: "add-apt-repository -y --no-update {{ item }}"
