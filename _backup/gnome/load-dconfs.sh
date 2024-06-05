@@ -16,4 +16,5 @@ dconf load /org/gnome/shell/extensions/desktop-cube/ < ~/.dotfiles/_backup/gnome
 dconf load /org/gnome/shell/extensions/status-area-horizontal-spacing/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_status-area-horizontal-spacing.dump
 dconf load /org/gnome/shell/extensions/screenshot-window-sizer/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_screenshot-window-sizer.dump
 dconf load /org/gnome/pomodoro/preferences/ < ~/.dotfiles/_backup/gnome/org_gnome_pomodoro.dump
-dconf load /org/gnome/shell/extensions/panel-date-format/ <  ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_panel_date_format.dump
+dconf load /org/gnome/shell/extensions/panel-date-format/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_panel_date_format.dump
+dconf load /org/gnome/shell/extensions/system-monitor/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_system_monitor.dump

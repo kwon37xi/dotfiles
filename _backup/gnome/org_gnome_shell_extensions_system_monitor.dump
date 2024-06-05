@@ -1,0 +1,7 @@
+[/]
+battery-display=false
+cpu-graph-width=50
+gpu-display=false
+gpu-show-menu=false
+memory-graph-width=50
+net-graph-width=50
