@@ -93,7 +93,7 @@ sudo apt install amd64-microcode
 
 ### Gnome 설정
 * **설정 -> 지역 및 언어 -> Manage Installed Languages**에서 부족한 패키지 자동 설치
-* ibus 사용시에는 **설정 -> 키보드**에서 **한국어 (Hangul)**만 남기고 지운다.
+* ibus 사용시에는 **설정 -> 키보드**에서 **한국어 (Hangul)** 만 남기고 지운다.
 * uim/fcitx 사용시에는  **설정 -> 키보드**에서 **hangul** 제거
 * Top Bar 사용시 : `/usr/share/themes/<원하는테마>/gnome-shell/gnome-shell.css` 파일에서 `.panel-button`의 `hpadding`항목 값들을
   **1px**로 변경해주면 Panel 의 인디케이터 부분의 아이콘간 간격이 줄어들게 된다.
