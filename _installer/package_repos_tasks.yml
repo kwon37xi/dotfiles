@@ -4,6 +4,11 @@
   community.general.snap:
     name: firefox
     state: absent
+- name: remove snap thunderbird # firefox ppa 추가전에 모두 삭제
+  become: yes
+  community.general.snap:
+    name: thunderbird
+    state: absent
 - name: remove apt firefox & thunderbird
   become: yes
   apt:
