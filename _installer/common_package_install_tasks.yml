@@ -86,6 +86,12 @@
       - adb # for android development and scrcpy
       - poppler-utils # pdf utils
     state: latest
+- name: install remove unused utils
+  become: yes
+  apt:
+    package:
+      - transmission-gtk
+    state: absent
 - name: install system tools
   become: yes
   apt:
