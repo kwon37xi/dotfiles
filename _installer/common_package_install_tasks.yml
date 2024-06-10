@@ -41,7 +41,7 @@
   become: yes
   apt:
     package:
-      - eza
+      - lsd
       - ripgrep
       - fd-find
       - tmux

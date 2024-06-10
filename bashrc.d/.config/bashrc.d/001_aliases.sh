@@ -39,12 +39,12 @@ alias sysup='pushd . && sudo apt update && sudo apt -y upgrade && sudo apt  -y a
 # apt search names only
 alias aptsearch='apt search --names-only'
 
-# exa as ls
-alias ls='exa -lgah --colour=always --icons --git --group-directories-first'
-alias ll='exa -lgah --colour=always --icons --git --group-directories-first'
-alias lt='exa -lah --colour=always --icons --git --group-directories-first --tree'
-alias l='exa'
-alias l1='exa -1 --group-directories-first --icons'
+# lsd as ls
+alias ls='lsd -lah --git --group-directories-first'
+alias ll='lsd -lah --git --group-directories-first'
+alias lt='lsd -lah --git --group-directories-first --tree'
+alias l='lsd'
+alias l1='lsd -1 --group-directories-first'
 
 # 전체 경로 포함해서 출력. 파일과 링크
 alias lsfp='find $PWD -maxdepth 1 -type f,l'
