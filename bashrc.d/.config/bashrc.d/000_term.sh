@@ -2,7 +2,11 @@
 # vim-airline 플러그인이 제대로 안나오는 현상 해결
 export TERM=screen-256color
 
+# batcat 을 man 명령 뷰어로
 export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+# batcat 컬러 깨지는 현상 해결. see https://github.com/sharkdp/bat/issues/2593
+export MANROFFOPT='-c'
+
 # history 명령에 날짜 출력
 export HISTTIMEFORMAT="%Y-%m-%d %T "
 
