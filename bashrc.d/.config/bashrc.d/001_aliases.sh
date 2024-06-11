@@ -40,10 +40,10 @@ alias sysup='pushd . && sudo apt update && sudo apt -y upgrade && sudo apt  -y a
 alias aptsearch='apt search --names-only'
 
 # lsd as ls
-alias ls='lsd -lah --git --group-directories-first'
+alias ls='lsd -lh --git --group-directories-first'
 alias ll='lsd -lah --git --group-directories-first'
-alias lt='lsd -lah --git --group-directories-first --tree'
-alias l='lsd'
+alias lt='lsd -lh --git --group-directories-first --tree'
+alias l='lsd --group-directories-first'
 alias l1='lsd -1 --group-directories-first'
 
 # 전체 경로 포함해서 출력. 파일과 링크
