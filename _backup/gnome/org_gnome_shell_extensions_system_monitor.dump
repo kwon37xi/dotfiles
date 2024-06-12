@@ -1,7 +1,9 @@
 [/]
 battery-display=false
 cpu-graph-width=50
+cpu-style='both'
 gpu-display=false
 gpu-show-menu=false
 memory-graph-width=50
 net-graph-width=50
+show-swap=false
