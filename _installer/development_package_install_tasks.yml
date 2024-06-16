@@ -45,15 +45,6 @@
   until: google_chrome_installed is not failed
   retries: 3
   delay: 10
-- name: vivaldi install
-  become: yes
-  apt:
-    package:
-      - vivaldi-stable
-  register: vivaldi_installed
-  until: vivaldi_installed is not failed
-  retries: 3
-  delay: 10
 - name: Slack
   become: yes
   apt:
