@@ -26,14 +26,14 @@ function install_nerd_fonts {
     rm -f $download_file
 }
 
-install_nerd_fonts inconsolata "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Inconsolata.zip"
-install_nerd_fonts isoveka "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip"
-install_nerd_fonts caskaydia "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip"
-install_nerd_fonts codenewroman "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CodeNewRoman.zip" true
-install_nerd_fonts firacode "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip"
-install_nerd_fonts hack "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip"
-install_nerd_fonts jetbrainsmono "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip"
-install_nerd_fonts saucecodepro "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip"
-install_nerd_fonts terminus "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Terminus.zip"
+install_nerd_fonts inconsolata "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Inconsolata.zip"
+install_nerd_fonts isoveka "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Iosevka.zip"
+install_nerd_fonts caskaydia "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaCode.zip"
+install_nerd_fonts codenewroman "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CodeNewRoman.zip" true
+install_nerd_fonts firacode "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip"
+install_nerd_fonts hack "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip"
+install_nerd_fonts jetbrainsmono "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip"
+install_nerd_fonts saucecodepro "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/SourceCodePro.zip"
+install_nerd_fonts terminus "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Terminus.zip"
 
 fc-cache -vf
