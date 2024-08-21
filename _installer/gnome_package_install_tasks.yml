@@ -44,7 +44,7 @@
   become: yes
   apt:
     package:
-      - chrome-gnome-shell
+      - gnome-browser-connector
       - gnome-shell-extension-prefs
       - gnome-shell-extensions
       - gnome-shell-extension-manager
