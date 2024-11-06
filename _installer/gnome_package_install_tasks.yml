@@ -9,7 +9,7 @@
       - gnome-clocks
       - alacarte
       - gnome-authenticator
-      - python3-pydrive # for deja-dup
+      - python3-pydrive2 # for deja-dup
       - deja-dup
       - gnome-clocks
       - gnome-calendar
