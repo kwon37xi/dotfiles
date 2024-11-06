@@ -37,5 +37,3 @@ install_nerd_fonts hack "https://github.com/ryanoasis/nerd-fonts/releases/downlo
 install_nerd_fonts jetbrainsmono "https://github.com/ryanoasis/nerd-fonts/releases/download/${FONT_VERSION}/JetBrainsMono.zip"
 install_nerd_fonts saucecodepro "https://github.com/ryanoasis/nerd-fonts/releases/download/${FONT_VERSION}/SourceCodePro.zip"
 install_nerd_fonts terminus "https://github.com/ryanoasis/nerd-fonts/releases/download/${FONT_VERSION}/Terminus.zip"
-
-fc-cache -vf
