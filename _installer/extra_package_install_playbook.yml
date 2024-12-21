@@ -185,7 +185,6 @@
       become: yes
       apt:
         package:
-          - megadown
           - megatools
           - nautilus-megasync
         state: latest
