@@ -99,7 +99,7 @@
         "!Split sequence"
     ],
     "yaml.schemas": {
-        "file:///home/kwon37xi/.vscode/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/kwon37xi/.vscode/extensions/atlassian.atlascode-3.2.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "redhat.telemetry.enabled": true,
     "indentRainbow.includedLanguages": ["javascript", "python", "markdown", "java", "ruby", "go", "rust", "html", "xml", "json", "yaml"],
