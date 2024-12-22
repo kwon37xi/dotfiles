@@ -6,5 +6,5 @@
     mode: 0700
   with_items:
     - personal
-    - woowabros
+    - navercorp
     - observes

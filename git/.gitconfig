@@ -1,5 +1,5 @@
 [user]
-    name = KwonNam Son
+    name = Son KwonNam
     email = kwon37xi@gmail.com
 
 [init]
@@ -17,8 +17,8 @@
 [includeIf "gitdir:~/projects/observes/"]
     path = ~/.git_personal_projects
 
-[includeIf "gitdir:~/projects/woowabros/"]
-    path = ~/.git_woowabros_projects
+[includeIf "gitdir:~/projects/navercorp/"]
+    path = ~/.git_navercorp_projects
 
 [core]
     filemode = false
