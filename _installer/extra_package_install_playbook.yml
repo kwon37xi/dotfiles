@@ -62,6 +62,7 @@
           - handbrake
           - gpick
           - gromit-mpx
+          - vainfo
         state: latest
     - name: install pdftools
       become: yes
