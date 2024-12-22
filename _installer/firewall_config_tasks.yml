@@ -7,3 +7,7 @@
     ufw default allow outgoing
     ufw allow ssh
     ufw allow 8999 # for qbittorrent
+    # for kde connect
+    ufw allow 1714:1764/udp
+    ufw allow 1714:1764/tcp
+    ufw reload
