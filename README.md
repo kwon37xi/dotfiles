@@ -91,6 +91,12 @@ sudo apt install intel-microcode iucode-tool
 sudo apt install amd64-microcode
 ```
 
+### Intel GPU - vaapi 설정
+* https://kwonnam.pe.kr/wiki/linux/vaapi
+```
+sudo apt install intel-media-va-driver-non-free libva-drm2 libva-x11-2
+```
+
 ### Gnome 설정
 * **설정 -> 지역 및 언어 -> Manage Installed Languages**에서 부족한 패키지 자동 설치
 * ibus 사용시에는 **설정 -> 키보드**에서 **한국어 (Hangul)** 만 남기고 지운다.
