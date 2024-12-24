@@ -18,6 +18,12 @@
       - virtualbox-ext-pack
       - virtualbox-guest-additions-iso
     state: latest
+- name: virtualbox usergroup
+  become: yes
+  ansible.builtin.user:
+    name: "{{ current_user }}"
+    groups: vboxusers
+    append: yes
 - name: install node.js # vim markdown plugin에 필요함.
   become: yes
   apt:
