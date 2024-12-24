@@ -198,5 +198,15 @@
         "is_default_search": false,
         "run_without_argument": false,
         "added": 1734939224.9786017
+    },
+    "a8c3c1f1-596c-4398-aecb-cfcf696600ed": {
+        "id": "a8c3c1f1-596c-4398-aecb-cfcf696600ed",
+        "name": "Android scrcpy OTG",
+        "keyword": "otg",
+        "cmd": "#!/bin/bash\n$HOME/.local/bin/android-otg.sh",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1734997695.7622855
     }
 }
