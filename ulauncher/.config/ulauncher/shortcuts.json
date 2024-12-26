@@ -208,5 +208,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1734997695.7622855
+    },
+    "a21ebe0e-b202-4835-b1c9-95699bcdd455": {
+        "id": "a21ebe0e-b202-4835-b1c9-95699bcdd455",
+        "name": "WiFi IP",
+        "keyword": "wip",
+        "cmd": "#!/bin/sh\n$HOME/.local/bin/wifi-ip.sh",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1735202070.2176454
     }
 }
