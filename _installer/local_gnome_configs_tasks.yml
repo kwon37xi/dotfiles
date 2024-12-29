@@ -15,8 +15,8 @@
     # Window Manager titlebar font
     gsettings set org.gnome.desktop.wm.preferences titlebar-font '한글누리 Bold 11'
 
-    # Mouse 위치 찾기 끄기
-    gsettings set org.gnome.desktop.interface locate-pointer false
+    # Mouse 위치 찾기 켜기 - ulauncher 에서 마우스 위치찾기가 켜져있을 경우 버그가 있었으나 해결됨.
+    gsettings set org.gnome.desktop.interface locate-pointer true
 - name: ubuntu-dock settings
   shell: |
     gsettings set org.gnome.shell.extensions.dash-to-dock show-trash true
