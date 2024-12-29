@@ -70,6 +70,7 @@
         package:
           - pdftk
           - texlive-extra-utils
+          - simple-scan
         state: latest
     - name: add architecture i386
       become: yes
