@@ -1,0 +1,4 @@
+# GNOME 실행시 실행하는 스크립트.
+# 일부 환경변수가 터미널 뿐만 아니라 GNOME 환경에서도 필요해서 로딩함.
+
+source $HOME/.config/bashrc.d/020_fzf.sh
