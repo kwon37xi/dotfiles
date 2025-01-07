@@ -29,6 +29,7 @@
       - fonts-naver-d2coding
       - fonts-unfonts-core
       - fonts-unfonts-extra
+      - fonts-pretendard
       - fonts-noto-cjk
       - fonts-noto-cjk-extra
       - ttf-mscorefonts-installer
