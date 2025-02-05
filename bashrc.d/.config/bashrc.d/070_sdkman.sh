@@ -2,6 +2,18 @@
 export SDKMAN_DIR="/home/${USER}/.sdkman"
 [[ -s "/home/${USER}/.sdkman/bin/sdkman-init.sh" ]] && source "/home/${USER}/.sdkman/bin/sdkman-init.sh"
 
+## Shell 명령으로 sdkman java 제어
+# ju : 현재 shell 의 java version 지정
+# jei : 현재 shell 용 JDK를 선택하고 .sdkmanrc 에 반영
+# jd : default Java version 지정
+# ji : java 설치
+# jr : 설치된 java 목록을 보여주고 선택해서 삭제
+
+## shell 작업중 단축키로 sdkman java 관련 목록 보여주고 선택하기
+# Ctrl-J Ctrl-A : 모든 java 버전 목록
+# Ctrl-J Ctrl-I : 설치돼 있는 java 버전 목록
+# Ctrl-J Ctrl-L : 설치되어있지 않은 java 버전 목록
+# Ctrl-J Ctrl-J : 메뉴에서 위 세 종류중 원하는 것 지정해서 java 목록 보여줌
 # SDKMAN + fzf functions
 # https://www.grailbox.com/2021/04/switch-among-java-versions-fzf-and-sdkman/
 # 현재 shell 용 java version 지정
