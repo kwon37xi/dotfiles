@@ -51,6 +51,14 @@
   until: google_chrome_installed is not failed
   retries: 3
   delay: 10
+- name: naver whale install
+  become: yes
+  apt:
+    deb: https://installer-whale.pstatic.net/downloads/installers/naver-whale-stable_amd64.deb
+  register: naver_whale_installed
+  until: naver_whale_installed is not failed
+  retries: 3
+  delay: 10
 - name: Slack
   become: yes
   apt:
