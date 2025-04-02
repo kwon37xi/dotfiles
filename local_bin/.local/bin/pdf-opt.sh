@@ -5,4 +5,4 @@
 FILE_NAME_ONLY=`basename "$1" .pdf`
 OPTIMIZED_NAME="${FILE_NAME_ONLY}.opt.pdf"
 
-docker run --rm -i --user "$(id -u):$(id -g)" --workdir /data -v "$PWD:/data" jbarlow83/ocrmypdf --tesseract-timeout=0 --optimize 3 --skip-text "/data/$1" "/data/$OPTIMIZED_NAME"
+docker run --rm -i --user "$(id -u):$(id -g)" --workdir /data -v "$PWD:/data" jbarlow83/ocrmypdf-ubuntu --tesseract-timeout=0 --optimize 3 --skip-text "/data/$1" "/data/$OPTIMIZED_NAME"
