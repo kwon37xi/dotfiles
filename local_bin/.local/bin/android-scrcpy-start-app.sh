@@ -11,4 +11,8 @@ else
     exit 1
 fi
 
-/home/linuxbrew/.linuxbrew/bin/scrcpy $DISPLAY_OPTION --start-app="$2"
+/home/linuxbrew/.linuxbrew/bin/scrcpy $DISPLAY_OPTION \
+   --no-vd-system-decorations \
+   --no-vd-destroy-content \
+   --display-ime-policy=local \
+   --start-app="$2"
