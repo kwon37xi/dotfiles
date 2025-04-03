@@ -218,5 +218,35 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1735202070.2176454
+    },
+    "5a9fce0a-5631-496c-8445-4d28def0bbc0": {
+        "id": "5a9fce0a-5631-496c-8445-4d28def0bbc0",
+        "name": "scrcpy - kakaotalk",
+        "keyword": "avkt",
+        "cmd": "#!/bin/sh\nscrcpy-start-app.sh com.kakao.talk",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1743643746.711045
+    },
+    "b73f208a-9d62-4fec-93c3-2d8951a0164c": {
+        "id": "b73f208a-9d62-4fec-93c3-2d8951a0164c",
+        "name": "scrcpy - messaging",
+        "keyword": "avsms",
+        "cmd": "#!/bin/sh\nscrcpy-start-app.sh com.samsung.android.messaging",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1743644243.4098446
+    },
+    "c035177e-26ae-491b-9656-133b751ea8ae": {
+        "id": "c035177e-26ae-491b-9656-133b751ea8ae",
+        "name": "scrcpy - mega",
+        "keyword": "avmg",
+        "cmd": "#!/bin/sh\nscrcpy-start-app.sh mega.privacy.android.app",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1743644265.861975
     }
 }
