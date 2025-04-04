@@ -11,8 +11,8 @@ else
     exit 1
 fi
 
+adb shell ime set "com.egloos.woongyee.sesak/.SesakKeyboardService"
 /home/linuxbrew/.linuxbrew/bin/scrcpy $DISPLAY_OPTION \
    --no-vd-system-decorations \
    --no-vd-destroy-content \
-   --display-ime-policy=local \
    --start-app="$2"
