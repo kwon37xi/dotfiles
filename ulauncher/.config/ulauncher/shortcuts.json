@@ -258,5 +258,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1743989259.2954628
+    },
+    "bf04f435-ccf5-4797-88b4-6cbf997fd908": {
+        "id": "bf04f435-ccf5-4797-88b4-6cbf997fd908",
+        "name": "scrcpy - Google Keep",
+        "keyword": "avgk",
+        "cmd": "#!/bin/sh\nandroid-scrcpy-start-app.sh 1920x1080/180 com.google.android.keep",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1744006749.186773
     }
 }
