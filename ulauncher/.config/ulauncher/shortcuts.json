@@ -243,10 +243,20 @@
         "id": "c035177e-26ae-491b-9656-133b751ea8ae",
         "name": "scrcpy - mega",
         "keyword": "avmg",
-        "cmd": "#!/bin/sh\nandroid-scrcpy-start-app.sh wide mega.privacy.android.app",
+        "cmd": "#!/bin/sh\nandroid-scrcpy-start-app.sh wide mega.privacy.android.app --no-vd-destroy-content",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1743644265.861975
+    },
+    "9611a379-f26b-40a4-be60-813e4be6e7e3": {
+        "id": "9611a379-f26b-40a4-be60-813e4be6e7e3",
+        "name": "scrcpy - filemanager",
+        "keyword": "avfm",
+        "cmd": "#!/bin/sh\nandroid-scrcpy-start-app.sh 1920x1080/180 com.alphainventor.filemanager",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1743989259.2954628
     }
 }
