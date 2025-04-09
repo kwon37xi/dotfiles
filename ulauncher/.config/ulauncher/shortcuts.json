@@ -263,7 +263,7 @@
         "id": "bf04f435-ccf5-4797-88b4-6cbf997fd908",
         "name": "scrcpy - Google Keep",
         "keyword": "avgk",
-        "cmd": "#!/bin/sh\nandroid-scrcpy-start-app.sh 1920x1080/180 com.google.android.keep",
+        "cmd": "#!/bin/sh\nandroid-scrcpy-start-app.sh wide com.google.android.keep",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
