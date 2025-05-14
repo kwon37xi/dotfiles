@@ -21,7 +21,7 @@
       - nautilus-admin
       - gnome-sushi
       - nautilus-image-converter
-      - nautilus-scripts-manager
+      - nautilus-script-manager
       - nautilus-share
     state: latest
 - name: install GNOME network packages
