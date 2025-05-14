@@ -16,34 +16,33 @@
       - firefox
       - thunderbird
     state: absent
-- name: docker key
+- name: docker repository
   become: yes
-  ansible.builtin.apt_key:
-    url: https://download.docker.com/linux/ubuntu/gpg
-    keyring: /etc/apt/trusted.gpg.d/docker-archive-keyring.gpg
-  register: docker_key_installed
-  until: docker_key_installed is not failed
-  retries: 3
-- name: docker repository # docker repository는 Ubuntu release 후 10일 이상 지나야 추가되는 편임.
-  become: yes
-  apt_repository:
-    repo: "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu {{ ubuntu_release }} stable"
-    filename: docker
-    update_cache: no
-- name: vscode key
-  become: yes
-  ansible.builtin.apt_key:
-    url: https://packages.microsoft.com/keys/microsoft.asc
-    keyring: /etc/apt/trusted.gpg.d/packages.microsoft.gpg
-  register: vscode_key_installed
-  until: vscode_key_installed is not failed
+  ansible.builtin.deb822_repository:
+    name: docker
+    types: [deb]
+    uris: "https://download.docker.com/linux/{{ ansible_distribution | lower }}"
+    signed_by: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
+    suites: ["{{ ansible_distribution_release | lower }}"]
+    components: [stable]
+    state: present
+    enabled: yes
+  register: docker_repository_installed
+  until: docker_repository_installed is not failed
   retries: 3
 - name: vscode repository
   become: yes
-  apt_repository:
-    repo: "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main"
-    filename: vscode
-    update_cache: no
+  ansible.builtin.deb822_repository:
+    types: [deb]
+    uris: "https://packages.microsoft.com/repos/code"
+    signed_by: "https://packages.microsoft.com/keys/microsoft.asc"
+    suites: [stable]
+    components: [main]
+    state: present
+    enabled: yes
+  register: vscode_repository_installed
+  until: vscode_repository_installed is not failed
+  retries: 3
 - name: add PPAs
   become: yes
   shell: "add-apt-repository -y --no-update {{ item }}"

@@ -5,25 +5,26 @@
   vars_files:
     - "vars.yml"
   tasks:
-    - name: jenkins key
+    - name: jenkins repository
       become: yes
-      apt_key:
-        url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+      deb822_repository:
+        name: jenkins
+        types: deb
+        uris: "https://pkg.jenkins.io/debian-stable"
+        components: binary
+        signed_by: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+        state: present
+        enabled: true
       register: jenkins_repo_key_installed
       until: jenkins_repo_key_installed is not failed
       retries: 3
-    - name: jenkins repo
-      become: yes
-      apt_repository:
-        repo: deb https://pkg.jenkins.io/debian-stable binary/
-        filename: jenkins
-        update_cache: yes
     - name: install jenkins replated packages
       become: yes
       apt:
         package:
           - openjdk-11-jdk
           - jenkins
+        update_cache: yes
     - name: change jenkins user
       become: yes
       shell: |
