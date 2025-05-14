@@ -12,7 +12,8 @@ echo "설치를 시작합니다."
 echo "$SUDO_PASSWORD" | sudo --stdin --prompt='' apt-get -y install git ansible xz-utils unzip
 set -x
 
-ansible-galaxy collection install community.general
+# --upgrade 옵션으로 최시 번전 컬렉션을 설치하게 해야 한다.
+ansible-galaxy collection install community.general --upgrade
 
 git clone https://kwon37xi@github.com/kwon37xi/dotfiles.git ~/.dotfiles
 
