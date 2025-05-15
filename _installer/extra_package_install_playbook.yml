@@ -38,21 +38,11 @@
           - ubuntu-wallpapers
           - gnome-backgrounds
         state: latest
-    - name: install GIMP
-      become: yes
-      apt:
-        package:
-          - gimp
-          - gimp-gmic
-          - gimp-data-extras
-          - gimp-help-ko
-        state: latest
     - name: install video audio graphic packages
       become: yes
       apt:
         package:
           - gimp
-          - gimp-gmic
           - gimp-data-extras
           - gimp-help-ko
           - nomacs
