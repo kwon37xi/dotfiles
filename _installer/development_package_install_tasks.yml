@@ -7,8 +7,6 @@
       - libvirt-daemon
       - qemu-system-x86
       - libvirt-dev # for vagrant libvirt provider
-  # libvirt-daemon-driver-qemu 설치불가 버그로 일시적으로 disable
-  when: 0 > 1
 - name: prepare for virtualbox-ext-pack PUEL accept # https://askubuntu.com/questions/811488/command-to-accept-virtualbox-puel-for-virtualbox-ext-pack-installation
   become: yes
   shell: "echo virtualbox-ext-pack virtualbox-ext-pack/license select true | debconf-set-selections"
