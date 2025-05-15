@@ -53,6 +53,7 @@
     - ppa:gerardpuig/ppa # for ubuntu cleaner
     - ppa:mozillateam/ppa
     - ppa:danielrichter2007/grub-customizer
+    - ppa:ubuntuhandbook1/annotator
     #- ppa:graphics-drivers/ppa # 최신 nvidia driver 가 굳이 필요해보이지는 않아서 일단 disable
 - name: multiverse universe
   become: yes

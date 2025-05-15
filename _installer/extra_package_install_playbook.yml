@@ -53,6 +53,7 @@
           - gpick
           - gromit-mpx
           - vainfo
+          - com.github.phase1geo.annotator
         state: latest
     - name: install pdftools
       become: yes
