@@ -59,6 +59,7 @@
   until: naver_whale_installed is not failed
   retries: 3
   delay: 10
+  when: 0 > 1 # apt-key deprecation 으로 설치에 문제가 생김. disable
 - name: Slack
   become: yes
   apt:
@@ -67,6 +68,7 @@
   until: slack_installed is not failed
   retries: 3
   delay: 10
+  when: 0 > 1 # slack 사용안함.
 - name: zoom
   become: yes
   apt:
