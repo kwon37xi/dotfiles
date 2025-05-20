@@ -1,4 +1,5 @@
 #!/bin/sh
+# flatpak 버전이 안정화 되어서 flatpak 버전으로 설치
 # zoom.us 를 자동으로 다운로드 하고 설치한다.
 # zoom.us 가 debian/ubuntu package repository 를 제공해주지 않아서 이런 처리 필요하다.
 

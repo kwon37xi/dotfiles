@@ -69,26 +69,11 @@
   retries: 3
   delay: 10
   when: 0 > 1 # slack 사용안함.
-- name: zoom
-  become: yes
-  apt:
-    deb: https://zoom.us/client/latest/zoom_amd64.deb
-  register: zoom_installed
-  until: zoom_installed is not failed
-  retries: 3
-  delay: 10
 - name: bitwarden
   community.general.flatpak:
     name: "com.bitwarden.desktop"
   register: bitwarden_installed
   until: bitwarden_installed is not failed
-  retries: 3
-  delay: 10
-- name: joplin
-  community.general.flatpak:
-    name: "net.cozic.joplin_desktop"
-  register: joplin_installed
-  until: joplin_installed is not failed
   retries: 3
   delay: 10
 - name: multipass
