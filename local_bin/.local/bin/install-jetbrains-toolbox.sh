@@ -19,10 +19,6 @@ fi
 mkdir -p "$TOOLBOX_DIR"
 cd "$TOOLBOX_DIR"
 
-# bin 디렉토리에 설치
-mkdir bin
-cd bin
-
 # Get the latest version of JetBrains Toolbox - linux X86_64(AMD64) 버전임
 RELEASES_API_URL="https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release"
 LATEST_URL=$(curl -s "$RELEASES_API_URL" | jq -r '.TBA[0].downloads.linux.link')
@@ -36,13 +32,14 @@ fi
 wget -q --show-progress "$LATEST_URL" -O jetbrains-toolbox.tar.gz
 
 # Extract the downloaded file
+# 여기서 bin 디렉토리가 생성됨
 tar -xzf jetbrains-toolbox.tar.gz --strip-components=1
 
 # Remove the downloaded tar.gz file
 rm jetbrains-toolbox.tar.gz
 
 # Make the binary executable
-chmod +x jetbrains-toolbox
+chmod +x bin/jetbrains-toolbox
 
 echo "JetBrains Toolbox has been installed to $TOOLBOX_DIR"
 
