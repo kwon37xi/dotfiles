@@ -105,9 +105,9 @@
 - name: wrappers-easy-executor
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-wrappers-easy-executor.sh"
 - name: install jetbrains toolbox
-  become: yes
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-jetbrains-toolbox.sh"
-  creates: "/home/{{ current_user }}/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox"
+  args:
+    creates: "/home/{{ current_user }}/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox"
   register: jetbrains_toolbox_installed
   until: jetbrains_toolbox_installed is not failed
   retries: 3
