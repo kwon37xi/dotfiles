@@ -131,15 +131,12 @@ sudo apt install intel-media-va-driver-non-free libva-drm2 libva-x11-2
 * 시스템 설정 열고 각종 단축키 설정 올바로 안 된 것들 보정 : dconf 설정에서 자동으로 하고 있음.
 
 ### IntelliJ IDEA
-* IntelliJ Idea 설치
-```
-~/.local/opt/JetBrains/ideaIU/bin/idea
-```
+* Jetbrains ToolBox 를 통해서 설치한다.
 * 설치 후 **Files -> Manage IDE Settings** 에서 온라인 동기화를 위해 로그인 할 것.
 * **Desktop Entry**를 만들어주고, Dock 에 고정할 것.
 
 ### vscode
-* github 계정 동기화 방식으로 변경됨.
+* github 계정 동기화를 진행한다.
 
 ### Libre Office
 * 도구 -> 기본설정 -> 보기 -> 아이콘 스타일 : dark 계통 테마일경우 아이콘 스타일을 dark 계통으로 변경한것. 그렇지 않으면 아이콘이 잘 안보인다.
