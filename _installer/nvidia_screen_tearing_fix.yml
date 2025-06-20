@@ -1,4 +1,5 @@
 ---
+# nvidia option 은 nvidia가아니면 아무 영향을 안끼침
 - name: nvidia screen-tearing fix
   become: yes
   ansible.builtin.file:

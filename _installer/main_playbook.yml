@@ -16,7 +16,6 @@
     - import_tasks: development_package_install_tasks.yml
     - import_tasks: homebrew_install_playbook.yml
     - import_tasks: package_full_upgrade_tasks.yml
-    - import_tasks: free_korean_fonts_install_tasks.yml
     - import_tasks: firewall_config_tasks.yml
     - import_tasks: local_apps_install_tasks.yml
     - import_tasks: local_dotfiles_install_tasks.yml
@@ -28,5 +27,6 @@
     - import_tasks: add_crons.yml
     #- import_tasks: vagrant.yml
     - import_tasks: nvidia_screen_tearing_fix.yml
+    #- import_tasks: free_korean_fonts_install_tasks.yml
     #- import_tasks: auto_cpufreq_tasks.yml
     #- import_tasks: sound_theme_tasks.yml # 22.10 부터 override 불필요해진듯.
