@@ -135,6 +135,11 @@
       until: otpclient_package_installed is not failed
       retries: 3
       delay: 10
+    - name: raindrop
+      become: yes
+      community.general.snap:
+        name: raindrop
+        state: present
     - name: pinta
       become: yes
       community.general.snap:
