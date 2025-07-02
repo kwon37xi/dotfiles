@@ -16,3 +16,5 @@
   until: brew_bundle is not failed
   retries: 3
   delay: 10
+- name: brew cask fonts cache update
+  shell: "fc-cache -vf"

@@ -96,10 +96,6 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-jmc.sh"
 - name: ulauncher
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-ulauncher.sh"
-- name: nerd-fonts
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-nerd-fonts.sh"
-- name: nerd-font cache update
-  shell: "fc-cache -v"
 - name: docker-compose
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-docker-compose.sh"
 - name: wrappers-easy-executor
