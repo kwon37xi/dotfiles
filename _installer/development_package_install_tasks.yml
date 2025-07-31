@@ -68,7 +68,6 @@
   until: slack_installed is not failed
   retries: 3
   delay: 10
-  when: 0 > 1 # slack 사용안함.
 - name: bitwarden
   community.general.flatpak:
     name: "com.bitwarden.desktop"
