@@ -273,7 +273,7 @@
         "id": "e32bbea9-f5a8-40bd-be2b-0f3a72ae539e",
         "name": "scrcpy - \ub2f9\uadfc",
         "keyword": "avdg",
-        "cmd": "#!/bin/sh\nandroid-scrcpy-start-app.sh wide com.towneers.www",
+        "cmd": "#!/bin/sh\nandroid-scrcpy-start-app.sh normal com.towneers.www",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
