@@ -223,7 +223,7 @@
         "id": "5a9fce0a-5631-496c-8445-4d28def0bbc0",
         "name": "scrcpy - kakaotalk",
         "keyword": "avkt",
-        "cmd": "#!/bin/sh\nandroid-scrcpy-start-app.sh wide com.kakao.talk",
+        "cmd": "#!/bin/sh\nandroid-scrcpy-start-app.sh normal com.kakao.talk",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
