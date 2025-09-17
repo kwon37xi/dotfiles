@@ -203,7 +203,7 @@
         "id": "a8c3c1f1-596c-4398-aecb-cfcf696600ed",
         "name": "Android scrcpy OTG",
         "keyword": "otg",
-        "cmd": "#!/bin/bash\n$HOME/.local/bin/android-otg.sh",
+        "cmd": "#!/bin/bash\nadb shell ime set \"com.egloos.woongyee.sesak/.SesakKeyboardService\"\n$HOME/.local/bin/android-otg.sh\nadb shell ime set \"com.samsung.android.honeyboard/.service.HoneyBoardService\"",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
