@@ -278,5 +278,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1744681920.6332278
+    },
+    "e49e76fa-b723-4a1c-8aea-d7a6195d5e4d": {
+        "id": "e49e76fa-b723-4a1c-8aea-d7a6195d5e4d",
+        "name": "scrcpy - android view remote",
+        "keyword": "avr",
+        "cmd": "#!/bin/sh\nadb shell ime set \"com.egloos.woongyee.sesak/.SesakKeyboardService\"\n/home/linuxbrew/.linuxbrew/bin/scrcpy --tcpip\n#adb shell ime set \"com.lge.ime/.LgeImeImpl\"\nadb shell ime set \"com.samsung.android.honeyboard/.service.HoneyBoardService\"",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1758690985.0304074
     }
 }
