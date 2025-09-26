@@ -173,7 +173,7 @@
         "id": "83ad6d43-d4ad-4b75-9dc4-81bc743a90a5",
         "name": "scrcpy - android view",
         "keyword": "andview",
-        "cmd": "#!/bin/sh\nadb shell ime set \"com.egloos.woongyee.sesak/.SesakKeyboardService\"\n/home/linuxbrew/.linuxbrew/bin/scrcpy --keyboard=uhid --stay-awake\n#adb shell ime set \"com.lge.ime/.LgeImeImpl\"\nadb shell ime set \"com.samsung.android.honeyboard/.service.HoneyBoardService\"",
+        "cmd": "#!/bin/sh\nadb shell ime set \"com.egloos.woongyee.sesak/.SesakKeyboardService\"\n/home/linuxbrew/.linuxbrew/bin/scrcpy --select-usb --keyboard=uhid --stay-awake\n#adb shell ime set \"com.lge.ime/.LgeImeImpl\"\nadb shell ime set \"com.samsung.android.honeyboard/.service.HoneyBoardService\"",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
