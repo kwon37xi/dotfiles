@@ -1,21 +1,4 @@
 ---
-- name: remove snap firefox # firefox ppa 추가전에 모두 삭제
-  become: yes
-  community.general.snap:
-    name: firefox
-    state: absent
-- name: remove snap thunderbird # firefox ppa 추가전에 모두 삭제
-  become: yes
-  community.general.snap:
-    name: thunderbird
-    state: absent
-- name: remove apt firefox & thunderbird
-  become: yes
-  apt:
-    package:
-      - firefox
-      - thunderbird
-    state: absent
 - name: docker repository
   become: yes
   ansible.builtin.deb822_repository:
@@ -51,7 +34,6 @@
     - ppa:git-core/ppa
     - ppa:cappelikan/ppa # for mainline
     - ppa:gerardpuig/ppa # for ubuntu cleaner
-    - ppa:mozillateam/ppa
     - ppa:danielrichter2007/grub-customizer
     - ppa:ubuntuhandbook1/annotator
     #- ppa:graphics-drivers/ppa # 최신 nvidia driver 가 굳이 필요해보이지는 않아서 일단 disable

@@ -187,22 +187,6 @@
       - geany
       - geany-plugins
     state: latest
-- name: copy mozilla-ppa-conf
-  become: yes
-  ansible.builtin.copy:
-    src: "/home/{{ current_user }}/.dotfiles/_backup/mozilla-ppa/99mozillateamppa"
-    dest: "/etc/apt/preferences.d/99mozillateamppa"
-    mode: 0644
-    owner: root
-    group: root
-- name: install firefox-thunderbird
-  become: yes
-  apt:
-    package:
-      - firefox
-      - firefox-locale-ko
-      - thunderbird
-      - thunderbird-locale-ko
 - name: install input methods
   become: yes
   apt:
