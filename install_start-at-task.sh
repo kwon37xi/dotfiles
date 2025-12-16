@@ -11,6 +11,8 @@ else
 fi
 # 최소 필요사항 설치
 set +x
+echo -n "Password for sudo: "
+read -s SUDO_PASSWORD
 
 export ANSIBLE_LOG_PATH=~/ansible-dotfiles-step-at.log
-ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml --start-at-task="$1" --step --ask-become-pass
+ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml --start-at-task="$1" --step --extra-vars="ansible_become_pass='{{ lookup('env', 'SUDO_PASSWORD') }}'"
