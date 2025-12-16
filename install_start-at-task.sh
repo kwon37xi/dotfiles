@@ -12,11 +12,11 @@ fi
 # 최소 필요사항 설치
 set +x
 echo -n "Password for sudo: "
-read -s SUDO_PASSWORD
+read -s ANSIBLE_BECOME_PASS
 
 if command -v sudo.ws >/dev/null 2>&1; then
     export ANSIBLE_BECOME_EXE='sudo.ws'
 fi
 
 export ANSIBLE_LOG_PATH=~/ansible-dotfiles-step-at.log
-ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml --start-at-task="$1" --step --extra-vars="ansible_become_pass='{{ lookup('env', 'SUDO_PASSWORD') }}'"
+ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml --start-at-task="$1"
