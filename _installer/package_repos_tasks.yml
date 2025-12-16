@@ -33,7 +33,6 @@
   with_items:
     - ppa:git-core/ppa
     - ppa:cappelikan/ppa # for mainline
-    - ppa:gerardpuig/ppa # for ubuntu cleaner
     - ppa:danielrichter2007/grub-customizer
     - ppa:ubuntuhandbook1/annotator
     #- ppa:graphics-drivers/ppa # 최신 nvidia driver 가 굳이 필요해보이지는 않아서 일단 disable
