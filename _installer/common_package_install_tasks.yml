@@ -13,7 +13,6 @@
       - flatpak
       - inotify-tools
       - inxi
-      - neofetch
       - libfuse2 # for appimage
     state: latest
 - name: install deb fonts
@@ -139,7 +138,7 @@
   apt:
     package:
       - inxi
-      - neofetch
+      - neowofetch
       - ufw
       - gufw
       - openconnect
