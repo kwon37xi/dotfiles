@@ -148,7 +148,7 @@
       - openfortivpn
       - network-manager-fortisslvpn
       - openssh-client
-      - freerdp2-x11
+      - freerdp3-wayland
       - openssh-server
       - openssh-sftp-server
       - sshpass
