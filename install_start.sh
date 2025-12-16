@@ -12,6 +12,11 @@ echo "설치를 시작합니다."
 echo "$SUDO_PASSWORD" | sudo --stdin --prompt='' apt-get -y install git ansible xz-utils unzip
 set -x
 
+# ubuntu 25.10 에서 sudo-rs 가 기본 sudo 명령이 되었는데, ansible이 아직 이와 호환이 안되기 때문에 구버전인 sudo.ws 로 전환
+if command -v sudo.ws >/dev/null 2>&1; then
+    export ANSIBLE_BECOME_EXE='sudo.ws'
+fi
+
 # --upgrade 옵션으로 최시 번전 컬렉션을 설치하게 해야 한다.
 ansible-galaxy collection install community.general --upgrade
 

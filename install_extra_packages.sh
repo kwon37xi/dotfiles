@@ -3,5 +3,9 @@
 set -eux -o pipefail
 shopt -s failglob
 
+if command -v sudo.ws >/dev/null 2>&1; then
+    export ANSIBLE_BECOME_EXE='sudo.ws'
+fi
+
 export ANSIBLE_LOG_PATH=~/ansible-dotfiles.log
 ansible-playbook -vv ~/.dotfiles/_installer/extra_package_install_playbook.yml
