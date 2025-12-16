@@ -5,7 +5,7 @@ shopt -s failglob
 
 if [ $# -ne 1 ]; then
 	echo "Usage install_start-at-task.sh <task-name>"
-	exit -1
+	exit 1
 else
 	echo "Start instlaling at $1 ..."
 fi
