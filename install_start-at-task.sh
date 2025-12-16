@@ -19,4 +19,4 @@ if command -v sudo.ws >/dev/null 2>&1; then
 fi
 
 export ANSIBLE_LOG_PATH=~/ansible-dotfiles-step-at.log
-ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml --start-at-task="$1"
+ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml --start-at-task="$1" --ask-become-pass

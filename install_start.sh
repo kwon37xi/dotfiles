@@ -23,6 +23,6 @@ ansible-galaxy collection install community.general --upgrade
 git clone https://kwon37xi@github.com/kwon37xi/dotfiles.git ~/.dotfiles
 
 export ANSIBLE_LOG_PATH=~/ansible-dotfiles.log
-ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml
+ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml --ask-become-pass
 
 echo "      installation finished. REBOOT! "
