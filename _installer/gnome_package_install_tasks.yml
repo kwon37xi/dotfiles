@@ -54,10 +54,10 @@
   become: yes
   apt:
     package:
-      - qt5-style-kvantum # for qt5 theme
-      - qt5-style-kvantum-l10n # for qt5 theme
-      - qt5-style-kvantum-themes # for qt5 theme
-      - qt5ct # for qt5 theme
+      - qt6-style-kvantum # for qt5 theme
+      - qt6-style-kvantum-l10n # for qt5 theme
+      - qt6-style-kvantum-themes # for qt5 theme
+      - qt6ct # for qt5 theme
       - breeze
     state: latest
 - name: build git libsecret git credential helper
