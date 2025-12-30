@@ -3,7 +3,9 @@
   become: yes
   copy:
     dest: "/etc/sudoers.d/99-self"
-    content: "{{ current_user }}    ALL=(ALL:ALL) NOPASSWD: ALL"
+    content: |
+      {{ current_user }}    ALL=(ALL:ALL) NOPASSWD: ALL
+
     mode: 0440
     owner: root
     group: root
