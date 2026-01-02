@@ -75,7 +75,6 @@
       - jc
       - iotop
       - atop
-      - guake
       - python3-argcomplete # ansible bash auto completion
       - urlview # for tmux urlview
       - xpad # sticky note

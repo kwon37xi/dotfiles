@@ -21,3 +21,4 @@ dconf dump /org/gnome/shell/extensions/screenshot-window-sizer/ > org_gnome_shel
 dconf dump /org/gnome/pomodoro/preferences/ > org_gnome_pomodoro.dump
 dconf dump  /org/gnome/shell/extensions/panel-date-format/ > org_gnome_shell_extensions_panel_date_format.dump
 dconf dump /org/gnome/shell/extensions/system-monitor/ > org_gnome_shell_extensions_system_monitor.dump
+dconf dump /com/github/amezin/ddterm/ > com_github_amezin_ddterm.dump

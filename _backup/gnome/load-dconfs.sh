@@ -18,3 +18,4 @@ dconf load /org/gnome/shell/extensions/screenshot-window-sizer/ < ~/.dotfiles/_b
 dconf load /org/gnome/pomodoro/preferences/ < ~/.dotfiles/_backup/gnome/org_gnome_pomodoro.dump
 dconf load /org/gnome/shell/extensions/panel-date-format/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_panel_date_format.dump
 dconf load /org/gnome/shell/extensions/system-monitor/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_system_monitor.dump
+dconf load /com/github/amezin/ddterm/ < ~/.dotfiles/_backup/gnome/com_github_amezin_ddterm.dump
