@@ -60,14 +60,6 @@
   retries: 3
   delay: 10
   when: 0 > 1 # apt-key deprecation 으로 설치에 문제가 생김. disable
-- name: Slack
-  become: yes
-  apt:
-    deb: https://downloads.slack-edge.com/releases/linux/4.33.90/prod/x64/slack-desktop-4.33.90-amd64.deb
-  register: slack_installed
-  until: slack_installed is not failed
-  retries: 3
-  delay: 10
 - name: bitwarden
   community.general.flatpak:
     name: "com.bitwarden.desktop"

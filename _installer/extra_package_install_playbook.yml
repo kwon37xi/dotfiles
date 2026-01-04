@@ -135,6 +135,15 @@
       until: otpclient_package_installed is not failed
       retries: 3
       delay: 10
+    - name: slack
+      become: yes
+      community.general.snap:
+        name: slack
+        state: present
+      register: slack_package_installed
+      until: slack_package_installed is not failed
+      retries: 3
+      delay: 10
     - name: raindrop
       become: yes
       community.general.snap:
