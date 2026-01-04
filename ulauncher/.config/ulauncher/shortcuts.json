@@ -143,7 +143,7 @@
         "id": "11456eba-54c2-4e77-87c0-9c9422891e37",
         "name": "youtube-dl queue view",
         "keyword": "ydlqv",
-        "cmd": "#!/bin/bash\nmkdir -p /tmp/videos_nq\ngnome-terminal -- /bin/bash -c 'NQDIR=/tmp/videos_nq nqtail -a; read -p \"===== Enter\ub97c \ub20c\ub7ec \uc885\ub8cc\ud558\uc138\uc694.\"'",
+        "cmd": "#!/bin/bash\nmkdir -p /tmp/videos_nq\nptyxis -- /bin/bash -c 'NQDIR=/tmp/videos_nq nqtail -a; read -p \"===== Enter\ub97c \ub20c\ub7ec \uc885\ub8cc\ud558\uc138\uc694.\"'",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
