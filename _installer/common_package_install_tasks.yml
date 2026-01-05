@@ -80,6 +80,7 @@
       - xpad # sticky note
       - transmission-qt
       - intel-gpu-tools
+      - nvtop
       - ksnip # for image/screenshot annotation
       - adb # for android development and scrcpy
       - poppler-utils # pdf utils
