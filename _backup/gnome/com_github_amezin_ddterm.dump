@@ -3,4 +3,7 @@ command='custom-command'
 custom-command='/usr/bin/tmux'
 custom-font='FiraCode Nerd Font Medium 10'
 ddterm-toggle-hotkey=['<Super>grave']
+tab-policy='automatic'
 use-system-font=false
+window-maximize=false
+window-size=1.0
