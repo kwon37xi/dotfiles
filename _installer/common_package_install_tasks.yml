@@ -124,6 +124,7 @@
       - tig
       - meld
       - python3-pip
+      - pipx
       - shellcheck
       - rabbitvcs-nautilus
       - rabbitvcs-cli
