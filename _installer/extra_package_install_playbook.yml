@@ -24,6 +24,8 @@
           - libreoffice-*
         autoremove: yes
         state: absent
+    - name: zoom # zoom flatpak은 버그가 많아서 직섭 설치방식으로
+      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-zoom.sh"
     - name: install libreoffice flatpak
       community.general.flatpak:
         name: org.libreoffice.LibreOffice
@@ -93,13 +95,6 @@
       become: yes
       apt:
         deb: "/home/{{ current_user }}/.dotfiles/_backup/themes/ocs-url_3.1.0-0ubuntu1_amd64.deb"
-    - name: zoom
-      community.general.flatpak:
-        name: "us.zoom.Zoom"
-      register: zoom_package_installed
-      until: zoom_package_installed is not failed
-      retries: 3
-      delay: 10
     - name: joplin
       community.general.flatpak:
         name: "net.cozic.joplin_desktop"
