@@ -7,23 +7,6 @@
       - libvirt-daemon
       - qemu-system-x86
       - libvirt-dev # for vagrant libvirt provider
-- name: prepare for virtualbox-ext-pack PUEL accept # https://askubuntu.com/questions/811488/command-to-accept-virtualbox-puel-for-virtualbox-ext-pack-installation
-  become: yes
-  shell: "echo virtualbox-ext-pack virtualbox-ext-pack/license select true | debconf-set-selections"
-- name: install virtualization
-  become: yes
-  apt:
-    package:
-      - virtualbox
-      - virtualbox-ext-pack
-      - virtualbox-guest-additions-iso
-    state: latest
-- name: virtualbox usergroup
-  become: yes
-  ansible.builtin.user:
-    name: "{{ current_user }}"
-    groups: vboxusers
-    append: yes
 - name: install node.js # vim markdown plugin에 필요함.
   become: yes
   apt:
