@@ -1,0 +1,9 @@
+[/]
+default-profile-uuid='bfc75e33c3ef6933cfee67df69549d7f'
+font-name='D2CodingLigature Nerd Font Mono 12'
+profile-uuids=['bfc75e33c3ef6933cfee67df69549d7f']
+use-system-font=false
+window-size=(uint32 266, uint32 58)
+
+[Profiles/bfc75e33c3ef6933cfee67df69549d7f]
+palette='gnome'

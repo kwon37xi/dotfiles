@@ -1,9 +1,13 @@
 [/]
+background-color='rgb(23,20,33)'
 command='custom-command'
 custom-command='/usr/bin/tmux'
-custom-font='FiraCode Nerd Font Medium 10'
+custom-font='D2CodingLigature Nerd Font Mono 12'
 ddterm-toggle-hotkey=['<Super>grave']
+foreground-color='rgb(208,207,204)'
+panel-icon-type='none'
 tab-policy='automatic'
 use-system-font=false
+use-theme-colors=false
 window-maximize=false
 window-size=1.0
