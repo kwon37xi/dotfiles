@@ -78,19 +78,13 @@
       - python3-argcomplete # ansible bash auto completion
       - urlview # for tmux urlview
       - xpad # sticky note
-      - transmission-qt
+      - transmission-gtk
       - intel-gpu-tools
       - nvtop
       - ksnip # for image/screenshot annotation
       - adb # for android development and scrcpy
       - poppler-utils # pdf utils
     state: latest
-- name: install remove unused utils
-  become: yes
-  apt:
-    package:
-      - transmission-gtk
-    state: absent
 - name: install system tools
   become: yes
   apt:
