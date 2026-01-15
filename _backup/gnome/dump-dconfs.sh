@@ -13,7 +13,6 @@ dconf dump /org/gnome/shell/extensions/dash-to-panel/ > org_gnome_shell_extensio
 dconf dump /org/gnome/shell/extensions/nothing-to-say/ > org_gnome_shell_extensions_nothing-to-say.dump
 dconf dump /apps/guake/ > apps_guake.dump
 dconf dump /org/gnome/shell/extensions/tiling-assistant/ > org_gnome_shell_extensions_tiling-assistant.dump
-dconf dump /org/gnome/shell/extensions/date-menu-formatter/ > org_gnome_shell_extensions_date-menu-formatter.dump
 dconf dump /org/gnome/shell/extensions/desktop-cube/ > org_gnome_shell_extensions_desktop-cube.dump
 dconf dump /org/gnome/shell/extensions/clipboard-indicator/ > org_gnome_shell_extensions_clipboard-indicator.dump
 dconf dump /org/gnome/shell/extensions/status-area-horizontal-spacing/ > org_gnome_shell_extensions_status-area-horizontal-spacing.dump
