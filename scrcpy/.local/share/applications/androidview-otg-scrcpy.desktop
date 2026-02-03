@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=android otg - scrcpy
+Exec=/home/kwon37xi/.local/bin/android-otg.sh
+Comment=
+Terminal=false
+Icon=/home/kwon37xi/.dotfiles/_icons/scrcpy-otg.png
+Type=Application

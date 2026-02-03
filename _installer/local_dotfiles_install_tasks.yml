@@ -67,6 +67,7 @@
     - qttheme
     - nautilus_scripts
     - gnome
+    - scrcpy
 - name: stow with adopt
   shell: "stow -d ~/.dotfiles -t ~/ --adopt -S {{ item }}"
   with_items:

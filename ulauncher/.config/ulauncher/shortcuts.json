@@ -169,16 +169,6 @@
         "run_without_argument": true,
         "added": 1655104138.8368993
     },
-    "83ad6d43-d4ad-4b75-9dc4-81bc743a90a5": {
-        "id": "83ad6d43-d4ad-4b75-9dc4-81bc743a90a5",
-        "name": "scrcpy - android view",
-        "keyword": "andview",
-        "cmd": "#!/bin/sh\nadb shell ime set \"com.egloos.woongyee.sesak/.SesakKeyboardService\"\n/home/linuxbrew/.linuxbrew/bin/scrcpy --select-usb --keyboard=uhid --stay-awake\n#adb shell ime set \"com.lge.ime/.LgeImeImpl\"\nadb shell ime set \"com.samsung.android.honeyboard/.service.HoneyBoardService\"",
-        "icon": null,
-        "is_default_search": false,
-        "run_without_argument": true,
-        "added": 1657068855.6458433
-    },
     "c9de56bd-322d-42fd-8792-6f02a89ddcae": {
         "id": "c9de56bd-322d-42fd-8792-6f02a89ddcae",
         "name": "presentation mode toggle",
@@ -198,16 +188,6 @@
         "is_default_search": false,
         "run_without_argument": false,
         "added": 1734939224.9786017
-    },
-    "a8c3c1f1-596c-4398-aecb-cfcf696600ed": {
-        "id": "a8c3c1f1-596c-4398-aecb-cfcf696600ed",
-        "name": "Android scrcpy OTG",
-        "keyword": "otg",
-        "cmd": "#!/bin/bash\nadb shell ime set \"com.egloos.woongyee.sesak/.SesakKeyboardService\"\n$HOME/.local/bin/android-otg.sh\nadb shell ime set \"com.samsung.android.honeyboard/.service.HoneyBoardService\"",
-        "icon": null,
-        "is_default_search": false,
-        "run_without_argument": true,
-        "added": 1734997695.7622855
     },
     "a21ebe0e-b202-4835-b1c9-95699bcdd455": {
         "id": "a21ebe0e-b202-4835-b1c9-95699bcdd455",
@@ -278,15 +258,5 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1744681920.6332278
-    },
-    "e49e76fa-b723-4a1c-8aea-d7a6195d5e4d": {
-        "id": "e49e76fa-b723-4a1c-8aea-d7a6195d5e4d",
-        "name": "scrcpy - android view remote",
-        "keyword": "avr",
-        "cmd": "#!/bin/sh\nadb shell ime set \"com.egloos.woongyee.sesak/.SesakKeyboardService\"\n/home/linuxbrew/.linuxbrew/bin/scrcpy --tcpip\n#adb shell ime set \"com.lge.ime/.LgeImeImpl\"\nadb shell ime set \"com.samsung.android.honeyboard/.service.HoneyBoardService\"",
-        "icon": null,
-        "is_default_search": false,
-        "run_without_argument": true,
-        "added": 1758690985.0304074
     }
 }

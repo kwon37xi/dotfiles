@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=androidview andview - scrcpy
+Exec=/home/kwon37xi/.local/bin/scrcpy-androidview.sh
+Comment=
+Terminal=false
+Icon=/home/kwon37xi/.dotfiles/_icons/scrcpy.png
+Type=Application
