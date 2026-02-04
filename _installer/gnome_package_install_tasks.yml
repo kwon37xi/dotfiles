@@ -65,3 +65,28 @@
   shell: |
     cd /usr/share/doc/git/contrib/credential/libsecret
     make
+- name: install gnome-extensions-cli
+  become: yes
+  shell: |
+    pipx install gnome-extensions-cli
+- name: install gnome extensions
+  shell: |
+    gext install {{ item }}
+    # 아래는 gext 로 설치시 gschemas.compiled 가 생성 안되는 버그 때문에 필요. 버그 해소시 불필요함.
+    if [ -d "$HOME/.local/share/gnome-shell/extensions/{{ item }}/schemas" ]; then
+      echo "> compile {{ item }} schemas...."
+      glib-compile-schemas "$HOME/.local/share/gnome-shell/extensions/{{ item }}/schemas"
+    fi
+    echo "재 로그인 후에 gnome extension 들이 활성화 됨"
+  with_items:
+    - "bluetooth-quick-connect@bjarosze.gmail.com"
+    - "caffeine@patapon.info"
+    - "clipboard-indicator@tudmotu.com"
+    - "ddterm@amezin.github.com"
+    - "desktop-cube@schneegans.github.com"
+    - "do-not-disturb-while-screen-sharing-or-recording@marcinjahn.com"
+    - "gsconnect@andyholmes.github.io"
+    - "Move_Clock@rmy.pobox.com"
+    - "nothing-to-say@extensions.gnome.wouter.bolsterl.ee"
+    - "panel-date-format@keiii.github.com"
+    - "status-area-horizontal-spacing@mathematical.coffee.gmail.com"

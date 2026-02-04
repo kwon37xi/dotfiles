@@ -118,7 +118,7 @@
       - tig
       - meld
       - python3-pip
-      - pipx
+      - pipx # for gnome-extensions-cli
       - shellcheck
       - rabbitvcs-nautilus
       - rabbitvcs-cli
