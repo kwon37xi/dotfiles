@@ -89,3 +89,7 @@
     - "nothing-to-say@extensions.gnome.wouter.bolsterl.ee"
     - "panel-date-format@keiii.github.com"
     - "status-area-horizontal-spacing@mathematical.coffee.gmail.com"
+- name: fix ddterm binary executable
+  ansible.builtin.file:
+    path: "/home/{{ current_user }}/.local/share/gnome-shell/extensions/ddterm@amezin.github.com/bin/com.github.amezin.ddterm"
+    mode: "0755"
