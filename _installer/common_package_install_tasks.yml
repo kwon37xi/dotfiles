@@ -123,6 +123,11 @@
       - rabbitvcs-nautilus
       - rabbitvcs-cli
     state: latest
+- name: install ai tools
+  become: yes
+  apt:
+    package:
+      - claude-desktop
 - name: update-alternatives java # java 11을 기본으로. java 17 아직 지원안하는 애플리케이션이 많음.
   become: yes
   shell: |
