@@ -139,20 +139,6 @@
       until: slack_package_installed is not failed
       retries: 3
       delay: 10
-    - name: raindrop
-      become: yes
-      community.general.snap:
-        name: raindrop
-        state: present
-    - name: pinta
-      become: yes
-      community.general.snap:
-        name: pinta
-        state: present
-      register: pinta_package_installed
-      until: pinta_package_installed is not failed
-      retries: 3
-      delay: 10
     - name: haruna
       community.general.flatpak:
         name: "org.kde.haruna"
