@@ -32,8 +32,8 @@
   ansible.builtin.deb822_repository:
     name: claude-desktop-debian
     types: [deb]
-    uris: "https://aaddrick.github.io/claude-desktop-debian"
-    signed_by: "https://aaddrick.github.io/claude-desktop-debian/KEY.gpg"
+    uris: "https://pkg.claude-desktop-debian.dev"
+    signed_by: "https://pkg.claude-desktop-debian.dev/KEY.gpg"
     suites: [stable]
     components: [main]
     architectures: [amd64,arm64]
