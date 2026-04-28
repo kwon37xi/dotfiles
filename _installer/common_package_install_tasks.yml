@@ -94,7 +94,6 @@
       - gparted
       - dconf-editor
       - blueman
-      - grub-customizer
     state: latest
 - name: install development base tools
   become: yes
