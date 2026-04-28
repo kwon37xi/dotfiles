@@ -145,7 +145,6 @@
       - smbclient
       - network-manager-openconnect
       - openfortivpn
-      - network-manager-fortisslvpn
       - openssh-client
       - freerdp3-wayland
       - openssh-server
