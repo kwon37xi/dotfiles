@@ -1,192 +1,184 @@
 ---
 # 당장 개발에 필수는 아닌 애플리케이션들 설치
-- name: extra packages
-  hosts: 127.0.0.1
-  connection: local
-  vars_files:
-    - "vars.yml"
-  environment:
-    PATH: "{{ lookup('env', 'PATH') }}:/home/linuxbrew/.linuxbrew/bin"
-  tasks:
-    - name: install KDE/GNOME themes
-      become: yes
-      apt:
-        install_recommends: yes
-        package:
-          - dmz-cursor-theme
-          - xcursor-themes
-        state: latest
-    - name: remove libreoffice deb packages
-      become: yes
-      apt:
-        package:
-          - libreoffice
-          - libreoffice-*
-        autoremove: yes
-        state: absent
-    - name: zoom # zoom flatpak은 버그가 많아서 직섭 설치방식으로
-      shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-zoom.sh"
-    - name: install libreoffice flatpak
-      community.general.flatpak:
-        name: org.libreoffice.LibreOffice
-      register: libreoffice_package_installed
-      until: libreoffice_package_installed is not failed
-      retries: 3
-      delay: 10
-    - name: install wallpapers
-      become: yes
-      apt:
-        package:
-          - ubuntu-wallpapers
-          - gnome-backgrounds
-        state: latest
-    - name: install video audio graphic packages
-      become: yes
-      apt:
-        package:
-          - gimp
-          - gimp-data-extras
-          - gimp-help-ko
-          - nomacs
-          - sxiv
-          - vlc
-          - audacious
-          - handbrake
-          - gpick
-          - gromit-mpx
-          - vainfo
-          - com.github.phase1geo.annotator
-        state: latest
-    - name: install pdftools
-      become: yes
-      apt:
-        package:
-          - pdftk
-          - texlive-extra-utils
-          - simple-scan
-        state: latest
-    - name: add architecture i386
-      become: yes
-      shell: "dpkg --add-architecture i386"
-    - name: update apt cache all # architecture 추가시에 cache 도 갱신해야함.
-      become: yes
-      apt:
-        update_cache: yes
-        upgrade: full
-    - name: install wine
-      become: yes
-      apt:
-        package:
-          - wine
-          - wine32:i386
-          - winetricks
-        state: latest
-    - name: apt clean # ansible의 autoclean 은 clean이 아니다.
-      become: yes
-      ansible.builtin.command: apt clean
-    - name: ocs-url dependencies
-      become: yes
-      apt:
-        package:
-          - libqt5svg5
-          - qml-module-qtquick-controls
-        state: latest
-    - name: ocs-url install # https://www.opendesktop.org/p/1136805/
-      become: yes
-      apt:
-        deb: "/home/{{ current_user }}/.dotfiles/_backup/themes/ocs-url_3.1.0-0ubuntu1_amd64.deb"
-    - name: joplin
-      community.general.flatpak:
-        name: "net.cozic.joplin_desktop"
-      register: joplin_installed
-      until: joplin_installed is not failed
-      retries: 3
-      delay: 10
-    - name: flatseal
-      community.general.flatpak:
-        name: "com.github.tchx84.Flatseal"
-      register: flatseal_package_installed
-      until: flatseal_package_installed is not failed
-      retries: 3
-      delay: 10
-    - name: blanket
-      community.general.flatpak:
-        name: "com.rafaelmardojai.Blanket"
-      register: blanket_package_installed
-      until: blanket_package_installed is not failed
-      retries: 3
-      delay: 10
-    - name: extensionmanager
-      community.general.flatpak:
-        name: "com.mattjakeman.ExtensionManager"
-      register: extensionmanager_package_installed
-      until: extensionmanager_package_installed is not failed
-      retries: 3
-      delay: 10
-    - name: OTPClient
-      community.general.flatpak:
-        name: "com.github.paolostivanin.OTPClient"
-      register: otpclient_package_installed
-      until: otpclient_package_installed is not failed
-      retries: 3
-      delay: 10
-    - name: slack
-      become: yes
-      community.general.snap:
-        name: slack
-        state: present
-      register: slack_package_installed
-      until: slack_package_installed is not failed
-      retries: 3
-      delay: 10
-    - name: haruna
-      community.general.flatpak:
-        name: "org.kde.haruna"
-      register: haruna_package_installed
-      until: haruna_package_installed is not failed
-      retries: 3
-      delay: 10
-    - name: celluloid
-      community.general.flatpak:
-        name: "io.github.celluloid_player.Celluloid"
-      register: celluloid_package_installed
-      until: celluloid_package_installed is not failed
-      retries: 3
-      delay: 10
-    - name: pdfarranger
-      community.general.flatpak:
-        name: "com.github.jeromerobert.pdfarranger"
-      register: pdfarranger_package_installed
-      until: pdfarranger_package_installed is not failed
-      retries: 3
-      delay: 10
-    - name: krop
-      community.general.flatpak:
-        name: "com.github.arminstraub.krop"
-      register: krop_package_installed
-      until: krop_package_installed is not failed
-      retries: 3
-      delay: 10
-    - name: download meganz
-      become: yes
-      apt:
-        deb: "{{ item }}"
-      register: meganz_debs_installed
-      until: meganz_debs_installed is not failed
-      retries: 3
-      delay: 10
-      with_items:
-        - "https://mega.nz/linux/repo/xUbuntu_{{ ubuntu_version }}/amd64/megacmd-xUbuntu_{{ ubuntu_version }}_amd64.deb"
-        - "https://mega.nz/linux/repo/xUbuntu_{{ ubuntu_version }}/amd64/megasync-xUbuntu_{{ ubuntu_version }}_amd64.deb"
-    - name: update apt cache all
-      become: yes
-      apt:
-        update_cache: yes
-        state: fixed
-    - name: install mega apps
-      become: yes
-      apt:
-        package:
-          - megatools
-          - nautilus-megasync
-        state: latest
+- name: install KDE/GNOME themes
+  become: yes
+  apt:
+    install_recommends: yes
+    package:
+      - dmz-cursor-theme
+      - xcursor-themes
+    state: latest
+- name: remove libreoffice deb packages
+  become: yes
+  apt:
+    package:
+      - libreoffice
+      - libreoffice-*
+    autoremove: yes
+    state: absent
+- name: zoom # zoom flatpak은 버그가 많아서 직섭 설치방식으로
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-zoom.sh"
+- name: install libreoffice flatpak
+  community.general.flatpak:
+    name: org.libreoffice.LibreOffice
+  register: libreoffice_package_installed
+  until: libreoffice_package_installed is not failed
+  retries: 3
+  delay: 10
+- name: install wallpapers
+  become: yes
+  apt:
+    package:
+      - ubuntu-wallpapers
+      - gnome-backgrounds
+    state: latest
+- name: install video audio graphic packages
+  become: yes
+  apt:
+    package:
+      - gimp
+      - gimp-data-extras
+      - gimp-help-ko
+      - nomacs
+      - sxiv
+      - vlc
+      - audacious
+      - handbrake
+      - gpick
+      - gromit-mpx
+      - vainfo
+      - com.github.phase1geo.annotator
+    state: latest
+- name: install pdftools
+  become: yes
+  apt:
+    package:
+      - pdftk
+      - texlive-extra-utils
+      - simple-scan
+    state: latest
+- name: add architecture i386
+  become: yes
+  shell: "dpkg --add-architecture i386"
+- name: update apt cache all # architecture 추가시에 cache 도 갱신해야함.
+  become: yes
+  apt:
+    update_cache: yes
+    upgrade: full
+- name: install wine
+  become: yes
+  apt:
+    package:
+      - wine
+      - wine32:i386
+      - winetricks
+    state: latest
+- name: apt clean # ansible의 autoclean 은 clean이 아니다.
+  become: yes
+  ansible.builtin.command: apt clean
+- name: ocs-url dependencies
+  become: yes
+  apt:
+    package:
+      - libqt5svg5
+      - qml-module-qtquick-controls
+    state: latest
+- name: ocs-url install # https://www.opendesktop.org/p/1136805/
+  become: yes
+  apt:
+    deb: "/home/{{ current_user }}/.dotfiles/_backup/themes/ocs-url_3.1.0-0ubuntu1_amd64.deb"
+- name: joplin
+  community.general.flatpak:
+    name: "net.cozic.joplin_desktop"
+  register: joplin_installed
+  until: joplin_installed is not failed
+  retries: 3
+  delay: 10
+- name: flatseal
+  community.general.flatpak:
+    name: "com.github.tchx84.Flatseal"
+  register: flatseal_package_installed
+  until: flatseal_package_installed is not failed
+  retries: 3
+  delay: 10
+- name: blanket
+  community.general.flatpak:
+    name: "com.rafaelmardojai.Blanket"
+  register: blanket_package_installed
+  until: blanket_package_installed is not failed
+  retries: 3
+  delay: 10
+- name: extensionmanager
+  community.general.flatpak:
+    name: "com.mattjakeman.ExtensionManager"
+  register: extensionmanager_package_installed
+  until: extensionmanager_package_installed is not failed
+  retries: 3
+  delay: 10
+- name: OTPClient
+  community.general.flatpak:
+    name: "com.github.paolostivanin.OTPClient"
+  register: otpclient_package_installed
+  until: otpclient_package_installed is not failed
+  retries: 3
+  delay: 10
+#- name: slack
+#  become: yes
+#  community.general.snap:
+#    name: slack
+#    state: present
+#  register: slack_package_installed
+#  until: slack_package_installed is not failed
+#  retries: 3
+#  delay: 10
+- name: haruna
+  community.general.flatpak:
+    name: "org.kde.haruna"
+  register: haruna_package_installed
+  until: haruna_package_installed is not failed
+  retries: 3
+  delay: 10
+- name: celluloid
+  community.general.flatpak:
+    name: "io.github.celluloid_player.Celluloid"
+  register: celluloid_package_installed
+  until: celluloid_package_installed is not failed
+  retries: 3
+  delay: 10
+- name: pdfarranger
+  community.general.flatpak:
+    name: "com.github.jeromerobert.pdfarranger"
+  register: pdfarranger_package_installed
+  until: pdfarranger_package_installed is not failed
+  retries: 3
+  delay: 10
+- name: krop
+  community.general.flatpak:
+    name: "com.github.arminstraub.krop"
+  register: krop_package_installed
+  until: krop_package_installed is not failed
+  retries: 3
+  delay: 10
+- name: download meganz
+  become: yes
+  apt:
+    deb: "{{ item }}"
+  register: meganz_debs_installed
+  until: meganz_debs_installed is not failed
+  retries: 3
+  delay: 10
+  with_items:
+    - "https://mega.nz/linux/repo/xUbuntu_{{ ubuntu_version }}/amd64/megacmd-xUbuntu_{{ ubuntu_version }}_amd64.deb"
+    - "https://mega.nz/linux/repo/xUbuntu_{{ ubuntu_version }}/amd64/megasync-xUbuntu_{{ ubuntu_version }}_amd64.deb"
+- name: update apt cache all
+  become: yes
+  apt:
+    update_cache: yes
+    state: fixed
+- name: install mega apps
+  become: yes
+  apt:
+    package:
+      - megatools
+      - nautilus-megasync
+    state: latest
