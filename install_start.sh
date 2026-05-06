@@ -20,9 +20,12 @@ fi
 # --upgrade 옵션으로 최시 번전 컬렉션을 설치하게 해야 한다.
 ansible-galaxy collection install community.general --upgrade
 
-git clone https://kwon37xi@github.com/kwon37xi/dotfiles.git ~/.dotfiles
+if [ ! -d "~/.dotfiles" ]; then
+    echo "cloning dotfiles...."
+    git clone https://kwon37xi@github.com/kwon37xi/dotfiles.git ~/.dotfiles
+fi
 
 export ANSIBLE_LOG_PATH=~/ansible-dotfiles.log
-ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml --ask-become-pass
+ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml
 
 echo "      installation finished. REBOOT! "
