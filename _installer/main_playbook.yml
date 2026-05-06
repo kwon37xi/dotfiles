@@ -1,9 +1,12 @@
 ---
 - name: main
-  hosts: 127.0.0.1
+  hosts: localhost
   connection: local
-  vars_files:
-    - "vars.yml"
+  vars:
+    ubuntu_release: "{{ lookup('pipe', 'lsb_release -cs') }}"
+    ubuntu_version: "{{ lookup('pipe', 'lsb_release -rs') }}"
+    current_user: "{{ lookup('env', 'USER') }}"
+    local_bashrcs_dir: ~/.config/bashrc.d
   environment:
     PATH: "{{ lookup('env', 'PATH') }}:/home/linuxbrew/.linuxbrew/bin"
   tasks:

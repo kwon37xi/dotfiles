@@ -9,7 +9,6 @@
       - gnome-clocks
       - alacarte
       - gnome-authenticator
-      - python3-pydrive2 # for deja-dup
       - deja-dup
       - gnome-clocks
       - gnome-calendar
@@ -21,14 +20,12 @@
       - nautilus-admin
       - gnome-sushi
       - nautilus-image-converter
-      - nautilus-script-manager
       - nautilus-share
     state: latest
 - name: install GNOME network packages
   become: yes
   apt:
     package:
-      - network-manager-fortisslvpn-gnome
       - network-manager-openconnect-gnome
       - network-manager-openvpn-gnome
     state: latest
@@ -48,17 +45,6 @@
       - gnome-shell-extension-prefs
       - gnome-shell-extensions
       - gnome-shell-extension-manager
-      - gnome-shell-pomodoro
-    state: latest
-- name: install qt themes
-  become: yes
-  apt:
-    package:
-      - qt6-style-kvantum # for qt5 theme
-      - qt6-style-kvantum-l10n # for qt5 theme
-      - qt6-style-kvantum-themes # for qt5 theme
-      - qt6ct # for qt5 theme
-      - breeze
     state: latest
 - name: build git libsecret git credential helper
   become: yes
