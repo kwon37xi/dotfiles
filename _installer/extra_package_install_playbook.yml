@@ -25,13 +25,6 @@
   until: libreoffice_package_installed is not failed
   retries: 3
   delay: 10
-- name: install wallpapers
-  become: yes
-  apt:
-    package:
-      - ubuntu-wallpapers
-      - gnome-backgrounds
-    state: latest
 - name: install video audio graphic packages
   become: yes
   apt:
