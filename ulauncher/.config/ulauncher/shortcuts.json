@@ -258,5 +258,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1744681920.6332278
+    },
+    "16e404e8-dd01-4644-aaff-5b4b8aa33549": {
+        "id": "16e404e8-dd01-4644-aaff-5b4b8aa33549",
+        "name": "Kill KakaoTalk",
+        "keyword": "kko",
+        "cmd": "#!/usr/bin/env bash\npkill -9 \"KakaoTalk.exe\"\n",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1778657962.083707
     }
 }
