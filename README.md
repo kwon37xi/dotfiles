@@ -58,7 +58,6 @@ sudo apt install make gcc perl
 * gnu `stow` 명령으로 링크할 dotfiles 설정파일들이 있다.
 
 ## 설치 후 할 일들
-* `install_extra_packages.sh` 를 실행하여 부가 패키지들(당장 개발에 필요는 없지만 일상생활에 필요한)을 설치한다.
 * 후속 private dotfiles 설치
 
 ### HOME 기본 디렉토리 다른 파티션으로 이동
@@ -123,6 +122,10 @@ sudo apt install intel-media-va-driver-non-free libva-drm2 libva-x11-2
     * 두 손가락 : 활성화
     * 스크롤 방향 반전(자연스크롤)
 
+### zoom
+* https://app.zoom.us/ 에서 PWA 크롬 앱으로 zoom 을 설치한다.
+* 2026년 현재 Linux zoom client 는 너무 느리고 버그가 많아서 사용이 힘들다.
+
 ### fcitx
 * fcitx 사용시, 설치 완료후, keyboard 에 **hangul** 을 추가해줘야만한다.
 * 또한 KDE Panel 에 Input Method Widget을 추가해주면 좋다(kimpanel).
@@ -141,13 +144,6 @@ sudo apt install intel-media-va-driver-non-free libva-drm2 libva-x11-2
 ### Libre Office
 * 도구 -> 기본설정 -> 보기 -> 아이콘 스타일 : dark 계통 테마일경우 아이콘 스타일을 dark 계통으로 변경한것. 그렇지 않으면 아이콘이 잘 안보인다.
 
-### Grub Customizer
-* Grub Theme 을 조정해준다.
-
-### nvidia - screen tearing
-* X windows + nvidia 그래픽 카드일 경우 screen tearing 이 발생할 수 있다.
-* [Linux Nvidia Graphic Card](https://kwonnam.pe.kr/wiki/linux/nvidia) 에 따라 이미 처리 돼 있다. nvidia + X 상황에서만 활성화 된다.
-* `/etc/X11/xorg.conf.d/99-nvidia-myoptions.conf` 파일 참조
 
 ### nvidia - prime 설치 및 확인
 * nvidia/intel dual 일경우 `prime-select` 가 필요하다.
@@ -171,7 +167,7 @@ sudo reboot
 
 ### 4k 설정
 * 4k 모니터 Console 설정
-* 4k 모니터 설정시에 grub 화면 반응속도가 너무 느리다. [Linux Grub](https://kwonnam.pe.kr/wiki/linux/grub)을 참조하여 해상도를 FHD 로 변경하는게 낫다.
+* 4k 모니터 설정시에 grub 화면 반응속도가 너무 느리다. GRUB 해상도를 FHD 로 변경하는게 낫다.
 ```
 ~/.dotfiles/install_grub_4k.sh
 ```

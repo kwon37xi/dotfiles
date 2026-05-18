@@ -16,8 +16,6 @@
       - libreoffice-*
     autoremove: yes
     state: absent
-- name: zoom # zoom flatpak은 버그가 많아서 직섭 설치방식으로
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-zoom.sh"
 - name: install libreoffice flatpak
   community.general.flatpak:
     name: org.libreoffice.LibreOffice
