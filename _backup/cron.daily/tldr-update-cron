@@ -9,6 +9,6 @@ if [ "$(id -u)" -eq 0 ]; then
         exec sudo -H -u "${TARGET_USER}" $0 "$@"
 fi
 
-/home/${TARGET_USER}/.local/bin/tldr --update 2>&1 | logger -i -t "TLDR Update"
+/snap/bin/tldr --update 2>&1 | logger -i -t "TLDR Update"
 
 exit 0;

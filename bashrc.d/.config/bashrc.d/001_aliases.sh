@@ -70,8 +70,8 @@ alias flameshot="flatpak run org.flameshot.Flameshot"
 # node.js yarn
 alias yarn="yarnpkg"
 
-# tldr
-alias tldr="tldr --theme=ocean"
+# tldr-js
+# alias tldr="tldr --theme=ocean"
 
 # editor
 alias se=sudoedit

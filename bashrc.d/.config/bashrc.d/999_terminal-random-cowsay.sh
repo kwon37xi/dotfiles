@@ -17,5 +17,5 @@ fi
 
 if [ $random_tldr -eq 1 ]
 then
-    ~/.local/bin/tldr --random-example | cowsay -W 80 -f $(\ls /usr/share/cowsay/cows/*.cow | sort -R | head -n 1 | xargs basename -s .cow) | lolcat
+    tldr --list | shuf -n 1 | xargs tldr | cowsay -W 80 -f $(\ls /usr/share/cowsay/cows/*.cow | sort -R | head -n 1 | xargs basename -s .cow) | lolcat
 fi

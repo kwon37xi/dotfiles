@@ -35,10 +35,6 @@
   lineinfile:
     path: ~/.bash_logout
     line: "bash ~/.local/bin/seeyouspacecowboy.sh; sleep 1"
-- name: tldr install
-  shell: ~/.dotfiles/local_bin/.local/bin/install-tldr-node-client.sh
-- name: tldr update
-  shell: "/home/{{ current_user }}/.local/bin/tldr --update"
 - name: sdkman
   shell: |
     curl -s "https://get.sdkman.io?rcupdate=false" | bash
