@@ -106,6 +106,16 @@
   until: otpclient_package_installed is not failed
   retries: 3
   delay: 10
+- name: astral-uv
+  become: yes
+  community.general.snap:
+    name: astral-uv
+    classic: true
+    state: present
+  register: astral-uv_package_installed
+  until: astral-uv_package_installed is not failed
+  retries: 3
+  delay: 10
 - name: tldr
   become: yes
   community.general.snap:
