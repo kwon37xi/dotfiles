@@ -9,7 +9,7 @@ echo -n "Password for sudo: "
 read -s ANSIBLE_BECOME_PASS
 echo "설치를 시작합니다."
 #echo "$ANSIBLE_BECOME_PASS" | sudo --stdin --prompt='' add-apt-repository -y ppa:ansible/ansible # ansible ubuntu 기본 버전의 버그가 간혹 있어서 PPA로 설치
-echo "$ANSIBLE_BECOME_PASS" | sudo --stdin --prompt='' apt-get -y install git ansible xz-utils unzip
+echo "$ANSIBLE_BECOME_PASSWORD" | sudo --stdin --prompt='' apt-get -y install git ansible xz-utils unzip
 set -x
 
 # ubuntu 25.10 에서 sudo-rs 가 기본 sudo 명령이 되었는데, ansible이 아직 이와 호환이 안되기 때문에 구버전인 sudo.ws 로 전환
@@ -26,6 +26,6 @@ if [ ! -d "~/.dotfiles" ]; then
 fi
 
 export ANSIBLE_LOG_PATH=~/ansible-dotfiles.log
-ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml --ask-become-pass
+ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml
 
 echo "      installation finished. REBOOT! "
