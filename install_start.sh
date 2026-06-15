@@ -26,6 +26,7 @@ if [ ! -d "~/.dotfiles" ]; then
 fi
 
 export ANSIBLE_LOG_PATH=~/ansible-dotfiles.log
-ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml
+# ANSIBLE_BECOME_PASSWORD 환경변수도 안먹음.
+ansible-playbook -vvv ~/.dotfiles/_installer/main_playbook.yml --ask-become-pass
 
 echo "      installation finished. REBOOT! "
