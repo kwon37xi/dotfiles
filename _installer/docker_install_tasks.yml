@@ -8,6 +8,7 @@
       - containerd.io
       - docker-compose-plugin
       - docker-ce-rootless-extras
+      - uidmap
     state: latest
 - name: docker group # rootless 를 사용하면서 불필요해짐.
   become: yes
