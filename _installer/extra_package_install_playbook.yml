@@ -112,8 +112,8 @@
     name: astral-uv
     classic: true
     state: present
-  register: astral-uv_package_installed
-  until: astral-uv_package_installed is not failed
+  register: astral_uv_package_installed
+  until: astral_uv_package_installed is not failed
   retries: 3
   delay: 10
 - name: tldr
