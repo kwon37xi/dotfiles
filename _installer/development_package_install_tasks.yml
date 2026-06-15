@@ -60,8 +60,6 @@
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-jmc.sh"
 - name: ulauncher
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-ulauncher.sh"
-- name: docker-compose
-  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-docker-compose.sh"
 - name: wrappers-easy-executor
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-wrappers-easy-executor.sh"
 - name: install jetbrains toolbox
