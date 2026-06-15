@@ -7,26 +7,46 @@
       - docker-ce-cli
       - containerd.io
       - docker-compose-plugin
+      - docker-ce-rootless-extras
     state: latest
-- name: docker group
+- name: docker group # rootless 를 사용하면서 불필요해짐.
   become: yes
   ansible.builtin.group:
     name: docker
     state: present
-- name: add user to docker group
+  when: false
+- name: add user to docker group # rootless 를 사용하면서 불필요해짐.
   become: yes
   ansible.builtin.user:
     name: "{{ current_user }}"
     groups:
       - docker
     append: yes
-- name: docker systemd enable
+  when: false
+- name: docker systemd disable for rootless
   become: yes
-  ansible.builtin.systemd:
+  ansible.builtin.systemd_service:
     name: docker.service
-    enabled: yes
+    enabled: false
+    state: stopped
+- name: docker socket systemd disable for rootless
+  become: yes
+  ansible.builtin.systemd_service:
+    name: docker.socket
+    enabled: false
+    state: stopped
 - name: containerd systemd enable
   become: yes
-  ansible.builtin.systemd:
+  ansible.builtin.systemd_service:
     name: containerd.service
-    enabled: yes
+    enabled: true
+- name: docker rootless setup
+  shell: "dockerd-rootless-setup-tool.sh"
+- name: docker  rootless enable user systemd
+  become: yes
+  shell: "loginctl enable-linger {{ current_user }}"
+- name: docker user systemd enable for rootless
+  ansible.builtin.systemd_service:
+    name: docker.service
+    enabled: true
+    scope: user
