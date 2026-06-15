@@ -41,10 +41,10 @@
     name: containerd.service
     enabled: true
 - name: docker rootless setup
-  shell: "/usr/bin/dockerd-rootless-setuptool.sh"
+  ansible.builtin.shell: /usr/bin/dockerd-rootless-setuptool.sh
 - name: docker  rootless enable user systemd
   become: yes
-  shell: "loginctl enable-linger {{ current_user }}"
+  ansible.builtin.shell: loginctl enable-linger "{{ current_user }}"
 - name: docker user systemd enable for rootless
   ansible.builtin.systemd_service:
     name: docker.service
