@@ -10,7 +10,7 @@
   delay: 10
 - name: brew bundle install
   shell: |
-    /home/linuxbrew/.linuxbrew/bin/brew trust aws/tap hashicorp/tab
+    /home/linuxbrew/.linuxbrew/bin/brew trust aws/tap hashicorp/tap
     /home/linuxbrew/.linuxbrew/bin/brew bundle --file=/home/{{ current_user }}/.dotfiles/_backup/brew/Brewfile
   args:
     executable: /usr/bin/bash
