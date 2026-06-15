@@ -6,7 +6,7 @@ shopt -s failglob
 # 최소 필요사항 설치
 set +x
 echo -n "Password for sudo: "
-read -s ANSIBLE_BECOME_PASS
+read -s ANSIBLE_BECOME_PASSWORD
 echo "설치를 시작합니다."
 #echo "$ANSIBLE_BECOME_PASS" | sudo --stdin --prompt='' add-apt-repository -y ppa:ansible/ansible # ansible ubuntu 기본 버전의 버그가 간혹 있어서 PPA로 설치
 echo "$ANSIBLE_BECOME_PASSWORD" | sudo --stdin --prompt='' apt-get -y install git ansible xz-utils unzip
