@@ -8,21 +8,12 @@
       - dmz-cursor-theme
       - xcursor-themes
     state: latest
-- name: remove libreoffice deb packages
+- name: install libreoffice
   become: yes
   apt:
     package:
       - libreoffice
-      - libreoffice-*
-    autoremove: yes
-    state: absent
-- name: install libreoffice flatpak
-  community.general.flatpak:
-    name: org.libreoffice.LibreOffice
-  register: libreoffice_package_installed
-  until: libreoffice_package_installed is not failed
-  retries: 3
-  delay: 10
+    state: latest
 - name: install video audio graphic packages
   become: yes
   apt:
@@ -40,13 +31,14 @@
       - vainfo
       - com.github.phase1geo.annotator
     state: latest
-- name: install pdftools
+- name: install documentation tools
   become: yes
   apt:
     package:
       - pdftk
       - texlive-extra-utils
       - simple-scan
+      - okular
     state: latest
 - name: add architecture i386
   become: yes
