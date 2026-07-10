@@ -124,7 +124,7 @@ sudo apt install intel-media-va-driver-non-free libva-drm2 libva-x11-2
 
 ### zoom
 * https://app.zoom.us/ 에서 PWA 크롬 앱으로 zoom 을 설치한다.
-* 2026년 현재 Linux zoom client 는 너무 느리고 버그가 많아서 사용이 힘들다.
+* zoom app 과 PWA 버전을 돌아가며 사용한다. Linux + Wayland 환경에서의 zoom 이 점차 개선되고 있으며 2026년 7월 현재 vaapi video acceleration도 작동한다.
 
 ### fcitx
 * fcitx 사용시, 설치 완료후, keyboard 에 **hangul** 을 추가해줘야만한다.

@@ -31,6 +31,8 @@
       - vainfo
       - com.github.phase1geo.annotator
     state: latest
+- name: install zoom
+  shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-zoom.sh"
 - name: install documentation tools
   become: yes
   apt:
