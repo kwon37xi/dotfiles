@@ -2,7 +2,7 @@
 background-color='rgb(23,20,33)'
 command='custom-command'
 custom-command='/usr/bin/tmux'
-custom-font='D2CodingLigature Nerd Font Mono 12'
+custom-font='D2KodingLigature Nerd Font Mono 12'
 ddterm-toggle-hotkey=['<Super>grave']
 foreground-color='rgb(208,207,204)'
 panel-icon-type='none'
