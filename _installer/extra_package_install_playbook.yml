@@ -79,6 +79,13 @@
   until: flatseal_package_installed is not failed
   retries: 3
   delay: 10
+- name: drawing #그림판
+  community.general.flatpak:
+    name: "com.github.maoschanz.drawing"
+  register: drawing_package_installed
+  until: drawing_package_installed is not failed
+  retries: 3
+  delay: 10
 - name: blanket
   community.general.flatpak:
     name: "com.rafaelmardojai.Blanket"
