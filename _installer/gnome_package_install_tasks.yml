@@ -77,6 +77,7 @@
     - "status-area-horizontal-spacing@mathematical.coffee.gmail.com"
     - "easy_docker_containers@red.software.systems"
     - "battery-power-mode-indicator@nirmaladvani.github.com"
+    - "auto-power-profile@dmy3k.github.io"
 - name: fix ddterm binary executable
   ansible.builtin.file:
     path: "/home/{{ current_user }}/.local/share/gnome-shell/extensions/ddterm@amezin.github.com/bin/com.github.amezin.ddterm"
