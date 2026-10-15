@@ -27,20 +27,20 @@
   register: vscode_repository_installed
   until: vscode_repository_installed is not failed
   retries: 3
-- name: claude-desktop-debian repository
+- name: claude-desktop-official repository
   become: yes
   ansible.builtin.deb822_repository:
-    name: claude-desktop-debian
+    name: claude-desktop-official
     types: [deb]
-    uris: "https://pkg.claude-desktop-debian.dev"
-    signed_by: "https://pkg.claude-desktop-debian.dev/KEY.gpg"
+    uris: "https://downloads.claude.ai/claude-desktop/apt/stable"
+    signed_by: "https://downloads.claude.ai/claude-desktop/key.asc"
     suites: [stable]
     components: [main]
     architectures: [amd64,arm64]
     state: present
     enabled: yes
-  register: claude_desktop_debian_repository_installed
-  until: claude_desktop_debian_repository_installed is not failed
+  register: claude_desktop_official_repository_installed
+  until: claude_desktop_official_repository_installed is not failed
   retries: 3
 - name: add PPAs
   become: yes
