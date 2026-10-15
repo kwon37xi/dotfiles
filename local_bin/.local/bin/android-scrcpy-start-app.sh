@@ -21,7 +21,7 @@ fi
 
 EXTRA_OPTIONS="${@:3}"
 
-adb shell ime set "com.egloos.woongyee.sesak/.SesakKeyboardService"
+#adb shell ime set "com.egloos.woongyee.sesak/.SesakKeyboardService"
 /home/linuxbrew/.linuxbrew/bin/scrcpy $DISPLAY_OPTION \
    --no-vd-system-decorations \
    --start-app="$2" $EXTRA_OPTIONS
