@@ -36,7 +36,7 @@
     signed_by: "https://downloads.claude.ai/claude-desktop/key.asc"
     suites: [stable]
     components: [main]
-    architectures: [amd64,arm64]
+    architectures: [amd64]
     state: present
     enabled: yes
   register: claude_desktop_official_repository_installed
