@@ -122,11 +122,18 @@
       - rabbitvcs-nautilus
       - rabbitvcs-cli
     state: latest
-- name: install ai tools
+- name: install claude-desktop
   become: yes
   apt:
     package:
       - claude-desktop
+- name: install chatgpt codex-desktop
+  become: yes
+  apt:
+    deb: "https://persistent.oaistatic.com/codex-app-prod/linux/deb/latest/chatgpt_amd64.deb"
+  register: chatgpt_codex_installed
+  until: chatgpt_codex_installed is not failed
+  retries: 3
 - name: update-alternatives java # java 11을 기본으로. java 17 아직 지원안하는 애플리케이션이 많음.
   become: yes
   shell: |
