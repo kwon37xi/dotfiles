@@ -30,7 +30,7 @@
 - name: claude-desktop-official repository
   become: yes
   ansible.builtin.deb822_repository:
-    name: claude-desktop-official
+    name: claude-desktop
     types: [deb]
     uris: "https://downloads.claude.ai/claude-desktop/apt/stable"
     signed_by: "https://downloads.claude.ai/claude-desktop/key.asc"
