@@ -58,6 +58,12 @@
       - wine32:i386
       - winetricks
     state: latest
+- name: install wine32
+  become: yes
+  apt:
+    package:
+      - wine32:i386
+    state: latest
 - name: apt clean # ansible의 autoclean 은 clean이 아니다.
   become: yes
   ansible.builtin.command: apt clean
