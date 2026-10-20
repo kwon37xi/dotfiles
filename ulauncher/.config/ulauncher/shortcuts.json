@@ -248,5 +248,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1778657962.083707
+    },
+    "33f2b1d9-f33d-4463-b4d1-a37ff2e28e98": {
+        "id": "33f2b1d9-f33d-4463-b4d1-a37ff2e28e98",
+        "name": "scrcpy - dex",
+        "keyword": "dex",
+        "cmd": "#!/bin/sh\n/home/linuxbrew/.linuxbrew/bin/scrcpy --new-display=1920x1080/120 -K",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1792474401.9304137
     }
 }
