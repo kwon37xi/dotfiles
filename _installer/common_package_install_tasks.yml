@@ -20,15 +20,10 @@
   apt:
     package:
       - fonts-alee
-      - fonts-lexi-gulim
-      - fonts-lexi-saebom
       - fonts-woowa-bm
       - fonts-nanum
-      - fonts-nanum-eco
       - fonts-nanum-extra
       - fonts-naver-d2coding
-      - fonts-unfonts-core
-      - fonts-unfonts-extra
       - fonts-pretendard
       - fonts-noto-cjk
       - fonts-noto-cjk-extra
