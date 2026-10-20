@@ -79,6 +79,7 @@
       - ksnip # for image/screenshot annotation
       - adb # for android development and scrcpy
       - poppler-utils # pdf utils
+      - wayland-utils
     state: latest
 - name: install system tools
   become: yes
