@@ -233,8 +233,6 @@
     # gsettings set org.gnome.settings-daemon.plugins.keyboard active false
     # gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'uim'>}"
     # sudo mv /usr/bin/ibus-daemon /usr/bin/ibus-daemon.distrib
-- name: set default im
-  shell: "im-config -n ibus"
 - name: tmux plugin manager
   ansible.builtin.git:
     repo: "https://github.com/tmux-plugins/tpm.git"
