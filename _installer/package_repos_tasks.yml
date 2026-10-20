@@ -27,7 +27,7 @@
   register: vscode_repository_installed
   until: vscode_repository_installed is not failed
   retries: 3
-- name: claude-desktop disable add repo # claude 가 스스로 repo 추가하지 못하게 해야한다.
+- name: claude-desktop disable add repo
   become: yes
   ansible-builtin.copy:
     dest: /etc/default/claude-desktop
