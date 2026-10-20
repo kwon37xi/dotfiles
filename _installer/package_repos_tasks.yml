@@ -29,7 +29,7 @@
   retries: 3
 - name: claude-desktop disable add repo
   become: yes
-  ansible-builtin.copy:
+  ansible.builtin.copy:
     dest: /etc/default/claude-desktop
     content: |
       CLAUDE_DESKTOP_ADD_REPO="false"
