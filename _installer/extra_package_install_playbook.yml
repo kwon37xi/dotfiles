@@ -50,7 +50,7 @@
   apt:
     update_cache: yes
     upgrade: full
-- name: install wine
+- name: install wine #ubuntu 26.10 60-libgphoto2-6t64.rules 버그로 force-overwrite 추가'
   become: yes
   apt:
     package:
@@ -58,12 +58,7 @@
       - wine32:i386
       - winetricks
     state: latest
-- name: install wine32
-  become: yes
-  apt:
-    package:
-      - wine32:i386
-    state: latest
+    dpkg_options: "force-confdef,force-confold,force-overwrite"
 - name: apt clean # ansible의 autoclean 은 clean이 아니다.
   become: yes
   ansible.builtin.command: apt clean
