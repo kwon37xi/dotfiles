@@ -7,6 +7,7 @@
     package:
       - dmz-cursor-theme
       - xcursor-themes
+      - qt6ct
     state: latest
 - name: install libreoffice
   become: yes
