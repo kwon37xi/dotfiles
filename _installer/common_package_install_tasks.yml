@@ -80,6 +80,8 @@
       - adb # for android development and scrcpy
       - poppler-utils # pdf utils
       - wayland-utils
+      - copyq
+      - copyq-plugins
     state: latest
 - name: install system tools
   become: yes
