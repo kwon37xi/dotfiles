@@ -1,6 +1,6 @@
 [/]
 calculator=['Calculator']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
 help=@as []
 home=['<Super>e']
 logout=['<Primary><Alt>Delete']
@@ -56,19 +56,14 @@ command='gromit-mpx --redo'
 name='gromit-mpx-wayland-hotkey --redo'
 
 [custom-keybindings/custom2]
-binding='<Super>h'
-command='copyq toggle'
-name='copyq toggle'
+binding='<Shift><Super>slash'
+command='copy-text-to-clipboard.sh'
+name='Copy Text'
 
 [custom-keybindings/custom3]
 binding='<Super>p'
 command=' gnome-control-center display'
 name='Gnome Display'
-
-[custom-keybindings/custom4]
-binding='<Shift><Super>question'
-command='copy-text-to-clipboard.sh'
-name='Copy Text'
 
 [custom-keybindings/custom5]
 binding='<Super>space'
