@@ -22,6 +22,8 @@
     - .config/bashrc.d
     - .config/Code/User
     - .config/mpv
+    - .config/qt5ct
+    - .config/qt6ct
     - .sdkman/etc
     - .local/share/bash-completion/completions
     - .local/share/nautilus/scripts
