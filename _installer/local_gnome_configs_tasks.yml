@@ -17,6 +17,9 @@
 
     # Mouse 위치 찾기 켜기 - ulauncher 에서 마우스 위치찾기가 켜져있을 경우 버그가 있었으나 해결됨.
     gsettings set org.gnome.desktop.interface locate-pointer true
+
+    # Appindicator 좌측으로
+    gsettings set org.gnome.shell.extensions.appindicator tray-pos 'left'
 - name: ubuntu-dock settings
   shell: |
     gsettings set org.gnome.shell.extensions.dash-to-dock show-trash true
@@ -41,6 +44,6 @@
 
 - name: gnome-calendar
   shell: |
-    # 달력 기본 응용프로그램을 Gnome Calendar로 설정 - 텍스트 편집기로 돼 있는 버그 존재
+    # 달력 기본 응용프로그램을 Gnome Calendar로 설정 - 텍스트 편집기로 돼 있는 버그 존재 - 일단 disable하고 확인
     # gnome-calendar install required
-    gio mime text/calendar org.gnome.Calendar.desktop
+    #gio mime text/calendar org.gnome.Calendar.desktop
