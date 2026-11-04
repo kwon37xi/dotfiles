@@ -73,7 +73,7 @@
     - "Move_Clock@rmy.pobox.com"
     - "nothing-to-say@extensions.gnome.wouter.bolsterl.ee"
     - "panel-date-format@keiii.github.com"
-    - "docker@stickman_0x00.com"
+    - "easy_docker_containers@red.software.systems"
     - "battery-power-mode-indicator@nirmaladvani.github.com"
     - "auto-power-profile@dmy3k.github.io"
 - name: fix ddterm binary executable
