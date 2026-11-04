@@ -51,8 +51,6 @@
       - autojump
       - stow
       - rclone
-      - krusader
-      - trash-cli
       - ncdu
       - bat
       - timeshift
@@ -101,6 +99,10 @@
       - zenity
       - universal-ctags
       - java-common
+      - openjdk-25-jdk
+      - openjdk-25-source
+      - openjdk-21-jdk
+      - openjdk-21-source
       - openjdk-17-jdk
       - openjdk-17-source
       - openjdk-11-jdk
