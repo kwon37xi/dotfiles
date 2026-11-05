@@ -3,7 +3,6 @@ dconf load /org/gnome/desktop/interface/ < ~/.dotfiles/_backup/gnome/org_gnome_d
 dconf load /org/gnome/desktop/wm/keybindings/ < ~/.dotfiles/_backup/gnome/org_gnome_desktop_wm_keybindings.dump
 dconf load /org/gnome/mutter/keybindings/ < ~/.dotfiles/_backup/gnome/org_gnome_mutter_keybindings.dump
 dconf load /org/gnome/settings-daemon/plugins/media-keys/ < ~/.dotfiles/_backup/gnome/org_gnome_settings-daemon_plugins_media-keys.dump
-dconf load /org/gnome/terminal/ < ~/.dotfiles/_backup/gnome/org_gnome_terminal.dump
 dconf load /org/gnome/shell/extensions/dash-to-panel/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_dash-to-panel.dump
 dconf load /org/gnome/shell/extensions/nothing-to-say/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_nothing-to-say.dump
 dconf load /org/gnome/shell/keybindings/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_keybindings.dump
@@ -16,3 +15,4 @@ dconf load /org/gnome/shell/extensions/panel-date-format/ < ~/.dotfiles/_backup/
 dconf load /org/gnome/shell/extensions/system-monitor/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_system_monitor.dump
 dconf load /com/github/amezin/ddterm/ < ~/.dotfiles/_backup/gnome/com_github_amezin_ddterm.dump
 dconf load /org/gnome/Ptyxis/ < ~/.dotfiles/_backup/gnome/org_gnome_ptyxis.dump
+dconf load /org/gnome/shell/extensions/appindicator/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_appindicator.dump

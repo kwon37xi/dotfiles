@@ -8,7 +8,6 @@ dconf dump /org/gnome/settings-daemon/plugins/media-keys/ > org_gnome_settings-d
 dconf dump /org/gnome/desktop/interface/ > org_gnome_desktop_interface.dump
 dconf dump /org/gnome/desktop/peripherals/touchpad/ > org_gnome_desktop_peripherals_touchpad.dump
 dconf dump /org/gnome/desktop/wm/keybindings/ > org_gnome_desktop_wm_keybindings.dump
-dconf dump /org/gnome/terminal/ > org_gnome_terminal.dump
 dconf dump /org/gnome/shell/extensions/dash-to-panel/ > org_gnome_shell_extensions_dash-to-panel.dump
 dconf dump /org/gnome/shell/extensions/nothing-to-say/ > org_gnome_shell_extensions_nothing-to-say.dump
 dconf dump /org/gnome/shell/extensions/tiling-assistant/ > org_gnome_shell_extensions_tiling-assistant.dump
@@ -19,3 +18,4 @@ dconf dump /org/gnome/shell/extensions/panel-date-format/ > org_gnome_shell_exte
 dconf dump /org/gnome/shell/extensions/system-monitor/ > org_gnome_shell_extensions_system_monitor.dump
 dconf dump /com/github/amezin/ddterm/ > com_github_amezin_ddterm.dump
 dconf dump /org/gnome/Ptyxis/ > org_gnome_ptyxis.dump
+dconf dump /org/gnome/shell/extensions/appindicator/ > org_gnome_shell_extensions_appindicator.dump
