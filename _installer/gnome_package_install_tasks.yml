@@ -76,7 +76,9 @@
     - "easy_docker_containers@red.software.systems"
     - "battery-power-mode-indicator@nirmaladvani.github.com"
     - "auto-power-profile@dmy3k.github.io"
+    - "quicksettings-audio-devices-hider@marcinjahn.com"
 - name: fix ddterm binary executable
   ansible.builtin.file:
     path: "/home/{{ current_user }}/.local/share/gnome-shell/extensions/ddterm@amezin.github.com/bin/com.github.amezin.ddterm"
     mode: "0755"
+    when: false
