@@ -23,9 +23,12 @@
       - gimp
       - gimp-data-extras
       - gimp-help-ko
+      - imagemagick
       - nomacs
       - sxiv
       - vlc
+      - mpv
+      - ffmpeg
       - audacious
       - handbrake
       - gpick
