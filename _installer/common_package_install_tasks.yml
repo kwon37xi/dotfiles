@@ -41,6 +41,7 @@
       - fd-find
       - tmux
       - xclip
+      - wl-clipboard
       - htop
       - btop
       - bpytop
