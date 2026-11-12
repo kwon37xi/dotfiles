@@ -9,6 +9,7 @@ ITEMS=(
     "⬆️↗️➡️↘️⬇️↙️⬅️↖️"
     "✅☑️✔️"
     "℃℉"
+    "🌏🧭🏕️🛍️📦🛒🔔📢💻📽️💡📖"
 )
 # 결과 문자열에 개행이 있어서 tr 로 제거 필요함.
-zenity --list --text="특수문자 선택" --column="특수문자" --hide-header --height 400 "${ITEMS[@]}" | tr -d "\n" | wl-copy
+zenity --list --text="특수문자 선택" --column="특수문자" --hide-header --height 500 "${ITEMS[@]}" | tr -d "\n" | wl-copy
