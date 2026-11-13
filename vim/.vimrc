@@ -31,7 +31,6 @@ Plug 'vim-scripts/localvimrc'
 Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/grep.vim'
 Plug 'majutsushi/tagbar'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'vim-scripts/snipMate'
 Plug 'vim-scripts/Align'
 Plug 'vim-airline/vim-airline'
@@ -261,27 +260,6 @@ nnoremap <expr> <silent> <C-A-Up> (&diff ? "[c" : ":cprev\<CR>")
 
 " Recursive grep :Rgrep -i 검색어 *.txt
 " close grep window :cclose
-
-" Tags / ctags
-
-" Gutentags - .git, .hg 등의 디렉토리를 기준으로 변경된 파일에 대해서 자동으로
-" tag update
-" https://bolt80.com/gutentags/
-set statusline+=%{gutentags#statusline()}
-
-" tagbar
-nnoremap <F11> :TagbarToggle<CR>
-nnoremap <leader>Tj :TagbarJumpNext<CR>
-nnoremap <leader>Tk :TagbarJumpPrev<CR>
-nnoremap <A-Down> :TagbarJumpNext<CR>
-nnoremap <A-Up> :TagbarJumpPrev<CR>
-
-" fzf tags
-" Tags 전체를 탐색한다. tags 파일이 없으면 생성한다.
-nnoremap <leader>Tt :Tags<CR>
-nnoremap <leader>TT :BTags<CR>
-" intelliJ idea와 동일하게 맞춘 단축키
-nnoremap <C-F12> :BTags<CR>
 
 " Open in Browser
 nnoremap <leader>wf :exe ':silent !firefox %'<CR>
