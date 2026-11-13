@@ -258,5 +258,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1792474401.9304137
+    },
+    "3406f3e2-a817-4da0-9630-c3444d8e166b": {
+        "id": "3406f3e2-a817-4da0-9630-c3444d8e166b",
+        "name": "reconnect thinkpad bluetooth mouse",
+        "keyword": "tbm",
+        "cmd": "#!/bin/sh\nptyxis -x ~/.dotfiles/local_bin/.local/bin/reconnect-thinkpad-bluetoothmouse-device.sh",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1794552039.727287
     }
 }
