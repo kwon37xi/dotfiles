@@ -12,8 +12,8 @@
     gsettings set org.gnome.shell.app-switcher current-workspace-only true
     gsettings set org.gnome.shell.window-switcher current-workspace-only true
 
-    # Window Manager titlebar font
-    gsettings set org.gnome.desktop.wm.preferences titlebar-font '한글누리 Bold 11'
+    # Window Manager titlebar font -작동안하는 듯.
+    #gsettings set org.gnome.desktop.wm.preferences titlebar-font '함초롬돋움 Bold 11'
 
     # Mouse 위치 찾기 켜기 - ulauncher 에서 마우스 위치찾기가 켜져있을 경우 버그가 있었으나 해결됨.
     gsettings set org.gnome.desktop.interface locate-pointer true
@@ -34,13 +34,13 @@
     ~/.dotfiles/local_bin/.local/bin/set-app-grid-icon.sh ~/.dotfiles/_icons/ubuntu/cof_orange_hex.png
 
     # 유사 테마에 .icons override
-    ln -s ~/.icons/Yaru ~/.icons/Papirus
-    ln -s ~/.icons/Yaru ~/.icons/Papirus-Dark
-    ln -s ~/.icons/Yaru ~/.icons/Papirus-Light
-    ln -s ~/.icons/Yaru ~/.icons/Numix
-    ln -s ~/.icons/Yaru ~/.icons/Numix-Circle
-    ln -s ~/.icons/Yaru ~/.icons/Numix-Circle-Light
-    ln -s ~/.icons/Yaru ~/.icons/Numix-Light
+    #ln -s ~/.icons/Yaru ~/.icons/Papirus
+    #ln -s ~/.icons/Yaru ~/.icons/Papirus-Dark
+    #ln -s ~/.icons/Yaru ~/.icons/Papirus-Light
+    #ln -s ~/.icons/Yaru ~/.icons/Numix
+    #ln -s ~/.icons/Yaru ~/.icons/Numix-Circle
+    #ln -s ~/.icons/Yaru ~/.icons/Numix-Circle-Light
+    #ln -s ~/.icons/Yaru ~/.icons/Numix-Light
 
 - name: gnome-calendar
   shell: |

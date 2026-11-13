@@ -81,4 +81,3 @@
   ansible.builtin.file:
     path: "/home/{{ current_user }}/.local/share/gnome-shell/extensions/ddterm@amezin.github.com/bin/com.github.amezin.ddterm"
     mode: "0755"
-    when: false
