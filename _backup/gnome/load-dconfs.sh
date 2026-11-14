@@ -16,3 +16,5 @@ dconf load /org/gnome/shell/extensions/system-monitor/ < ~/.dotfiles/_backup/gno
 dconf load /com/github/amezin/ddterm/ < ~/.dotfiles/_backup/gnome/com_github_amezin_ddterm.dump
 dconf load /org/gnome/Ptyxis/ < ~/.dotfiles/_backup/gnome/org_gnome_ptyxis.dump
 dconf load /org/gnome/shell/extensions/appindicator/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_appindicator.dump
+dconf load /org/gnome/shell/extensions/status-area-horizontal-spacing/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_status-area-horizontal-spacing.dump
+
