@@ -20,3 +20,4 @@ dconf dump /com/github/amezin/ddterm/ > com_github_amezin_ddterm.dump
 dconf dump /org/gnome/Ptyxis/ > org_gnome_ptyxis.dump
 dconf dump /org/gnome/shell/extensions/appindicator/ > org_gnome_shell_extensions_appindicator.dump
 dconf dump /org/gnome/shell/extensions/status-area-horizontal-spacing/ > org_gnome_shell_extensions_status-area-horizontal-spacing.dump
+dconf dump /org/gnome/shell/extensions/auto-power-profile/ > org_gnome_shell_extensions_auto-poewr-profile.dump
