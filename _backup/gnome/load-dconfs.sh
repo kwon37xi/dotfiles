@@ -17,4 +17,4 @@ dconf load /com/github/amezin/ddterm/ < ~/.dotfiles/_backup/gnome/com_github_ame
 dconf load /org/gnome/Ptyxis/ < ~/.dotfiles/_backup/gnome/org_gnome_ptyxis.dump
 dconf load /org/gnome/shell/extensions/appindicator/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_appindicator.dump
 dconf load /org/gnome/shell/extensions/status-area-horizontal-spacing/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_status-area-horizontal-spacing.dump
-
+dconf load /org/gnome/shell/extensions/battery-power-mode-indicator/ < ~/.dotfiles/_backup/gnome/org_gnome_shell_extensions_battery-power-mode-indicator.dump
