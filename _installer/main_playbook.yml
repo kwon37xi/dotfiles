@@ -34,3 +34,9 @@
     #- import_tasks: free_korean_fonts_install_tasks.yml
     #- import_tasks: auto_cpufreq_tasks.yml
     #- import_tasks: sound_theme_tasks.yml # 22.10 부터 override 불필요해진듯.
+  handlers:
+    - name: Restart accounts-daemon
+      become: yes
+      ansible.builtin.systemd:
+        name: accounts-daemon
+        state: restarted
