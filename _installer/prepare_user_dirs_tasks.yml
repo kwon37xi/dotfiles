@@ -39,6 +39,11 @@
   args:
     creates: ~/Videos
     removes: ~/비디오
+- name: 프로젝트 to Projects
+  shell: mv ~/프로젝트 ~/Projects
+  args:
+    creates: ~/Projects
+    removes: ~/프로젝트
 - name: xdg-user-dirs-update
   shell: |
     xdg-user-dirs-update --set DESKTOP $HOME/Desktop
@@ -49,3 +54,16 @@
     xdg-user-dirs-update --set MUSIC $HOME/Music
     xdg-user-dirs-update --set PICTURES $HOME/Pictures
     xdg-user-dirs-update --set VIDEOS $HOME/Videos
+    xdg-user-dirs-update --set PROJECTS $HOME/Projects
+- name: update nautilus bookmarks
+  ansible.builtin.copy:
+    dest: "/home/{{ current_user }}/.config/gtk-3.0/bookmarks"
+    force: true
+    content: |
+      file:///home/kwon37xi/Downloads Downloads
+      file:///home/kwon37xi/Documents Documents
+      file:///home/kwon37xi/Desktop Desktop
+      file:///home/kwon37xi/Projects Projects
+      file:///home/kwon37xi/Pictures Pictures
+      file:///home/kwon37xi/Music Music
+      file:///home/kwon37xi/Videos Videos
