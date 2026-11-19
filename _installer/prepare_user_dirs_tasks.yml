@@ -60,10 +60,10 @@
     dest: "/home/{{ current_user }}/.config/gtk-3.0/bookmarks"
     force: true
     content: |
-      file:///home/kwon37xi/Downloads Downloads
-      file:///home/kwon37xi/Documents Documents
-      file:///home/kwon37xi/Desktop Desktop
-      file:///home/kwon37xi/Projects Projects
-      file:///home/kwon37xi/Pictures Pictures
-      file:///home/kwon37xi/Music Music
-      file:///home/kwon37xi/Videos Videos
+      file:///home/{{ current_user }}/Downloads Downloads
+      file:///home/{{ current_user }}/Documents Documents
+      file:///home/{{ current_user }}/Desktop Desktop
+      file:///home/{{ current_user }}/Projects Projects
+      file:///home/{{ current_user }}/Pictures Pictures
+      file:///home/{{ current_user }}/Music Music
+      file:///home/{{ current_user }}/Videos Videos
