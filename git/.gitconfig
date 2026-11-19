@@ -17,7 +17,13 @@
 [includeIf "gitdir:~/projects/observes/"]
     path = ~/.git_personal_projects
 
+[includeIf "gitdir:~/Projects/observes/"]
+    path = ~/.git_personal_projects
+
 [includeIf "gitdir:~/projects/navercorp/"]
+    path = ~/.git_navercorp_projects
+
+[includeIf "gitdir:~/Projects/navercorp/"]
     path = ~/.git_navercorp_projects
 
 [core]
