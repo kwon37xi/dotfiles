@@ -79,7 +79,7 @@ sudo software-properties-gtk
 ```
 
 ### microcode 설치
-* intel/amd 여부에 따라 서로 다르게 설치
+* intel/amd 여부에 따라 서로 다르게 설치 - 2026년 현재 불필요함. 자동으로 해주는 듯.
 ```
 # intel
 sudo apt install intel-microcode iucode-tool
@@ -89,7 +89,7 @@ sudo apt install amd64-microcode
 ```
 
 ### Intel GPU - vaapi 설정
-* https://kwonnam.pe.kr/wiki/linux/vaapi
+* Intel GPU 자동인식으로 변경함. 아래 작업 안해도 됨.
 ```
 sudo apt install intel-media-va-driver-non-free libva-drm2 libva-x11-2
 ```

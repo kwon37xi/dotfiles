@@ -36,6 +36,18 @@
       - vainfo
       - com.github.phase1geo.annotator
     state: latest
+- name: check for intel GPU hardware
+  become: yes
+  ansible.builtin.shell: lspci | grep -iE "vga|3d|display" | grep -iq "intel"
+  register: intel_gpu_check
+  changed_when: false #조회용 명령이므로 changed 항상 아님
+  failed_when: false # Intel GPU가 없을 경우 grep 이 1을 반환해도 실패로 처리 안하고 무시하게
+- name: install intel vaapi non-free driver
+  when: intel_gpu_check == 0
+  become: yes
+  ansible.builtin.apt:
+    name: intel-media-va-driver-non-free
+    state: present
 - name: install zoom
   shell: "/home/{{ current_user }}/.dotfiles/local_bin/.local/bin/install-zoom.sh"
 - name: install documentation tools
