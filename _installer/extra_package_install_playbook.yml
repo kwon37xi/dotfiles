@@ -163,6 +163,10 @@
   until: krop_package_installed is not failed
   retries: 3
   delay: 10
+- name: xdg-mime pdf okular
+  community.general.xdg_mime:
+    mime_types: application/pdf
+    handler: org.kde.okular.desktop
 - name: download meganz
   become: yes
   apt:
